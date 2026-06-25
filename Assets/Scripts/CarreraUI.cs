@@ -1,93 +1,128 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class CarreraUI : MonoBehaviour
 {
+    [Header("Track")]
     public RectTransform track;
 
-    public RectTransform caballo1;
-    public RectTransform caballo2;
-    public RectTransform caballo3;
+    [Header("Prefab UI")]
+    public GameObject caballoPrefab;
+    public Transform contenedorCaballos;
 
+    [Header("UI")]
     public TextMeshProUGUI textoEstado;
-
     public GameObject botonIniciar;
     public GameObject botonVolver;
 
-    float progreso1;
-    float progreso2;
-    float progreso3;
+    [Header("Datos")]
+    List<Caballo> caballosData = new List<Caballo>();
 
-    float vel1;
-    float vel2;
-    float vel3;
+    List<RectTransform> caballosUI = new List<RectTransform>();
+    List<Image> caballosImg = new List<Image>();
+
+    List<float> progreso = new List<float>();
+    List<float> velocidad = new List<float>();
 
     bool carreraActiva;
 
-    float anchoTrack;
+    const float POS_INICIO = -1000f;
+    const float META_X = 1000f;
 
-    const float POSICION_INICIAL_X = 40f;
+    Vector2[] posicionesIniciales =
+    {
+        new Vector2(-1000, 60),
+        new Vector2(-1000, 210),
+        new Vector2(-1000, 350),
+        new Vector2(-1000, -80),
+        new Vector2(-1000, -230),
+        new Vector2(-1000, -380)
+    };
+
+    float aceleracion = 0.08f;
+    float maxVel = 18f;
+    float minVel = 3f;
 
     void OnEnable()
     {
-        anchoTrack = track.rect.width;
         PrepararCarrera();
-    }
-
-    void Update()
-    {
-        if (!carreraActiva) return;
-
-        progreso1 += vel1 * Time.deltaTime;
-        progreso2 += vel2 * Time.deltaTime;
-        progreso3 += vel3 * Time.deltaTime;
-
-        Mover(caballo1, progreso1);
-        Mover(caballo2, progreso2);
-        Mover(caballo3, progreso3);
-
-        if (progreso1 >= 100)
-        {
-            Terminar(1);
-            return;
-        }
-
-        if (progreso2 >= 100)
-        {
-            Terminar(2);
-            return;
-        }
-
-        if (progreso3 >= 100)
-        {
-            Terminar(3);
-            return;
-        }
     }
 
     void PrepararCarrera()
     {
-        progreso1 = 0;
-        progreso2 = 0;
-        progreso3 = 0;
-
-        ReiniciarPosiciones();
-
         carreraActiva = false;
 
         textoEstado.text = "Listo para correr";
 
         botonIniciar.SetActive(true);
         botonVolver.SetActive(true);
+
+        caballosData.Clear();
+
+        if (GameManager.Instancia.caballosJugador.Count > 0)
+            caballosData.Add(GameManager.Instancia.caballosJugador[0]);
+
+        caballosData.AddRange(GameManager.Instancia.caballosDelDia);
+
+        CrearCaballosUI();
+    }
+
+    void CrearCaballosUI()
+    {
+        foreach (Transform child in contenedorCaballos)
+            Destroy(child.gameObject);
+
+        caballosUI.Clear();
+        caballosImg.Clear();
+        progreso.Clear();
+        velocidad.Clear();
+
+        for (int i = 0; i < caballosData.Count; i++)
+        {
+            GameObject obj = Instantiate(caballoPrefab, contenedorCaballos);
+
+            RectTransform ui = obj.GetComponent<RectTransform>();
+
+            //  FIX IMPORTANTE: buscar Image en hijos
+            Image img = obj.GetComponentInChildren<Image>(true);
+
+            caballosUI.Add(ui);
+            caballosImg.Add(img);
+
+            progreso.Add(0f);
+            velocidad.Add(0f);
+
+            ui.anchoredPosition = posicionesIniciales[Mathf.Min(i, posicionesIniciales.Length - 1)];
+
+            //  ASIGNAR SPRITE SEGURO
+            if (img != null)
+            {
+                if (caballosData[i].sprite != null)
+                {
+                    img.sprite = caballosData[i].sprite;
+                    img.preserveAspect = true;
+                    img.enabled = true;
+                }
+                else
+                {
+                    Debug.LogWarning("Caballo sin sprite: " + caballosData[i].nombre);
+                }
+            }
+            else
+            {
+                Debug.LogError("Prefab no tiene Image en hijos!");
+            }
+        }
     }
 
     public void IniciarCarrera()
     {
-        vel1 = Random.Range(8f, 12f);
-        vel2 = Random.Range(8f, 12f);
-        vel3 = Random.Range(8f, 12f);
-
         carreraActiva = true;
+
+        for (int i = 0; i < caballosData.Count; i++)
+            velocidad[i] = CalcularVelocidadBase(caballosData[i]);
 
         botonIniciar.SetActive(false);
         botonVolver.SetActive(false);
@@ -95,36 +130,58 @@ public class CarreraUI : MonoBehaviour
         textoEstado.text = "¡Carrera iniciada!";
     }
 
-    void Mover(RectTransform caballo, float progreso)
+    void Update()
     {
-        float x = POSICION_INICIAL_X + ((progreso / 100f) * (anchoTrack - POSICION_INICIAL_X));
-        caballo.anchoredPosition = new Vector2(x, caballo.anchoredPosition.y);
+        if (!carreraActiva) return;
+
+        float dt = Time.deltaTime;
+
+        for (int i = 0; i < caballosData.Count; i++)
+        {
+            velocidad[i] += aceleracion * dt;
+            velocidad[i] += Random.Range(-0.04f, 0.06f);
+            velocidad[i] = Mathf.Clamp(velocidad[i], minVel, maxVel);
+
+            progreso[i] += velocidad[i] * dt;
+
+            float t = Mathf.Clamp01(progreso[i] / 100f);
+            float x = Mathf.Lerp(POS_INICIO, META_X, t);
+
+            Vector2 pos = caballosUI[i].anchoredPosition;
+            pos.x = x;
+            caballosUI[i].anchoredPosition = pos;
+
+            if (x >= META_X)
+            {
+                Terminar(i);
+                return;
+            }
+        }
     }
 
-    void ReiniciarPosiciones()
+    float CalcularVelocidadBase(Caballo c)
     {
-        caballo1.anchoredPosition =
-            new Vector2(POSICION_INICIAL_X, caballo1.anchoredPosition.y);
+        float baseSpeed = 4.5f;
 
-        caballo2.anchoredPosition =
-            new Vector2(POSICION_INICIAL_X, caballo2.anchoredPosition.y);
+        float v = c.velocidad * 1.3f;
+        float s = c.stamina * 0.6f;
+        float i = c.inteligencia * 0.4f;
+        float su = c.suerte * 0.2f;
+        float p = c.potencial * 0.5f;
 
-        caballo3.anchoredPosition =
-            new Vector2(POSICION_INICIAL_X, caballo3.anchoredPosition.y);
+        return Mathf.Clamp(baseSpeed + v + s + i + su + p, minVel, maxVel);
     }
 
     void Terminar(int ganador)
     {
         carreraActiva = false;
 
-        textoEstado.text = "Ganó el caballo " + ganador;
+        textoEstado.text = "Ganó: " + caballosData[ganador].nombre;
 
-        if (ganador == 1)
+        if (ganador == 0)
             GameManager.Instancia.AgregarDinero(500);
         else
             GameManager.Instancia.RestarDinero(200);
-
-        ReiniciarPosiciones();
 
         botonIniciar.SetActive(true);
         botonVolver.SetActive(true);
@@ -133,7 +190,6 @@ public class CarreraUI : MonoBehaviour
     public void Volver()
     {
         if (carreraActiva) return;
-
         GameManager.Instancia.VolverAlHub();
     }
 }
