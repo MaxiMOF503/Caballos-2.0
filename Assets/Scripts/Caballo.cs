@@ -12,6 +12,7 @@ public class Caballo
 
     public int nivel = 1;
     public int experiencia = 0;
+    public int puntosMejoraPendientes = 0;
 
     public int velocidad = EstadisticaMinima;
     public int stamina = EstadisticaMinima;
@@ -34,6 +35,7 @@ public class Caballo
         edad = Mathf.Clamp(edad, 3, 7);
         nivel = Mathf.Max(1, nivel);
         experiencia = Mathf.Max(0, experiencia);
+        puntosMejoraPendientes = Mathf.Max(0, puntosMejoraPendientes);
 
         velocidad = NormalizarEstadistica(velocidad);
         stamina = NormalizarEstadistica(stamina);

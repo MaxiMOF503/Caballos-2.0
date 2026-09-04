@@ -7,11 +7,13 @@ public class TablonView : MonoBehaviour
     [Header("UI Info")]
     public TMP_Text textoNombre;
     public TMP_Text textoEdad;
+    public TMP_Text textoNivel;
 
     public TMP_Text textoVelocidad;
     public TMP_Text textoStamina;
     public TMP_Text textoSuerte;
     public TMP_Text textoInteligencia;
+    public TMP_Text textoPotencial;
 
     [Header("Scroll")]
     public Transform content;
@@ -59,12 +61,36 @@ public class TablonView : MonoBehaviour
 
     void MostrarCaballo(Caballo caballo)
     {
+        if (caballo == null)
+        {
+            textoNombre.text = "-";
+            textoEdad.text = "Edad: -";
+            textoNivel.text = "Nivel: -";
+            textoVelocidad.text = "Velocidad: -";
+            textoStamina.text = "Stamina: -";
+            textoSuerte.text = "Suerte: -";
+            textoInteligencia.text = "Inteligencia: -";
+            textoPotencial.text = "Potencial: -";
+            return;
+        }
+
         textoNombre.text = caballo.nombre;
         textoEdad.text = "Edad: " + caballo.edad;
+        textoNivel.text = "Nivel: " + caballo.nivel;
 
-        textoVelocidad.text = "Velocidad: ?";
-        textoStamina.text = "Stamina: ?";
-        textoSuerte.text = "Suerte: ?";
-        textoInteligencia.text = "Inteligencia: ?";
+        textoVelocidad.text =
+            "Velocidad: " + RangoCaballo.ObtenerRango(caballo.velocidad);
+
+        textoStamina.text =
+            "Stamina: " + RangoCaballo.ObtenerRango(caballo.stamina);
+
+        textoSuerte.text =
+            "Suerte: " + RangoCaballo.ObtenerRango(caballo.suerte);
+
+        textoInteligencia.text =
+            "Inteligencia: " + RangoCaballo.ObtenerRango(caballo.inteligencia);
+
+        textoPotencial.text =
+            "Potencial: " + RangoCaballo.ObtenerRango(caballo.potencial);
     }
 }

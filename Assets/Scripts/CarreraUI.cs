@@ -321,6 +321,7 @@ public class CarreraUI : MonoBehaviour
 
     bool carreraActiva;
     Caballo caballoJugadorParticipante;
+    int diaPreparado;
 
     const float POS_INICIO = -1000f;
     const float META_X = 1000f;
@@ -364,6 +365,7 @@ public class CarreraUI : MonoBehaviour
         }
 
         caballosData.AddRange(GameManager.Instancia.caballosDelDia);
+        diaPreparado = GameManager.Instancia.dia;
 
         CrearCaballosUI();
     }
@@ -414,6 +416,15 @@ public class CarreraUI : MonoBehaviour
 
     public void IniciarCarrera()
     {
+        if (GameManager.Instancia.campanaCompletada)
+        {
+            Debug.LogWarning("La campaña ya está completada. No se puede iniciar una carrera del día 43.");
+            return;
+        }
+
+        if (diaPreparado != GameManager.Instancia.dia)
+            PrepararCarrera();
+
         if (caballosData.Count == 0)
             return;
 
@@ -511,7 +522,7 @@ public class CarreraUI : MonoBehaviour
                       (ganoJugador ? " XP por victoria." : " XP por participar."));
         }
 
-        GameManager.Instancia.GenerarCaballosDelDia();
+        GameManager.Instancia.SiguienteDia();
 
         botonIniciar.SetActive(true);
         botonVolver.SetActive(true);

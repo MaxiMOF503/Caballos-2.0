@@ -21,6 +21,35 @@ public class GameManager : MonoBehaviour
     private const int EstadisticaRivalMaximaExclusiva = 7;
     private const int PotencialRivalMinimo = 5;
     private const int PotencialRivalMaximoExclusivo = 15;
+    private const int DiasPorSemana = 7;
+    private const int TotalSemanasCampana = 6;
+    private const int UltimoDiaCampana = DiasPorSemana * TotalSemanasCampana;
+
+    private static readonly int[] CuotasSemanales =
+    {
+        1500,
+        2000,
+        2750,
+        3500,
+        4500,
+        6000
+    };
+
+    private enum ResultadoCierreDia
+    {
+        Continuar,
+        CampanaPerdida,
+        CampanaCompletada
+    }
+
+    private struct TransicionCampana
+    {
+        public ResultadoCierreDia resultado;
+        public int diaSiguiente;
+        public int dineroRestante;
+        public int semanaFinalizada;
+        public int cuotaAplicada;
+    }
 
     public static GameManager Instancia;
 
@@ -30,9 +59,17 @@ public class GameManager : MonoBehaviour
     [Header("Economía")]
     public int dinero = DineroInicial;
     public int dia = DiaInicial;
+    public bool campanaCompletada;
+
+    [Header("Desarrollo")]
+    [SerializeField]
+    private bool reiniciarPartidaAlIniciarEnEditor = true;
 
     [Header("Caballos Jugador")]
     public List<Caballo> caballosJugador = new List<Caballo>();
+
+    [Header("Items Jugador")]
+    public List<ItemCaballo> itemsJugador = new List<ItemCaballo>();
 
     [Header("Caballos del Día")]
     public List<Caballo> caballosDelDia = new List<Caballo>();
@@ -42,6 +79,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Sprites Caballos (IA + jugador)")]
     public Sprite[] spritesCaballos;
+
+    [Header("Sprites Items")]
+    public Sprite[] spritesItems;
 
     private List<Sprite> spritesDisponibles = new List<Sprite>();
 
@@ -69,20 +109,52 @@ public class GameManager : MonoBehaviour
     {
         ResetSprites();
 
+#if UNITY_EDITOR
+        if (reiniciarPartidaAlIniciarEnEditor)
+        {
+            Debug.Log("Reinicio de desarrollo activo: se iniciará una campaña nueva.");
+            IniciarNuevaPartida();
+            return;
+        }
+#endif
+
         bool partidaCargada = CargarPartida();
 
         if (!partidaCargada)
         {
-            dinero = DineroInicial;
-            dia = DiaInicial;
-            caballosJugador.Clear();
-            rivalPersistente = null;
-            CrearCaballoInicial();
+            IniciarNuevaPartida();
+            return;
         }
 
-        GenerarCaballosDelDia();
+        if (!campanaCompletada)
+            GenerarCaballosDelDia();
+        else
+            caballosDelDia.Clear();
+
         GuardarPartida();
         ActualizarHUD();
+    }
+
+    public void IniciarNuevaPartida()
+    {
+        dinero = DineroInicial;
+        dia = DiaInicial;
+        campanaCompletada = false;
+        rivalPersistente = null;
+
+        caballosJugador.Clear();
+        caballosDelDia.Clear();
+
+        if (itemsJugador == null)
+            itemsJugador = new List<ItemCaballo>();
+        else
+            itemsJugador.Clear();
+
+        ResetSprites();
+        CrearCaballoInicial();
+        GenerarCaballosDelDia();
+        ActualizarHUD();
+        GuardarPartida();
     }
 
     // =========================
@@ -95,8 +167,11 @@ public class GameManager : MonoBehaviour
         {
             saveVersion = SaveSystem.SaveVersionActual,
             dinero = dinero,
-            dia = dia
+            dia = dia,
+            campanaCompletada = campanaCompletada
         };
+
+        HashSet<string> idsCaballosJugador = new HashSet<string>();
 
         foreach (Caballo caballo in caballosJugador)
         {
@@ -107,8 +182,44 @@ public class GameManager : MonoBehaviour
             }
 
             caballo.ValidarDatos();
+            idsCaballosJugador.Add(caballo.id);
             int indiceSprite = ObtenerIndiceSprite(caballo.sprite);
             datos.caballosJugador.Add(CaballoData.DesdeCaballo(caballo, indiceSprite));
+        }
+
+        HashSet<string> idsItems = new HashSet<string>();
+        HashSet<string> slotsOcupados = new HashSet<string>();
+        HashSet<ItemCaballo> referenciasItems = new HashSet<ItemCaballo>();
+
+        if (itemsJugador != null)
+        {
+            foreach (ItemCaballo item in itemsJugador)
+            {
+                if (item == null)
+                {
+                    Debug.LogWarning("Se omitió un item nulo al guardar la partida.");
+                    continue;
+                }
+
+                if (!referenciasItems.Add(item))
+                {
+                    Debug.LogWarning("Se omitió una referencia de item repetida al guardar la partida.");
+                    continue;
+                }
+
+                item.ValidarDatos();
+
+                if (!idsItems.Add(item.id))
+                {
+                    Debug.LogWarning("Se encontró un ID de item duplicado. Se generará uno nuevo.");
+                    item.id = System.Guid.NewGuid().ToString("N");
+                    idsItems.Add(item.id);
+                }
+
+                ValidarAsignacionItem(item, idsCaballosJugador, slotsOcupados);
+                int indiceSprite = ObtenerIndiceSpriteItem(item.sprite);
+                datos.itemsJugador.Add(ItemCaballoData.DesdeItem(item, indiceSprite));
+            }
         }
 
         if (rivalPersistente != null && !EsCaballoJugador(rivalPersistente))
@@ -167,10 +278,53 @@ public class GameManager : MonoBehaviour
         }
 
         dinero = datos.dinero;
-        dia = Mathf.Max(DiaInicial, datos.dia);
+        dia = Mathf.Clamp(datos.dia, DiaInicial, UltimoDiaCampana);
+        campanaCompletada = datos.campanaCompletada;
+
+        if (campanaCompletada)
+            dia = UltimoDiaCampana;
 
         caballosJugador.Clear();
         caballosJugador.AddRange(caballosCargados);
+
+        if (itemsJugador == null)
+            itemsJugador = new List<ItemCaballo>();
+        else
+            itemsJugador.Clear();
+        HashSet<string> idsItemsCargados = new HashSet<string>();
+        HashSet<string> slotsOcupados = new HashSet<string>();
+
+        if (datos.itemsJugador != null)
+        {
+            foreach (ItemCaballoData itemGuardado in datos.itemsJugador)
+            {
+                if (itemGuardado == null)
+                {
+                    Debug.LogWarning("La partida contiene un item nulo que será ignorado.");
+                    continue;
+                }
+
+                string caballoEquipadoGuardado = itemGuardado.caballoEquipadoId;
+                ItemCaballo item = itemGuardado.CrearItem();
+
+                if (!string.IsNullOrWhiteSpace(caballoEquipadoGuardado) &&
+                    string.IsNullOrEmpty(item.caballoEquipadoId))
+                {
+                    Debug.LogWarning("Un item tenía un ID de caballo equipado inválido y quedó disponible.");
+                }
+
+                if (!idsItemsCargados.Add(item.id))
+                {
+                    Debug.LogWarning("Se encontró un ID de item duplicado. Se generará uno nuevo.");
+                    item.id = System.Guid.NewGuid().ToString("N");
+                    idsItemsCargados.Add(item.id);
+                }
+
+                ValidarAsignacionItem(item, idsCargados, slotsOcupados);
+                item.sprite = ObtenerSpriteItemGuardado(itemGuardado.spriteIndex);
+                itemsJugador.Add(item);
+            }
+        }
 
         rivalPersistente = null;
 
@@ -232,6 +386,52 @@ public class GameManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    int ObtenerIndiceSpriteItem(Sprite sprite)
+    {
+        if (sprite == null || spritesItems == null)
+            return -1;
+
+        for (int i = 0; i < spritesItems.Length; i++)
+        {
+            if (spritesItems[i] == sprite)
+                return i;
+        }
+
+        Debug.LogWarning("El sprite de un item no pertenece a spritesItems.");
+        return -1;
+    }
+
+    Sprite ObtenerSpriteItemGuardado(int indice)
+    {
+        if (indice < 0)
+            return null;
+
+        if (spritesItems != null &&
+            indice < spritesItems.Length &&
+            spritesItems[indice] != null)
+        {
+            return spritesItems[indice];
+        }
+
+        Debug.LogWarning("No se pudo restaurar el sprite de item con índice " + indice + ".");
+        return null;
+    }
+
+    static void ValidarAsignacionItem(
+        ItemCaballo item,
+        HashSet<string> idsCaballosJugador,
+        HashSet<string> slotsOcupados)
+    {
+        if (!SistemaEquipamiento.ValidarAsignacionPersistida(
+                item,
+                idsCaballosJugador,
+                slotsOcupados,
+                out string advertencia))
+        {
+            Debug.LogWarning(advertencia);
+        }
     }
 
     // =========================
@@ -329,6 +529,9 @@ public class GameManager : MonoBehaviour
 
         int i = Random.Range(0, candidatos.Count);
         Caballo elegido = candidatos[i];
+
+        elegido.nivel = 1;
+        elegido.experiencia = 0;
 
         ResetSprites();
         elegido.sprite = ObtenerSprite();
@@ -442,6 +645,58 @@ public class GameManager : MonoBehaviour
     // ECONOMÍA
     // =========================
 
+    public bool EquiparItem(Caballo caballo, ItemCaballo item)
+    {
+        bool equipado = SistemaEquipamiento.EquiparItem(
+            caballo,
+            item,
+            caballosJugador,
+            itemsJugador,
+            ref dinero,
+            out string mensaje);
+
+        if (!equipado)
+        {
+            Debug.LogWarning(mensaje);
+            return false;
+        }
+
+        Debug.Log(mensaje + " Coste: $" + SistemaEquipamiento.CostoEquiparItem + ".");
+        ActualizarHUD();
+        GuardarPartida();
+        return true;
+    }
+
+    public bool DesequiparItem(Caballo caballo, ItemCaballo item)
+    {
+        bool desequipado = SistemaEquipamiento.DesequiparItem(
+            caballo,
+            item,
+            caballosJugador,
+            itemsJugador,
+            ref dinero,
+            out string mensaje);
+
+        if (!desequipado)
+        {
+            Debug.LogWarning(mensaje);
+            return false;
+        }
+
+        Debug.Log(mensaje + " Coste: $" + SistemaEquipamiento.CostoDesequiparItem + ".");
+        ActualizarHUD();
+        GuardarPartida();
+        return true;
+    }
+
+    public ItemCaballo ObtenerItemEquipado(Caballo caballo, TipoSlotItem slot)
+    {
+        if (!EsCaballoJugador(caballo))
+            return null;
+
+        return SistemaEquipamiento.ObtenerItemEquipado(itemsJugador, caballo.id, slot);
+    }
+
     public void AgregarDinero(int c)
     {
         dinero += c;
@@ -458,10 +713,114 @@ public class GameManager : MonoBehaviour
 
     public void SiguienteDia()
     {
-        dia++;
+        if (campanaCompletada)
+        {
+            Debug.LogWarning("La campaña ya está completada. No se puede avanzar a un día 43.");
+            return;
+        }
+
+        TransicionCampana transicion = CalcularTransicionCampana(dia, dinero);
+
+        if (transicion.resultado == ResultadoCierreDia.CampanaPerdida)
+        {
+            Debug.LogWarning(
+                "CAMPAÑA PERDIDA. Semana " + transicion.semanaFinalizada +
+                ": dinero $" + dinero + ", cuota $" + transicion.cuotaAplicada + ".");
+            IniciarNuevaPartida();
+            return;
+        }
+
+        dinero = transicion.dineroRestante;
+
+        if (transicion.cuotaAplicada > 0)
+        {
+            Debug.Log(
+                "Semana " + transicion.semanaFinalizada + " superada. Cuota pagada: $" +
+                transicion.cuotaAplicada + ". Dinero restante: $" + dinero + ".");
+        }
+
+        if (transicion.resultado == ResultadoCierreDia.CampanaCompletada)
+        {
+            dia = UltimoDiaCampana;
+            campanaCompletada = true;
+            Debug.Log("CAMPAÑA COMPLETADA");
+            ActualizarHUD();
+            GuardarPartida();
+            return;
+        }
+
+        dia = transicion.diaSiguiente;
         GenerarCaballosDelDia();
         ActualizarHUD();
         GuardarPartida();
+    }
+
+    public static int ObtenerSemana(int diaCampana)
+    {
+        int diaValido = diaCampana < DiaInicial
+            ? DiaInicial
+            : diaCampana > UltimoDiaCampana
+                ? UltimoDiaCampana
+                : diaCampana;
+
+        return ((diaValido - 1) / DiasPorSemana) + 1;
+    }
+
+    public static int ObtenerDiaDeSemana(int diaCampana)
+    {
+        int diaValido = diaCampana < DiaInicial
+            ? DiaInicial
+            : diaCampana > UltimoDiaCampana
+                ? UltimoDiaCampana
+                : diaCampana;
+
+        return ((diaValido - 1) % DiasPorSemana) + 1;
+    }
+
+    public static int ObtenerCuotaSemana(int semana)
+    {
+        return semana >= 1 && semana <= CuotasSemanales.Length
+            ? CuotasSemanales[semana - 1]
+            : 0;
+    }
+
+    static TransicionCampana CalcularTransicionCampana(int diaActual, int dineroActual)
+    {
+        int diaValido = diaActual < DiaInicial
+            ? DiaInicial
+            : diaActual > UltimoDiaCampana
+                ? UltimoDiaCampana
+                : diaActual;
+
+        TransicionCampana transicion = new TransicionCampana
+        {
+            resultado = ResultadoCierreDia.Continuar,
+            diaSiguiente = diaValido + 1,
+            dineroRestante = dineroActual
+        };
+
+        if (diaValido % DiasPorSemana != 0)
+            return transicion;
+
+        transicion.semanaFinalizada = ObtenerSemana(diaValido);
+        transicion.cuotaAplicada = ObtenerCuotaSemana(transicion.semanaFinalizada);
+
+        if (dineroActual < transicion.cuotaAplicada)
+        {
+            transicion.resultado = ResultadoCierreDia.CampanaPerdida;
+            transicion.diaSiguiente = DiaInicial;
+            return transicion;
+        }
+
+        transicion.dineroRestante = dineroActual - transicion.cuotaAplicada;
+
+        if (transicion.semanaFinalizada == TotalSemanasCampana)
+        {
+            transicion.resultado = ResultadoCierreDia.CampanaCompletada;
+            transicion.diaSiguiente = UltimoDiaCampana;
+        }
+
+        return transicion;
     }
 
     void ActualizarHUD()

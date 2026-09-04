@@ -28,6 +28,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         cam = GetComponent<Camera>();
+        zoom = cam.fieldOfView;
         Cursor.lockState = CursorLockMode.None;
     }
 

@@ -1,5 +1,13 @@
 using UnityEngine;
 
+public enum TipoEstadisticaCaballo
+{
+    Velocidad,
+    Stamina,
+    Suerte,
+    Inteligencia
+}
+
 public static class ProgresionCaballo
 {
     public static int ExperienciaNecesariaParaSiguienteNivel(int nivel)
@@ -29,8 +37,7 @@ public static class ProgresionCaballo
             experienciaAcumulada -= ExperienciaNecesariaParaSiguienteNivel(caballo.nivel);
             caballo.nivel++;
             nivelesSubidos++;
-
-            AplicarCrecimientoPorNivel(caballo);
+            caballo.puntosMejoraPendientes += CalcularPuntosPorNivel(caballo.potencial);
         }
 
         caballo.experiencia = experienciaAcumulada > int.MaxValue
@@ -51,20 +58,75 @@ public static class ProgresionCaballo
         return nivelesSubidos;
     }
 
-    private static void AplicarCrecimientoPorNivel(Caballo caballo)
+    public static bool MejorarEstadistica(Caballo caballo, TipoEstadisticaCaballo estadistica)
     {
-        int oportunidades = ObtenerOportunidadesDeMejora(caballo.potencial);
-
-        for (int i = 0; i < oportunidades; i++)
+        if (caballo == null)
         {
-            if (!MejorarEstadisticaAleatoria(caballo))
-                break;
+            Debug.LogWarning("No se puede mejorar una estadística de un caballo nulo.");
+            return false;
         }
 
         caballo.ValidarDatos();
+
+        if (caballo.puntosMejoraPendientes <= 0)
+            return false;
+
+        int valorActual;
+
+        switch (estadistica)
+        {
+            case TipoEstadisticaCaballo.Velocidad:
+                valorActual = caballo.velocidad;
+                break;
+
+            case TipoEstadisticaCaballo.Stamina:
+                valorActual = caballo.stamina;
+                break;
+
+            case TipoEstadisticaCaballo.Suerte:
+                valorActual = caballo.suerte;
+                break;
+
+            case TipoEstadisticaCaballo.Inteligencia:
+                valorActual = caballo.inteligencia;
+                break;
+
+            default:
+                return false;
+        }
+
+        if (valorActual >= Caballo.EstadisticaMaxima)
+            return false;
+
+        switch (estadistica)
+        {
+            case TipoEstadisticaCaballo.Velocidad:
+                caballo.velocidad++;
+                break;
+
+            case TipoEstadisticaCaballo.Stamina:
+                caballo.stamina++;
+                break;
+
+            case TipoEstadisticaCaballo.Suerte:
+                caballo.suerte++;
+                break;
+
+            case TipoEstadisticaCaballo.Inteligencia:
+                caballo.inteligencia++;
+                break;
+        }
+
+        caballo.puntosMejoraPendientes--;
+        caballo.ValidarDatos();
+
+        if (GameManager.Instancia != null)
+            GameManager.Instancia.GuardarPartida();
+
+        return true;
     }
 
-    private static int ObtenerOportunidadesDeMejora(int potencial)
+    public static int CalcularPuntosPorNivel(int potencial)
     {
         int potencialValido = Caballo.NormalizarEstadistica(potencial);
 
@@ -80,50 +142,9 @@ public static class ProgresionCaballo
         else if (potencialValido >= 5)
             probabilidadSegundaMejora = 0.25f;
 
+        if (probabilidadSegundaMejora <= 0f)
+            return 1;
+
         return 1 + (Random.value < probabilidadSegundaMejora ? 1 : 0);
-    }
-
-    private static bool MejorarEstadisticaAleatoria(Caballo caballo)
-    {
-        int[] estadisticasDisponibles = new int[4];
-        int cantidadDisponible = 0;
-
-        if (caballo.velocidad < Caballo.EstadisticaMaxima)
-            estadisticasDisponibles[cantidadDisponible++] = 0;
-
-        if (caballo.stamina < Caballo.EstadisticaMaxima)
-            estadisticasDisponibles[cantidadDisponible++] = 1;
-
-        if (caballo.suerte < Caballo.EstadisticaMaxima)
-            estadisticasDisponibles[cantidadDisponible++] = 2;
-
-        if (caballo.inteligencia < Caballo.EstadisticaMaxima)
-            estadisticasDisponibles[cantidadDisponible++] = 3;
-
-        if (cantidadDisponible == 0)
-            return false;
-
-        int estadisticaElegida = estadisticasDisponibles[Random.Range(0, cantidadDisponible)];
-
-        switch (estadisticaElegida)
-        {
-            case 0:
-                caballo.velocidad++;
-                break;
-
-            case 1:
-                caballo.stamina++;
-                break;
-
-            case 2:
-                caballo.suerte++;
-                break;
-
-            case 3:
-                caballo.inteligencia++;
-                break;
-        }
-
-        return true;
     }
 }
