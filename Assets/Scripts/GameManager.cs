@@ -71,6 +71,11 @@ public class GameManager : MonoBehaviour
     [Header("Items Jugador")]
     public List<ItemCaballo> itemsJugador = new List<ItemCaballo>();
 
+    [Header("Tienda")]
+    [Min(1)] public int ofertasVisiblesTienda = SistemaTienda.OfertasIniciales;
+    [Min(1)] public int intervaloRotacionTienda = SistemaTienda.DiasPorRotacion;
+    public EstadoTiendaData estadoTienda;
+
     [Header("Caballos del Día")]
     public List<Caballo> caballosDelDia = new List<Caballo>();
 
@@ -150,25 +155,29 @@ public class GameManager : MonoBehaviour
         else
             itemsJugador.Clear();
 
+        estadoTienda = SistemaTienda.CrearEstado(CatalogoTienda(), OfertasTienda, dia, IntervaloTienda);
+
         ResetSprites();
         CrearCaballoInicial();
         GenerarCaballosDelDia();
         ActualizarHUD();
         GuardarPartida();
+        RefrescarTiendaAbierta();
     }
 
     // =========================
     // PERSISTENCIA
     // =========================
 
-    public void GuardarPartida()
+    public bool GuardarPartida()
     {
         GameData datos = new GameData
         {
             saveVersion = SaveSystem.SaveVersionActual,
             dinero = dinero,
             dia = dia,
-            campanaCompletada = campanaCompletada
+            campanaCompletada = campanaCompletada,
+            estadoTienda = estadoTienda
         };
 
         HashSet<string> idsCaballosJugador = new HashSet<string>();
@@ -230,7 +239,7 @@ public class GameManager : MonoBehaviour
             datos.rivalPersistente = CaballoData.DesdeCaballo(rivalPersistente, indiceSprite);
         }
 
-        SaveSystem.Guardar(datos);
+        return SaveSystem.Guardar(datos);
     }
 
     bool CargarPartida()
@@ -283,6 +292,9 @@ public class GameManager : MonoBehaviour
 
         if (campanaCompletada)
             dia = UltimoDiaCampana;
+
+        estadoTienda = datos.estadoTienda;
+        SincronizarTienda();
 
         caballosJugador.Clear();
         caballosJugador.AddRange(caballosCargados);
@@ -645,6 +657,87 @@ public class GameManager : MonoBehaviour
     // ECONOMÍA
     // =========================
 
+    private int OfertasTienda => ofertasVisiblesTienda <= 0
+        ? SistemaTienda.OfertasIniciales
+        : Mathf.Clamp(ofertasVisiblesTienda, 1, 6);
+    private int IntervaloTienda => intervaloRotacionTienda <= 0
+        ? SistemaTienda.DiasPorRotacion
+        : intervaloRotacionTienda;
+
+    public List<DefinicionProductoTienda> CatalogoTienda()
+    {
+        return SistemaTienda.CrearCatalogo(spritesItems);
+    }
+
+    public bool SincronizarTienda()
+    {
+        List<DefinicionProductoTienda> catalogo = CatalogoTienda();
+        if (!SistemaTienda.StockValido(estadoTienda, catalogo, OfertasTienda))
+        {
+            estadoTienda = SistemaTienda.CrearEstado(catalogo, OfertasTienda, dia, IntervaloTienda);
+            return true;
+        }
+
+        return SistemaTienda.Sincronizar(estadoTienda, catalogo, OfertasTienda, dia, IntervaloTienda);
+    }
+
+    public bool IntentarComprarItem(string idDefinicion)
+    {
+        DefinicionProductoTienda producto = SistemaTienda.Buscar(CatalogoTienda(), idDefinicion);
+        if (producto == null || producto.tipoProducto != TipoProductoTienda.Equipable ||
+            !producto.tieneSlotEquipable || !System.Enum.IsDefined(typeof(TipoSlotItem), producto.slotPermitido) ||
+            producto.precio < 0 || dinero < producto.precio || itemsJugador == null || producto.sprite == null ||
+            estadoTienda == null || estadoTienda.idsProductosStock == null ||
+            !estadoTienda.idsProductosStock.Contains(producto.idDefinicion))
+            return false;
+
+        ItemCaballo item = new ItemCaballo
+        {
+            id = System.Guid.NewGuid().ToString("N"),
+            idDefinicion = producto.idDefinicion,
+            nombre = producto.nombre,
+            descripcion = producto.descripcion,
+            slotPermitido = producto.slotPermitido,
+            sprite = producto.sprite,
+            caballoEquipadoId = null
+        };
+
+        int dineroAnterior = dinero;
+        itemsJugador.Add(item);
+        dinero -= producto.precio;
+        if (!GuardarPartida())
+        {
+            itemsJugador.Remove(item);
+            dinero = dineroAnterior;
+            return false;
+        }
+
+        ActualizarHUD();
+        return true;
+    }
+
+    public bool IntentarRerollTiendaManual()
+    {
+        if (dinero < SistemaTienda.CostoRerollManual || estadoTienda == null ||
+            estadoTienda.idsProductosStock == null)
+            return false;
+
+        List<string> anterior = estadoTienda.idsProductosStock;
+        List<string> nuevo = SistemaTienda.GenerarStockDistinto(CatalogoTienda(), OfertasTienda, anterior);
+        int dineroAnterior = dinero;
+        estadoTienda.idsProductosStock = nuevo;
+        dinero -= SistemaTienda.CostoRerollManual;
+        if (!GuardarPartida())
+        {
+            estadoTienda.idsProductosStock = anterior;
+            dinero = dineroAnterior;
+            return false;
+        }
+
+        ActualizarHUD();
+        return true;
+    }
+
     public bool EquiparItem(Caballo caballo, ItemCaballo item)
     {
         bool equipado = SistemaEquipamiento.EquiparItem(
@@ -750,9 +843,23 @@ public class GameManager : MonoBehaviour
         }
 
         dia = transicion.diaSiguiente;
+        bool tiendaRotada = SincronizarTienda();
         GenerarCaballosDelDia();
         ActualizarHUD();
         GuardarPartida();
+        if (tiendaRotada)
+            RefrescarTiendaAbierta();
+    }
+
+    private static void RefrescarTiendaAbierta()
+    {
+        if (UIManager.instance == null || UIManager.instance.viewTienda == null ||
+            !UIManager.instance.viewTienda.activeInHierarchy)
+            return;
+
+        TiendaView tienda = UIManager.instance.viewTienda.GetComponentInChildren<TiendaView>(true);
+        if (tienda != null)
+            tienda.RefrescarPorCambioDeStock();
     }
 
     public static int ObtenerSemana(int diaCampana)

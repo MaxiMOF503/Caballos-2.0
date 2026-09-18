@@ -13,6 +13,7 @@ public enum TipoSlotItem
 public class ItemCaballo
 {
     public string id = Guid.NewGuid().ToString("N");
+    public string idDefinicion = string.Empty;
     public string nombre;
     public string descripcion;
     public TipoSlotItem slotPermitido;
@@ -28,6 +29,7 @@ public class ItemCaballo
             nombre = "Item";
 
         descripcion ??= string.Empty;
+        idDefinicion ??= string.Empty;
 
         if (!Enum.IsDefined(typeof(TipoSlotItem), slotPermitido))
             slotPermitido = TipoSlotItem.Cabeza;
@@ -245,12 +247,22 @@ public class GameData
     public List<CaballoData> caballosJugador = new List<CaballoData>();
     public CaballoData rivalPersistente;
     public List<ItemCaballoData> itemsJugador = new List<ItemCaballoData>();
+    public EstadoTiendaData estadoTienda;
+}
+
+[Serializable]
+public class EstadoTiendaData
+{
+    public List<string> idsProductosStock = new List<string>();
+    public int diaUltimaRotacion;
+    public int diaProximaRotacion;
 }
 
 [Serializable]
 public class ItemCaballoData
 {
     public string id;
+    public string idDefinicion;
     public string nombre;
     public string descripcion;
     public TipoSlotItem slotPermitido;
@@ -262,6 +274,7 @@ public class ItemCaballoData
         return new ItemCaballoData
         {
             id = item.id,
+            idDefinicion = item.idDefinicion,
             nombre = item.nombre,
             descripcion = item.descripcion,
             slotPermitido = item.slotPermitido,
@@ -275,6 +288,7 @@ public class ItemCaballoData
         ItemCaballo item = new ItemCaballo
         {
             id = id,
+            idDefinicion = idDefinicion ?? string.Empty,
             nombre = nombre,
             descripcion = descripcion,
             slotPermitido = slotPermitido,
