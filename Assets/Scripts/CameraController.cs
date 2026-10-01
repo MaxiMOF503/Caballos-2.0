@@ -7,6 +7,28 @@ public class CameraController : MonoBehaviour
     [Header("Movimiento")]
     public float sensibilidad = 100f;
 
+    [Header("Navegacion fija del hub")]
+    [Tooltip("Activar solo en la camara de esta habitacion. Conserva el control anterior en otros usos.")]
+    public bool fixedHubNavigation;
+    [Tooltip("Desplazamiento horizontal respecto a la orientacion inicial de la camara.")]
+    public float centralYawOffset;
+    [Min(0f)] public float horizontalSensitivity = 3f;
+    [Min(0f)] public float verticalSensitivity = 2f;
+    [Range(-90f, 0f)] public float minYaw = -90f;
+    [Range(0f, 90f)] public float maxYaw = 90f;
+    [Range(-89f, 0f)] public float minPitch = -25f;
+    [Range(0f, 89f)] public float maxPitch = 30f;
+    [Min(0f)] public float rotationSmoothTime = 0.045f;
+
+    Vector3 posicionInicial;
+    Quaternion rotacionCentral;
+    float yaw;
+    float pitch;
+    float smoothYaw;
+    float smoothPitch;
+    float yawVelocity;
+    float pitchVelocity;
+
     float rotacionX = 0f;
     float rotacionY = 0f;
 
@@ -23,6 +45,8 @@ public class CameraController : MonoBehaviour
     void Awake()
     {
         instancia = this;
+        posicionInicial = transform.position;
+        rotacionCentral = Quaternion.AngleAxis(centralYawOffset, Vector3.up) * transform.rotation;
     }
 
     void Start()
@@ -30,10 +54,29 @@ public class CameraController : MonoBehaviour
         cam = GetComponent<Camera>();
         zoom = cam.fieldOfView;
         Cursor.lockState = CursorLockMode.None;
+        if (fixedHubNavigation)
+            Cursor.visible = true;
     }
 
     void Update()
     {
+        if (fixedHubNavigation)
+        {
+            bool menuAbierto = GameManager.Instancia != null &&
+                GameManager.Instancia.estadoActual != GameState.Hub;
+            // Detener tambien el suavizado pendiente al abrir UI o hacer clic.
+            if (!puedeMover || menuAbierto || Input.GetMouseButton(0))
+            {
+                DetenerSuavizado();
+                return;
+            }
+
+            // Mouse X/Y ya son deltas: no multiplicarlos por deltaTime.
+            AplicarMiradaHub(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"),
+                Time.unscaledDeltaTime);
+            return;
+        }
+
         if (puedeMover)
         {
             // ROTACIÓN
@@ -57,12 +100,76 @@ public class CameraController : MonoBehaviour
         }
     }
 
+    void LateUpdate()
+    {
+        if (!fixedHubNavigation)
+            return;
+
+        transform.position = posicionInicial;
+        transform.rotation = rotacionCentral * Quaternion.Euler(smoothPitch, smoothYaw, 0f);
+    }
+
+    void AplicarMiradaHub(float inputX, float inputY, float deltaTime)
+    {
+        yaw = Mathf.Clamp(yaw + inputX * horizontalSensitivity, minYaw, maxYaw);
+        pitch = Mathf.Clamp(pitch - inputY * verticalSensitivity, minPitch, maxPitch);
+
+        if (rotationSmoothTime <= 0f)
+        {
+            smoothYaw = yaw;
+            smoothPitch = pitch;
+        }
+        else if (deltaTime > 0f)
+        {
+            smoothYaw = Mathf.SmoothDamp(smoothYaw, yaw, ref yawVelocity,
+                rotationSmoothTime, Mathf.Infinity, deltaTime);
+            smoothPitch = Mathf.SmoothDamp(smoothPitch, pitch, ref pitchVelocity,
+                rotationSmoothTime, Mathf.Infinity, deltaTime);
+        }
+
+        smoothYaw = Mathf.Clamp(smoothYaw, minYaw, maxYaw);
+        smoothPitch = Mathf.Clamp(smoothPitch, minPitch, maxPitch);
+    }
+
+    void DetenerSuavizado()
+    {
+        yaw = smoothYaw;
+        pitch = smoothPitch;
+        yawVelocity = 0f;
+        pitchVelocity = 0f;
+    }
+
+    void OnValidate()
+    {
+        minYaw = Mathf.Clamp(minYaw, -90f, 0f);
+        maxYaw = Mathf.Clamp(maxYaw, 0f, 90f);
+        minPitch = Mathf.Clamp(minPitch, -89f, 0f);
+        maxPitch = Mathf.Clamp(maxPitch, 0f, 89f);
+    }
+
 
     // ENFOCAR OBJETO Y BLOQUEAR
 
     public void EnfocarObjeto(Transform objetivo)
     {
-        puedeMover = false;
+        SetCameraLocked(true);
+
+        if (fixedHubNavigation)
+        {
+            if (objetivo == null)
+                return;
+            Vector3 direccionLocal = Quaternion.Inverse(rotacionCentral) *
+                (objetivo.position - posicionInicial);
+            if (direccionLocal.sqrMagnitude < 0.0001f)
+                return;
+
+            Vector3 angulos = Quaternion.LookRotation(direccionLocal).eulerAngles;
+            smoothYaw = Mathf.Clamp(Mathf.DeltaAngle(0f, angulos.y), minYaw, maxYaw);
+            smoothPitch = Mathf.Clamp(Mathf.DeltaAngle(0f, angulos.x), minPitch, maxPitch);
+            DetenerSuavizado();
+            transform.rotation = rotacionCentral * Quaternion.Euler(smoothPitch, smoothYaw, 0f);
+            return;
+        }
 
         Vector3 direccion = objetivo.position - transform.position;
         Quaternion rotacion = Quaternion.LookRotation(direccion);
@@ -79,6 +186,13 @@ public class CameraController : MonoBehaviour
  
     public void ActivarControl()
     {
-        puedeMover = true;
+        SetCameraLocked(false);
+    }
+
+    public void SetCameraLocked(bool locked)
+    {
+        puedeMover = !locked;
+        if (fixedHubNavigation)
+            DetenerSuavizado();
     }
 }
