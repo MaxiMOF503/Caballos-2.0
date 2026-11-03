@@ -25,6 +25,7 @@ public class Caballo
 
     public bool esDelJugador;
 
+    public string visualProfileId;
     public Sprite sprite;
 
     public void ValidarDatos()

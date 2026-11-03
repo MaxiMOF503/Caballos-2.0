@@ -1,0 +1,5 @@
+Edit Mode checks passed: 498
+Play Mode persistence: generated rivals, 12 identities saved/loaded through GameManager + SaveSystem, stats and rival preserved; 28 legacy sprites migrated and reloaded unchanged.
+Real race group 0: 6 profiles, all 48 frames observed, base sprites restored.
+Real race group 1: 6 profiles, all 48 frames observed, base sprites restored.
+Play Mode PASS: 2 real CarreraUI races, all 12 profiles, correct frames and base restoration. Runtime assertions sampled repeatedly; not counted as independent tests.

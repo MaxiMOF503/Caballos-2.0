@@ -304,6 +304,7 @@ public class ItemCaballoData
 public class CaballoData
 {
     public string id;
+    public string visualProfileId;
     public string nombre;
     public int edad;
     public int nivel;
@@ -324,6 +325,7 @@ public class CaballoData
         return new CaballoData
         {
             id = caballo.id,
+            visualProfileId = caballo.visualProfileId,
             nombre = caballo.nombre,
             edad = caballo.edad,
             nivel = caballo.nivel,
@@ -346,6 +348,7 @@ public class CaballoData
         Caballo caballo = new Caballo
         {
             id = id,
+            visualProfileId = visualProfileId,
             nombre = nombre,
             edad = edad,
             nivel = nivel,

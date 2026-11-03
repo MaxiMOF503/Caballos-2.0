@@ -319,6 +319,7 @@ public class CarreraUI : MonoBehaviour
 
     List<EstadoCaballoCarrera> estadosCarrera = new List<EstadoCaballoCarrera>();
 
+    readonly List<HorseVisualAnimator> visualAnimators = new List<HorseVisualAnimator>();
     bool carreraActiva;
     Caballo caballoJugadorParticipante;
     int diaPreparado;
@@ -375,6 +376,7 @@ public class CarreraUI : MonoBehaviour
         foreach (Transform child in contenedorCaballos)
             Destroy(child.gameObject);
 
+        visualAnimators.Clear();
         caballosUI.Clear();
         caballosImg.Clear();
         estadosCarrera.Clear();
@@ -388,6 +390,9 @@ public class CarreraUI : MonoBehaviour
             //  FIX IMPORTANTE: buscar Image en hijos
             Image img = obj.GetComponentInChildren<Image>(true);
 
+            var visual = obj.AddComponent<HorseVisualAnimator>();
+            visual.Bind(caballosData[i], img);
+            visualAnimators.Add(visual);
             caballosUI.Add(ui);
             caballosImg.Add(img);
 
@@ -441,6 +446,7 @@ public class CarreraUI : MonoBehaviour
             caballosUI[i].anchoredPosition = posicionInicial;
         }
 
+        foreach (var visual in visualAnimators) visual.StartRun();
         carreraActiva = true;
 
         botonIniciar.SetActive(false);
@@ -498,6 +504,7 @@ public class CarreraUI : MonoBehaviour
 
         carreraActiva = false;
 
+        foreach (var visual in visualAnimators) visual.StopRun();
         Caballo caballoGanador = caballosData[ganador];
         bool ganoJugador = EsCaballoJugadorParticipante(caballoGanador);
         Caballo mejorRival = ganoJugador

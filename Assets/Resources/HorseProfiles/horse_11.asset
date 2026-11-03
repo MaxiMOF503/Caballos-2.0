@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a72746d7ceb004faa6c27e79c4ac35, type: 3}
+  m_Name: horse_11
+  m_EditorClassIdentifier: Assembly-CSharp::HorseVisualProfile
+  profileId: horse_11
+  baseSprite: {fileID: 21300000, guid: 9eb103c1c48a7fb43ac49166bffffe9d, type: 3}
+  runFrames:
+  - {fileID: 21300000, guid: f19d3f21b67d68644b7954aef43cf078, type: 3}
+  - {fileID: 21300000, guid: 25e7379aa975e0748807728b6f94c3f3, type: 3}
+  - {fileID: 21300000, guid: 0eb726cfbeb531842979cf848908fe04, type: 3}
+  - {fileID: 21300000, guid: 864463cca20f2d94a904a1cd05d3619f, type: 3}
+  - {fileID: 21300000, guid: 5cca1827c2b34a344ab99ac85f981976, type: 3}
+  - {fileID: 21300000, guid: 4b6a3feca924ced489bb1e33702347ef, type: 3}
+  - {fileID: 21300000, guid: c7cca50a95136c14bb485cd2ff598d2a, type: 3}
+  - {fileID: 21300000, guid: a252a22df165b5a4da944db813b80ce5, type: 3}
+  framesPerSecond: 9
+  provisional: 1
+  source: WhatsApp video 500x670; approximate phase selection; provisional

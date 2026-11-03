@@ -114,6 +114,28 @@ public class GameManager : MonoBehaviour
     {
         ResetSprites();
 
+        // Menu intent takes priority over the editor-only development reset.
+        if (GameLaunch.TryConsume(out GameLaunchMode launchMode))
+        {
+            if (launchMode == GameLaunchMode.NewGame)
+            {
+                IniciarNuevaPartida();
+                return;
+            }
+
+            // A failed explicit load must never fall through to a new campaign.
+            if (!SaveSystem.PuedeCargar(out string error) || !CargarPartida())
+            {
+                GameLaunch.Fail(string.IsNullOrEmpty(error) ? "No se pudo cargar la partida. El archivo original se conservó." : error);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(GameLaunch.MenuScenePath);
+                return;
+            }
+            if (!campanaCompletada) GenerarCaballosDelDia();
+            else caballosDelDia.Clear();
+            ActualizarHUD();
+            return;
+        }
+
 #if UNITY_EDITOR
         if (reiniciarPartidaAlIniciarEnEditor)
         {
@@ -282,7 +304,7 @@ public class GameManager : MonoBehaviour
                 idsCargados.Add(caballo.id);
             }
 
-            caballo.sprite = ObtenerSpriteGuardado(caballoGuardado.spriteIndex);
+            RestaurarVisual(caballo, caballoGuardado.spriteIndex);
             caballosCargados.Add(caballo);
         }
 
@@ -352,13 +374,33 @@ public class GameManager : MonoBehaviour
             {
                 rivalCargado.esDelJugador = false;
                 rivalCargado.ValidarDatos();
-                rivalCargado.sprite = ObtenerSpriteGuardado(datos.rivalPersistente.spriteIndex);
+                RestaurarVisual(rivalCargado, datos.rivalPersistente.spriteIndex);
                 rivalPersistente = rivalCargado;
             }
         }
 
         Debug.Log("Partida cargada: " + caballosJugador.Count + " caballo(s).");
         return true;
+    }
+
+    void AsignarVisualNuevo(Caballo caballo)
+    {
+        var catalog = HorseVisualCatalog.Default;
+        if (catalog == null || !catalog.AssignNew(caballo))
+        {
+            caballo.sprite = ObtenerSprite();
+            caballo.visualProfileId = "legacy:" + ObtenerIndiceSprite(caballo.sprite);
+        }
+    }
+
+    void RestaurarVisual(Caballo caballo, int indice)
+    {
+        var catalog = HorseVisualCatalog.Default;
+        var profile = catalog != null ? catalog.Resolve(caballo.visualProfileId) : null;
+        if (profile != null) { caballo.sprite = profile.baseSprite; return; }
+        var legacy = ObtenerSpriteGuardado(indice);
+        if (catalog != null) catalog.Restore(caballo, indice, legacy);
+        else caballo.sprite = legacy;
     }
 
     int ObtenerIndiceSprite(Sprite sprite)
@@ -372,6 +414,10 @@ public class GameManager : MonoBehaviour
                 return i;
         }
 
+        var catalog = HorseVisualCatalog.Default;
+        if (catalog != null && catalog.profiles != null)
+            foreach (var profile in catalog.profiles)
+                if (profile != null && profile.baseSprite == sprite) return -1;
         Debug.LogWarning("El sprite de un caballo no pertenece a spritesCaballos.");
         return -1;
     }
@@ -546,7 +592,7 @@ public class GameManager : MonoBehaviour
         elegido.experiencia = 0;
 
         ResetSprites();
-        elegido.sprite = ObtenerSprite();
+        AsignarVisualNuevo(elegido);
 
         caballosJugador.Add(elegido);
 
@@ -599,7 +645,7 @@ public class GameManager : MonoBehaviour
             c.estres = 0;
             c.esDelJugador = false;
 
-            c.sprite = ObtenerSprite(rivalPersistente != null ? rivalPersistente.sprite : null);
+            AsignarVisualNuevo(c);
             c.ValidarDatos();
 
             caballosDelDia.Add(c);

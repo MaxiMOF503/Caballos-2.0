@@ -8,7 +8,22 @@ public static class SaveSystem
     private const string NombreArchivo = "gameData.json";
 
     public static string RutaArchivo =>
-        Path.Combine(Application.persistentDataPath, NombreArchivo);
+        Path.Combine(DirectorioGuardado, NombreArchivo);
+
+    private static string DirectorioGuardado
+    {
+        get
+        {
+#if UNITY_EDITOR
+            // Batch validation uses a separate save; never overwrites the player's campaign.
+            string validationPath = Environment.GetEnvironmentVariable("CABALLOS_VALIDATION_SAVE_PATH");
+            if (string.IsNullOrEmpty(validationPath))
+                validationPath = UnityEditor.SessionState.GetString("HorseVisualRecovery.SavePath", "");
+            if (!string.IsNullOrEmpty(validationPath)) return validationPath;
+#endif
+            return Application.persistentDataPath;
+        }
+    }
 
     public static bool Guardar(GameData datos)
     {
@@ -18,6 +33,35 @@ public static class SaveSystem
     public static bool IntentarCargar(out GameData datos)
     {
         return IntentarCargarDesdeRuta(RutaArchivo, out datos);
+    }
+
+    // Menu preflight: read only. In particular, corrupt files are neither
+    // replaced nor backed up as a side effect of displaying the menu.
+    public static bool PuedeCargar(out string error)
+    {
+        error = null;
+        if (!File.Exists(RutaArchivo))
+        {
+            error = "No se encontró ninguna partida guardada.";
+            return false;
+        }
+        try
+        {
+            var datos = JsonUtility.FromJson<GameData>(File.ReadAllText(RutaArchivo));
+            if (datos == null || datos.saveVersion != SaveVersionActual ||
+                datos.caballosJugador == null || datos.caballosJugador.Count == 0 ||
+                datos.caballosJugador.Exists(c => c == null))
+            {
+                error = "La partida guardada es inválida o tiene una versión incompatible. El archivo se conservó.";
+                return false;
+            }
+            return true;
+        }
+        catch (Exception)
+        {
+            error = "No se pudo leer la partida guardada. Puede estar dañada o no ser accesible. El archivo se conservó.";
+            return false;
+        }
     }
 
     public static void RespaldarPartidaInvalida()

@@ -1,0 +1,7 @@
+Edit Mode PASS: 84 checks; menu/build settings, references, image-relative hotspots, aspect-fit geometry at four resolutions. Not a rendered visual test.
+Play Mode PASS: missing/corrupt save, overwrite confirmation/cancel, settings/prefs, internal pointer/navigation events, safe editor exit.
+Play Mode PASS: confirmed new game opens original hub with day 1, money 1000, original horse generation and initial progression.
+Play Mode PASS: load opens hub and retains day, money, horse ID/profile, stats, XP, equipment, rival and campaign. JSON unchanged by explicit load. Hub camera/UI references intact; visual behavior not tested.
+Play Mode PASS: corruption after preflight returns to menu, preserves file and clears transition.
+FINAL PASS. No rendered visual or standalone quit test performed.
+Separate process PASS: PlayerPrefs volume/fullscreen/resolution survived Unity restart. Test keys removed afterward.

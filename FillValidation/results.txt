@@ -1,0 +1,3 @@
+Edit Mode PASS: transparent Button/Image with Transition=None; four hidden solid fills; original first-diamond baked selection covered by non-raycast background interpolation; centers/scale checked at four resolutions.
+Play Mode PASS: empty initial state; all 4 pointer enter/exit; 400 rapid transitions including delayed exits; genuine keyboard focus restored after hover exit; mouse click clears stale keyboard focus; modal reset; UGUI raycasts and all 4 existing click routes; solid center-filled diamond topology. Assertions: 10972
+No desktop input or rendered visual test performed. Background repair appearance requires manual visual review.

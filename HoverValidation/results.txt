@@ -1,0 +1,3 @@
+Edit Mode PASS: transparent Button/Image with Transition=None; four hidden non-raycast ring indicators; no button Animator/Shadow.
+Play Mode PASS: all 4 pointer enter/exit; 400 rapid transitions including delayed exits; keyboard/mouse handover; mouse exit clears selection; UGUI raycasts hit transparent buttons and ignore glows; all 4 existing click routes. Diamond mesh topology checked. Assertions: 10956
+No desktop input or rendered visual test performed.

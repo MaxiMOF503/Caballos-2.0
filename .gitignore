@@ -51,6 +51,7 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -105,3 +106,22 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Local validation diagnostics and machine-specific verification snapshots.
+# Keep only useful, portable reports and the repeatable PNG audit.
+/VisualValidation/*
+!/VisualValidation/results.txt
+!/VisualValidation/Audit-Png.ps1
+!/VisualValidation/png-audit.csv
+!/VisualValidation/alignment-audit.csv
+/MenuValidation/*
+!/MenuValidation/results.txt
+!/MenuValidation/horse-regression.txt
+/HoverValidation/*
+!/HoverValidation/results.txt
+/FillValidation/*
+!/FillValidation/results.txt
+/CheckpointValidation/*
+!/CheckpointValidation/README.md
+/Validation/
+/ValidationSave/
