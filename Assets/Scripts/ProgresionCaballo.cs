@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum TipoEstadisticaCaballo
@@ -60,70 +61,58 @@ public static class ProgresionCaballo
 
     public static bool MejorarEstadistica(Caballo caballo, TipoEstadisticaCaballo estadistica)
     {
-        if (caballo == null)
-        {
-            Debug.LogWarning("No se puede mejorar una estadística de un caballo nulo.");
+        caballo?.ValidarDatos();
+        return AplicarMejoras(caballo, new Dictionary<TipoEstadisticaCaballo, int> { [estadistica] = 1 });
+    }
+
+    public static int ValorBase(Caballo caballo, TipoEstadisticaCaballo estadistica) => estadistica switch
+    {
+        TipoEstadisticaCaballo.Velocidad => caballo.velocidad,
+        TipoEstadisticaCaballo.Stamina => caballo.stamina,
+        TipoEstadisticaCaballo.Suerte => caballo.suerte,
+        TipoEstadisticaCaballo.Inteligencia => caballo.inteligencia,
+        _ => Caballo.EstadisticaMaxima
+    };
+
+    public static bool AplicarMejoras(Caballo caballo, IReadOnlyDictionary<TipoEstadisticaCaballo, int> mejoras)
+    {
+        if (caballo == null || mejoras == null || mejoras.Count == 0)
             return false;
-        }
 
-        caballo.ValidarDatos();
-
-        if (caballo.puntosMejoraPendientes <= 0)
-            return false;
-
-        int valorActual;
-
-        switch (estadistica)
+        int disponibles = caballo.puntosMejoraPendientes;
+        foreach (var mejora in mejoras)
         {
-            case TipoEstadisticaCaballo.Velocidad:
-                valorActual = caballo.velocidad;
-                break;
-
-            case TipoEstadisticaCaballo.Stamina:
-                valorActual = caballo.stamina;
-                break;
-
-            case TipoEstadisticaCaballo.Suerte:
-                valorActual = caballo.suerte;
-                break;
-
-            case TipoEstadisticaCaballo.Inteligencia:
-                valorActual = caballo.inteligencia;
-                break;
-
-            default:
+            if (mejora.Value <= 0 || mejora.Value > disponibles ||
+                mejora.Value > Caballo.EstadisticaMaxima - ValorBase(caballo, mejora.Key))
                 return false;
+
+            disponibles -= mejora.Value;
         }
 
-        if (valorActual >= Caballo.EstadisticaMaxima)
-            return false;
+        int puntosAnteriores = caballo.puntosMejoraPendientes;
+        AjustarValores(caballo, mejoras, 1);
+        caballo.puntosMejoraPendientes = disponibles;
+        if (GameManager.Instancia == null || GameManager.Instancia.GuardarPartida())
+            return true;
 
-        switch (estadistica)
+        AjustarValores(caballo, mejoras, -1);
+        caballo.puntosMejoraPendientes = puntosAnteriores;
+        return false;
+    }
+
+    private static void AjustarValores(Caballo caballo, IReadOnlyDictionary<TipoEstadisticaCaballo, int> mejoras, int signo)
+    {
+        foreach (var mejora in mejoras)
         {
-            case TipoEstadisticaCaballo.Velocidad:
-                caballo.velocidad++;
-                break;
-
-            case TipoEstadisticaCaballo.Stamina:
-                caballo.stamina++;
-                break;
-
-            case TipoEstadisticaCaballo.Suerte:
-                caballo.suerte++;
-                break;
-
-            case TipoEstadisticaCaballo.Inteligencia:
-                caballo.inteligencia++;
-                break;
+            int cantidad = signo * mejora.Value;
+            switch (mejora.Key)
+            {
+                case TipoEstadisticaCaballo.Velocidad: caballo.velocidad += cantidad; break;
+                case TipoEstadisticaCaballo.Stamina: caballo.stamina += cantidad; break;
+                case TipoEstadisticaCaballo.Suerte: caballo.suerte += cantidad; break;
+                case TipoEstadisticaCaballo.Inteligencia: caballo.inteligencia += cantidad; break;
+            }
         }
-
-        caballo.puntosMejoraPendientes--;
-        caballo.ValidarDatos();
-
-        if (GameManager.Instancia != null)
-            GameManager.Instancia.GuardarPartida();
-
-        return true;
     }
 
     public static int CalcularPuntosPorNivel(int potencial)

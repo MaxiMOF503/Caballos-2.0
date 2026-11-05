@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca312029b61f4bc6ac490a4521b8b750, type: 3}
+  m_Name: Catalogo
+  m_EditorClassIdentifier: Assembly-CSharp::CatalogoCarreras
+  atlasBanners: {fileID: 2800000, guid: e98695b3973c41e8a716bf72e022aec8, type: 3}
+  minimoOfertas: 2
+  maximoOfertas: 4
+  carreraEspecialSemanal: copa-nocturna
+  carreras:
+  - id: copa-pampeana
+    nombre: Copa Pampeana
+    tipo: 0
+    distanciaMetros: 1200
+    premio: 1000
+    dificultad: 1
+    indiceBanner: 0
+    bannerAlternativo: {fileID: 0}
+  - id: trofeo-alamedas
+    nombre: Trofeo de las Alamedas
+    tipo: 0
+    distanciaMetros: 1200
+    premio: 1200
+    dificultad: 1
+    indiceBanner: 1
+    bannerAlternativo: {fileID: 0}
+  - id: sprint-faro
+    nombre: Sprint del Faro
+    tipo: 0
+    distanciaMetros: 1200
+    premio: 1200
+    dificultad: 2
+    indiceBanner: 2
+    bannerAlternativo: {fileID: 0}
+  - id: velocidad-canon
+    nombre: Velocidad del Cañón
+    tipo: 0
+    distanciaMetros: 1200
+    premio: 1500
+    dificultad: 2
+    indiceBanner: 3
+    bannerAlternativo: {fileID: 0}
+  - id: premio-cerezos
+    nombre: Premio de los Cerezos
+    tipo: 1
+    distanciaMetros: 1600
+    premio: 1500
+    dificultad: 2
+    indiceBanner: 4
+    bannerAlternativo: {fileID: 0}
+  - id: milla-canterbury
+    nombre: Milla de Canterbury
+    tipo: 1
+    distanciaMetros: 1600
+    premio: 1500
+    dificultad: 2
+    indiceBanner: 5
+    bannerAlternativo: {fileID: 0}
+  - id: trofeo-toscano
+    nombre: Trofeo Toscano
+    tipo: 1
+    distanciaMetros: 1600
+    premio: 2000
+    dificultad: 3
+    indiceBanner: 6
+    bannerAlternativo: {fileID: 0}
+  - id: copa-rin
+    nombre: Copa del Rin
+    tipo: 1
+    distanciaMetros: 1600
+    premio: 2000
+    dificultad: 3
+    indiceBanner: 7
+    bannerAlternativo: {fileID: 0}
+  - id: gran-premio-chateau
+    nombre: Gran Premio del Château
+    tipo: 2
+    distanciaMetros: 2100
+    premio: 2000
+    dificultad: 3
+    indiceBanner: 8
+    bannerAlternativo: {fileID: 0}
+  - id: derbi-esmeralda
+    nombre: Derbi Esmeralda
+    tipo: 2
+    distanciaMetros: 2100
+    premio: 2000
+    dificultad: 3
+    indiceBanner: 9
+    bannerAlternativo: {fileID: 0}
+  - id: copa-alpina
+    nombre: Copa Alpina
+    tipo: 2
+    distanciaMetros: 2100
+    premio: 3000
+    dificultad: 4
+    indiceBanner: 10
+    bannerAlternativo: {fileID: 0}
+  - id: premio-andalucia
+    nombre: Premio de Andalucía
+    tipo: 2
+    distanciaMetros: 2100
+    premio: 3000
+    dificultad: 4
+    indiceBanner: 11
+    bannerAlternativo: {fileID: 0}
+  - id: gran-fondo-fuji
+    nombre: Gran Fondo del Fuji
+    tipo: 3
+    distanciaMetros: 2400
+    premio: 4000
+    dificultad: 4
+    indiceBanner: 12
+    bannerAlternativo: {fileID: 0}
+  - id: desafio-highlands
+    nombre: Desafío de las Highlands
+    tipo: 3
+    distanciaMetros: 2400
+    premio: 3000
+    dificultad: 4
+    indiceBanner: 13
+    bannerAlternativo: {fileID: 0}
+  - id: gran-premio-patagonia
+    nombre: Gran Premio Patagonia
+    tipo: 3
+    distanciaMetros: 2400
+    premio: 4000
+    dificultad: 5
+    indiceBanner: 14
+    bannerAlternativo: {fileID: 0}
+  - id: copa-nocturna
+    nombre: Copa Nocturna
+    tipo: 3
+    distanciaMetros: 2400
+    premio: 5000
+    dificultad: 5
+    indiceBanner: 15
+    bannerAlternativo: {fileID: 0}

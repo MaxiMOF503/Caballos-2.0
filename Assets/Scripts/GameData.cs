@@ -6,7 +6,9 @@ public enum TipoSlotItem
 {
     Cabeza,
     Espalda,
-    Patas
+    Patas, // Categoría del catálogo y valor serializado de partidas anteriores.
+    PatasDelanteras,
+    PatasTraseras
 }
 
 [Serializable]
@@ -18,7 +20,12 @@ public class ItemCaballo
     public string descripcion;
     public TipoSlotItem slotPermitido;
     public string caballoEquipadoId;
+    public TipoSlotItem slotEquipado;
     public Sprite sprite;
+
+    public TipoSlotItem RanuraActual => SistemaEquipamiento.EsCompatible(slotPermitido, slotEquipado)
+        ? slotEquipado
+        : SistemaEquipamiento.RanuraInicial(slotPermitido);
 
     public void ValidarDatos()
     {
@@ -49,6 +56,27 @@ public static class SistemaEquipamiento
 {
     public const int CostoEquiparItem = 50;
     public const int CostoDesequiparItem = 50;
+    public static IReadOnlyList<TipoSlotItem> Ranuras { get; } = Array.AsReadOnly(new[]
+    {
+        TipoSlotItem.Cabeza, TipoSlotItem.Espalda,
+        TipoSlotItem.PatasDelanteras, TipoSlotItem.PatasTraseras
+    });
+
+    public static TipoSlotItem RanuraInicial(TipoSlotItem categoria) =>
+        categoria == TipoSlotItem.Patas ? TipoSlotItem.PatasDelanteras : categoria;
+
+    public static bool EsCompatible(TipoSlotItem categoria, TipoSlotItem ranura) =>
+        categoria == TipoSlotItem.Patas
+            ? ranura == TipoSlotItem.PatasDelanteras || ranura == TipoSlotItem.PatasTraseras
+            : categoria == ranura && Enum.IsDefined(typeof(TipoSlotItem), ranura);
+
+    public static string NombreRanura(TipoSlotItem ranura) => ranura switch
+    {
+        TipoSlotItem.PatasDelanteras => "Patas delanteras",
+        TipoSlotItem.PatasTraseras => "Patas traseras",
+        TipoSlotItem.Patas => "Patas delanteras o traseras",
+        _ => ranura.ToString()
+    };
 
     public static bool EquiparItem(
         Caballo caballo,
@@ -58,6 +86,22 @@ public static class SistemaEquipamiento
         ref int dinero,
         out string mensaje)
     {
+        return EquiparItem(caballo, item, RanuraInicial(item?.slotPermitido ?? default),
+            false, caballosJugador, itemsJugador, ref dinero, out _, out mensaje);
+    }
+
+    public static bool EquiparItem(
+        Caballo caballo,
+        ItemCaballo item,
+        TipoSlotItem ranura,
+        bool permitirReemplazo,
+        IList<Caballo> caballosJugador,
+        IList<ItemCaballo> itemsJugador,
+        ref int dinero,
+        out ItemCaballo reemplazado,
+        out string mensaje)
+    {
+        reemplazado = null;
         Caballo caballoJugador = BuscarCaballo(caballosJugador, caballo);
         if (caballoJugador == null)
         {
@@ -81,20 +125,33 @@ public static class SistemaEquipamiento
             return false;
         }
 
-        if (ObtenerItemEquipado(itemsJugador, caballoJugador.id, itemJugador.slotPermitido) != null)
+        if (!EsCompatible(itemJugador.slotPermitido, ranura))
         {
-            mensaje = "Slot " + itemJugador.slotPermitido + " ocupado.";
+            mensaje = itemJugador.nombre + " no es compatible con " + NombreRanura(ranura) + ".";
             return false;
         }
 
-        if (dinero < CostoEquiparItem)
+        ItemCaballo ocupado = ObtenerItemEquipado(itemsJugador, caballoJugador.id, ranura);
+        if (ocupado != null && !permitirReemplazo)
+        {
+            mensaje = "Ranura " + NombreRanura(ranura) + " ocupada.";
+            return false;
+        }
+
+        int costo = CostoEquiparItem + (ocupado != null ? CostoDesequiparItem : 0);
+        if (dinero < costo)
         {
             mensaje = "Dinero insuficiente para equipar el item.";
             return false;
         }
 
-        dinero -= CostoEquiparItem;
+        dinero -= costo;
+        if (ocupado != null)
+            ocupado.caballoEquipadoId = null;
+
+        reemplazado = ocupado;
         itemJugador.caballoEquipadoId = caballoJugador.id;
+        itemJugador.slotEquipado = ranura;
         mensaje = itemJugador.nombre + " equipado en " + caballoJugador.nombre + ".";
         return true;
     }
@@ -156,11 +213,12 @@ public static class SistemaEquipamiento
         if (itemsJugador == null || string.IsNullOrEmpty(caballoId))
             return null;
 
+        slot = RanuraInicial(slot);
         foreach (ItemCaballo item in itemsJugador)
         {
             if (item != null &&
                 item.caballoEquipadoId == caballoId &&
-                item.slotPermitido == slot)
+                item.RanuraActual == slot)
             {
                 return item;
             }
@@ -189,11 +247,12 @@ public static class SistemaEquipamiento
             return false;
         }
 
-        string claveSlot = item.caballoEquipadoId + ":" + (int)item.slotPermitido;
+        item.slotEquipado = item.RanuraActual;
+        string claveSlot = item.caballoEquipadoId + ":" + (int)item.slotEquipado;
         if (slotsOcupados == null || !slotsOcupados.Add(claveSlot))
         {
             advertencia =
-                "Dos items intentaban ocupar el slot " + item.slotPermitido +
+                "Dos items intentaban ocupar la ranura " + NombreRanura(item.slotEquipado) +
                 " del mismo caballo. " + item.nombre + " quedó disponible.";
             item.caballoEquipadoId = null;
             return false;
@@ -248,6 +307,9 @@ public class GameData
     public CaballoData rivalPersistente;
     public List<ItemCaballoData> itemsJugador = new List<ItemCaballoData>();
     public EstadoTiendaData estadoTienda;
+    public CarreraProgramada carreraProgramada;
+    public int semillaOfertaCarreras;
+    public ApuestaCarrera ultimaApuesta;
 }
 
 [Serializable]
@@ -267,6 +329,7 @@ public class ItemCaballoData
     public string descripcion;
     public TipoSlotItem slotPermitido;
     public string caballoEquipadoId;
+    public TipoSlotItem slotEquipado;
     public int spriteIndex = -1;
 
     public static ItemCaballoData DesdeItem(ItemCaballo item, int indiceSprite)
@@ -279,6 +342,7 @@ public class ItemCaballoData
             descripcion = item.descripcion,
             slotPermitido = item.slotPermitido,
             caballoEquipadoId = item.caballoEquipadoId,
+            slotEquipado = item.RanuraActual,
             spriteIndex = indiceSprite
         };
     }
@@ -292,7 +356,8 @@ public class ItemCaballoData
             nombre = nombre,
             descripcion = descripcion,
             slotPermitido = slotPermitido,
-            caballoEquipadoId = caballoEquipadoId
+            caballoEquipadoId = caballoEquipadoId,
+            slotEquipado = slotEquipado
         };
 
         item.ValidarDatos();

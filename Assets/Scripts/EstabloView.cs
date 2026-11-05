@@ -1,998 +1,372 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class EstabloView : MonoBehaviour
+public partial class EstabloView : MonoBehaviour
 {
-    [Header("Ventanas")]
-    public GameObject panelInfoCaballo;
-    public GameObject panelUps;
-    public GameObject panelProcrear;
-    public GameObject panelItems;
+    [SerializeField] private TMP_FontAsset fuente;
+    [SerializeField] private Sprite madera;
+    [SerializeField] private Sprite marco;
+    [SerializeField] private Sprite fondoCriadero;
+    [SerializeField] private Sprite retratoStats;
+    [SerializeField] private Sprite iconosStats;
+    [SerializeField] private Sprite spriteManiquiItems;
 
-    [Header("Stats")]
-    public TMP_Text textoNombre;
-    public TMP_Text textoEdad;
-    public TMP_Text textoNivel;
-    public TMP_Text textoExperiencia;
-    public TMP_Text textoVelocidad;
-    public TMP_Text textoStamina;
-    public TMP_Text textoSuerte;
-    public TMP_Text textoInteligencia;
-    public TMP_Text textoPotencial;
-    public TMP_Text textoRelacion;
-    public TMP_Text textoEstres;
-    public Image imagenCaballo;
+    private enum Pestana { Stats, Up, Procrear, Items }
 
-    [Header("Items")]
-    public Sprite spriteManiquiItems;
-
-    private readonly List<Button> botonesNavegacion = new List<Button>();
-
-    private TMP_Text textoNombreUp;
-    private TMP_Text textoPuntosUp;
-    private TMP_Text textoVelocidadUp;
-    private TMP_Text textoStaminaUp;
-    private TMP_Text textoSuerteUp;
-    private TMP_Text textoInteligenciaUp;
-    private TMP_Text textoPotencialUp;
-
-    private Button botonMejorarVelocidad;
-    private Button botonMejorarStamina;
-    private Button botonMejorarSuerte;
-    private Button botonMejorarInteligencia;
-
-    private readonly List<Button> botonesInventarioItems = new List<Button>();
-    private readonly Dictionary<TipoSlotItem, TMP_Text> textosSlotsItems =
-        new Dictionary<TipoSlotItem, TMP_Text>();
-    private readonly Dictionary<TipoSlotItem, Image> imagenesSlotsItems =
-        new Dictionary<TipoSlotItem, Image>();
-
-    private RectTransform contenidoInventarioItems;
-    private TMP_Text textoInventarioVacio;
-    private TMP_Text textoDetalleItem;
-    private TMP_Text textoCaballoItems;
-    private Button botonAccionItem;
-    private TMP_Text textoAccionItem;
-    private Image imagenManiquiItems;
-    private Button plantillaBotonItems;
-    private TMP_Text plantillaTextoItems;
-    private ItemCaballo itemSeleccionado;
-
-    private int indiceCaballoSeleccionado;
-    private bool interfazConfigurada;
-
-    private void Start()
+    private static readonly string[] NombresStats =
     {
-        AsegurarConfiguracionInterfaz();
-        RefrescarCaballoSeleccionado();
+        "Edad", "Nivel", "XP", "Velocidad", "Stamina", "Suerte", "Inteligencia",
+        "Potencial", "Relación", "Estrés"
+    };
+
+    private readonly Dictionary<TipoEstadisticaCaballo, int> mejorasPendientes = new();
+    private readonly List<Button> flechasCaballos = new();
+    private readonly Dictionary<TipoSlotItem, Button> botonesRanura = new();
+    private readonly Dictionary<string, Button> botonesInventario = new();
+    private Pestana pestanaActual;
+    private int indiceCaballo;
+    private string grupoSeleccionado;
+    private Sprite marcoRecortado;
+
+    private GameManager Juego => GameManager.Instancia;
+    private List<Caballo> Caballos => Juego?.caballosJugador;
+    private Caballo CaballoActual => Caballos != null && indiceCaballo < Caballos.Count
+        ? Caballos[indiceCaballo] : null;
+
+    private void OnEnable()
+    {
+        ConstruirInterfaz();
+        AbrirCaballo();
     }
 
-    public void AbrirCaballo()
+    private void OnDisable()
     {
-        AsegurarConfiguracionInterfaz();
-        MostrarStats();
+        mejorasPendientes.Clear();
+        grupoSeleccionado = null;
+        if (modal != null)
+            OcultarModal();
     }
 
-    private Caballo ObtenerCaballoSeleccionado()
+    private void OnDestroy()
     {
-        if (GameManager.Instancia == null ||
-            GameManager.Instancia.caballosJugador == null ||
-            GameManager.Instancia.caballosJugador.Count == 0)
+        if (marcoRecortado != null)
+            Destroy(marcoRecortado);
+    }
+
+    // These entry points also preserve bindings in existing scenes.
+    public void AbrirCaballo() => MostrarStats();
+    public void MostrarStats() => Mostrar(Pestana.Stats);
+    public void MostrarUps() => Mostrar(Pestana.Up);
+    public void MostrarProcrear() => Mostrar(Pestana.Procrear);
+    public void MostrarItems() => Mostrar(Pestana.Items);
+    public void CerrarCaballo() => Juego.VolverAlHub();
+
+    private void Mostrar(Pestana pestana)
+    {
+        if (pestana != pestanaActual)
         {
-            indiceCaballoSeleccionado = 0;
-            return null;
+            mejorasPendientes.Clear();
+            grupoSeleccionado = null;
         }
 
-        int cantidadCaballos = GameManager.Instancia.caballosJugador.Count;
-        indiceCaballoSeleccionado = CalcularIndiceCircular(
-            indiceCaballoSeleccionado,
-            0,
-            cantidadCaballos);
-
-        return GameManager.Instancia.caballosJugador[indiceCaballoSeleccionado];
-    }
-
-    private static int CalcularIndiceCircular(int indiceActual, int desplazamiento, int cantidad)
-    {
-        if (cantidad <= 0)
-            return 0;
-
-        int indice = (indiceActual + desplazamiento) % cantidad;
-        return indice < 0 ? indice + cantidad : indice;
-    }
-
-    public void SeleccionarAnterior()
-    {
-        CambiarSeleccion(-1);
-    }
-
-    public void SeleccionarSiguiente()
-    {
-        CambiarSeleccion(1);
-    }
-
-    private void CambiarSeleccion(int desplazamiento)
-    {
-        int cantidadCaballos = GameManager.Instancia?.caballosJugador?.Count ?? 0;
-
-        if (cantidadCaballos > 1)
+        OcultarModal();
+        pestanaActual = pestana;
+        mensajeUp.text = "";
+        mensajeItems.text = "";
+        for (int i = 0; i < paneles.Length; i++)
         {
-            indiceCaballoSeleccionado = CalcularIndiceCircular(
-                indiceCaballoSeleccionado,
-                desplazamiento,
-                cantidadCaballos);
+            bool activa = i == (int)pestana;
+            paneles[i].gameObject.SetActive(activa);
+            Resaltar(pestanas[i], activa);
         }
 
-        RefrescarCaballoSeleccionado();
+        Refrescar();
     }
 
-    private void RefrescarCaballoSeleccionado()
+    public void SeleccionarAnterior() => CambiarCaballo(-1);
+    public void SeleccionarSiguiente() => CambiarCaballo(1);
+
+    private void CambiarCaballo(int paso)
     {
-        Caballo caballo = ObtenerCaballoSeleccionado();
-        MostrarCaballo(caballo);
-        MostrarMejoras(caballo);
-        MostrarItemsCaballo(caballo);
+        int cantidad = Caballos?.Count ?? 0;
+        if (cantidad > 1)
+            SeleccionarCaballo((indiceCaballo + paso + cantidad) % cantidad);
+    }
 
-        int cantidadCaballos = GameManager.Instancia?.caballosJugador?.Count ?? 0;
-        bool puedeNavegar = cantidadCaballos > 1;
+    private void SeleccionarCaballo(int indice)
+    {
+        if (indice == indiceCaballo)
+            return;
 
-        foreach (Button boton in botonesNavegacion)
+        indiceCaballo = indice;
+        mejorasPendientes.Clear();
+        grupoSeleccionado = null;
+        OcultarModal();
+        mensajeUp.text = "";
+        mensajeItems.text = "";
+        Refrescar();
+    }
+
+    private void Refrescar()
+    {
+        int cantidad = Caballos?.Count ?? 0;
+        indiceCaballo = Mathf.Clamp(indiceCaballo, 0, Mathf.Max(0, cantidad - 1));
+        foreach (var flecha in flechasCaballos)
+            flecha.interactable = cantidad > 1;
+
+        switch (pestanaActual)
         {
-            if (boton != null)
-                boton.interactable = puedeNavegar;
+            case Pestana.Stats: RefrescarStats(); break;
+            case Pestana.Up: RefrescarUp(); break;
+            case Pestana.Procrear: RefrescarCriadero(); break;
+            case Pestana.Items: RefrescarItems(); break;
         }
     }
 
-    private void MostrarCaballo(Caballo caballo)
+    private string NombreActual => CaballoActual?.nombre ?? "Sin caballo";
+
+    private string[] ValoresStats(Caballo caballo)
     {
         if (caballo == null)
+            return Enumerable.Repeat("—", NombresStats.Length).ToArray();
+
+        return new[]
         {
-            AsignarTexto(textoNombre, "Sin caballo");
-            AsignarTexto(textoEdad, "Edad: -");
-            AsignarTexto(textoNivel, "Nivel: -");
-            AsignarTexto(textoExperiencia, "XP: - / -");
-            AsignarTexto(textoVelocidad, "Velocidad: -");
-            AsignarTexto(textoStamina, "Stamina: -");
-            AsignarTexto(textoSuerte, "Suerte: -");
-            AsignarTexto(textoInteligencia, "Inteligencia: -");
-            AsignarTexto(textoPotencial, "Potencial: -");
-            AsignarTexto(textoRelacion, "Relación: -");
-            AsignarTexto(textoEstres, "Estrés: -");
-
-            if (imagenCaballo != null)
-            {
-                imagenCaballo.sprite = null;
-                imagenCaballo.enabled = false;
-            }
-
-            return;
-        }
-
-        AsignarTexto(textoNombre, caballo.nombre);
-        AsignarTexto(textoEdad, "Edad: " + caballo.edad);
-        AsignarTexto(textoNivel, "Nivel: " + caballo.nivel);
-
-        int experienciaNecesaria =
-            ProgresionCaballo.ExperienciaNecesariaParaSiguienteNivel(caballo.nivel);
-
-        AsignarTexto(
-            textoExperiencia,
-            "XP: " + caballo.experiencia + " / " + experienciaNecesaria);
-
-        AsignarTexto(textoVelocidad, "Velocidad: " + RangoCaballo.ObtenerRango(caballo.velocidad));
-        AsignarTexto(textoStamina, "Stamina: " + RangoCaballo.ObtenerRango(caballo.stamina));
-        AsignarTexto(textoSuerte, "Suerte: " + RangoCaballo.ObtenerRango(caballo.suerte));
-        AsignarTexto(textoInteligencia, "Inteligencia: " + RangoCaballo.ObtenerRango(caballo.inteligencia));
-        AsignarTexto(textoPotencial, "Potencial: " + RangoCaballo.ObtenerRango(caballo.potencial));
-        AsignarTexto(textoRelacion, "Relación: " + caballo.relacion);
-        AsignarTexto(textoEstres, "Estrés: " + caballo.estres);
-
-        if (imagenCaballo != null)
-        {
-            imagenCaballo.sprite = caballo.sprite;
-            imagenCaballo.enabled = caballo.sprite != null;
-        }
+            caballo.edad.ToString(), caballo.nivel.ToString(),
+            $"{caballo.experiencia} / {ProgresionCaballo.ExperienciaNecesariaParaSiguienteNivel(caballo.nivel)}",
+            Estadistica(caballo, TipoEstadisticaCaballo.Velocidad),
+            Estadistica(caballo, TipoEstadisticaCaballo.Stamina),
+            Estadistica(caballo, TipoEstadisticaCaballo.Suerte),
+            Estadistica(caballo, TipoEstadisticaCaballo.Inteligencia),
+            RangoCaballo.ObtenerRango(caballo.potencial),
+            caballo.relacion.ToString(), caballo.estres.ToString()
+        };
     }
 
-    private void MostrarMejoras(Caballo caballo)
-    {
-        if (caballo == null)
-        {
-            AsignarTexto(textoNombreUp, "Sin caballo");
-            AsignarTexto(textoPuntosUp, "Puntos disponibles: 0");
-            AsignarTexto(textoVelocidadUp, "Velocidad: -");
-            AsignarTexto(textoStaminaUp, "Stamina: -");
-            AsignarTexto(textoSuerteUp, "Suerte: -");
-            AsignarTexto(textoInteligenciaUp, "Inteligencia: -");
-            AsignarTexto(textoPotencialUp, "Potencial: -");
-            ActualizarBotonesMejora(null);
-            return;
-        }
+    private string Estadistica(Caballo caballo, TipoEstadisticaCaballo tipo) =>
+        Juego.MostrarEstadistica(caballo, tipo, ProgresionCaballo.ValorBase(caballo, tipo));
 
-        AsignarTexto(textoNombreUp, caballo.nombre);
-        AsignarTexto(textoPuntosUp, "Puntos disponibles: " + caballo.puntosMejoraPendientes);
-        AsignarTexto(textoVelocidadUp, "Velocidad: " + RangoCaballo.ObtenerRango(caballo.velocidad));
-        AsignarTexto(textoStaminaUp, "Stamina: " + RangoCaballo.ObtenerRango(caballo.stamina));
-        AsignarTexto(textoSuerteUp, "Suerte: " + RangoCaballo.ObtenerRango(caballo.suerte));
-        AsignarTexto(textoInteligenciaUp, "Inteligencia: " + RangoCaballo.ObtenerRango(caballo.inteligencia));
-        AsignarTexto(textoPotencialUp, "Potencial: " + RangoCaballo.ObtenerRango(caballo.potencial));
-        ActualizarBotonesMejora(caballo);
+    private void RefrescarStats()
+    {
+        nombreStats.text = NombreActual;
+        retratoEnStats.enabled = CaballoActual != null && retratoStats != null;
+        var valores = ValoresStats(CaballoActual);
+        for (int i = 0; i < valores.Length; i++)
+            valoresStats[i].text = valores[i];
     }
 
-    public void MejorarVelocidad()
+    private int PuntosDisponibles =>
+        (CaballoActual?.puntosMejoraPendientes ?? 0) - mejorasPendientes.Values.Sum();
+
+    private int Pendientes(TipoEstadisticaCaballo estadistica) =>
+        mejorasPendientes.TryGetValue(estadistica, out int cantidad) ? cantidad : 0;
+
+    private bool PuedePreparar(TipoEstadisticaCaballo estadistica) =>
+        CaballoActual != null && PuntosDisponibles > 0 &&
+        ProgresionCaballo.ValorBase(CaballoActual, estadistica) + Pendientes(estadistica) < Caballo.EstadisticaMaxima;
+
+    private void PrepararMejora(TipoEstadisticaCaballo estadistica)
     {
-        MejorarEstadisticaSeleccionada(TipoEstadisticaCaballo.Velocidad);
-    }
-
-    public void MejorarStamina()
-    {
-        MejorarEstadisticaSeleccionada(TipoEstadisticaCaballo.Stamina);
-    }
-
-    public void MejorarSuerte()
-    {
-        MejorarEstadisticaSeleccionada(TipoEstadisticaCaballo.Suerte);
-    }
-
-    public void MejorarInteligencia()
-    {
-        MejorarEstadisticaSeleccionada(TipoEstadisticaCaballo.Inteligencia);
-    }
-
-    private void MejorarEstadisticaSeleccionada(TipoEstadisticaCaballo estadistica)
-    {
-        Caballo caballo = ObtenerCaballoSeleccionado();
-
-        if (ProgresionCaballo.MejorarEstadistica(caballo, estadistica))
-            RefrescarCaballoSeleccionado();
-    }
-
-    private void ActualizarBotonesMejora(Caballo caballo)
-    {
-        bool tienePuntos = caballo != null && caballo.puntosMejoraPendientes > 0;
-
-        ConfigurarInteractuable(
-            botonMejorarVelocidad,
-            tienePuntos && caballo.velocidad < Caballo.EstadisticaMaxima);
-        ConfigurarInteractuable(
-            botonMejorarStamina,
-            tienePuntos && caballo.stamina < Caballo.EstadisticaMaxima);
-        ConfigurarInteractuable(
-            botonMejorarSuerte,
-            tienePuntos && caballo.suerte < Caballo.EstadisticaMaxima);
-        ConfigurarInteractuable(
-            botonMejorarInteligencia,
-            tienePuntos && caballo.inteligencia < Caballo.EstadisticaMaxima);
-    }
-
-    private static void ConfigurarInteractuable(Button boton, bool interactuable)
-    {
-        if (boton != null)
-            boton.interactable = interactuable;
-    }
-
-    private void AsegurarConfiguracionInterfaz()
-    {
-        if (interfazConfigurada ||
-            panelInfoCaballo == null ||
-            panelUps == null ||
-            panelItems == null)
+        if (pestanaActual != Pestana.Up || !PuedePreparar(estadistica))
             return;
 
-        Transform raizEstablo = panelInfoCaballo.transform.parent;
-        Button plantillaBoton = null;
-
-        foreach (Button boton in raizEstablo.GetComponentsInChildren<Button>(true))
-        {
-            if (boton.name == "Butonanterior")
-            {
-                boton.onClick.AddListener(SeleccionarAnterior);
-                botonesNavegacion.Add(boton);
-            }
-            else if (boton.name == "Butonsiguiente")
-            {
-                boton.onClick.AddListener(SeleccionarSiguiente);
-                botonesNavegacion.Add(boton);
-
-                if (boton.transform.parent == panelUps.transform)
-                    plantillaBoton = boton;
-
-                if (boton.transform.parent == panelItems.transform)
-                    plantillaBotonItems = boton;
-            }
-        }
-
-        TMP_Text textoRelacionUp = null;
-        TMP_Text textoEstresUp = null;
-
-        foreach (TMP_Text texto in panelUps.GetComponentsInChildren<TMP_Text>(true))
-        {
-            switch (texto.name)
-            {
-                case "TextoNombre":
-                    textoNombreUp = texto;
-                    break;
-                case "TextoEdad":
-                    textoPuntosUp = texto;
-                    break;
-                case "TextoVelocidad":
-                    textoVelocidadUp = texto;
-                    break;
-                case "TextoStamina":
-                    textoStaminaUp = texto;
-                    break;
-                case "TextoSuerte":
-                    textoSuerteUp = texto;
-                    break;
-                case "TextoInteligencia":
-                    textoInteligenciaUp = texto;
-                    break;
-                case "TextoPotencial":
-                    textoPotencialUp = texto;
-                    break;
-                case "TextoRelacion":
-                    textoRelacionUp = texto;
-                    break;
-                case "TextoEstres":
-                    textoEstresUp = texto;
-                    break;
-            }
-        }
-
-        AsignarTexto(textoRelacionUp, string.Empty);
-        AsignarTexto(textoEstresUp, string.Empty);
-
-        if (plantillaBoton == null)
-        {
-            Debug.LogWarning("No se encontró una plantilla de botón para las mejoras del Establo.");
-        }
-        else
-        {
-            botonMejorarVelocidad = CrearBotonMejora(
-                plantillaBoton,
-                "MejorarVelocidad",
-                textoVelocidadUp,
-                MejorarVelocidad);
-            botonMejorarStamina = CrearBotonMejora(
-                plantillaBoton,
-                "MejorarStamina",
-                textoStaminaUp,
-                MejorarStamina);
-            botonMejorarSuerte = CrearBotonMejora(
-                plantillaBoton,
-                "MejorarSuerte",
-                textoSuerteUp,
-                MejorarSuerte);
-            botonMejorarInteligencia = CrearBotonMejora(
-                plantillaBoton,
-                "MejorarInteligencia",
-                textoInteligenciaUp,
-                MejorarInteligencia);
-        }
-
-        ConfigurarPanelItems();
-        interfazConfigurada = true;
+        mejorasPendientes[estadistica] = Pendientes(estadistica) + 1;
+        mensajeUp.text = "";
+        RefrescarUp();
     }
 
-    private void ConfigurarPanelItems()
+    private void ConfirmarMejoras()
     {
-        if (plantillaBotonItems == null)
-        {
-            Debug.LogWarning("No se encontró una plantilla de botón para Items del Establo.");
-            return;
-        }
-
-        plantillaTextoItems = plantillaBotonItems.GetComponentInChildren<TMP_Text>(true);
-        if (plantillaTextoItems == null)
-        {
-            Debug.LogWarning("No se encontró una plantilla de texto para Items del Establo.");
-            return;
-        }
-
-        RectTransform raizItems = CrearRectTransform(
-            "ContenidoFuncionalItems",
-            panelItems.transform,
-            Vector2.zero,
-            Vector2.one,
-            Vector2.zero,
-            Vector2.zero);
-        raizItems.SetSiblingIndex(1);
-
-        RectTransform panelInventario = CrearRectTransform(
-            "PanelInventarioItems",
-            raizItems,
-            new Vector2(0.05f, 0.10f),
-            new Vector2(0.36f, 0.84f),
-            Vector2.zero,
-            Vector2.zero);
-
-        RectTransform panelManiqui = CrearRectTransform(
-            "PanelManiquiItems",
-            raizItems,
-            new Vector2(0.40f, 0.10f),
-            new Vector2(0.96f, 0.84f),
-            Vector2.zero,
-            Vector2.zero);
-
-        CrearTextoItems(
-            "TituloInventarioItems",
-            panelInventario,
-            "INVENTARIO",
-            new Vector2(0f, 0.89f),
-            new Vector2(1f, 1f),
-            34f,
-            TextAlignmentOptions.Center);
-
-        CrearListaInventario(panelInventario);
-
-        textoDetalleItem = CrearTextoItems(
-            "DetalleItemSeleccionado",
-            panelInventario,
-            "Selecciona un item",
-            new Vector2(0.04f, 0.10f),
-            new Vector2(0.96f, 0.27f),
-            22f,
-            TextAlignmentOptions.TopLeft);
-
-        botonAccionItem = Instantiate(plantillaBotonItems, panelInventario);
-        botonAccionItem.name = "AccionItemSeleccionado";
-        botonAccionItem.onClick.RemoveAllListeners();
-        botonAccionItem.onClick.AddListener(EjecutarAccionItemSeleccionado);
-
-        RectTransform rectAccion = botonAccionItem.GetComponent<RectTransform>();
-        rectAccion.anchorMin = new Vector2(0.5f, 0f);
-        rectAccion.anchorMax = new Vector2(0.5f, 0f);
-        rectAccion.pivot = new Vector2(0.5f, 0f);
-        rectAccion.anchoredPosition = new Vector2(0f, 8f);
-        rectAccion.sizeDelta = new Vector2(430f, 62f);
-
-        textoAccionItem = botonAccionItem.GetComponentInChildren<TMP_Text>(true);
-        if (textoAccionItem != null)
-        {
-            textoAccionItem.enableAutoSizing = true;
-            textoAccionItem.fontSizeMin = 14f;
-            textoAccionItem.fontSizeMax = 25f;
-        }
-
-        textoCaballoItems = CrearTextoItems(
-            "NombreCaballoItems",
-            panelManiqui,
-            "Sin caballo seleccionado",
-            new Vector2(0f, 0.89f),
-            new Vector2(1f, 1f),
-            34f,
-            TextAlignmentOptions.Center);
-
-        GameObject imagenManiquiObjeto = new GameObject(
-            "CaballoManiqui",
-            typeof(RectTransform),
-            typeof(CanvasRenderer),
-            typeof(Image));
-        imagenManiquiObjeto.transform.SetParent(panelManiqui, false);
-        RectTransform rectManiqui = imagenManiquiObjeto.GetComponent<RectTransform>();
-        rectManiqui.anchorMin = new Vector2(0.18f, 0.16f);
-        rectManiqui.anchorMax = new Vector2(0.82f, 0.78f);
-        rectManiqui.offsetMin = Vector2.zero;
-        rectManiqui.offsetMax = Vector2.zero;
-        imagenManiquiItems = imagenManiquiObjeto.GetComponent<Image>();
-        imagenManiquiItems.preserveAspect = true;
-        imagenManiquiItems.raycastTarget = false;
-
-        CrearSlotItems(
-            panelManiqui,
-            TipoSlotItem.Cabeza,
-            new Vector2(0.5f, 0.82f),
-            "CABEZA ▼");
-        CrearSlotItems(
-            panelManiqui,
-            TipoSlotItem.Patas,
-            new Vector2(0.16f, 0.17f),
-            "PATAS ▶");
-        CrearSlotItems(
-            panelManiqui,
-            TipoSlotItem.Espalda,
-            new Vector2(0.84f, 0.43f),
-            "◀ ESPALDA");
-    }
-
-    private void CrearListaInventario(RectTransform panelInventario)
-    {
-        GameObject scrollObjeto = new GameObject(
-            "ListaItems",
-            typeof(RectTransform),
-            typeof(ScrollRect));
-        scrollObjeto.transform.SetParent(panelInventario, false);
-        RectTransform rectScroll = scrollObjeto.GetComponent<RectTransform>();
-        rectScroll.anchorMin = new Vector2(0.04f, 0.29f);
-        rectScroll.anchorMax = new Vector2(0.96f, 0.88f);
-        rectScroll.offsetMin = Vector2.zero;
-        rectScroll.offsetMax = Vector2.zero;
-
-        GameObject viewportObjeto = new GameObject(
-            "Viewport",
-            typeof(RectTransform),
-            typeof(CanvasRenderer),
-            typeof(Image),
-            typeof(Mask));
-        viewportObjeto.transform.SetParent(rectScroll, false);
-        RectTransform viewport = viewportObjeto.GetComponent<RectTransform>();
-        viewport.anchorMin = Vector2.zero;
-        viewport.anchorMax = Vector2.one;
-        viewport.offsetMin = Vector2.zero;
-        viewport.offsetMax = Vector2.zero;
-        viewportObjeto.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.28f);
-        viewportObjeto.GetComponent<Mask>().showMaskGraphic = true;
-
-        GameObject contenidoObjeto = new GameObject(
-            "ContenidoInventario",
-            typeof(RectTransform),
-            typeof(VerticalLayoutGroup),
-            typeof(ContentSizeFitter));
-        contenidoObjeto.transform.SetParent(viewport, false);
-        contenidoInventarioItems = contenidoObjeto.GetComponent<RectTransform>();
-        contenidoInventarioItems.anchorMin = new Vector2(0f, 1f);
-        contenidoInventarioItems.anchorMax = new Vector2(1f, 1f);
-        contenidoInventarioItems.pivot = new Vector2(0.5f, 1f);
-        contenidoInventarioItems.anchoredPosition = Vector2.zero;
-        contenidoInventarioItems.sizeDelta = Vector2.zero;
-
-        VerticalLayoutGroup layout = contenidoObjeto.GetComponent<VerticalLayoutGroup>();
-        layout.padding = new RectOffset(10, 10, 10, 10);
-        layout.spacing = 8f;
-        layout.childAlignment = TextAnchor.UpperCenter;
-        layout.childControlWidth = true;
-        layout.childControlHeight = true;
-        layout.childForceExpandWidth = true;
-        layout.childForceExpandHeight = false;
-
-        ContentSizeFitter fitter = contenidoObjeto.GetComponent<ContentSizeFitter>();
-        fitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
-        fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
-
-        ScrollRect scroll = scrollObjeto.GetComponent<ScrollRect>();
-        scroll.viewport = viewport;
-        scroll.content = contenidoInventarioItems;
-        scroll.horizontal = false;
-        scroll.vertical = true;
-        scroll.movementType = ScrollRect.MovementType.Clamped;
-        scroll.scrollSensitivity = 30f;
-
-        textoInventarioVacio = CrearTextoItems(
-            "InventarioVacio",
-            viewport,
-            "Inventario vacío",
-            Vector2.zero,
-            Vector2.one,
-            25f,
-            TextAlignmentOptions.Center);
-    }
-
-    private void CrearSlotItems(
-        RectTransform panelManiqui,
-        TipoSlotItem slot,
-        Vector2 ancla,
-        string etiqueta)
-    {
-        GameObject slotObjeto = new GameObject(
-            "Slot" + slot,
-            typeof(RectTransform),
-            typeof(CanvasRenderer),
-            typeof(Image),
-            typeof(Outline));
-        slotObjeto.transform.SetParent(panelManiqui, false);
-
-        RectTransform rectSlot = slotObjeto.GetComponent<RectTransform>();
-        rectSlot.anchorMin = ancla;
-        rectSlot.anchorMax = ancla;
-        rectSlot.pivot = new Vector2(0.5f, 0.5f);
-        rectSlot.anchoredPosition = Vector2.zero;
-        rectSlot.sizeDelta = new Vector2(230f, 105f);
-
-        slotObjeto.GetComponent<Image>().color = new Color(0.18f, 0.10f, 0.04f, 0.88f);
-        Outline outline = slotObjeto.GetComponent<Outline>();
-        outline.effectColor = new Color(0.75f, 0.48f, 0.18f, 1f);
-        outline.effectDistance = new Vector2(2f, -2f);
-
-        TMP_Text textoSlot = CrearTextoItems(
-            "TextoSlot" + slot,
-            rectSlot,
-            etiqueta + "\nVACÍO",
-            Vector2.zero,
-            Vector2.one,
-            23f,
-            TextAlignmentOptions.Center);
-        textosSlotsItems[slot] = textoSlot;
-
-        GameObject iconoObjeto = new GameObject(
-            "IconoSlot" + slot,
-            typeof(RectTransform),
-            typeof(CanvasRenderer),
-            typeof(Image));
-        iconoObjeto.transform.SetParent(rectSlot, false);
-        RectTransform rectIcono = iconoObjeto.GetComponent<RectTransform>();
-        rectIcono.anchorMin = new Vector2(0.5f, 0.5f);
-        rectIcono.anchorMax = new Vector2(0.5f, 0.5f);
-        rectIcono.pivot = new Vector2(0.5f, 0.5f);
-        rectIcono.anchoredPosition = Vector2.zero;
-        rectIcono.sizeDelta = new Vector2(72f, 72f);
-
-        Image imagenSlot = iconoObjeto.GetComponent<Image>();
-        imagenSlot.preserveAspect = true;
-        imagenSlot.raycastTarget = false;
-        imagenSlot.enabled = false;
-        imagenesSlotsItems[slot] = imagenSlot;
-    }
-
-    private TMP_Text CrearTextoItems(
-        string nombre,
-        Transform padre,
-        string contenido,
-        Vector2 anclaMin,
-        Vector2 anclaMax,
-        float tamanoFuente,
-        TextAlignmentOptions alineacion)
-    {
-        TMP_Text texto = Instantiate(plantillaTextoItems, padre);
-        texto.name = nombre;
-        texto.text = contenido;
-        texto.fontSize = tamanoFuente;
-        texto.alignment = alineacion;
-        texto.enableAutoSizing = true;
-        texto.fontSizeMin = 12f;
-        texto.fontSizeMax = tamanoFuente;
-        texto.raycastTarget = false;
-
-        RectTransform rect = texto.rectTransform;
-        rect.anchorMin = anclaMin;
-        rect.anchorMax = anclaMax;
-        rect.offsetMin = Vector2.zero;
-        rect.offsetMax = Vector2.zero;
-        rect.localScale = Vector3.one;
-        texto.gameObject.SetActive(true);
-        return texto;
-    }
-
-    private static RectTransform CrearRectTransform(
-        string nombre,
-        Transform padre,
-        Vector2 anclaMin,
-        Vector2 anclaMax,
-        Vector2 offsetMin,
-        Vector2 offsetMax)
-    {
-        GameObject objeto = new GameObject(nombre, typeof(RectTransform));
-        objeto.transform.SetParent(padre, false);
-        RectTransform rect = objeto.GetComponent<RectTransform>();
-        rect.anchorMin = anclaMin;
-        rect.anchorMax = anclaMax;
-        rect.offsetMin = offsetMin;
-        rect.offsetMax = offsetMax;
-        return rect;
-    }
-
-    private void MostrarItemsCaballo(Caballo caballo)
-    {
-        if (contenidoInventarioItems == null)
+        if (pestanaActual != Pestana.Up || mejorasPendientes.Count == 0)
             return;
 
-        AsignarTexto(
-            textoCaballoItems,
-            caballo != null ? "EQUIPAMIENTO — " + caballo.nombre : "Sin caballo seleccionado");
+        bool aplicado = ProgresionCaballo.AplicarMejoras(CaballoActual, mejorasPendientes);
+        if (aplicado)
+            mejorasPendientes.Clear();
 
-        if (imagenManiquiItems != null)
-        {
-            imagenManiquiItems.sprite = spriteManiquiItems != null
-                ? spriteManiquiItems
-                : caballo != null
-                    ? caballo.sprite
-                    : null;
-            imagenManiquiItems.enabled = imagenManiquiItems.sprite != null;
-        }
-
-        ActualizarListaInventario();
-        ActualizarSlotItem(caballo, TipoSlotItem.Cabeza, "CABEZA ▼");
-        ActualizarSlotItem(caballo, TipoSlotItem.Espalda, "◀ ESPALDA");
-        ActualizarSlotItem(caballo, TipoSlotItem.Patas, "PATAS ▶");
-        ActualizarDetalleItem(caballo);
+        mensajeUp.text = aplicado ? "Mejoras guardadas" : "No se pudieron aplicar las mejoras";
+        RefrescarUp();
     }
 
-    private void ActualizarListaInventario()
+    private void RefrescarUp()
     {
-        foreach (Button boton in botonesInventarioItems)
+        nombreUp.text = NombreActual;
+        retratoEnUp.enabled = CaballoActual != null && retratoStats != null;
+        puntosUp.text = $"Puntos disponibles: {Mathf.Max(0, PuntosDisponibles)}";
+        var valores = ValoresStats(CaballoActual);
+        for (int i = 0; i < indicesResumen.Length; i++)
+            resumenUp[i].text = valores[indicesResumen[i]];
+
+        for (int i = 0; i < mejorasUp.Length; i++)
         {
-            if (boton != null)
-            {
-                boton.gameObject.SetActive(false);
-                Destroy(boton.gameObject);
-            }
+            var estadistica = (TipoEstadisticaCaballo)i;
+            int cantidad = Pendientes(estadistica);
+            mejorasUp[i].text = NombresStats[i + 3] + ": " + valores[i + 3];
+            pendientesUp[i].text = cantidad > 0 ? "+" + cantidad : "";
+            botonesUp[i].interactable = PuedePreparar(estadistica);
         }
 
-        botonesInventarioItems.Clear();
+        potencialUp.text = "Potencial: " + valores[7];
+        confirmarUp.interactable = mejorasPendientes.Count > 0 && PuntosDisponibles >= 0;
+    }
 
-        List<ItemCaballo> items = GameManager.Instancia?.itemsJugador;
-        bool inventarioVacio = items == null || items.Count == 0;
+    private void RefrescarCriadero()
+    {
+        QuitarFilas(listaCaballos);
+        var caballos = Caballos;
+        cantidadCaballos.text = $"Mis Caballos ({caballos?.Count ?? 0})";
+        padreCriadero.text = NombreActual;
+        AsignarSprite(imagenPadre, CaballoActual?.sprite);
 
-        if (textoInventarioVacio != null)
-            textoInventarioVacio.gameObject.SetActive(inventarioVacio);
-
-        if (inventarioVacio)
-        {
-            itemSeleccionado = null;
+        if (caballos == null)
             return;
-        }
 
-        itemSeleccionado = ResolverItemInventario(itemSeleccionado, items);
-
-        foreach (ItemCaballo item in items)
+        for (int i = 0; i < caballos.Count; i++)
         {
-            if (item == null)
+            int indice = i;
+            var caballo = caballos[i];
+            if (caballo == null)
                 continue;
 
-            Button boton = Instantiate(plantillaBotonItems, contenidoInventarioItems);
-            boton.name = "Item_" + item.id;
-            boton.onClick.RemoveAllListeners();
-            ItemCaballo itemEntrada = item;
-            boton.onClick.AddListener(() => SeleccionarItem(itemEntrada));
-
-            LayoutElement layout = boton.GetComponent<LayoutElement>();
-            if (layout == null)
-                layout = boton.gameObject.AddComponent<LayoutElement>();
-            layout.preferredHeight = 82f;
-
-            TMP_Text etiqueta = boton.GetComponentInChildren<TMP_Text>(true);
-            if (etiqueta != null)
-            {
-                string estado = string.IsNullOrEmpty(item.caballoEquipadoId)
-                    ? "Disponible"
-                    : "Equipado: " + ObtenerNombreCaballo(item.caballoEquipadoId);
-                string seleccion = ReferenceEquals(item, itemSeleccionado) ? "▶ " : string.Empty;
-                etiqueta.text = seleccion + item.nombre + "\n" + item.slotPermitido + " — " + estado;
-                etiqueta.alignment = TextAlignmentOptions.Center;
-                etiqueta.enableAutoSizing = true;
-                etiqueta.fontSizeMin = 12f;
-                etiqueta.fontSizeMax = 22f;
-            }
-
-            boton.gameObject.SetActive(true);
-            botonesInventarioItems.Add(boton);
+            var boton = Fila("Caballo_" + caballo.id, listaCaballos,
+                caballo.nombre + "\nNv. " + caballo.nivel, caballo.sprite);
+            boton.onClick.AddListener(() => SeleccionarCaballo(indice));
+            Resaltar(boton, i == indiceCaballo);
         }
     }
 
-    private void ActualizarSlotItem(Caballo caballo, TipoSlotItem slot, string etiqueta)
+    private static string ClaveGrupo(ItemCaballo item) =>
+        string.IsNullOrEmpty(item.idDefinicion) ? item.id : item.idDefinicion;
+
+    private IEnumerable<ItemCaballo> Disponibles() => Juego?.itemsJugador?
+        .Where(item => item != null && string.IsNullOrEmpty(item.caballoEquipadoId))
+        ?? Enumerable.Empty<ItemCaballo>();
+
+    private ItemCaballo ItemSeleccionado() => Disponibles().FirstOrDefault(item => ClaveGrupo(item) == grupoSeleccionado);
+
+    private void RefrescarItems()
     {
-        if (!textosSlotsItems.TryGetValue(slot, out TMP_Text textoSlot) ||
-            !imagenesSlotsItems.TryGetValue(slot, out Image imagenSlot))
+        tituloItems.text = "Equipamiento: " + NombreActual;
+        nombreItems.text = NombreActual;
+        AsignarSprite(maniquiItems, CaballoActual != null ? spriteManiquiItems : null);
+        QuitarFilas(listaInventario);
+        botonesInventario.Clear();
+
+        var grupos = Disponibles().GroupBy(ClaveGrupo).ToArray();
+        inventarioVacio.gameObject.SetActive(grupos.Length == 0);
+        foreach (var grupo in grupos)
         {
-            return;
+            var item = grupo.First();
+            string clave = grupo.Key;
+            var boton = Fila("Item_" + clave, listaInventario, item.nombre + $"   × {grupo.Count()}", item.sprite);
+            botonesInventario.Add(clave, boton);
+            boton.onClick.AddListener(() => SeleccionarItem(clave));
+            boton.gameObject.AddComponent<EstabloArrastre>().Configurar(raiz, item, () => SeleccionarItem(clave));
         }
 
-        ItemCaballo equipado = caballo != null && GameManager.Instancia != null
-            ? GameManager.Instancia.ObtenerItemEquipado(caballo, slot)
-            : null;
+        if (ItemSeleccionado() == null)
+            grupoSeleccionado = null;
+        ActualizarSeleccionItem();
+    }
 
+    private void SeleccionarItem(string clave)
+    {
+        grupoSeleccionado = clave;
+        mensajeItems.text = "";
+        ActualizarSeleccionItem();
+    }
+
+    private void ActualizarSeleccionItem()
+    {
+        foreach (var boton in botonesInventario)
+            Resaltar(boton.Value, boton.Key == grupoSeleccionado);
+
+        var seleccionado = ItemSeleccionado();
+        descripcionItems.interactable = seleccionado != null;
+        Etiqueta(descripcionItems).text = seleccionado != null ? "Descripción" : "Selecciona un ítem";
+
+        foreach (var entrada in botonesRanura)
+        {
+            var equipado = Juego?.ObtenerItemEquipado(CaballoActual, entrada.Key);
+            var boton = entrada.Value;
+            Etiqueta(boton).text = equipado == null ? "Vacío" : equipado.nombre + Bonificacion(equipado);
+            boton.interactable = equipado != null || (CaballoActual != null && seleccionado != null &&
+                SistemaEquipamiento.EsCompatible(seleccionado.slotPermitido, entrada.Key));
+        }
+    }
+
+    private DefinicionProductoTienda Producto(ItemCaballo item) =>
+        Juego == null ? null : SistemaTienda.Buscar(Juego.CatalogoTienda(), item.idDefinicion);
+
+    private string Bonificacion(ItemCaballo item)
+    {
+        var producto = Producto(item);
+        return producto != null && producto.bonificacion != 0
+            ? $" · +{producto.bonificacion} {producto.estadistica}" : "";
+    }
+
+    private void MostrarDescripcion()
+    {
+        var item = ItemSeleccionado();
+        if (item == null)
+            return;
+
+        var producto = Producto(item);
+        string efecto = producto != null && producto.bonificacion != 0
+            ? $"Estadística: {producto.estadistica}\nBonificación: +{producto.bonificacion}"
+            : "Sin bonificación registrada";
+        MostrarModal(producto?.nombre ?? item.nombre,
+            $"{producto?.descripcion ?? item.descripcion}\n\n{efecto}\nRanura: {SistemaEquipamiento.NombreRanura(producto?.slotPermitido ?? item.slotPermitido)}");
+    }
+
+    private void ActivarRanura(TipoSlotItem ranura)
+    {
+        var caballo = CaballoActual;
+        var equipado = Juego?.ObtenerItemEquipado(caballo, ranura);
         if (equipado == null)
         {
-            textoSlot.text = etiqueta + "\nVACÍO";
-            imagenSlot.sprite = null;
-            imagenSlot.enabled = false;
+            if (ItemSeleccionado() is ItemCaballo item)
+                EquiparEnRanura(ranura, item);
             return;
         }
 
-        textoSlot.text = equipado.sprite == null
-            ? etiqueta + "\n" + equipado.nombre
-            : etiqueta;
-        imagenSlot.sprite = equipado.sprite;
-        imagenSlot.enabled = equipado.sprite != null;
-    }
-
-    private void SeleccionarItem(ItemCaballo item)
-    {
-        itemSeleccionado = item;
-        MostrarItemsCaballo(ObtenerCaballoSeleccionado());
-    }
-
-    private void ActualizarDetalleItem(Caballo caballo)
-    {
-        GameManager gameManager = GameManager.Instancia;
-        ItemCaballo item = ResolverItemInventario(itemSeleccionado, gameManager?.itemsJugador);
-        itemSeleccionado = item;
-
-        if (item == null)
-        {
-            AsignarTexto(textoDetalleItem, "Selecciona un item");
-            ConfigurarAccionItem("Selecciona un item", false);
-            return;
-        }
-
-        string estado = string.IsNullOrEmpty(item.caballoEquipadoId)
-            ? "Disponible"
-            : "Equipado en: " + ObtenerNombreCaballo(item.caballoEquipadoId);
-        AsignarTexto(
-            textoDetalleItem,
-            item.nombre + "\n" + item.slotPermitido + " — " + estado + "\n" + item.descripcion);
-
-        if (gameManager == null || caballo == null)
-        {
-            ConfigurarAccionItem("Sin caballo seleccionado", false);
-            return;
-        }
-
-        if (item.caballoEquipadoId == caballo.id)
-        {
-            bool puedePagar = gameManager.dinero >= SistemaEquipamiento.CostoDesequiparItem;
-            ConfigurarAccionItem(
-                "Desequipar ($" + SistemaEquipamiento.CostoDesequiparItem + ")" +
-                (puedePagar ? string.Empty : " — dinero insuficiente"),
-                puedePagar);
-            return;
-        }
-
-        if (!string.IsNullOrEmpty(item.caballoEquipadoId))
-        {
-            ConfigurarAccionItem("Equipado en: " + ObtenerNombreCaballo(item.caballoEquipadoId), false);
-            return;
-        }
-
-        ItemCaballo itemEnSlot = gameManager.ObtenerItemEquipado(caballo, item.slotPermitido);
-        if (itemEnSlot != null)
-        {
-            ConfigurarAccionItem("Slot " + item.slotPermitido + " ocupado", false);
-            return;
-        }
-
-        bool dineroSuficiente = gameManager.dinero >= SistemaEquipamiento.CostoEquiparItem;
-        ConfigurarAccionItem(
-            "Equipar ($" + SistemaEquipamiento.CostoEquiparItem + ")" +
-            (dineroSuficiente ? string.Empty : " — dinero insuficiente"),
-            dineroSuficiente);
-    }
-
-    private void ConfigurarAccionItem(string texto, bool interactuable)
-    {
-        AsignarTexto(textoAccionItem, texto);
-        if (botonAccionItem != null)
-            botonAccionItem.interactable = interactuable;
-    }
-
-    private void EjecutarAccionItemSeleccionado()
-    {
-        GameManager gameManager = GameManager.Instancia;
-        Caballo caballo = ObtenerCaballoSeleccionado();
-        ItemCaballo item = ResolverItemInventario(itemSeleccionado, gameManager?.itemsJugador);
-
-        if (gameManager == null || caballo == null || item == null)
-            return;
-
-        bool cambioRealizado = item.caballoEquipadoId == caballo.id
-            ? gameManager.DesequiparItem(caballo, item)
-            : gameManager.EquiparItem(caballo, item);
-
-        if (cambioRealizado)
-            MostrarItemsCaballo(caballo);
-    }
-
-    private static ItemCaballo ResolverItemInventario(
-        ItemCaballo item,
-        IList<ItemCaballo> items)
-    {
-        if (item == null || items == null)
-            return null;
-
-        foreach (ItemCaballo itemInventario in items)
-        {
-            if (ReferenceEquals(itemInventario, item) ||
-                (itemInventario != null && itemInventario.id == item.id))
+        MostrarModal(equipado.nombre, $"Desequipar de {SistemaEquipamiento.NombreRanura(ranura)} cuesta ${SistemaEquipamiento.CostoDesequiparItem}.",
+            () =>
             {
-                return itemInventario;
-            }
-        }
-
-        return null;
+                bool retirado = Juego.DesequiparItem(caballo, equipado);
+                mensajeItems.text = retirado ? "Ítem devuelto al inventario" : "No se pudo desequipar";
+                RefrescarItems();
+            }, Juego.dinero >= SistemaEquipamiento.CostoDesequiparItem);
     }
 
-    private static string ObtenerNombreCaballo(string caballoId)
+    private void EquiparEnRanura(TipoSlotItem ranura, ItemCaballo item)
     {
-        List<Caballo> caballos = GameManager.Instancia?.caballosJugador;
-        if (caballos == null)
-            return "Desconocido";
+        if (pestanaActual != Pestana.Items || CaballoActual == null || item == null)
+            return;
 
-        foreach (Caballo caballo in caballos)
+        if (!SistemaEquipamiento.EsCompatible(item.slotPermitido, ranura))
         {
-            if (caballo != null && caballo.id == caballoId)
-                return caballo.nombre;
+            mensajeItems.text = "Ítem incompatible con " + SistemaEquipamiento.NombreRanura(ranura);
+            return;
         }
 
-        return "Desconocido";
-    }
+        int costo = SistemaEquipamiento.CostoEquiparItem;
+        if (Juego.ObtenerItemEquipado(CaballoActual, ranura) != null)
+            costo += SistemaEquipamiento.CostoDesequiparItem;
 
-    private Button CrearBotonMejora(
-        Button plantilla,
-        string nombre,
-        TMP_Text textoEstadistica,
-        UnityAction accion)
-    {
-        Button boton = Instantiate(plantilla, panelUps.transform);
-        boton.name = nombre;
-        boton.onClick.RemoveAllListeners();
-        boton.onClick.AddListener(accion);
+        if (Juego.dinero < costo)
+        {
+            mensajeItems.text = "Saldo insuficiente";
+            return;
+        }
 
-        RectTransform rectBoton = boton.GetComponent<RectTransform>();
-        RectTransform rectTexto = textoEstadistica != null
-            ? textoEstadistica.rectTransform
-            : null;
-
-        rectBoton.anchorMin = new Vector2(0.5f, 0.5f);
-        rectBoton.anchorMax = new Vector2(0.5f, 0.5f);
-        rectBoton.pivot = new Vector2(0.5f, 0.5f);
-        rectBoton.sizeDelta = new Vector2(60f, 50f);
-        rectBoton.anchoredPosition = rectTexto != null
-            ? new Vector2(
-                rectTexto.anchoredPosition.x + rectTexto.sizeDelta.x * 0.5f + 50f,
-                rectTexto.anchoredPosition.y)
-            : Vector2.zero;
-
-        TMP_Text etiqueta = boton.GetComponentInChildren<TMP_Text>(true);
-        if (etiqueta != null)
-            etiqueta.text = "+";
-
-        boton.gameObject.SetActive(true);
-        return boton;
-    }
-
-    private static void AsignarTexto(TMP_Text texto, string contenido)
-    {
-        if (texto != null)
-            texto.text = contenido;
-    }
-
-    public void CerrarCaballo()
-    {
-        panelInfoCaballo.SetActive(false);
-        panelUps.SetActive(false);
-        panelProcrear.SetActive(false);
-        panelItems.SetActive(false);
-    }
-
-    public void MostrarStats()
-    {
-        AsegurarConfiguracionInterfaz();
-        panelInfoCaballo.SetActive(true);
-        panelUps.SetActive(false);
-        panelProcrear.SetActive(false);
-        panelItems.SetActive(false);
-        RefrescarCaballoSeleccionado();
-    }
-
-    public void MostrarUps()
-    {
-        AsegurarConfiguracionInterfaz();
-        panelInfoCaballo.SetActive(false);
-        panelUps.SetActive(true);
-        panelProcrear.SetActive(false);
-        panelItems.SetActive(false);
-        RefrescarCaballoSeleccionado();
-    }
-
-    public void MostrarProcrear()
-    {
-        AsegurarConfiguracionInterfaz();
-        panelInfoCaballo.SetActive(false);
-        panelUps.SetActive(false);
-        panelProcrear.SetActive(true);
-        panelItems.SetActive(false);
-        RefrescarCaballoSeleccionado();
-    }
-
-    public void MostrarItems()
-    {
-        AsegurarConfiguracionInterfaz();
-        panelInfoCaballo.SetActive(false);
-        panelUps.SetActive(false);
-        panelProcrear.SetActive(false);
-        panelItems.SetActive(true);
-        RefrescarCaballoSeleccionado();
+        bool equipado = Juego.EquiparItem(CaballoActual, item, ranura, true);
+        mensajeItems.text = equipado ? "Equipo guardado" : "No se pudo equipar";
+        if (equipado)
+            RefrescarItems();
     }
 }

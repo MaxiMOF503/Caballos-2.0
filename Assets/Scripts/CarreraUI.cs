@@ -322,7 +322,7 @@ public class CarreraUI : MonoBehaviour
     readonly List<HorseVisualAnimator> visualAnimators = new List<HorseVisualAnimator>();
     bool carreraActiva;
     Caballo caballoJugadorParticipante;
-    int diaPreparado;
+    CarreraProgramada carreraPreparada;
 
     const float POS_INICIO = -1000f;
     const float META_X = 1000f;
@@ -357,17 +357,25 @@ public class CarreraUI : MonoBehaviour
         caballosData.Clear();
         caballoJugadorParticipante = null;
 
-        if (GameManager.Instancia.caballosJugador.Count > 0)
+        var juego = GameManager.Instancia;
+        carreraPreparada = juego.ObtenerCarreraProgramada();
+        if (carreraPreparada != null)
         {
-            caballoJugadorParticipante = GameManager.Instancia.caballosJugador[0];
-
-            if (caballoJugadorParticipante != null)
-                caballosData.Add(caballoJugadorParticipante);
+            foreach (var participante in carreraPreparada.participantes)
+            {
+                var caballo = juego.CrearVistaParticipante(participante);
+                caballosData.Add(caballo);
+                if (caballo.esDelJugador) caballoJugadorParticipante = caballo;
+            }
+            textoEstado.text = carreraPreparada.iniciada
+                ? "Carrera pendiente de reanudar · " + carreraPreparada.NombreVisible
+                : carreraPreparada.NombreVisible + " · Listo para correr";
         }
-
-        caballosData.AddRange(GameManager.Instancia.caballosDelDia);
-        diaPreparado = GameManager.Instancia.dia;
-
+        else
+        {
+            botonIniciar.SetActive(false);
+            textoEstado.text = juego.campanaCompletada ? "Campaña completada" : "Elegí una carrera en el televisor";
+        }
         CrearCaballosUI();
     }
 
@@ -421,17 +429,24 @@ public class CarreraUI : MonoBehaviour
 
     public void IniciarCarrera()
     {
+        if (carreraActiva) return;
         if (GameManager.Instancia.campanaCompletada)
         {
             Debug.LogWarning("La campaña ya está completada. No se puede iniciar una carrera del día 43.");
             return;
         }
 
-        if (diaPreparado != GameManager.Instancia.dia)
+        if (carreraPreparada != GameManager.Instancia.ObtenerCarreraProgramada())
             PrepararCarrera();
 
         if (caballosData.Count == 0)
             return;
+
+        if (!GameManager.Instancia.IniciarCarreraProgramada(carreraPreparada))
+        {
+            textoEstado.text = "No se pudo guardar el inicio de la carrera.";
+            return;
+        }
 
         estadosCarrera.Clear();
 
@@ -439,7 +454,7 @@ public class CarreraUI : MonoBehaviour
         {
             estadosCarrera.Add(new EstadoCaballoCarrera(
                 caballosData[i],
-                Random.Range(1, int.MaxValue)));
+                carreraPreparada.participantes[i].semilla));
 
             Vector2 posicionInicial = caballosUI[i].anchoredPosition;
             posicionInicial.x = POS_INICIO;
@@ -460,7 +475,9 @@ public class CarreraUI : MonoBehaviour
         if (!carreraActiva) return;
 
         float dt = Time.deltaTime;
-        float distanciaValida = Mathf.Max(1f, distanciaCarrera);
+        // 1200 m is the reference length of the existing TV simulation.
+        float escalaDistancia = carreraPreparada.distanciaMetros > 0 ? carreraPreparada.distanciaMetros / 1200f : 1f;
+        float distanciaValida = Mathf.Max(1f, distanciaCarrera * escalaDistancia);
         int ganador = -1;
         float menorFraccionDeLlegada = float.PositiveInfinity;
 
@@ -511,27 +528,13 @@ public class CarreraUI : MonoBehaviour
             ? ObtenerMejorRivalPorProgreso()
             : caballoGanador;
 
-        GameManager.Instancia.EstablecerRivalPersistente(mejorRival);
-
+        string resultado = GameManager.Instancia.FinalizarCarreraProgramada(carreraPreparada, caballoGanador, mejorRival);
         textoEstado.text = "Ganó: " + caballoGanador.nombre;
-
-        if (ganoJugador)
-            GameManager.Instancia.AgregarDinero(500);
-        else
-            GameManager.Instancia.RestarDinero(200);
-
-        if (caballoJugadorParticipante != null)
-        {
-            int experienciaGanada = ganoJugador ? 100 : 25;
-            ProgresionCaballo.AgregarExperiencia(caballoJugadorParticipante, experienciaGanada);
-
-            Debug.Log(caballoJugadorParticipante.nombre + " obtuvo " + experienciaGanada +
-                      (ganoJugador ? " XP por victoria." : " XP por participar."));
-        }
-
-        GameManager.Instancia.SiguienteDia();
-
-        botonIniciar.SetActive(true);
+        textoEstado.text += ganoJugador ? $" · Premio de carrera +${carreraPreparada.PremioGanador}" : " · Balance de carrera −$200";
+        if (!string.IsNullOrEmpty(resultado)) textoEstado.text += " · " + resultado;
+        textoEstado.enableAutoSizing = true;
+        textoEstado.fontSizeMax = 36;
+        botonIniciar.SetActive(false);
         botonVolver.SetActive(true);
     }
 

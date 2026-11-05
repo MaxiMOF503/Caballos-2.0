@@ -179,6 +179,11 @@ public static class HorseVisualRecovery
                     var horse = new Caballo { nombre = p.profileId, visualProfileId = p.profileId, sprite = p.baseSprite, esDelJugador = i == 0, velocidad = 8, stamina = 8 };
                     if (i == 0) gm.caballosJugador.Add(horse); else gm.caballosDelDia.Add(horse);
                 }
+                var fixture = new CarreraProgramada { dia = gm.dia };
+                foreach (var horse in gm.caballosJugador.Concat(gm.caballosDelDia))
+                    fixture.participantes.Add(new ParticipanteCarrera { caballo = CaballoData.DesdeCaballo(horse, -1), semilla = 1 });
+                typeof(GameManager).GetField("carreraProgramada", BindingFlags.Instance | BindingFlags.NonPublic)
+                    .SetValue(gm, fixture);
                 gm.estadoActual = GameState.TV;
                 UIManager.instance.AbrirCarrera();
                 if (group > 0)
@@ -226,12 +231,16 @@ public static class HorseVisualRecovery
         Require(Path.GetFullPath(SaveSystem.RutaArchivo).StartsWith(Path.GetFullPath("../ValidationSave")), "isolated save path");
         Require(gm.spritesCaballos.Length == 28 && gm.spritesCaballos.All(s => s != null), "28 legacy references intact");
         // Exercise real generation, not just manually constructed DTOs.
-        for (int day = 0; day < 20; day++)
+        int originalDay = gm.dia;
+        for (int day = 1; day <= 20; day++)
         {
-            gm.GenerarCaballosDelDia();
+            gm.dia = day;
+            Require(gm.ElegirCarrera(gm.ObtenerOfertaCarreras()[0].id, out _), "generate rivals for selected race");
             foreach (var horse in gm.caballosDelDia)
                 Require(catalog.Resolve(horse.visualProfileId)?.baseSprite == horse.sprite, "generated identity");
         }
+        gm.dia = originalDay;
+        typeof(GameManager).GetField("carreraProgramada", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(gm, null);
         gm.caballosJugador.Clear();
         foreach (var p in catalog.profiles)
             gm.caballosJugador.Add(new Caballo { nombre = p.profileId, visualProfileId = p.profileId, sprite = p.baseSprite, esDelJugador = true, velocidad = 7, stamina = 6, inteligencia = 5, suerte = 4, potencial = 12 });

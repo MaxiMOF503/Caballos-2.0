@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public GameObject viewTienda;
     public GameObject viewEstablo;
     public GameObject viewTablon;
+    [SerializeField] GameObject viewSeleccionCarrera;
 
     private void Awake()
     {
@@ -20,10 +21,22 @@ public class UIManager : MonoBehaviour
         viewTienda.SetActive(false);
         viewEstablo.SetActive(false);
         viewTablon.SetActive(false);
+        if (viewSeleccionCarrera != null) viewSeleccionCarrera.SetActive(false);
+    }
+
+    public void AbrirSeleccionCarrera()
+    {
+        CerrarTodo();
+        viewSeleccionCarrera.SetActive(true);
     }
 
     public void AbrirCarrera()
     {
+        if (GameManager.Instancia.ObtenerCarreraProgramada() == null)
+        {
+            AbrirSeleccionCarrera();
+            return;
+        }
         CerrarTodo();
         viewCarrera.SetActive(true);
     }

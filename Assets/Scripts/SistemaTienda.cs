@@ -18,6 +18,8 @@ public sealed class DefinicionProductoTienda
     public bool tieneSlotEquipable;
     public TipoSlotItem slotPermitido;
     public Sprite sprite;
+    public TipoEstadisticaCaballo estadistica;
+    public int bonificacion;
 
     public DefinicionProductoTienda(string id, string nombre, string descripcion,
         int precio, TipoProductoTienda tipo, bool tieneSlot, TipoSlotItem slot, Sprite sprite)
@@ -44,18 +46,18 @@ public static class SistemaTienda
     {
         return new List<DefinicionProductoTienda>
         {
-            new DefinicionProductoTienda("herradura_plata", "Herradura de Plata", "Mejora ligeramente el rendimiento.", 200,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 0)),
+            new DefinicionProductoTienda("herradura_plata", "Herradura de Plata", "+1 resistencia.", 200,
+                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 0)) { estadistica = TipoEstadisticaCaballo.Stamina, bonificacion = 1 },
             new DefinicionProductoTienda("manzana_dorada", "Manzana Dorada", "Aumenta considerablemente la energía.", 350,
                 TipoProductoTienda.Consumible, false, default, SpriteEn(sprites, 2)),
-            new DefinicionProductoTienda("herradura_oro", "Herradura de Oro", "Mejora notablemente la velocidad.", 500,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 1)),
-            new DefinicionProductoTienda("zapatillas", "Zapatillas", "Mejora el desempeño en carrera.", 150,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 5)),
-            new DefinicionProductoTienda("sombrero_copa", "Sombrero de Copa", "Accesorio elegante.", 300,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Cabeza, SpriteEn(sprites, 3)),
-            new DefinicionProductoTienda("sombrero_noble", "Sombrero Noble", "Accesorio exclusivo.", 450,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Cabeza, SpriteEn(sprites, 4))
+            new DefinicionProductoTienda("herradura_oro", "Herradura de Oro", "+2 velocidad.", 500,
+                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 1)) { estadistica = TipoEstadisticaCaballo.Velocidad, bonificacion = 2 },
+            new DefinicionProductoTienda("zapatillas", "Zapatillas", "+1 velocidad.", 150,
+                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 5)) { estadistica = TipoEstadisticaCaballo.Velocidad, bonificacion = 1 },
+            new DefinicionProductoTienda("sombrero_copa", "Sombrero de Copa", "+1 suerte.", 300,
+                TipoProductoTienda.Equipable, true, TipoSlotItem.Cabeza, SpriteEn(sprites, 3)) { estadistica = TipoEstadisticaCaballo.Suerte, bonificacion = 1 },
+            new DefinicionProductoTienda("sombrero_noble", "Sombrero Noble", "+2 suerte.", 450,
+                TipoProductoTienda.Equipable, true, TipoSlotItem.Cabeza, SpriteEn(sprites, 4)) { estadistica = TipoEstadisticaCaballo.Suerte, bonificacion = 2 }
         };
     }
 

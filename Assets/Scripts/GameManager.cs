@@ -11,14 +11,12 @@ public enum GameState
     Tablon
 }
 
-public class GameManager : MonoBehaviour
+public partial class GameManager : MonoBehaviour
 {
     private const int DineroInicial = 1000;
     private const int DiaInicial = 1;
     private const int EdadMinima = 3;
     private const int EdadMaximaExclusiva = 8;
-    private const int EstadisticaRivalMinima = 1;
-    private const int EstadisticaRivalMaximaExclusiva = 7;
     private const int PotencialRivalMinimo = 5;
     private const int PotencialRivalMaximoExclusivo = 15;
     private const int DiasPorSemana = 7;
@@ -130,8 +128,6 @@ public class GameManager : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene(GameLaunch.MenuScenePath);
                 return;
             }
-            if (!campanaCompletada) GenerarCaballosDelDia();
-            else caballosDelDia.Clear();
             ActualizarHUD();
             return;
         }
@@ -153,17 +149,15 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (!campanaCompletada)
-            GenerarCaballosDelDia();
-        else
-            caballosDelDia.Clear();
-
         GuardarPartida();
         ActualizarHUD();
     }
 
     public void IniciarNuevaPartida()
     {
+        carreraProgramada = null;
+        semillaOfertaCarreras = Random.Range(1, int.MaxValue);
+        UltimaApuesta = null;
         dinero = DineroInicial;
         dia = DiaInicial;
         campanaCompletada = false;
@@ -181,7 +175,6 @@ public class GameManager : MonoBehaviour
 
         ResetSprites();
         CrearCaballoInicial();
-        GenerarCaballosDelDia();
         ActualizarHUD();
         GuardarPartida();
         RefrescarTiendaAbierta();
@@ -193,13 +186,17 @@ public class GameManager : MonoBehaviour
 
     public bool GuardarPartida()
     {
+        if (procesandoResultado) return true;
         GameData datos = new GameData
         {
             saveVersion = SaveSystem.SaveVersionActual,
             dinero = dinero,
             dia = dia,
             campanaCompletada = campanaCompletada,
-            estadoTienda = estadoTienda
+            estadoTienda = estadoTienda,
+            carreraProgramada = carreraProgramada,
+            semillaOfertaCarreras = semillaOfertaCarreras,
+            ultimaApuesta = UltimaApuesta
         };
 
         HashSet<string> idsCaballosJugador = new HashSet<string>();
@@ -379,6 +376,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        CargarCarreraProgramada(datos);
         Debug.Log("Partida cargada: " + caballosJugador.Count + " caballo(s).");
         return true;
     }
@@ -603,57 +601,6 @@ public class GameManager : MonoBehaviour
     // CABALLOS DEL DÍA
     // =========================
 
-    public void GenerarCaballosDelDia()
-    {
-        caballosDelDia.Clear();
-
-        nombresDisponibles = new List<string>(nombres);
-        ResetSprites();
-
-        int cantidad = Random.Range(4, 6);
-
-        if (rivalPersistente != null)
-        {
-            if (EsCaballoJugador(rivalPersistente))
-            {
-                Debug.LogWarning("Un caballo del jugador no puede utilizarse como rival persistente.");
-                rivalPersistente = null;
-            }
-            else
-            {
-                rivalPersistente.esDelJugador = false;
-                rivalPersistente.ValidarDatos();
-                caballosDelDia.Add(rivalPersistente);
-                nombresDisponibles.Remove(rivalPersistente.nombre);
-                spritesDisponibles.Remove(rivalPersistente.sprite);
-            }
-        }
-
-        for (int i = caballosDelDia.Count; i < cantidad; i++)
-        {
-            Caballo c = new Caballo();
-
-            c.nombre = ObtenerNombreUnico();
-            c.edad = Random.Range(EdadMinima, EdadMaximaExclusiva);
-            c.velocidad = Random.Range(EstadisticaRivalMinima, EstadisticaRivalMaximaExclusiva);
-            c.stamina = Random.Range(EstadisticaRivalMinima, EstadisticaRivalMaximaExclusiva);
-            c.suerte = Random.Range(EstadisticaRivalMinima, EstadisticaRivalMaximaExclusiva);
-            c.inteligencia = Random.Range(EstadisticaRivalMinima, EstadisticaRivalMaximaExclusiva);
-            c.potencial = Random.Range(PotencialRivalMinimo, PotencialRivalMaximoExclusivo);
-
-            c.relacion = 0;
-            c.estres = 0;
-            c.esDelJugador = false;
-
-            AsignarVisualNuevo(c);
-            c.ValidarDatos();
-
-            caballosDelDia.Add(c);
-        }
-
-        Debug.Log("Caballos del día: " + caballosDelDia.Count);
-    }
-
     public void EstablecerRivalPersistente(Caballo rival)
     {
         if (rival == null || EsCaballoJugador(rival))
@@ -786,12 +733,25 @@ public class GameManager : MonoBehaviour
 
     public bool EquiparItem(Caballo caballo, ItemCaballo item)
     {
+        return EquiparItem(caballo, item, SistemaEquipamiento.RanuraInicial(item?.slotPermitido ?? default), false);
+    }
+
+    public bool EquiparItem(Caballo caballo, ItemCaballo item, TipoSlotItem ranura, bool permitirReemplazo)
+    {
+        ItemCaballo propio = itemsJugador?.Find(i => ReferenceEquals(i, item) ||
+            (i != null && !string.IsNullOrEmpty(item?.id) && i.id == item.id));
+        string asignacionAnterior = propio?.caballoEquipadoId;
+        TipoSlotItem ranuraAnterior = propio?.slotEquipado ?? default;
+        int saldoAnterior = dinero;
         bool equipado = SistemaEquipamiento.EquiparItem(
             caballo,
             item,
+            ranura,
+            permitirReemplazo,
             caballosJugador,
             itemsJugador,
             ref dinero,
+            out ItemCaballo reemplazado,
             out string mensaje);
 
         if (!equipado)
@@ -800,14 +760,21 @@ public class GameManager : MonoBehaviour
             return false;
         }
 
-        Debug.Log(mensaje + " Coste: $" + SistemaEquipamiento.CostoEquiparItem + ".");
-        ActualizarHUD();
-        GuardarPartida();
-        return true;
+        if (GuardarCambioEquipamiento(propio, asignacionAnterior, saldoAnterior, mensaje))
+            return true;
+
+        propio.slotEquipado = ranuraAnterior;
+        if (reemplazado != null)
+            reemplazado.caballoEquipadoId = caballo.id;
+        return false;
     }
 
     public bool DesequiparItem(Caballo caballo, ItemCaballo item)
     {
+        ItemCaballo propio = itemsJugador?.Find(i => ReferenceEquals(i, item) ||
+            (i != null && !string.IsNullOrEmpty(item?.id) && i.id == item.id));
+        string asignacionAnterior = propio?.caballoEquipadoId;
+        int saldoAnterior = dinero;
         bool desequipado = SistemaEquipamiento.DesequiparItem(
             caballo,
             item,
@@ -822,9 +789,19 @@ public class GameManager : MonoBehaviour
             return false;
         }
 
-        Debug.Log(mensaje + " Coste: $" + SistemaEquipamiento.CostoDesequiparItem + ".");
+        return GuardarCambioEquipamiento(propio, asignacionAnterior, saldoAnterior, mensaje);
+    }
+
+    bool GuardarCambioEquipamiento(ItemCaballo item, string asignacionAnterior, int saldoAnterior, string mensaje)
+    {
+        if (!GuardarPartida())
+        {
+            item.caballoEquipadoId = asignacionAnterior;
+            dinero = saldoAnterior;
+            return false;
+        }
+        Debug.Log(mensaje);
         ActualizarHUD();
-        GuardarPartida();
         return true;
     }
 
@@ -859,6 +836,8 @@ public class GameManager : MonoBehaviour
         }
 
         TransicionCampana transicion = CalcularTransicionCampana(dia, dinero);
+        carreraProgramada = null;
+        caballosDelDia.Clear();
 
         if (transicion.resultado == ResultadoCierreDia.CampanaPerdida)
         {
@@ -890,7 +869,6 @@ public class GameManager : MonoBehaviour
 
         dia = transicion.diaSiguiente;
         bool tiendaRotada = SincronizarTienda();
-        GenerarCaballosDelDia();
         ActualizarHUD();
         GuardarPartida();
         if (tiendaRotada)
@@ -995,7 +973,7 @@ public class GameManager : MonoBehaviour
         {
             case Interactable.Tipo.TV:
                 estadoActual = GameState.TV;
-                UIManager.instance.AbrirCarrera();
+                UIManager.instance.AbrirSeleccionCarrera();
                 break;
 
             case Interactable.Tipo.Tienda:
