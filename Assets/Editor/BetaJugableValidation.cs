@@ -14,6 +14,9 @@ public static class BetaJugableValidation
     static int saldoAntes;
     static ApuestaCarrera apuestaEnCurso;
     static int premioEnCurso;
+    static CarreraProgramada carreraSinApuesta;
+    static int saldoSinApuesta;
+    static string resultadoAnterior;
 
     static BetaJugableValidation() => EditorApplication.update += Verificar;
 
@@ -35,7 +38,7 @@ public static class BetaJugableValidation
         try
         {
             if (inicio == 0) inicio = EditorApplication.timeSinceStartup;
-            Exigir(EditorApplication.timeSinceStartup - inicio < 60, "Tiempo máximo de validación");
+            Exigir(EditorApplication.timeSinceStartup - inicio < 120, "Tiempo máximo de validación");
             var juego = GameManager.Instancia;
             if (juego == null || juego.caballosJugador.Count == 0) return;
             if (apuestaEnCurso == null)
@@ -44,6 +47,15 @@ public static class BetaJugableValidation
                 VerificarSeleccion(juego);
                 VerificarTablonYLiquidacion(juego);
                 PrepararCarreraReal(juego);
+                return;
+            }
+            if (carreraSinApuesta != null)
+            {
+                if (juego.dia != 4) return;
+                VerificarResultadoSinApuesta(juego);
+                VerificarCarreraAnterior(juego);
+                Debug.Log("BETA PASS: escenarios A–G, con apuesta y sin apuesta, persistencia, cambio de carrera y liquidación única.");
+                Salir(0);
                 return;
             }
             if (juego.dia != 3) return;
@@ -57,9 +69,7 @@ public static class BetaJugableValidation
             Recargar(juego);
             Exigir(juego.UltimaApuesta.estado == resultado.estado && juego.dinero == saldoAntes + balanceCarrera + pago,
                 "Resultado persistente sin segundo pago");
-            VerificarCarreraAnterior(juego);
-            Debug.Log("BETA PASS: equipamiento, selección, oferta, parrilla, tablón, cuotas, guardado y carrera real.");
-            Salir(0);
+            PrepararCarreraSinApuesta(juego);
         }
         catch (Exception error)
         {
@@ -115,9 +125,21 @@ public static class BetaJugableValidation
         typeof(GameManager).GetField("semillaOfertaCarreras", BindingFlags.Instance | BindingFlags.NonPublic)
             .SetValue(juego, semilla);
         var ofertas = juego.ObtenerOfertaCarreras();
-        juego.SetState(Interactable.Tipo.TV);
+        var camara = CameraController.instancia.transform;
+        var posicion = camara.position;
+        var rotacion = camara.rotation;
+        var televisor = UnityEngine.Object.FindObjectsByType<Interactable>(FindObjectsSortMode.None)
+            .First(objeto => objeto.tipo == Interactable.Tipo.TV);
+        televisor.Interact();
+        Exigir(juego.estadoActual == GameState.Hub && juego.ObtenerCarreraProgramada() == null &&
+            !UIManager.instance.viewCarrera.activeSelf && camara.position == posicion && camara.rotation == rotacion,
+            "C: TV sin selección conserva el Hub y la cámara");
+        Exigir(UIManager.instance.viewTablon.transform.parent.Find("AvisoHub").GetComponentInChildren<TMPro.TMP_Text>()
+            .text.Contains("tablón de apuestas"), "C: aviso visible para elegir primero en el tablón");
+        juego.SetState(Interactable.Tipo.Tablon);
         var selector = UnityEngine.Object.FindFirstObjectByType<SeleccionCarreraView>();
-        Exigir(selector != null && !UIManager.instance.viewCarrera.activeSelf, "El televisor abre el selector");
+        Exigir(selector != null && !UIManager.instance.viewTablon.activeSelf &&
+            !UIManager.instance.viewCarrera.activeSelf, "A: el tablón abre el selector cuando falta una carrera");
         var participar = selector.transform.Find("Participar").GetComponent<UnityEngine.UI.Button>();
         Exigir(!participar.interactable, "Participar exige selección");
         var primera = selector.transform.Find("Ofertas/Viewport/Lista/Carrera_" + ofertas[0].id);
@@ -134,16 +156,29 @@ public static class BetaJugableValidation
         Exigir(juego.ObtenerCarreraProgramada() == null, "Seleccionar sin Participar no genera rivales");
         participar.onClick.Invoke();
         var primeraParrilla = juego.ObtenerCarreraProgramada();
-        Exigir(UIManager.instance.viewCarrera.activeSelf && !selector.gameObject.activeSelf &&
+        Exigir(UIManager.instance.viewTablon.activeSelf && !UIManager.instance.viewCarrera.activeSelf && !selector.gameObject.activeSelf &&
             primeraParrilla.idDefinicion == ofertas[0].id && primeraParrilla.premio == ofertas[0].premio,
-            "Participar prepara la carrera indicada");
+            "A: Seleccionar prepara la carrera y abre el tablón");
+        string parrillaGuardada = JsonUtility.ToJson(primeraParrilla);
+        Recargar(juego);
+        Exigir(JsonUtility.ToJson(juego.ObtenerCarreraProgramada()) == parrillaGuardada, "D: selección y cuotas sobreviven a carga");
+        juego.VolverAlHub();
+        televisor.Interact();
+        Exigir(UIManager.instance.viewCarrera.activeSelf &&
+            JsonUtility.ToJson(juego.ObtenerCarreraProgramada()) == parrillaGuardada, "TV utiliza exactamente la carrera preparada");
+        juego.VolverAlHub();
+        juego.SetState(Interactable.Tipo.Tablon);
+        var tablon = UIManager.instance.viewTablon.GetComponentInChildren<TablonView>();
+        tablon.CambiarCarrera();
+        Exigir(selector.gameObject.activeSelf, "E: volver al selector sin apostar");
         var ids = primeraParrilla.participantes.Skip(1).Select(p => p.caballo.id).ToArray();
         var alternativa = ofertas.Last();
-        Exigir(juego.ElegirCarrera(alternativa.id, out _), "Cambio antes de apostar");
+        selector.transform.Find("Ofertas/Viewport/Lista/Carrera_" + alternativa.id).GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
+        participar.onClick.Invoke();
         var segunda = juego.ObtenerCarreraProgramada();
         Exigir(!ids.SequenceEqual(segunda.participantes.Skip(1).Select(p => p.caballo.id)) &&
             segunda.participantes.Skip(1).Average(p => p.caballo.stamina) >
-            primeraParrilla.participantes.Skip(1).Average(p => p.caballo.stamina), "Otra distancia adapta rivales");
+            primeraParrilla.participantes.Skip(1).Average(p => p.caballo.stamina), "E: otra distancia adapta rivales");
         Exigir(juego.ElegirCarrera(ofertas[0].id, out _) &&
             ids.SequenceEqual(juego.ObtenerCarreraProgramada().participantes.Skip(1).Select(p => p.caballo.id)),
             "Volver a una carrera conserva su parrilla determinista");
@@ -211,6 +246,12 @@ public static class BetaJugableValidation
         Exigir(vista.confirmar.gameObject.activeSelf && juego.dinero == saldo, "Vista previa sin cargo");
         vista.confirmar.onClick.Invoke();
         Exigir(carrera.apuesta?.cantidad == 100 && juego.dinero == saldo - 100, "Un cargo al confirmar");
+        vista.CambiarCarrera();
+        Exigir(UIManager.instance.viewTablon.activeSelf &&
+            !vista.transform.parent.Find("TablonRustico/Header/ChangeRaceButton").GetComponent<UnityEngine.UI.Button>().interactable,
+            "F: una apuesta confirmada bloquea el control de cambio");
+        UIManager.instance.AbrirSeleccionCarrera();
+        Exigir(UIManager.instance.viewTablon.activeSelf, "F: el acceso directo al selector respeta el bloqueo");
         Exigir(juego.ObtenerOfertaCarreras().Single().id == carrera.idDefinicion &&
             !juego.ElegirCarrera("distinta", out _), "La apuesta bloquea cambios de carrera");
         Exigir(!juego.Apostar(carrera.id, jugador.caballo.id, 100, out _), "Bloquea segunda apuesta");
@@ -238,8 +279,8 @@ public static class BetaJugableValidation
         var madera = board.Find("WoodenBackground/Planks").GetComponent<UnityEngine.UI.RawImage>();
         Exigir(marco.type == UnityEngine.UI.Image.Type.Sliced && marco.sprite.border.sqrMagnitude > 0,
             "Marco con esquinas protegidas");
-        Exigir(madera.texture != null && madera.material.shader.name == "Caballos/UI/MaderaCalida",
-            "Textura original con acabado cálido");
+        Exigir(madera.texture == UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Sprite>("Assets/Art/RaceSelection/MaderaFondo.png").texture &&
+            madera.material.shader.name == "UI/Default", "Madera compartida con el selector y proporciones conservadas");
         var content = (RectTransform)vista.content;
         var scroll = content.parent.GetComponent<UnityEngine.UI.ScrollRect>();
         var anteriorMin = root.anchorMin;
@@ -318,6 +359,48 @@ public static class BetaJugableValidation
         Exigir(anterior.id == carrera.id && anterior.apuesta.idCaballo == carrera.apuesta.idCaballo &&
             anterior.PremioGanador == 500 && juego.ElegirCarrera(opcion.id, out _) &&
             ReferenceEquals(anterior, juego.ObtenerCarreraProgramada()), "Apuesta y premio de guardado anterior");
+    }
+
+    static void PrepararCarreraSinApuesta(GameManager juego)
+    {
+        Exigir(juego.ObtenerCarreraProgramada() == null && juego.caballosDelDia.Count == 0,
+            "G: la carrera finalizada deja libre el nuevo día");
+        juego.SetState(Interactable.Tipo.TV);
+        Exigir(juego.estadoActual == GameState.Hub && !UIManager.instance.viewCarrera.activeSelf,
+            "G: el televisor no repite la carrera terminada");
+        juego.SetState(Interactable.Tipo.Tablon);
+        var selector = UnityEngine.Object.FindFirstObjectByType<SeleccionCarreraView>();
+        var oferta = juego.ObtenerOfertaCarreras()[0];
+        selector.transform.Find("Ofertas/Viewport/Lista/Carrera_" + oferta.id).GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
+        selector.transform.Find("Participar").GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
+        carreraSinApuesta = juego.ObtenerCarreraProgramada();
+        saldoSinApuesta = juego.dinero;
+        resultadoAnterior = JsonUtility.ToJson(juego.UltimaApuesta);
+        var tablon = UIManager.instance.viewTablon.GetComponentInChildren<TablonView>();
+        Exigir(carreraSinApuesta.apuesta == null && juego.dinero == saldoSinApuesta &&
+            !tablon.transform.parent.Find("TablonRustico/BettingFooter/FeedbackText").GetComponent<TMPro.TMP_Text>().text.Contains("Apuesta confirmada"),
+            "B: consultar sin apostar y sin mensajes pendientes de la carrera anterior");
+        juego.VolverAlHub();
+        juego.SetState(Interactable.Tipo.TV);
+        var carrera = UIManager.instance.viewCarrera.GetComponentInChildren<CarreraUI>();
+        carrera.IniciarCarrera();
+        Exigir(carreraSinApuesta.iniciada && carreraSinApuesta.apuesta == null, "B: carrera real sin apuesta");
+    }
+
+    static void VerificarResultadoSinApuesta(GameManager juego)
+    {
+        var pantalla = UIManager.instance.viewCarrera.GetComponentInChildren<CarreraUI>();
+        int balance = pantalla.textoEstado.text.Contains("Premio de carrera") ? carreraSinApuesta.PremioGanador : -200;
+        Exigir(juego.dinero == saldoSinApuesta + balance &&
+            JsonUtility.ToJson(juego.UltimaApuesta) == resultadoAnterior, "B: resultado sin débito ni pago de apuesta");
+        int saldoFinal = juego.dinero;
+        var ganador = juego.CrearVistaParticipante(carreraSinApuesta.participantes[0]);
+        juego.FinalizarCarreraProgramada(carreraSinApuesta, ganador, null);
+        Exigir(juego.dinero == saldoFinal && !juego.IniciarCarreraProgramada(carreraSinApuesta) &&
+            juego.ObtenerCarreraProgramada() == null, "G: no se repiten premios ni la carrera anterior");
+        Recargar(juego);
+        Exigir(juego.dinero == saldoFinal && juego.ObtenerCarreraProgramada() == null &&
+            juego.ObtenerOfertaCarreras().Count > 0, "G: nueva oferta y resultado guardados");
     }
 
     static void Recargar(GameManager juego) =>

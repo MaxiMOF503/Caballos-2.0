@@ -31,6 +31,8 @@ internal static class TablonLayout
             "TABLÓN DE APUESTAS", 54, TextAlignmentOptions.Center);
         var volver = Boton("BackButton", header, new Rect(1396, 12, 146, 44), headerSize, font, "Volver");
         volver.onClick.AddListener(() => GameManager.Instancia.VolverAlHub());
+        view.cambiarCarrera = Boton("ChangeRaceButton", header, new Rect(30, 12, 240, 44), headerSize, font, "Cambiar carrera");
+        view.cambiarCarrera.onClick.AddListener(view.CambiarCarrera);
 
         var leftSize = new Vector2(794, 542);
         var left = Panel("ParticipantsPanel", board, new Rect(68, 136, leftSize.x, leftSize.y), BoardSize, madera);
@@ -176,11 +178,9 @@ internal static class TablonLayout
     internal static RectTransform Wood(string name, RectTransform parent, Rect bounds, Vector2 size, Sprite madera)
     {
         var rect = Rect(name, parent, bounds, size);
-        var wood = rect.gameObject.AddComponent<TablonWoodGraphic>();
+        var wood = rect.gameObject.AddComponent<MaderaSelectorGraphic>();
         wood.texture = madera != null ? madera.texture : null;
-        if (madera != null)
-            wood.material = Resources.Load<Material>("Tablon/MaderaCalida");
-        else
+        if (madera == null)
             wood.color = new Color32(121, 69, 38, 255);
         wood.raycastTarget = false;
         return rect;
@@ -289,26 +289,5 @@ internal sealed class TablonRowsLayout : VerticalLayoutGroup
             element.minHeight = element.preferredHeight = height * 61 / 406;
         }
         base.CalculateLayoutInputVertical();
-    }
-}
-
-// Rotates the original plank texture in UV space and crops to cover each panel.
-internal sealed class TablonWoodGraphic : RawImage
-{
-    protected override void OnPopulateMesh(VertexHelper mesh)
-    {
-        base.OnPopulateMesh(mesh);
-        if (texture == null || rectTransform.rect.height <= 0) return;
-        float target = rectTransform.rect.width / rectTransform.rect.height;
-        float source = (float)texture.height / texture.width;
-        float u = Mathf.Min(1, source / target);
-        float v = Mathf.Min(1, target / source);
-        for (int i = 0; i < mesh.currentVertCount; i++)
-        {
-            var vertex = UIVertex.simpleVert;
-            mesh.PopulateUIVertex(ref vertex, i);
-            vertex.uv0 = new Vector2(.5f + (vertex.uv0.y - .5f) * u, .5f + (.5f - vertex.uv0.x) * v);
-            mesh.SetUIVertex(vertex, i);
-        }
     }
 }

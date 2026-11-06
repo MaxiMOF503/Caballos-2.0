@@ -8,16 +8,18 @@ imágenes, modelos y otros recursos binarios. En una copia nueva ejecutar
 ## Flujo de juego
 
 - El menú principal ofrece Nueva partida, Cargar, Configuración y Salir.
-- El televisor del Hub abre Elegir carrera. La oferta habitual contiene entre
+- El tablón del Hub abre Elegir carrera cuando falta una selección. La oferta habitual contiene entre
   dos y cuatro carreras por día. La Copa Nocturna está configurada como cierre
   semanal. Se pueden editar estas opciones en
   `Assets/Resources/Carreras/Catalogo.asset`.
-- Participar prepara una parrilla según la distancia y dificultad elegidas. La
-  pantalla del televisor mantiene el botón para iniciar la simulación. Para
-  apostar antes de iniciar, volver al Hub y abrir el tablón.
+- Seleccionar prepara y guarda una parrilla según la distancia y dificultad
+  elegidas y abre el tablón. Apostar es opcional. El televisor usa exclusivamente
+  esa carrera y mantiene el botón para iniciar la simulación. Si falta una
+  elección, muestra un aviso en el Hub.
 - La selección se puede cambiar hasta que se confirme una apuesta o se inicie
   la carrera. La parrilla guarda estadísticas efectivas, identidades visuales,
-  semillas y cuotas. Preparar el equipo antes de pulsar Participar.
+  semillas y cuotas. Preparar el equipo antes de pulsar Seleccionar. El control
+  Cambiar carrera del tablón permite volver al selector antes de apostar o iniciar.
 - El tablón usa dinero ficticio. Solo confirmar descuenta el importe. El pago
   incluye la apuesta original y se redondea hacia abajo. El premio por ganar la
   carrera es independiente. El guardado JSON conserva la parrilla, la apuesta

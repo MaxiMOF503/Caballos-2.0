@@ -3772,13 +3772,12 @@ MonoBehaviour:
   sensibilidad: 400
   fixedHubNavigation: 1
   centralYawOffset: 0
-  horizontalSensitivity: 3
-  verticalSensitivity: 2
-  minYaw: -70
-  maxYaw: 70
+  minYaw: -90
+  maxYaw: 90
   minPitch: -25
   maxPitch: 30
-  rotationSmoothTime: 0.045
+  rotationSmoothTime: 0
+  resumeBlendTime: 0.12
   zoom: 40
   zoomMin: 30
   zoomMax: 80
@@ -12597,7 +12596,7 @@ MonoBehaviour:
   confirmar: {fileID: 1504948942}
   cancelar: {fileID: 1247144959}
   marco: {fileID: 21300000, guid: 8018841f1a512274ca28f54187123f0a, type: 3}
-  madera: {fileID: 21300000, guid: f48d4a0143869b047b0232909977a688, type: 3}
+  madera: {fileID: 21300000, guid: 52b1b215c2b94558bde008ccdb873f55, type: 3}
 --- !u!1 &983095774
 GameObject:
   m_ObjectHideFlags: 0
@@ -12792,7 +12791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f85744c90daa4048b530fb07e2e54dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bea9d1f92234f40a176a4678eb58dad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18770,6 +18769,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd32ca6737d3de4e8eb14fc88b49b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TiendaView
+  fondo: {fileID: 21300000, guid: b4f0aba14b18497a9a5c7f068c78646c, type: 3}
+  estanteria: {fileID: 21300000, guid: 1b3d134c1db14324950807457eb76016, type: 3}
+  pergamino: {fileID: 21300000, guid: b6c05a1904874620ac4102599660af95, type: 3}
+  casilla: {fileID: 21300000, guid: a914bc373ce74eb1ade8a11e9fa4a72b, type: 3}
+  marcoCartel: {fileID: 21300000, guid: ea0777665bda4c76b822035a3dc9031b, type: 3}
+  marcoBoton: {fileID: 21300000, guid: 032960576d284b89a78d8d3e92393729, type: 3}
+  vendedor: {fileID: 21300000, guid: 3bea9d1f92234f40a176a4678eb58dad, type: 3}
   textoNombre: {fileID: 569965478}
   textoDescripcion: {fileID: 396498763}
   textoPrecio: {fileID: 347402296}
@@ -24186,8 +24192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a30fbc09ae4a17874de8dbcd194740, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::SeleccionCarreraView
-  marco: {fileID: 21300000, guid: 8018841f1a512274ca28f54187123f0a, type: 3}
-  madera: {fileID: 21300000, guid: f48d4a0143869b047b0232909977a688, type: 3}
+  marco: {fileID: 21300000, guid: 2cf5ec7f1646449d91abb377af6b9524, type: 3}
+  madera: {fileID: 21300000, guid: 52b1b215c2b94558bde008ccdb873f55, type: 3}
+  maderaPanel: {fileID: 21300000, guid: c483e263910b4f6392eda710814e5ab4, type: 3}
+  marcoBanner: {fileID: 21300000, guid: 032960576d284b89a78d8d3e92393729, type: 3}
   trofeo: {fileID: 21300000, guid: d2e16c9bf1b9483aa5acfb6710da63f2, type: 3}
   caballo: {fileID: 21300000, guid: 14f3d76136a64472a26ddfa8d47b9213, type: 3}
   fuente: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -15,139 +15,87 @@ public class TiendaView : MonoBehaviour
     public GameObject botonSi;
     public GameObject botonNo;
 
-    private readonly List<Button> botonesOferta = new List<Button>();
-    private DefinicionProductoTienda productoSeleccionado;
-    private Button botonReroll;
+    [Header("Presentación")]
+    [SerializeField] Sprite fondo, estanteria, pergamino, casilla, marcoCartel, marcoBoton;
+    [SerializeField] Sprite vendedor;
 
-    private void Start()
+    internal readonly List<TiendaProductoUI> ofertas = new();
+    internal Button botonReroll;
+    internal TMP_Text mensaje, textoConfirmacion;
+    internal CanvasGroup contenido;
+    internal GameObject confirmacion;
+    internal Button cancelar;
+    string productoSeleccionadoId;
+    string compraPendienteId;
+    int precioConfirmado;
+    GameObject focoAnterior;
+    bool interfazConfigurada;
+
+    void OnEnable()
     {
-        AsegurarBotones();
-        RefrescarTienda();
+        if (!interfazConfigurada)
+        {
+            TiendaLayout.Construir(this, (RectTransform)transform.parent,
+                fondo, estanteria, pergamino, casilla, marcoCartel, marcoBoton, vendedor);
+            interfazConfigurada = true;
+        }
+        RefrescarTienda(false);
     }
 
-    private void OnEnable()
+    void OnDisable()
     {
-        AsegurarBotones();
-        RefrescarTienda();
+        CerrarConfirmacion();
     }
 
-    private void AsegurarBotones()
+    internal DefinicionProductoTienda ProductoDisponible(string id)
     {
-        if (botonesOferta.Count > 0)
-            return;
+        var juego = GameManager.Instancia;
+        if (string.IsNullOrEmpty(id) || juego?.estadoTienda?.idsProductosStock == null ||
+            !juego.estadoTienda.idsProductosStock.Contains(id))
+            return null;
 
-        Transform panel = transform.parent != null ? transform.parent.Find("PanelItems") : null;
-        if (panel == null)
-            return;
-
-        foreach (Button boton in panel.GetComponentsInChildren<Button>(true))
-            if (boton.transform.parent == panel)
-                botonesOferta.Add(boton);
-
-        if (botonesOferta.Count > 0)
-            CrearBotonReroll();
+        return SistemaTienda.Buscar(juego.CatalogoTienda(), id);
     }
 
-    private void CrearBotonReroll()
+    void RefrescarTienda(bool conservarSeleccion)
     {
-        if (botonReroll != null || botonComprar == null)
-            return;
-        Button plantilla = botonComprar.GetComponent<Button>();
-        if (plantilla == null)
-            return;
-
-        botonReroll = Instantiate(plantilla, botonComprar.transform.parent);
-        botonReroll.name = "RerollTienda";
-        botonReroll.onClick = new Button.ButtonClickedEvent();
-        botonReroll.onClick.AddListener(EjecutarRerollManual);
-
-        LayoutElement layout = botonReroll.GetComponent<LayoutElement>();
-        if (layout == null)
-            layout = botonReroll.gameObject.AddComponent<LayoutElement>();
-        layout.ignoreLayout = true;
-
-        RectTransform rect = botonReroll.GetComponent<RectTransform>();
-        RectTransform rectComprar = plantilla.GetComponent<RectTransform>();
-        rect.anchorMin = rectComprar.anchorMin;
-        rect.anchorMax = rectComprar.anchorMax;
-        rect.pivot = rectComprar.pivot;
-        rect.anchoredPosition = rectComprar.anchoredPosition + new Vector2(0f, 100f);
-        rect.sizeDelta = new Vector2(190f, 36f);
-        rect.localScale = rectComprar.localScale;
-
-        TMP_Text etiqueta = botonReroll.GetComponentInChildren<TMP_Text>(true);
-        if (etiqueta != null)
-            etiqueta.text = "Reroll $" + SistemaTienda.CostoRerollManual;
-        foreach (Graphic grafico in botonReroll.GetComponentsInChildren<Graphic>(true))
-            if (grafico.gameObject != botonReroll.gameObject)
-                grafico.raycastTarget = false;
-        botonReroll.gameObject.SetActive(true);
-    }
-
-    private void RefrescarTienda()
-    {
-        GameManager juego = GameManager.Instancia;
-        if (juego == null || botonesOferta.Count == 0)
-            return;
+        CerrarConfirmacion();
+        var juego = GameManager.Instancia;
+        if (juego == null) return;
 
         if (juego.SincronizarTienda())
             juego.GuardarPartida();
 
-        productoSeleccionado = null;
-        List<DefinicionProductoTienda> catalogo = juego.CatalogoTienda();
-        List<string> stock = juego.estadoTienda.idsProductosStock;
+        if (!conservarSeleccion || ProductoDisponible(productoSeleccionadoId) == null)
+            productoSeleccionadoId = null;
 
-        for (int i = 0; i < botonesOferta.Count; i++)
-        {
-            Button boton = botonesOferta[i];
-            DefinicionProductoTienda producto = i < stock.Count
-                ? SistemaTienda.Buscar(catalogo, stock[i])
-                : null;
-            Image icono = boton.transform.childCount > 0
-                ? boton.transform.GetChild(0).GetComponent<Image>()
-                : null;
-            TMP_Text etiqueta = boton.GetComponentInChildren<TMP_Text>(true);
-            if (etiqueta != null)
-            {
-                etiqueta.text = string.Empty;
-                etiqueta.gameObject.SetActive(false);
-            }
-            if (icono != null)
-            {
-                icono.sprite = producto != null ? producto.sprite : null;
-                icono.preserveAspect = true;
-                icono.enabled = icono.sprite != null;
-            }
+        var stock = juego.estadoTienda.idsProductosStock;
+        for (int i = 0; i < ofertas.Count; i++)
+            ofertas[i].Mostrar(i < stock.Count ? ProductoDisponible(stock[i]) : null);
 
-            boton.gameObject.SetActive(producto != null);
-            if (producto != null)
-                boton.interactable = true;
-        }
-
-        if (botonReroll != null)
-            botonReroll.interactable = juego.dinero >= SistemaTienda.CostoRerollManual;
+        mensaje.text = "";
+        ActualizarReroll();
         MostrarDetalle();
     }
 
-    public void RefrescarPorCambioDeStock()
-    {
-        RefrescarTienda();
-    }
+    public void RefrescarPorCambioDeStock() => RefrescarTienda(true);
 
-    private void SeleccionarOferta(int indice)
+    internal void SeleccionarProducto(string id)
     {
-        GameManager juego = GameManager.Instancia;
-        if (juego == null || juego.estadoTienda == null ||
-            indice < 0 || indice >= juego.estadoTienda.idsProductosStock.Count ||
-            indice >= botonesOferta.Count || !botonesOferta[indice].gameObject.activeSelf)
-            return;
-
-        productoSeleccionado = SistemaTienda.Buscar(
-            juego.CatalogoTienda(), juego.estadoTienda.idsProductosStock[indice]);
+        if (confirmacion.activeSelf || ProductoDisponible(id) == null) return;
+        productoSeleccionadoId = id;
+        mensaje.text = "";
         MostrarDetalle();
     }
 
-    // Los eventos de los seis botones existentes están serializados con estos nombres.
+    void SeleccionarOferta(int indice)
+    {
+        var stock = GameManager.Instancia?.estadoTienda?.idsProductosStock;
+        if (stock != null && indice >= 0 && indice < stock.Count)
+            SeleccionarProducto(stock[indice]);
+    }
+
+    // Preserve the original entry points for existing scene bindings.
     public void SeleccionarHerraduraPlata() => SeleccionarOferta(0);
     public void SeleccionarManzanaDorada() => SeleccionarOferta(1);
     public void SeleccionarHerraduraOro() => SeleccionarOferta(2);
@@ -155,77 +103,102 @@ public class TiendaView : MonoBehaviour
     public void SeleccionarSombreroCopa() => SeleccionarOferta(4);
     public void SeleccionarSombreroNoble() => SeleccionarOferta(5);
 
-    private bool PuedeComprar()
+    static bool PuedeComprar(DefinicionProductoTienda producto)
     {
-        GameManager juego = GameManager.Instancia;
-        return productoSeleccionado != null && juego != null &&
-            productoSeleccionado.tipoProducto == TipoProductoTienda.Equipable &&
-            productoSeleccionado.tieneSlotEquipable &&
-            productoSeleccionado.sprite != null && juego.dinero >= productoSeleccionado.precio;
+        return producto != null && GameManager.Instancia != null &&
+            producto.tipoProducto == TipoProductoTienda.Equipable && producto.tieneSlotEquipable &&
+            producto.sprite != null && GameManager.Instancia.dinero >= producto.precio;
     }
 
-    private void MostrarDetalle()
+    void MostrarDetalle()
     {
-        if (textoNombre == null || textoDescripcion == null || textoPrecio == null)
-            return;
-
-        if (productoSeleccionado == null)
+        var producto = ProductoDisponible(productoSeleccionadoId);
+        textoNombre.text = producto?.nombre ?? "Selecciona un ítem";
+        textoDescripcion.text = "";
+        textoPrecio.text = "";
+        if (producto != null)
         {
-            textoNombre.text = "Selecciona un item";
-            textoDescripcion.text = string.Empty;
-            textoPrecio.text = string.Empty;
-        }
-        else
-        {
-            textoNombre.text = productoSeleccionado.nombre;
-            textoDescripcion.text = productoSeleccionado.descripcion;
-            textoPrecio.text = productoSeleccionado.tipoProducto == TipoProductoTienda.Consumible
-                ? "Precio: $" + productoSeleccionado.precio + " — Consumible - próximamente"
-                : "Precio: $" + productoSeleccionado.precio;
+            textoDescripcion.text = producto.descripcion;
+            if (producto.tipoProducto == TipoProductoTienda.Equipable)
+            {
+                textoDescripcion.text += $"\nBonificación: +{producto.bonificacion} {producto.estadistica}";
+                textoDescripcion.text += "\nRanura: " + SistemaEquipamiento.NombreRanura(producto.slotPermitido);
+            }
+            else
+                textoDescripcion.text += "\nConsumible · Próximamente";
+
+            textoPrecio.text = $"Precio: ${producto.precio}";
+            if (GameManager.Instancia.dinero < producto.precio)
+                textoPrecio.text += " · Saldo insuficiente";
         }
 
-        ReiniciarConfirmacion();
-    }
+        foreach (var oferta in ofertas)
+            oferta.Marcar(producto?.idDefinicion);
 
-    private void ReiniciarConfirmacion()
-    {
-        if (botonComprar != null)
-        {
-            botonComprar.SetActive(true);
-            Button boton = botonComprar.GetComponent<Button>();
-            if (boton != null)
-                boton.interactable = PuedeComprar();
-        }
-        if (botonSi != null) botonSi.SetActive(false);
-        if (botonNo != null) botonNo.SetActive(false);
+        botonComprar.GetComponent<Button>().interactable = PuedeComprar(producto);
     }
 
     public void MostrarConfirmacion()
     {
-        if (!PuedeComprar())
-            return;
-        botonComprar.SetActive(false);
-        botonSi.SetActive(true);
-        botonNo.SetActive(true);
+        var producto = ProductoDisponible(productoSeleccionadoId);
+        if (confirmacion.activeSelf || !PuedeComprar(producto)) return;
+        compraPendienteId = producto.idDefinicion;
+        precioConfirmado = producto.precio;
+        textoConfirmacion.text = producto.nombre + $" — ${producto.precio}";
+        foreach (var oferta in ofertas) oferta.QuitarHover();
+        focoAnterior = UnityEngine.EventSystems.EventSystem.current?.currentSelectedGameObject;
+        contenido.interactable = false;
+        contenido.blocksRaycasts = false;
+        confirmacion.SetActive(true);
+        cancelar.Select();
     }
 
-    public void CancelarCompra()
+    public void CancelarCompra() => CerrarConfirmacion();
+
+    void CerrarConfirmacion()
     {
-        ReiniciarConfirmacion();
+        compraPendienteId = null;
+        if (confirmacion == null) return;
+        confirmacion.SetActive(false);
+        contenido.interactable = true;
+        contenido.blocksRaycasts = true;
+        if (focoAnterior != null && focoAnterior.activeInHierarchy)
+            UnityEngine.EventSystems.EventSystem.current?.SetSelectedGameObject(focoAnterior);
+        focoAnterior = null;
     }
 
     public void ConfirmarCompra()
     {
-        if (PuedeComprar())
-            GameManager.Instancia.IntentarComprarItem(productoSeleccionado.idDefinicion);
-        ReiniciarConfirmacion();
-        if (botonReroll != null && GameManager.Instancia != null)
-            botonReroll.interactable = GameManager.Instancia.dinero >= SistemaTienda.CostoRerollManual;
+        if (string.IsNullOrEmpty(compraPendienteId)) return;
+        var producto = ProductoDisponible(compraPendienteId);
+        bool valida = PuedeComprar(producto) && producto.precio == precioConfirmado;
+        string id = compraPendienteId;
+        // Consume this confirmation before calling the existing synchronous transaction.
+        CerrarConfirmacion();
+        bool comprada = valida && GameManager.Instancia.IntentarComprarItem(id);
+        mensaje.text = comprada ? "Compra guardada" : "No se pudo comprar. Revisá la oferta y el saldo.";
+        ActualizarReroll();
+        MostrarDetalle();
     }
 
-    private void EjecutarRerollManual()
+    internal void EjecutarRerollManual()
     {
-        if (GameManager.Instancia != null && GameManager.Instancia.IntentarRerollTiendaManual())
-            RefrescarTienda();
+        if (confirmacion.activeSelf) return;
+        if (GameManager.Instancia.IntentarRerollTiendaManual())
+            RefrescarTienda(true);
+        else
+            mensaje.text = "No se pudo renovar la oferta.";
+    }
+
+    void ActualizarReroll()
+    {
+        botonReroll.GetComponentInChildren<TMP_Text>().text = "Reroll $" + SistemaTienda.CostoRerollManual;
+        botonReroll.interactable = GameManager.Instancia.dinero >= SistemaTienda.CostoRerollManual;
+    }
+
+    internal void Volver()
+    {
+        CerrarConfirmacion();
+        GameManager.Instancia.VolverAlHub();
     }
 }

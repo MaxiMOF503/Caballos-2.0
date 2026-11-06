@@ -374,7 +374,7 @@ public class CarreraUI : MonoBehaviour
         else
         {
             botonIniciar.SetActive(false);
-            textoEstado.text = juego.campanaCompletada ? "Campaña completada" : "Elegí una carrera en el televisor";
+            textoEstado.text = juego.campanaCompletada ? "Campaña completada" : "Elegí una carrera en el tablón de apuestas";
         }
         CrearCaballosUI();
     }

@@ -62,6 +62,11 @@
 *.terrainlayer          unity-yaml
 *.unity                 unity-yaml
 
+# Unity serializes empty YAML values with a trailing space in these generated files.
+# Keep that serialization intact while retaining whitespace checks for source code.
+*.asset                 whitespace=-blank-at-eol
+*.meta                  whitespace=-blank-at-eol
+
 # "physic" for 3D but "physics" for 2D
 *.physicMaterial        unity-yaml
 *.physicsMaterial2D     unity-yaml

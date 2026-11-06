@@ -973,7 +973,7 @@ public partial class GameManager : MonoBehaviour
         {
             case Interactable.Tipo.TV:
                 estadoActual = GameState.TV;
-                UIManager.instance.AbrirSeleccionCarrera();
+                UIManager.instance.AbrirCarrera();
                 break;
 
             case Interactable.Tipo.Tienda:

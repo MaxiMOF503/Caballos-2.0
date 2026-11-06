@@ -14,6 +14,7 @@ public class TablonView : MonoBehaviour
     public Button apostar, confirmar, cancelar;
     [SerializeField] Sprite marco, madera;
     internal TMP_Text saldo, feedback;
+    internal Button cambiarCarrera;
     Sprite marcoRecortado;
 
     readonly List<CaballoButtonUI> filas = new List<CaballoButtonUI>();
@@ -36,7 +37,8 @@ public class TablonView : MonoBehaviour
         var actual = juego.ObtenerCarreraProgramada();
         string seleccion = carrera?.id == actual?.id ? elegido?.id : null;
         carrera = actual;
-        mensaje = juego.UltimaApuesta?.Resultado;
+        mensaje = null;
+        importeConfirmacion = 0;
         importe.contentType = TMP_InputField.ContentType.IntegerNumber;
         importe.characterValidation = TMP_InputField.CharacterValidation.Digit;
         importe.SetTextWithoutNotify(carrera?.apuesta?.cantidad.ToString() ?? "");
@@ -45,9 +47,11 @@ public class TablonView : MonoBehaviour
         confirmar.onClick.AddListener(Confirmar);
         cancelar.onClick.AddListener(Cancelar);
         filas.Clear();
-        foreach (Transform child in content)
+        for (int i = content.childCount - 1; i >= 0; i--)
         {
+            var child = content.GetChild(i);
             child.gameObject.SetActive(false);
+            child.SetParent(null, false);
             Destroy(child.gameObject);
         }
         if (carrera != null)
@@ -92,6 +96,13 @@ public class TablonView : MonoBehaviour
         RefrescarApuesta();
     }
 
+    public void CambiarCarrera()
+    {
+        var actual = GameManager.Instancia.ObtenerCarreraProgramada();
+        if (actual == null || actual.SeleccionBloqueada) return;
+        UIManager.instance.AbrirSeleccionCarrera();
+    }
+
     void PedirConfirmacion()
     {
         if (!apostar.interactable || !int.TryParse(importe.text, out int cantidad)) return;
@@ -117,7 +128,9 @@ public class TablonView : MonoBehaviour
     void RefrescarApuesta()
     {
         int dinero = GameManager.Instancia.dinero;
-        bool abierta = carrera != null && !carrera.iniciada && carrera.apuesta == null;
+        bool vigente = carrera != null && carrera == GameManager.Instancia.ObtenerCarreraProgramada();
+        bool abierta = vigente && !carrera.SeleccionBloqueada;
+        cambiarCarrera.interactable = vigente && !carrera.SeleccionBloqueada;
         var participante = carrera?.Buscar(elegido?.id);
         bool valida = int.TryParse(importe.text, out int cantidad) && cantidad > 0 && cantidad <= dinero;
         importe.interactable = abierta && importeConfirmacion == 0;
@@ -141,11 +154,11 @@ public class TablonView : MonoBehaviour
             feedback.text = $"Confirmar ${importeConfirmacion} por {elegido.nombre} · {CuotaTexto(participante.cuotaDecimas)}";
         else if (!string.IsNullOrEmpty(mensaje)) feedback.text = mensaje;
         else if (carrera == null && !GameManager.Instancia.campanaCompletada)
-            feedback.text = "Elegí una carrera en el televisor para ver sus apuestas.";
+            feedback.text = "Elegí una carrera en el tablón de apuestas.";
         else if (!abierta) feedback.text = "Apuestas cerradas.";
         else if (participante == null) feedback.text = "Elegí un caballo de la lista.";
         else if (importe.text.Length > 0 && !valida) feedback.text = "Ingresá un importe positivo dentro de tu saldo.";
-        else feedback.text = "";
+        else feedback.text = carrera.NombreVisible + " · Podés correr sin apostar.";
     }
 
     internal static string CuotaTexto(int decimas) =>

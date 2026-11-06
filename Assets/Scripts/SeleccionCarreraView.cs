@@ -9,13 +9,14 @@ using static TablonLayout;
 public sealed class SeleccionCarreraView : MonoBehaviour
 {
     [SerializeField] Sprite marco, madera, trofeo, caballo;
+    [SerializeField] Sprite maderaPanel, marcoBanner;
     [SerializeField] TMP_FontAsset fuente;
 
     static readonly Vector2 Lienzo = new(1672, 941);
     static readonly Vector2 Fila = new(1536, 134);
     static readonly Color Crema = new Color32(255, 235, 198, 255);
     static readonly Color Oro = new Color32(236, 177, 79, 255);
-    static readonly Color MarcoFila = new Color32(113, 60, 28, 255);
+    static readonly Color MarcoFila = new Color32(190, 124, 60, 255);
     static readonly Color Tinta = new Color32(56, 28, 16, 255);
     static readonly CultureInfo Formato = CultureInfo.GetCultureInfo("es-AR");
 
@@ -25,7 +26,6 @@ public sealed class SeleccionCarreraView : MonoBehaviour
     TMP_Text tiempo, resumen, aviso;
     Button participar;
     DefinicionCarrera elegida;
-    Sprite recorte;
 
     void OnEnable()
     {
@@ -33,18 +33,17 @@ public sealed class SeleccionCarreraView : MonoBehaviour
         Refrescar();
     }
 
-    void OnDestroy()
-    {
-        if (recorte != null) Destroy(recorte);
-    }
-
     void Construir()
     {
         var raiz = (RectTransform)transform;
         var baseOpaca = Surface("Base", raiz, new Rect(Vector2.zero, Lienzo), Lienzo, Tinta).GetComponent<Image>();
         baseOpaca.raycastTarget = true;
-        recorte = ConfigurarMarco(Rect("Marco", raiz, new Rect(Vector2.zero, Lienzo), Lienzo).gameObject.AddComponent<Image>(), marco);
-        Wood("Madera", raiz, new Rect(25, 24, 1622, 893), Lienzo, madera);
+        Madera("Madera", raiz, new Rect(Vector2.zero, Lienzo), Lienzo, madera);
+        Marco("Marco", raiz, new Rect(Vector2.zero, Lienzo), Lienzo, marco);
+        Surface("SeparadorCabecera", raiz, new Rect(12, 147, 1648, 2), Lienzo,
+            new Color32(123, 69, 29, 255));
+        Surface("SeparadorPie", raiz, new Rect(12, 781, 1648, 2), Lienzo,
+            new Color32(176, 110, 50, 255));
 
         Texto("Titulo", raiz, new Rect(360, 16, 952, 72), Lienzo, "ELEGIR CARRERA", 69);
         tiempo = Texto("DiaSemana", raiz, new Rect(550, 93, 572, 52), Lienzo, "", 38);
@@ -73,14 +72,13 @@ public sealed class SeleccionCarreraView : MonoBehaviour
         scroll.movementType = ScrollRect.MovementType.Clamped;
         scroll.scrollSensitivity = 34;
 
-        Wood("Pie", raiz, new Rect(28, 789, 1616, 126), Lienzo, madera).GetComponent<RawImage>().color =
-            new Color32(163, 130, 108, 255);
+        Madera("Pie", raiz, new Rect(28, 789, 1616, 126), Lienzo, maderaPanel);
         Icono("Caballo", raiz, new Rect(77, 814, 92, 77), Lienzo, caballo);
         Surface("Separador", raiz, new Rect(199, 816, 2, 68), Lienzo, Oro);
         resumen = Texto("CarreraSeleccionada", raiz, new Rect(232, 806, 918, 63), Lienzo, "", 43, true);
         aviso = Texto("Aviso", raiz, new Rect(232, 870, 918, 29), Lienzo, "", 22, true);
-        participar = CrearBoton("Participar", raiz, new Rect(1186, 803, 414, 90), "Participar", 49,
-            new Color32(255, 222, 171, 255), Crema, conMadera: true);
+        participar = CrearBoton("Participar", raiz, new Rect(1186, 803, 414, 90), "Seleccionar", 49,
+            Color.white, Crema, conMadera: true);
         participar.onClick.AddListener(Participar);
     }
 
@@ -113,13 +111,11 @@ public sealed class SeleccionCarreraView : MonoBehaviour
 
     void CrearFila(DefinicionCarrera carrera, Texture2D atlas)
     {
-        var rect = Surface("Carrera_" + (carrera.id ?? "guardada"), lista, new Rect(0, 0, 1, 1), Vector2.one, MarcoFila);
+        var rect = Surface("Carrera_" + (carrera.id ?? "guardada"), lista, new Rect(0, 0, 1, 1), Vector2.one, Color.clear);
         rect.gameObject.AddComponent<LayoutElement>();
-        var borde = rect.GetComponent<Image>();
-        borde.raycastTarget = true;
+        rect.GetComponent<Image>().raycastTarget = true;
 
-        var maderaFila = Wood("Tabla", rect, new Rect(3, 3, 1530, 128), Fila, madera).GetComponent<RawImage>();
-        maderaFila.color = new Color32(166, 125, 94, 255);
+        var maderaFila = Madera("Tabla", rect, new Rect(3, 3, 1530, 128), Fila, maderaPanel);
 
         if (carrera.bannerAlternativo != null || (atlas != null && carrera.indiceBanner >= 0 && carrera.indiceBanner < 16))
         {
@@ -136,16 +132,18 @@ public sealed class SeleccionCarreraView : MonoBehaviour
             tipo + $"Premio: ${carrera.premio.ToString("N0", Formato)}", 30, true);
         var marca = Texto("MarcaSeleccion", rect, new Rect(8, 33, 35, 62), Fila, "›", 43);
         marca.color = Oro;
-        var brillo = Surface("Hover", rect, new Rect(3, 3, 1530, 128), Fila,
-            new Color32(255, 217, 151, 42)).GetComponent<Image>();
+        var borde = Marco("Borde", rect, new Rect(Vector2.zero, Fila), Fila, marcoBanner);
+        borde.color = MarcoFila;
+        var brillo = Marco("Hover", rect, new Rect(Vector2.zero, Fila), Fila, marcoBanner);
+        brillo.color = new Color32(255, 225, 162, 220);
+        var halo = brillo.gameObject.AddComponent<Outline>();
+        halo.effectColor = new Color32(255, 186, 76, 100);
+        halo.effectDistance = new Vector2(2, -2);
 
         var boton = rect.gameObject.AddComponent<BotonBannerCarrera>();
         boton.Configurar(brillo);
         boton.targetGraphic = maderaFila;
-        var colores = ColorBlock.defaultColorBlock;
-        colores.selectedColor = new Color32(255, 218, 180, 255);
-        colores.pressedColor = new Color32(217, 178, 139, 255);
-        boton.colors = colores;
+        boton.transition = Selectable.Transition.None;
         boton.onClick.AddListener(() => Seleccionar(carrera));
         filas.Add((carrera, borde, marca));
     }
@@ -156,7 +154,7 @@ public sealed class SeleccionCarreraView : MonoBehaviour
         foreach (var fila in filas)
         {
             bool marcada = ReferenceEquals(carrera, fila.carrera);
-            fila.borde.color = marcada ? Oro : MarcoFila;
+            fila.borde.color = marcada ? new Color32(255, 234, 168, 255) : MarcoFila;
             fila.marca.enabled = marcada;
         }
         resumen.text = carrera == null ? "Elegí una carrera" : "Carrera seleccionada: " + carrera.nombre;
@@ -172,7 +170,7 @@ public sealed class SeleccionCarreraView : MonoBehaviour
             return;
         }
 
-        UIManager.instance.AbrirCarrera();
+        UIManager.instance.AbrirTablon();
     }
 
     TMP_Text Texto(string nombre, RectTransform padre, Rect posicion, Vector2 medida, string texto, float tamano,
@@ -203,19 +201,39 @@ public sealed class SeleccionCarreraView : MonoBehaviour
         borde.raycastTarget = true;
         var interior = new Rect(3, 3, posicion.width - 6, posicion.height - 6);
         var frente = conMadera
-            ? Wood("Cara", rect, interior, posicion.size, madera).GetComponent<Graphic>()
+            ? Madera("Cara", rect, interior, posicion.size, maderaPanel)
             : Surface("Cara", rect, interior, posicion.size, cara).GetComponent<Graphic>();
         frente.color = cara;
+        borde.color = Color.clear;
+        Marco("Borde", rect, new Rect(Vector2.zero, posicion.size), posicion.size, marcoBanner).color = MarcoFila;
         var boton = rect.gameObject.AddComponent<Button>();
         boton.targetGraphic = frente;
         var colores = ColorBlock.defaultColorBlock;
-        colores.normalColor = new Color32(225, 213, 195, 255);
+        colores.normalColor = Color.white;
         colores.selectedColor = colores.normalColor;
         colores.highlightedColor = Color.white;
         colores.disabledColor = new Color32(128, 125, 122, 255);
         boton.colors = colores;
         Texto("Etiqueta", rect, new Rect(9, 4, posicion.width - 18, posicion.height - 8), posicion.size, texto, tamano, color: tinta);
         return boton;
+    }
+
+    static Graphic Madera(string nombre, RectTransform padre, Rect posicion, Vector2 medida, Sprite sprite)
+    {
+        var imagen = Rect(nombre, padre, posicion, medida).gameObject.AddComponent<MaderaSelectorGraphic>();
+        imagen.texture = sprite != null ? sprite.texture : null;
+        imagen.raycastTarget = false;
+        return imagen;
+    }
+
+    static Image Marco(string nombre, RectTransform padre, Rect posicion, Vector2 medida, Sprite sprite)
+    {
+        var imagen = Rect(nombre, padre, posicion, medida).gameObject.AddComponent<Image>();
+        imagen.sprite = sprite;
+        imagen.type = Image.Type.Sliced;
+        imagen.fillCenter = false;
+        imagen.raycastTarget = false;
+        return imagen;
     }
 }
 
