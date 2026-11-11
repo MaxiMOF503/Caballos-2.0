@@ -1002,6 +1002,5 @@ public partial class GameManager : MonoBehaviour
         estadoActual = GameState.Hub;
 
         UIManager.instance.CerrarTodo();
-        CameraController.instancia.ActivarControl();
     }
 }

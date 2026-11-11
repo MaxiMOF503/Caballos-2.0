@@ -14,15 +14,6 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        if (tipo == Tipo.TV && GameManager.Instancia.ObtenerCarreraProgramada() == null)
-        {
-            GameManager.Instancia.SetState(tipo);
-            return;
-        }
-        // enfocar cámara
-        CameraController.instancia.EnfocarObjeto(transform);
-
-        // cambiar estado
         GameManager.Instancia.SetState(tipo);
     }
 }

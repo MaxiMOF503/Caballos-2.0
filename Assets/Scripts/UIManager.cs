@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,9 +16,31 @@ public class UIManager : MonoBehaviour
     GameObject avisoHub;
     Coroutine ocultarAviso;
 
+    internal bool HayInterfazAbierta => viewCarrera.activeInHierarchy || viewTienda.activeInHierarchy ||
+        viewEstablo.activeInHierarchy || viewTablon.activeInHierarchy ||
+        (viewSeleccionCarrera != null && viewSeleccionCarrera.activeInHierarchy);
+
     private void Awake()
     {
         instance = this;
+    }
+
+    internal bool ConsumirEscape()
+    {
+        var foco = EventSystem.current?.currentSelectedGameObject;
+        if (foco != null && (foco.GetComponent<TMP_InputField>()?.isFocused == true ||
+            foco.GetComponent<InputField>()?.isFocused == true))
+            return true;
+
+        var tienda = viewTienda.GetComponentInChildren<TiendaView>();
+        if (tienda != null && tienda.confirmacion != null && tienda.confirmacion.activeInHierarchy)
+        {
+            tienda.CancelarCompra();
+            return true;
+        }
+
+        return viewEstablo.GetComponentInChildren<EstabloView>()?.CancelarModalConEscape() == true ||
+            viewTablon.GetComponentInChildren<TablonView>()?.CancelarApuestaConEscape() == true;
     }
 
     public void CerrarTodo()

@@ -345,6 +345,8 @@ public class CarreraUI : MonoBehaviour
         PrepararCarrera();
     }
 
+    internal bool EnCurso => carreraActiva;
+
     void PrepararCarrera()
     {
         carreraActiva = false;
@@ -472,7 +474,7 @@ public class CarreraUI : MonoBehaviour
 
     void Update()
     {
-        if (!carreraActiva) return;
+        if (!carreraActiva || MenuPausa.Activa) return;
 
         float dt = Time.deltaTime;
         // 1200 m is the reference length of the existing TV simulation.

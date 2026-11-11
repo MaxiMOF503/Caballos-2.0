@@ -285,6 +285,13 @@ public partial class EstabloView
         cerrarModal.Select();
     }
 
+    internal bool CancelarModalConEscape()
+    {
+        if (modal == null || !modal.activeInHierarchy) return false;
+        OcultarModal();
+        return true;
+    }
+
     private void OcultarModal()
     {
         if (!modal.activeSelf)

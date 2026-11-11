@@ -7,7 +7,7 @@ public class Interactor : MonoBehaviour
     void Update()
     {
         // Solo permitir interacción cuando estamos en el HUB
-        if (GameManager.Instancia.estadoActual != GameState.Hub)
+        if (MenuPausa.BloqueaEntrada || GameManager.Instancia.estadoActual != GameState.Hub)
             return;
 
         if (Input.GetMouseButtonDown(0))

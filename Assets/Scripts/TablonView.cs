@@ -111,6 +111,13 @@ public class TablonView : MonoBehaviour
         RefrescarApuesta();
     }
 
+    internal bool CancelarApuestaConEscape()
+    {
+        if (importeConfirmacion <= 0) return false;
+        Cancelar();
+        return true;
+    }
+
     void Cancelar()
     {
         importeConfirmacion = 0;
