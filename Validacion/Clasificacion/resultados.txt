@@ -1,0 +1,34 @@
+Ejecución de esta etapa (Unity 6000.3.13f1):
+- CatalogosAssetProbe.Run: PASS, 12 comprobaciones.
+- ClasificacionProbe.Run: PASS, 427 comprobaciones del modelo + 161 de integración.
+- AnimacionesCatalogoProbe.Run: PASS, 2539 comprobaciones y carrera real.
+- BetaJugableValidation.Run: PASS, escenarios A-G y dos carreras reales.
+- CatalogosWindowsProbe.Run: PASS, 27 ensamblados; sin ejecutable.
+
+Logs de las ejecuciones aprobadas:
+C:\Caballos\Validation\HubRefresh\Clasificacion-Compilacion.log
+C:\Caballos\Validation\HubRefresh\Clasificacion-Final2.log
+C:\Caballos\Validation\HubRefresh\Clasificacion-Animaciones.log
+C:\Caballos\Validation\HubRefresh\Clasificacion-Beta2.log
+C:\Caballos\Validation\HubRefresh\Clasificacion-Windows.log
+
+La prueba de fallo de guardado registra errores esperados de SaveSystem al usar
+un archivo de fixture como directorio. Se verificaron archivo anterior intacto,
+reintento fallido y exitoso, y ausencia de errores inesperados.
+
+Reproducción: copiar ClasificacionProbe.cs a Assets/Editor de una copia aislada
+con Assets, Packages y ProjectSettings actuales. Nunca ejecutar sobre el guardado
+personal. Definir CABALLOS_VALIDATION_SAVE_PATH con un directorio nuevo dentro de
+C:\Caballos\Validation\ValidationSave y CABALLOS_VALIDATION_PREFS_PREFIX exclusivo.
+Unity: -batchmode -projectPath COPIA -executeMethod ClasificacionProbe.Run
+-logFile LOG --burst-disable-compilation. No pasar -quit: la prueba entra a Play
+Mode y termina mediante EditorApplication.Exit. Graphics de batch únicamente
+para renders a RenderTexture; no usa escritorio. Iniciar oculto con Start-Process.
+
+La copia fuente de EconomiaSubastaProbe.cs se adaptó al requisito de clasificación
+completa. No se ejecutó en esta etapa: la economía fue comprobada por los probes
+nuevos y Beta A-G. No se presenta como una prueba adicional aprobada.
+
+Los probes de catálogo/animaciones y compilación usados también están disponibles
+en las carpetas de Validacion de las etapas anteriores. No compilar los .cs de
+este directorio como scripts de juego: son fuentes auxiliares para la copia de prueba.

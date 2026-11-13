@@ -1,0 +1,1 @@
+180 texturas únicas cargadas. Memoria reportada 53245440 bytes.

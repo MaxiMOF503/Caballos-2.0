@@ -128,8 +128,10 @@ public sealed class SeleccionCarreraView : MonoBehaviour
         string distancia = carrera.distanciaMetros > 0 ? $" · {carrera.distanciaMetros} m" : "";
         Texto("NombreDistancia", rect, new Rect(166, 10, 747, 59), Fila, carrera.nombre + distancia, 50, true);
         string tipo = carrera.distanciaMetros > 0 ? $"Tipo: {carrera.TipoVisible}   │   " : "";
-        Texto("TipoPremio", rect, new Rect(170, 73, 663, 46), Fila,
-            tipo + $"Premio: ${carrera.premio.ToString("N0", Formato)}", 30, true);
+        Texto("TipoPremio", rect, new Rect(170, 65, 663, 31), Fila,
+            tipo + $"Premio: ${carrera.premio.ToString("N0", Formato)}", 26, true);
+        Texto("Inscripcion", rect, new Rect(170, 99, 663, 28), Fila,
+            $"Inscripción: ${GameManager.Instancia.PrecioInscripcionOferta(carrera).ToString("N0", Formato)}", 25, true);
         var marca = Texto("MarcaSeleccion", rect, new Rect(8, 33, 35, 62), Fila, "›", 43);
         marca.color = Oro;
         var borde = Marco("Borde", rect, new Rect(Vector2.zero, Fila), Fila, marcoBanner);

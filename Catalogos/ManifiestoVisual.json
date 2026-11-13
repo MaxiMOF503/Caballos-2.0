@@ -1,0 +1,1624 @@
+{
+  "recursos": [
+    {
+      "tipo": "icono",
+      "id": "herradura_plata",
+      "nombre": "Herradura de Plata",
+      "ruta": "Assets/Sprites/items/Heradura gris.png",
+      "estado": "existente",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "Recurso original conservado"
+    },
+    {
+      "tipo": "icono",
+      "id": "manzana_dorada",
+      "nombre": "Manzana Dorada",
+      "ruta": "Assets/Sprites/items/Manzana Dorada.png",
+      "estado": "existente",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "Recurso original conservado"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_oro",
+      "nombre": "Herradura de Oro",
+      "ruta": "Assets/Sprites/items/Heradura.png",
+      "estado": "existente",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "Recurso original conservado"
+    },
+    {
+      "tipo": "icono",
+      "id": "zapatillas",
+      "nombre": "Zapatillas",
+      "ruta": "Assets/Sprites/items/Zapas.png",
+      "estado": "existente",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "Recurso original conservado"
+    },
+    {
+      "tipo": "icono",
+      "id": "sombrero_copa",
+      "nombre": "Sombrero de Copa",
+      "ruta": "Assets/Sprites/items/Sombrero Copa.png",
+      "estado": "existente",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "Recurso original conservado"
+    },
+    {
+      "tipo": "icono",
+      "id": "sombrero_noble",
+      "nombre": "Sombrero Noble",
+      "ruta": "Assets/Sprites/items/Sombrero plata.png",
+      "estado": "existente",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "Recurso original conservado"
+    },
+    {
+      "tipo": "icono",
+      "id": "brida_cuero",
+      "nombre": "Brida de cuero",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_cuero.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "brown leather horse bridle with bronze buckles and reins"
+    },
+    {
+      "tipo": "icono",
+      "id": "cabezada_lona",
+      "nombre": "Cabezada de lona",
+      "ruta": "Assets/Resources/Catalogos/Items/cabezada_lona.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "olive canvas horse halter with cream stitched edging"
+    },
+    {
+      "tipo": "icono",
+      "id": "orejeras_fieltro",
+      "nombre": "Orejeras de fieltro",
+      "ruta": "Assets/Resources/Catalogos/Items/orejeras_fieltro.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "burgundy felt equestrian ear bonnet with two tapered ear pockets"
+    },
+    {
+      "tipo": "icono",
+      "id": "anteojeras_laterales",
+      "nombre": "Anteojeras laterales",
+      "ruta": "Assets/Resources/Catalogos/Items/anteojeras_laterales.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "dark brown leather horse racing blinkers with paired curved side cups"
+    },
+    {
+      "tipo": "icono",
+      "id": "visera_lino",
+      "nombre": "Visera de lino",
+      "ruta": "Assets/Resources/Catalogos/Items/visera_lino.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "linen sun visor for a horse with two ear openings and short brown straps"
+    },
+    {
+      "tipo": "icono",
+      "id": "cabestro_cuerda",
+      "nombre": "Cabestro de cuerda",
+      "ruta": "Assets/Resources/Catalogos/Items/cabestro_cuerda.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "knotted natural hemp rope horse halter"
+    },
+    {
+      "tipo": "icono",
+      "id": "brida_doble_rienda",
+      "nombre": "Brida de doble rienda",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_doble_rienda.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "black leather double-rein bridle with two slender reins and silver bit"
+    },
+    {
+      "tipo": "icono",
+      "id": "capucha_cuadros",
+      "nombre": "Capucha de cuadros",
+      "ruta": "Assets/Resources/Catalogos/Items/capucha_cuadros.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "navy and cream plaid horse racing hood with ear openings"
+    },
+    {
+      "tipo": "icono",
+      "id": "gorro_lluvia",
+      "nombre": "Gorro de lluvia",
+      "ruta": "Assets/Resources/Catalogos/Items/gorro_lluvia.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "waxed dark green waterproof equestrian ear cover"
+    },
+    {
+      "tipo": "icono",
+      "id": "brida_bronce",
+      "nombre": "Brida de hebilla de bronce",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_bronce.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "dark leather ceremonial bridle with a modest aged bronze brow buckle"
+    },
+    {
+      "tipo": "icono",
+      "id": "sombrero_campo",
+      "nombre": "Sombrero de campo",
+      "ruta": "Assets/Resources/Catalogos/Items/sombrero_campo.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "worn brown felt country riding hat with a modest leather band"
+    },
+    {
+      "tipo": "icono",
+      "id": "mascara_moscas",
+      "nombre": "Máscara antimoscas",
+      "ruta": "Assets/Resources/Catalogos/Items/mascara_moscas.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "tan breathable mesh fly mask for a horse with dark edging"
+    },
+    {
+      "tipo": "icono",
+      "id": "orejeras_competicion",
+      "nombre": "Orejeras de competición",
+      "ruta": "Assets/Resources/Catalogos/Items/orejeras_competicion.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "deep blue technical equestrian ear bonnet with restrained silver piping"
+    },
+    {
+      "tipo": "icono",
+      "id": "anteojeras_sprint",
+      "nombre": "Anteojeras de sprint",
+      "ruta": "Assets/Resources/Catalogos/Items/anteojeras_sprint.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "compact crimson horse racing blinkers with black leather eye cups"
+    },
+    {
+      "tipo": "icono",
+      "id": "cabezada_reflectante",
+      "nombre": "Cabezada reflectante",
+      "ruta": "Assets/Resources/Catalogos/Items/cabezada_reflectante.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "navy horse halter with narrow reflective pale strips and bronze clips"
+    },
+    {
+      "tipo": "icono",
+      "id": "capucha_termica",
+      "nombre": "Capucha térmica",
+      "ruta": "Assets/Resources/Catalogos/Items/capucha_termica.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "quilted charcoal thermal horse hood with soft burgundy lining"
+    },
+    {
+      "tipo": "icono",
+      "id": "brida_escuela",
+      "nombre": "Brida de escuela",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_escuela.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "supple chestnut leather training bridle with plain steel rings"
+    },
+    {
+      "tipo": "icono",
+      "id": "sombrero_pluma",
+      "nombre": "Sombrero de pluma",
+      "ruta": "Assets/Resources/Catalogos/Items/sombrero_pluma.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "elegant weathered brown riding hat with one small pheasant feather"
+    },
+    {
+      "tipo": "icono",
+      "id": "silla_cuero",
+      "nombre": "Silla de cuero",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_cuero.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "traditional brown leather horse saddle with stirrups"
+    },
+    {
+      "tipo": "icono",
+      "id": "manta_lana",
+      "nombre": "Manta de lana",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_lana.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "folded burgundy wool horse blanket with cream trim"
+    },
+    {
+      "tipo": "icono",
+      "id": "sudadero_algodon",
+      "nombre": "Sudadero de algodón",
+      "ruta": "Assets/Resources/Catalogos/Items/sudadero_algodon.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "cream quilted cotton saddle pad with brown edging"
+    },
+    {
+      "tipo": "icono",
+      "id": "silla_ligera",
+      "nombre": "Silla ligera",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_ligera.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "compact black lightweight racing saddle with thin stirrups"
+    },
+    {
+      "tipo": "icono",
+      "id": "manta_viaje",
+      "nombre": "Manta de viaje",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_viaje.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "rolled forest green heavy travel horse blanket with leather straps"
+    },
+    {
+      "tipo": "icono",
+      "id": "silla_doma",
+      "nombre": "Silla de doma",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_doma.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "black dressage saddle with deep seat and long straight flaps"
+    },
+    {
+      "tipo": "icono",
+      "id": "mantilla_bordada",
+      "nombre": "Mantilla bordada",
+      "ruta": "Assets/Resources/Catalogos/Items/mantilla_bordada.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "burgundy saddlecloth with restrained cream embroidery"
+    },
+    {
+      "tipo": "icono",
+      "id": "silla_resistencia",
+      "nombre": "Silla de resistencia",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_resistencia.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "brown endurance saddle with broad supportive seat and simple pack rings"
+    },
+    {
+      "tipo": "icono",
+      "id": "sudadero_malla",
+      "nombre": "Sudadero de malla",
+      "ruta": "Assets/Resources/Catalogos/Items/sudadero_malla.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "teal breathable mesh saddle pad with black edge"
+    },
+    {
+      "tipo": "icono",
+      "id": "manta_encerada",
+      "nombre": "Manta encerada",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_encerada.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "folded dark olive waxed waterproof horse rug"
+    },
+    {
+      "tipo": "icono",
+      "id": "cincha_anatomica",
+      "nombre": "Cincha anatómica",
+      "ruta": "Assets/Resources/Catalogos/Items/cincha_anatomica.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "curved brown padded anatomical horse saddle girth with buckles"
+    },
+    {
+      "tipo": "icono",
+      "id": "silla_competicion",
+      "nombre": "Silla de competición",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_competicion.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "fine oxblood leather competition saddle with aged bronze fittings"
+    },
+    {
+      "tipo": "icono",
+      "id": "manta_ceremonial",
+      "nombre": "Manta ceremonial",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_ceremonial.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "folded purple ceremonial horse blanket with narrow bronze trim"
+    },
+    {
+      "tipo": "icono",
+      "id": "silla_veterana",
+      "nombre": "Silla veterana",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_veterana.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "well-maintained dark brown veteran riding saddle with hand stitching"
+    },
+    {
+      "tipo": "icono",
+      "id": "sudadero_tactico",
+      "nombre": "Sudadero táctico",
+      "ruta": "Assets/Resources/Catalogos/Items/sudadero_tactico.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "charcoal contoured saddle pad with tan channels and neat red piping"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_bronce",
+      "nombre": "Herradura de bronce",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_bronce.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single aged bronze horseshoe with traditional nail holes"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_hierro",
+      "nombre": "Herradura de hierro",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_hierro.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single rough forged dark iron horseshoe"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_aluminio",
+      "nombre": "Herradura de aluminio",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_aluminio.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single pale brushed aluminium lightweight horseshoe"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_acero",
+      "nombre": "Herradura de acero",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_acero.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single thick brushed steel horseshoe with reinforced toe"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_liviana",
+      "nombre": "Herradura liviana",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_liviana.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single slender polished silver racing horseshoe with slim tapered heels"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_traccion",
+      "nombre": "Herradura de tracción",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_traccion.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single steel traction horseshoe with short studs"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_cuarzo",
+      "nombre": "Herradura de cuarzo",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_cuarzo.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single dark bronze horseshoe inset with three tiny pale quartz stones"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_ortopedica",
+      "nombre": "Herradura ortopédica",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_ortopedica.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single supportive egg-bar therapeutic steel horseshoe"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_remache",
+      "nombre": "Herradura de remache",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_remache.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single rustic iron horseshoe with neat visible bronze rivets"
+    },
+    {
+      "tipo": "icono",
+      "id": "herradura_titanio",
+      "nombre": "Herradura de titanio",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_titanio.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "single finely machined matte titanium horseshoe with blue-gray finish"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_lino",
+      "nombre": "Vendas de lino",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_lino.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of natural linen equestrian leg bandage rolls"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_algodon",
+      "nombre": "Vendas de algodón",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_algodon.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of white cotton equestrian leg wrap rolls with blue straps"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_elasticas",
+      "nombre": "Vendas elásticas",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_elasticas.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of royal blue elastic horse leg wraps neatly rolled"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_termicas",
+      "nombre": "Vendas térmicas",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_termicas.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of charcoal quilted thermal horse leg wraps"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_compresion",
+      "nombre": "Vendas de compresión",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_compresion.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of burgundy technical compression horse leg wraps with black straps"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_tejidas",
+      "nombre": "Vendas tejidas",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_tejidas.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of cream and forest green woven horse leg wraps"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_cera",
+      "nombre": "Vendas enceradas",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_cera.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of olive waxed canvas horse leg wraps with bronze fasteners"
+    },
+    {
+      "tipo": "icono",
+      "id": "vendas_profesionales",
+      "nombre": "Vendas profesionales",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_profesionales.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of midnight blue premium horse leg bandages with restrained silver stitching"
+    },
+    {
+      "tipo": "icono",
+      "id": "protectores_cuero",
+      "nombre": "Protectores de cuero",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_cuero.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of shaped brown leather horse tendon boots"
+    },
+    {
+      "tipo": "icono",
+      "id": "protectores_neopreno",
+      "nombre": "Protectores de neopreno",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_neopreno.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of black neoprene horse sport boots with teal straps"
+    },
+    {
+      "tipo": "icono",
+      "id": "protectores_campo",
+      "nombre": "Protectores de campo",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_campo.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of tan horse field brushing boots with green buckles"
+    },
+    {
+      "tipo": "icono",
+      "id": "protectores_articulados",
+      "nombre": "Protectores articulados",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_articulados.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of articulated charcoal horse tendon boots with steel hinge details"
+    },
+    {
+      "tipo": "icono",
+      "id": "botas_lluvia",
+      "nombre": "Botas de lluvia",
+      "ruta": "Assets/Resources/Catalogos/Items/botas_lluvia.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of dark green waterproof horse hoof boots"
+    },
+    {
+      "tipo": "icono",
+      "id": "botines_pista",
+      "nombre": "Botines de pista",
+      "ruta": "Assets/Resources/Catalogos/Items/botines_pista.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of compact red and black horse track boots"
+    },
+    {
+      "tipo": "icono",
+      "id": "campanas_caucho",
+      "nombre": "Campanas de caucho",
+      "ruta": "Assets/Resources/Catalogos/Items/campanas_caucho.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of black ribbed rubber horse bell boots"
+    },
+    {
+      "tipo": "icono",
+      "id": "campanas_reforzadas",
+      "nombre": "Campanas reforzadas",
+      "ruta": "Assets/Resources/Catalogos/Items/campanas_reforzadas.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of reinforced dark brown leather horse bell boots with bronze straps"
+    },
+    {
+      "tipo": "icono",
+      "id": "protectores_pista",
+      "nombre": "Protectores de pista",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_pista.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "pair of fine ivory and bronze horse racing tendon protectors"
+    },
+    {
+      "tipo": "icono",
+      "id": "zanahoria_crujiente",
+      "nombre": "Zanahoria crujiente",
+      "ruta": "Assets/Resources/Catalogos/Items/zanahoria_crujiente.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "one fresh orange carrot with small green leaves"
+    },
+    {
+      "tipo": "icono",
+      "id": "avena_integral",
+      "nombre": "Avena integral",
+      "ruta": "Assets/Resources/Catalogos/Items/avena_integral.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "small burlap pouch filled with natural oat grains"
+    },
+    {
+      "tipo": "icono",
+      "id": "te_manzanilla",
+      "nombre": "Té de manzanilla",
+      "ruta": "Assets/Resources/Catalogos/Items/te_manzanilla.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "rustic ceramic cup of chamomile infusion with two dried chamomile flowers"
+    },
+    {
+      "tipo": "icono",
+      "id": "trebol_seco",
+      "nombre": "Trébol seco",
+      "ruta": "Assets/Resources/Catalogos/Items/trebol_seco.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "small tied bundle of dried green clover for horse feed"
+    },
+    {
+      "tipo": "icono",
+      "id": "mezcla_cereales",
+      "nombre": "Mezcla de cereales",
+      "ruta": "Assets/Resources/Catalogos/Items/mezcla_cereales.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "shallow wooden feed scoop containing a mixed grain ration"
+    },
+    {
+      "tipo": "icono",
+      "id": "infusion_menta",
+      "nombre": "Infusión de menta",
+      "ruta": "Assets/Resources/Catalogos/Items/infusion_menta.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "small amber glass bottle of mint infusion with a cork and two mint leaves"
+    },
+    {
+      "tipo": "icono",
+      "id": "pera_madura",
+      "nombre": "Pera madura",
+      "ruta": "Assets/Resources/Catalogos/Items/pera_madura.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "one ripe green pear with a brown stem and small leaf"
+    },
+    {
+      "tipo": "icono",
+      "id": "barrita_melaza",
+      "nombre": "Barrita de melaza",
+      "ruta": "Assets/Resources/Catalogos/Items/barrita_melaza.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "one dark molasses horse treat bar with visible grain texture on a small paper wrap"
+    },
+    {
+      "tipo": "icono",
+      "id": "sal_mineral",
+      "nombre": "Sal mineral",
+      "ruta": "Assets/Resources/Catalogos/Items/sal_mineral.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "small rough pink mineral salt block for horses"
+    },
+    {
+      "tipo": "icono",
+      "id": "galleta_avena",
+      "nombre": "Galleta de avena",
+      "ruta": "Assets/Resources/Catalogos/Items/galleta_avena.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "two rustic round oat horse biscuits tied with thin twine"
+    },
+    {
+      "tipo": "icono",
+      "id": "racion_larga",
+      "nombre": "Ración de fondo",
+      "ruta": "Assets/Resources/Catalogos/Items/racion_larga.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "small burgundy canvas ration bag filled with oats and dried hay"
+    },
+    {
+      "tipo": "icono",
+      "id": "fruta_campo",
+      "nombre": "Fruta de campo",
+      "ruta": "Assets/Resources/Catalogos/Items/fruta_campo.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "small woven basket containing one red apple and two small plums"
+    },
+    {
+      "tipo": "icono",
+      "id": "bocado_herbal",
+      "nombre": "Bocado herbal",
+      "ruta": "Assets/Resources/Catalogos/Items/bocado_herbal.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "three compact green herbal horse feed cubes with subtle dried herb texture"
+    },
+    {
+      "tipo": "icono",
+      "id": "manual_ejercicios",
+      "nombre": "Manual de ejercicios",
+      "ruta": "Assets/Resources/Catalogos/Items/manual_ejercicios.png",
+      "estado": "revisado",
+      "referencia": "Assets/Sprites/items",
+      "descripcion": "small weathered brown leather exercise notebook with a simple embossed horse silhouette and no lettering"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_001",
+      "nombre": "Rayo",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_001.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_01_base.png",
+      "descripcion": "silver gray almost white coat, black mane and dark tail, GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_002",
+      "nombre": "Luna",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_002.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_003",
+      "nombre": "Relámpago",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_003.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_004",
+      "nombre": "Tormenta",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_004.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_005",
+      "nombre": "Centella",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_005.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_006",
+      "nombre": "Pegaso",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_006.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_007",
+      "nombre": "Trueno",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_007.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_008",
+      "nombre": "Sombra",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_008.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_009",
+      "nombre": "Luna Negra",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_009.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_010",
+      "nombre": "Furia",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_010.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_10_base.png",
+      "descripcion": "cream dun coat, dark brown mane and brown tail and dark lower legs, dark PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_011",
+      "nombre": "Neblina",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_011.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_012",
+      "nombre": "Tornado",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_012.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_12_base.png",
+      "descripcion": "white coat with small BLACK spots, black mane and black tail, NAVY BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_013",
+      "nombre": "Azabache",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_013.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_014",
+      "nombre": "Cometa",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_014.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_02_base.png",
+      "descripcion": "warm chestnut brown coat, reddish brown mane and brown tail, RED saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_015",
+      "nombre": "Mistic",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_015.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_016",
+      "nombre": "Gitano",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_016.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_017",
+      "nombre": "Alba",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_017.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_018",
+      "nombre": "Eclipse",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_018.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_019",
+      "nombre": "Fénix",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_019.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_020",
+      "nombre": "Bandido",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_020.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_08_base.png",
+      "descripcion": "slate gray coat, black mane and black tail, MAGENTA saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_021",
+      "nombre": "Céfiro",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_021.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_022",
+      "nombre": "Gala",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_022.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_10_base.png",
+      "descripcion": "cream dun coat, dark brown mane and brown tail and dark lower legs, dark PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_023",
+      "nombre": "Lucero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_023.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_024",
+      "nombre": "Indio",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_024.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_12_base.png",
+      "descripcion": "white coat with small BLACK spots, black mane and black tail, NAVY BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_025",
+      "nombre": "Apolo",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_025.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_01_base.png",
+      "descripcion": "silver gray almost white coat, black mane and dark tail, GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_026",
+      "nombre": "Duque",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_026.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_02_base.png",
+      "descripcion": "warm chestnut brown coat, reddish brown mane and brown tail, RED saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_027",
+      "nombre": "Marqués",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_027.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_028",
+      "nombre": "Capitán",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_028.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_029",
+      "nombre": "Valiente",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_029.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_030",
+      "nombre": "Aquiles",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_030.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_031",
+      "nombre": "Hércules",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_031.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_032",
+      "nombre": "Odín",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_032.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_08_base.png",
+      "descripcion": "slate gray coat, black mane and black tail, MAGENTA saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_033",
+      "nombre": "Thor",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_033.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_034",
+      "nombre": "Ares",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_034.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_10_base.png",
+      "descripcion": "cream dun coat, dark brown mane and brown tail and dark lower legs, dark PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_035",
+      "nombre": "Zafiro",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_035.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_036",
+      "nombre": "Rubí",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_036.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_12_base.png",
+      "descripcion": "white coat with small BLACK spots, black mane and black tail, NAVY BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_037",
+      "nombre": "Esmeralda",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_037.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_01_base.png",
+      "descripcion": "silver gray almost white coat, black mane and dark tail, GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_038",
+      "nombre": "Diamante",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_038.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_02_base.png",
+      "descripcion": "warm chestnut brown coat, reddish brown mane and brown tail, RED saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_039",
+      "nombre": "Aurora",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_039.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_040",
+      "nombre": "Bruma",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_040.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_041",
+      "nombre": "Granizo",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_041.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_042",
+      "nombre": "Viento Sur",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_042.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_043",
+      "nombre": "Estrella",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_043.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_044",
+      "nombre": "Centinela",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_044.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_08_base.png",
+      "descripcion": "slate gray coat, black mane and black tail, MAGENTA saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_045",
+      "nombre": "Mistral",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_045.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_046",
+      "nombre": "Alazán",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_046.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_047",
+      "nombre": "Campanero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_047.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_048",
+      "nombre": "Canelita",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_048.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_12_base.png",
+      "descripcion": "white coat with small BLACK spots, black mane and black tail, NAVY BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_049",
+      "nombre": "Carbonero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_049.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_050",
+      "nombre": "Castaño",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_050.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_051",
+      "nombre": "Cobre",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_051.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_052",
+      "nombre": "Coral",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_052.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_053",
+      "nombre": "Destello",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_053.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_054",
+      "nombre": "Dorado",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_054.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_055",
+      "nombre": "Espiga",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_055.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_056",
+      "nombre": "Fandango",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_056.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_08_base.png",
+      "descripcion": "slate gray coat, black mane and black tail, MAGENTA saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_057",
+      "nombre": "Flecha",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_057.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_058",
+      "nombre": "Girasol",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_058.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_10_base.png",
+      "descripcion": "cream dun coat, dark brown mane and brown tail and dark lower legs, dark PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_059",
+      "nombre": "Horizonte",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_059.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_060",
+      "nombre": "Jade",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_060.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_12_base.png",
+      "descripcion": "white coat with small BLACK spots, black mane and black tail, NAVY BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_061",
+      "nombre": "Jaspe",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_061.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_01_base.png",
+      "descripcion": "silver gray almost white coat, black mane and dark tail, GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_062",
+      "nombre": "Junco",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_062.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_02_base.png",
+      "descripcion": "warm chestnut brown coat, reddish brown mane and brown tail, RED saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_063",
+      "nombre": "Leyenda",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_063.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_064",
+      "nombre": "Lince",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_064.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_065",
+      "nombre": "Litoral",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_065.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_066",
+      "nombre": "Malambo",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_066.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_067",
+      "nombre": "Marea",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_067.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_068",
+      "nombre": "Melodía",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_068.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_08_base.png",
+      "descripcion": "slate gray coat, black mane and black tail, MAGENTA saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_069",
+      "nombre": "Mercurio",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_069.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_070",
+      "nombre": "Milonga",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_070.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_10_base.png",
+      "descripcion": "cream dun coat, dark brown mane and brown tail and dark lower legs, dark PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_071",
+      "nombre": "Montaña",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_071.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_072",
+      "nombre": "Nácar",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_072.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_073",
+      "nombre": "Niebla Azul",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_073.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_08_base.png",
+      "descripcion": "slate gray coat, black mane and black tail, MAGENTA saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_074",
+      "nombre": "Nogal",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_074.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_075",
+      "nombre": "Olivo",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_075.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_076",
+      "nombre": "Ónix",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_076.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_077",
+      "nombre": "Paladín",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_077.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_078",
+      "nombre": "Pampero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_078.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_079",
+      "nombre": "Pampa",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_079.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_080",
+      "nombre": "Perla",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_080.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_081",
+      "nombre": "Pionero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_081.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_082",
+      "nombre": "Platero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_082.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_01_base.png",
+      "descripcion": "silver gray almost white coat, black mane and dark tail, GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_083",
+      "nombre": "Quebracho",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_083.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_084",
+      "nombre": "Rastro",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_084.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_12_base.png",
+      "descripcion": "white coat with small BLACK spots, black mane and black tail, NAVY BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_085",
+      "nombre": "Rebelde",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_085.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_01_base.png",
+      "descripcion": "silver gray almost white coat, black mane and dark tail, GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_086",
+      "nombre": "Resplandor",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_086.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_02_base.png",
+      "descripcion": "warm chestnut brown coat, reddish brown mane and brown tail, RED saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_087",
+      "nombre": "Rocío",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_087.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_088",
+      "nombre": "Romero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_088.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_089",
+      "nombre": "Sendero",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_089.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_05_base.png",
+      "descripcion": "charcoal black coat, black mane and black tail, GRAY saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_090",
+      "nombre": "Sereno",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_090.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_06_base.png",
+      "descripcion": "pure white coat, white mane and white tail, TEAL saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_091",
+      "nombre": "Sierra",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_091.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_07_base.png",
+      "descripcion": "copper chestnut coat, flaxen blond mane and blond tail, ORANGE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_092",
+      "nombre": "Solano",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_092.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_08_base.png",
+      "descripcion": "slate gray coat, black mane and black tail, MAGENTA saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_093",
+      "nombre": "Talismán",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_093.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_09_base.png",
+      "descripcion": "rich bay brown coat, black mane and black tail and dark legs, YELLOW saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_094",
+      "nombre": "Tango",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_094.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_10_base.png",
+      "descripcion": "cream dun coat, dark brown mane and brown tail and dark lower legs, dark PURPLE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_095",
+      "nombre": "Tempestad",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_095.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_11_base.png",
+      "descripcion": "reddish roan coat, black mane and black tail, LIME GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_096",
+      "nombre": "Tesoro",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_096.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_12_base.png",
+      "descripcion": "white coat with small BLACK spots, black mane and black tail, NAVY BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_097",
+      "nombre": "Travesía",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_097.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_01_base.png",
+      "descripcion": "silver gray almost white coat, black mane and dark tail, GREEN saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_098",
+      "nombre": "Trigal",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_098.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_02_base.png",
+      "descripcion": "warm chestnut brown coat, reddish brown mane and brown tail, RED saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_099",
+      "nombre": "Victoria",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_099.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_03_base.png",
+      "descripcion": "dark chocolate brown coat, black mane and black tail, BLUE saddlecloth with white piping"
+    },
+    {
+      "tipo": "splash",
+      "id": "caballo_100",
+      "nombre": "Vigía",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_100.png",
+      "estado": "revisado",
+      "referencia": "Assets/Art/HorsesRecovered/base/horse_04_base.png",
+      "descripcion": "pale golden palomino coat, cream mane and cream tail, PURPLE saddlecloth with white piping"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DisallowMultipleComponent]
 public class CameraController : MonoBehaviour
 {
     public static CameraController instancia;
@@ -15,41 +16,36 @@ public class CameraController : MonoBehaviour
     [Range(0f, 90f)] public float maxYaw = 90f;
     [Range(-89f, 0f)] public float minPitch = -25f;
     [Range(0f, 89f)] public float maxPitch = 30f;
-    [Tooltip("0 aplica inmediatamente el ángulo que corresponde a la posición del mouse.")]
-    [Min(0f)] public float rotationSmoothTime;
 
-    [Header("Zoom")]
+    [Header("Zoom fuera del Hub")]
     public float zoom = 60f;
     public float zoomMin = 30f;
     public float zoomMax = 80f;
     public float velocidadZoom = 200f;
 
-    enum Seguimiento { Recalibrar, EsperarCentro, Activo }
-
+    enum Seguimiento { Suspendido, Sincronizando, Activo }
+    Seguimiento seguimiento;
     Camera cam;
+    Mouse mouseAnterior;
     Vector3 posicionInicial;
     Quaternion rotacionCentral;
+    Vector2 angulosHub, cursorSolicitado, cursorAntesDeSincronizar, ultimaPosicion;
+    Rect areaAnterior;
+    double muestraAntesDeSincronizar;
+    int frameSolicitud;
+    bool tieneFoco;
     float rotacionX, rotacionY;
-    float smoothYaw, smoothPitch;
-    float yawVelocity, pitchVelocity;
-    Vector2 pantallaAnterior, posicionReferencia, angulosReferencia;
-    bool tieneFoco, centrarAlRetomar;
-    Seguimiento seguimiento;
-    int primerFrameDeLectura, frameDeCentrado;
-    float limiteDeCentrado;
-    const float EsperaDeCentrado = .25f;
 
-    bool InterfazActiva => MenuPausa.Activa ||
+    bool InterfazActiva => MenuPausa.BloqueaEntrada ||
         (GameManager.Instancia != null && GameManager.Instancia.estadoActual != GameState.Hub) ||
         (UIManager.instance != null && UIManager.instance.HayInterfazAbierta);
-
-    bool PuedeNavegarHub => tieneFoco && !InterfazActiva;
 
     void Awake()
     {
         instancia = this;
         cam = GetComponent<Camera>();
-        zoom = cam.fieldOfView;
+        zoom = fixedHubNavigation ? 60f : cam.fieldOfView;
+        if (fixedHubNavigation) cam.fieldOfView = 60f;
         posicionInicial = transform.position;
         rotacionCentral = Quaternion.AngleAxis(centralYawOffset, Vector3.up) * transform.rotation;
     }
@@ -71,142 +67,113 @@ public class CameraController : MonoBehaviour
     {
         if (!fixedHubNavigation) return;
         transform.position = posicionInicial;
-
-        // Las acciones de UI y el raycast del clic ya se resolvieron en Update.
+        var mouse = Mouse.current;
+        bool focoJuego = tieneFoco && VentanaDeJuegoActiva();
         bool bloqueada = InterfazActiva;
-        ActualizarCursorHub(tieneFoco && !bloqueada);
-        if (bloqueada || !tieneFoco)
+        ActualizarCursorHub(focoJuego && !bloqueada);
+        if (mouse != mouseAnterior) { Suspender(); mouseAnterior = mouse; }
+        if (mouse == null) { Suspender(); return; }
+
+        // Única entrada del Hub: posición absoluta del mismo dispositivo del Input System.
+        Vector2? sincronizar = ProcesarMuestraHub(mouse.position.ReadValue(), cam.pixelRect,
+            bloqueada, focoJuego, mouse.lastUpdateTime, Time.frameCount);
+        if (sincronizar.HasValue && !Application.isBatchMode)
+            mouse.WarpCursorPosition(sincronizar.Value);
+    }
+
+    Vector2? ProcesarMuestraHub(Vector2 posicion, Rect area, bool bloqueada, bool foco,
+        double instanteMuestra, int frame)
+    {
+        if (area != areaAnterior) { areaAnterior = area; Suspender(); }
+        if (bloqueada || !foco || !PosicionValida(posicion, area))
         {
-            centrarAlRetomar |= bloqueada;
-            InvalidarSeguimiento();
-            return;
+            Suspender();
+            return null;
         }
-
-        if (Time.frameCount < primerFrameDeLectura || MenuPausa.BloqueaEntrada || Input.GetMouseButtonDown(0))
-            return;
-
-        var pantalla = new Vector2(Screen.width, Screen.height);
-        Vector2 posicion = Input.mousePosition;
-        if (centrarAlRetomar && PosicionValida(posicion, pantalla))
+        if (seguimiento == Seguimiento.Suspendido)
         {
-            centrarAlRetomar = false;
-            var mouse = Mouse.current;
-            if (!Application.isBatchMode && Application.platform == RuntimePlatform.WindowsPlayer &&
-                mouse != null && mouse.native)
+            // Una única solicitud al recuperar control. Nunca recentrar durante navegación.
+            cursorSolicitado = CursorDesdeAngulos(angulosHub, area);
+            cursorAntesDeSincronizar = posicion;
+            muestraAntesDeSincronizar = instanteMuestra;
+            frameSolicitud = frame;
+            seguimiento = Seguimiento.Sincronizando;
+            return cursorSolicitado;
+        }
+        if (seguimiento == Seguimiento.Sincronizando)
+        {
+            // Warp actualiza Pointer.position en el siguiente input update, no inmediatamente.
+            if (frame <= frameSolicitud) return null;
+            if ((posicion - cursorSolicitado).sqrMagnitude <= 1f)
             {
-                PrepararCentrado(pantalla, Time.frameCount, Time.unscaledTime);
-                mouse.WarpCursorPosition(pantalla * .5f);
-                return;
+                seguimiento = Seguimiento.Activo;
+                ultimaPosicion = posicion;
+                return null; // La confirmación conserva exactamente la orientación anterior.
             }
-        }
-
-        ProcesarPosicionHub(posicion, pantalla, Time.unscaledDeltaTime, Time.frameCount, Time.unscaledTime);
-    }
-
-    void PrepararCentrado(Vector2 pantalla, int frame, float tiempo)
-    {
-        pantallaAnterior = pantalla;
-        seguimiento = Seguimiento.EsperarCentro;
-        frameDeCentrado = frame;
-        limiteDeCentrado = tiempo + EsperaDeCentrado;
-    }
-
-    void ProcesarPosicionHub(Vector2 posicion, Vector2 pantalla, float deltaTime, int frame, float tiempo)
-    {
-        if (pantalla != pantallaAnterior)
-        {
-            pantallaAnterior = pantalla;
-            InvalidarSeguimiento();
-        }
-        if (!PosicionValida(posicion, pantalla))
-        {
-            InvalidarSeguimiento();
-            return;
-        }
-
-        if (seguimiento == Seguimiento.EsperarCentro)
-        {
-            // El comando del mouse se refleja en una actualización de entrada posterior.
-            bool centrado = (posicion - pantalla * .5f).sqrMagnitude <= 4f;
-            if (frame <= frameDeCentrado || (!centrado && tiempo < limiteDeCentrado)) return;
-        }
-
-        var normalizada = new Vector2(Mathf.Min(1, posicion.x / (pantalla.x - 1)),
-            Mathf.Min(1, posicion.y / (pantalla.y - 1)));
-        if (seguimiento != Seguimiento.Activo)
-        {
-            posicionReferencia = normalizada;
-            angulosReferencia = new Vector2(smoothYaw, smoothPitch);
-            yawVelocity = pitchVelocity = 0;
+            // Si ya hubo movimiento posterior al warp, su posición final puede superar el destino.
+            // Ignorar la primera actualización evita consumir eventos previos al cambio de estado.
+            if (frame <= frameSolicitud + 1 || instanteMuestra <= muestraAntesDeSincronizar ||
+                (posicion - cursorAntesDeSincronizar).sqrMagnitude < .0001f) return null;
             seguimiento = Seguimiento.Activo;
-            return;
         }
 
-        float yaw = MapearEje(normalizada.x, ref posicionReferencia.x, ref angulosReferencia.x, minYaw, maxYaw);
-        float pitch = MapearEje(normalizada.y, ref posicionReferencia.y, ref angulosReferencia.y, maxPitch, minPitch);
-        if (rotationSmoothTime == 0)
-        {
-            smoothYaw = yaw;
-            smoothPitch = pitch;
-        }
-        else if (deltaTime > 0)
-        {
-            smoothYaw = Mathf.SmoothDamp(smoothYaw, yaw, ref yawVelocity, rotationSmoothTime,
-                Mathf.Infinity, deltaTime);
-            smoothPitch = Mathf.SmoothDamp(smoothPitch, pitch, ref pitchVelocity, rotationSmoothTime,
-                Mathf.Infinity, deltaTime);
-        }
-        smoothYaw = Mathf.Clamp(smoothYaw, minYaw, maxYaw);
-        smoothPitch = Mathf.Clamp(smoothPitch, minPitch, maxPitch);
-        transform.rotation = rotacionCentral * Quaternion.Euler(smoothPitch, smoothYaw, 0);
+        // Conservar también el ángulo exacto si Windows redondeó el warp a un píxel entero.
+        if ((posicion - ultimaPosicion).sqrMagnitude < .0001f) return null;
+        ultimaPosicion = posicion;
+        angulosHub = AngulosDesdeCursor(posicion, area);
+        transform.rotation = rotacionCentral * Quaternion.Euler(angulosHub.y, angulosHub.x, 0);
+        return null;
     }
 
-    static bool PosicionValida(Vector2 posicion, Vector2 pantalla) =>
-        pantalla.x > 1 && pantalla.y > 1 && posicion.x >= 0 && posicion.y >= 0 &&
-        posicion.x < pantalla.x && posicion.y < pantalla.y;
-
-    static float MapearEje(float posicion, ref float referencia, ref float angulo,
-        float limiteInferior, float limiteSuperior)
+    Vector2 AngulosDesdeCursor(Vector2 posicion, Rect area)
     {
-        if (posicion == referencia) return angulo;
-        float objetivo = posicion < referencia
-            ? Mathf.Lerp(angulo, limiteInferior, (referencia - posicion) / referencia)
-            : Mathf.Lerp(angulo, limiteSuperior, (posicion - referencia) / (1 - referencia));
-
-        // Si la recalibración cayó justo en el borde, el primer movimiento
-        // hacia dentro recupera un tramo utilizable a ambos lados.
-        if ((referencia == 0 || referencia == 1) && posicion > 0 && posicion < 1)
-        {
-            referencia = posicion;
-            angulo = objetivo;
-        }
-        return objetivo;
+        float x = Mathf.Clamp01((posicion.x - area.xMin) / (area.width - 1));
+        float y = Mathf.Clamp01((posicion.y - area.yMin) / (area.height - 1));
+        float pitch = y <= .5f ? Mathf.Lerp(maxPitch, 0, y * 2) : Mathf.Lerp(0, minPitch, (y - .5f) * 2);
+        return new Vector2(Mathf.Lerp(minYaw, maxYaw, x), pitch);
     }
 
-    void InvalidarSeguimiento()
+    Vector2 CursorDesdeAngulos(Vector2 angulos, Rect area)
     {
-        seguimiento = Seguimiento.Recalibrar;
-        yawVelocity = pitchVelocity = 0;
+        float x = Mathf.InverseLerp(minYaw, maxYaw, Mathf.Clamp(angulos.x, minYaw, maxYaw));
+        float pitch = Mathf.Clamp(angulos.y, minPitch, maxPitch);
+        float y = pitch >= 0 ? Mathf.Lerp(.5f, 0, Mathf.InverseLerp(0, maxPitch, pitch))
+            : Mathf.Lerp(.5f, 1, Mathf.InverseLerp(0, minPitch, pitch));
+        return new Vector2(area.xMin + x * (area.width - 1), area.yMin + y * (area.height - 1));
     }
+
+    static bool PosicionValida(Vector2 posicion, Rect area) =>
+        area.width > 1 && area.height > 1 && float.IsFinite(posicion.x) && float.IsFinite(posicion.y) &&
+        posicion.x >= area.xMin && posicion.y >= area.yMin &&
+        posicion.x < area.xMax && posicion.y < area.yMax;
+
+    void Suspender() => seguimiento = Seguimiento.Suspendido;
 
     void OnApplicationFocus(bool foco)
     {
         tieneFoco = foco;
-        if (!fixedHubNavigation) return;
-        primerFrameDeLectura = Time.frameCount + 1;
-        InvalidarSeguimiento();
-        ActualizarCursorHub(PuedeNavegarHub);
+        Suspender();
+        if (fixedHubNavigation && !foco) ActualizarCursorHub(false);
     }
 
     void OnDisable()
     {
-        InvalidarSeguimiento();
+        Suspender();
         if (fixedHubNavigation) ActualizarCursorHub(false);
     }
 
-    void OnDestroy()
+    void OnDestroy() { if (instancia == this) instancia = null; }
+
+    static bool VentanaDeJuegoActiva()
     {
-        if (instancia == this) instancia = null;
+#if UNITY_EDITOR
+        if (!Application.isBatchMode)
+        {
+            var ventana = UnityEditor.EditorWindow.focusedWindow;
+            return ventana != null && ventana.GetType().Name == "GameView";
+        }
+#endif
+        return true;
     }
 
     static void ActualizarCursorHub(bool navegar)
@@ -216,7 +183,6 @@ public class CameraController : MonoBehaviour
             Application.platform == RuntimePlatform.LinuxPlayer;
         var modo = navegar && compatible ? CursorLockMode.Confined : CursorLockMode.None;
         if (Cursor.lockState != modo) Cursor.lockState = modo;
-        if (!Cursor.visible) Cursor.visible = true;
     }
 
     void OnValidate()
@@ -225,6 +191,5 @@ public class CameraController : MonoBehaviour
         maxYaw = Mathf.Clamp(maxYaw, 0f, 90f);
         minPitch = Mathf.Clamp(minPitch, -89f, 0f);
         maxPitch = Mathf.Clamp(maxPitch, 0f, 89f);
-        rotationSmoothTime = Mathf.Max(0, rotationSmoothTime);
     }
 }

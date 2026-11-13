@@ -125,3 +125,8 @@ InitTestScene*.unity*
 !/CheckpointValidation/README.md
 /Validation/
 /ValidationSave/
+
+# Unity recovery copies and personal campaign saves (preserve locally).
+/Assets/_Recovery/
+/Assets/_Recovery.meta
+gameData.json*

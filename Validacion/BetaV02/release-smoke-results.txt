@@ -1,0 +1,8 @@
+STARTUP PASS: ejecutable final extraído, inicialización Unity 6000.3.13f1 observada sin excepciones de carga.
+Executable: C:\Caballos\Validation\BetaV02\ExtractedZip\Caballos-2.0-Beta-v0.2\Caballos-2.0.exe
+PID: 29756
+Natural exit: False
+Natural exit code:
+Si Natural exit=False, se detuvo sólo el proceso headless propio tras 60 segundos. Esto NO valida salida normal mediante Escape.
+Personal gameData.json unchanged: True
+Gráficos, audio, mouse, teclado físico y otra PC sin Unity: pendientes manuales.

@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
@@ -35,6 +35,8 @@ public partial class EstabloView
     private CanvasGroup grupoContenido, grupoNavegacion;
     private GameObject focoAnterior;
     private GameObject modal;
+    private TMP_Text selectorCaballo, estadoSeleccion;
+    private Button activarCaballo;
 
     private void ConstruirInterfaz()
     {
@@ -87,7 +89,19 @@ public partial class EstabloView
         ConstruirUp();
         ConstruirCriadero();
         ConstruirItems();
+        Flechas(raiz, 887);
+        selectorCaballo = Texto("CaballoSeleccionado", raiz, new Rect(106, 886, 202, 43), Lienzo, "", 23);
+        activarCaballo = Boton("ActivarCaballo", raiz, new Rect(314, 887, 181, 42), Lienzo,
+            "Hacer activo", 23, ActivarSeleccionado, Sombra);
+        estadoSeleccion = Texto("EstadoCaballoActivo", raiz, new Rect(600, 889, 970, 38), Lienzo, "", 22);
         ConstruirModal();
+    }
+
+    private void ActivarSeleccionado()
+    {
+        if (!Juego.SeleccionarCaballoActivo(CaballoActual?.id, out string mensaje))
+            MostrarModal("Caballo activo", mensaje);
+        Refrescar();
     }
 
     private void ConstruirStats()
@@ -223,7 +237,7 @@ public partial class EstabloView
         Ranura(panel, TipoSlotItem.PatasTraseras, new Rect(1301, 627, 264, 108), new Vector2(1243, 685), true);
 
         Texto("AyudaEquipamiento", panel, new Rect(613, 779, 965, 36), Lienzo,
-            $"Arrastra un ítem a su ranura · Equipar ${SistemaEquipamiento.CostoEquiparItem} · Reemplazar ${SistemaEquipamiento.CostoEquiparItem + SistemaEquipamiento.CostoDesequiparItem}", 23);
+            $"Arrastra un ítem a su ranura · Equipar {Moneda.Texto(SistemaEquipamiento.CostoEquiparItem)} · Reemplazar ${SistemaEquipamiento.CostoEquiparItem + SistemaEquipamiento.CostoDesequiparItem}", 23);
         mensajeItems = Texto("MensajeItems", panel, new Rect(613, 825, 965, 36), Lienzo, "", 25);
         mensajeItems.color = Oro;
     }

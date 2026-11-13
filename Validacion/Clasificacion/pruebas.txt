@@ -1,0 +1,161 @@
+Elige carrera del calendario
+Apuesta confirmada por ID real
+Primer cruce no liquida ni adelanta el día
+Primer cruce no escribe un resultado parcial
+Escenario controlado de jugador primero/último
+Sólo se detiene la animación del que llegó
+Finalista queda en meta, sin salir del recorrido
+Finalista no avanza y los demás continúan
+No hay pantalla final antes del último
+Carrera real completa y clasificación válida
+Todas las posiciones son únicas y todas las llegadas válidas
+Jugador ocupa el extremo previsto de la clasificación
+Se observó la carrera continuar tras el primer cruce
+Un avance de día y estadísticas base conservadas
+Cuotas congeladas y apuesta liquidada con ganador definitivo
+Premio y apuesta conservan los importes existentes
+XP única según resultado definitivo
+Cada animador restaura su base correspondiente
+Pantalla de resultados presente sólo al completar
+Puesto personal coincide con la clasificación
+Ranking incluye a todos, sin filas ficticias
+Podio muestra sólo los puestos existentes
+Podio: splash propio y proporciones para Relámpago
+Podio: nombre real para 280b457111be48c29126483d79ecd9b0
+Podio: splash propio y proporciones para Melodía
+Podio: nombre real para f635cb39faf8fe17e55faea794dd68db
+Podio: splash propio y proporciones para Fandango
+Podio: nombre real para 29ff8648a11c44c388190c74781ad009
+Sin efectos decorativos de hover
+No duplica premio, apuesta, XP ni día
+JSON contiene clasificación completa
+Carga no reabre ni vuelve a liquidar una carrera terminada
+Resultados cubren viewport (1920, 1080)
+Sin texto cortado en podio (1920, 1080)
+Resultados cubren viewport (1600, 900)
+Sin texto cortado en podio (1600, 900)
+Resultados cubren viewport (1366, 768)
+Sin texto cortado en podio (1366, 768)
+Resultados cubren viewport (1280, 720)
+Sin texto cortado en podio (1280, 720)
+Volver al Hub funciona y restaura cursor
+Elige carrera del calendario
+Apuesta confirmada por ID real
+Primer cruce no liquida ni adelanta el día
+Primer cruce no escribe un resultado parcial
+Escenario controlado de jugador primero/último
+Sólo se detiene la animación del que llegó
+Finalista queda en meta, sin salir del recorrido
+Finalista no avanza y los demás continúan
+No hay pantalla final antes del último
+Carrera real completa y clasificación válida
+Todas las posiciones son únicas y todas las llegadas válidas
+Jugador ocupa el extremo previsto de la clasificación
+Se observó la carrera continuar tras el primer cruce
+Un avance de día y estadísticas base conservadas
+Cuotas congeladas y apuesta liquidada con ganador definitivo
+Premio y apuesta conservan los importes existentes
+XP única según resultado definitivo
+Cada animador restaura su base correspondiente
+Pantalla de resultados presente sólo al completar
+Puesto personal coincide con la clasificación
+Ranking incluye a todos, sin filas ficticias
+Podio muestra sólo los puestos existentes
+Podio: splash propio y proporciones para Perla
+Podio: nombre real para ed7d39b4325a91d841d08cd8e02dd020
+Podio: splash propio y proporciones para Cometa
+Podio: nombre real para 9452bed411cdb28bd115b6d57f71463e
+Podio: splash propio y proporciones para Pegaso
+Podio: nombre real para b98a3dc934eec1990ef0b4000452c3cc
+Sin efectos decorativos de hover
+No duplica premio, apuesta, XP ni día
+JSON contiene clasificación completa
+Carga no reabre ni vuelve a liquidar una carrera terminada
+Resultados cubren viewport (1280, 720)
+Sin texto cortado en podio-6-ultimo (1280, 720)
+Volver al Hub funciona y restaura cursor
+Elige carrera del calendario
+Apuesta confirmada por ID real
+Primer cruce no liquida ni adelanta el día
+Primer cruce no escribe un resultado parcial
+Escenario controlado de jugador primero/último
+Sólo se detiene la animación del que llegó
+Finalista queda en meta, sin salir del recorrido
+Finalista no avanza y los demás continúan
+No hay pantalla final antes del último
+Carrera real completa y clasificación válida
+Todas las posiciones son únicas y todas las llegadas válidas
+Jugador ocupa el extremo previsto de la clasificación
+Se observó la carrera continuar tras el primer cruce
+Un avance de día y estadísticas base conservadas
+Cuotas congeladas y apuesta liquidada con ganador definitivo
+Premio y apuesta conservan los importes existentes
+XP única según resultado definitivo
+Cada animador restaura su base correspondiente
+Pantalla de resultados presente sólo al completar
+Puesto personal coincide con la clasificación
+Ranking incluye a todos, sin filas ficticias
+Podio muestra sólo los puestos existentes
+Podio: splash propio y proporciones para Luna
+Podio: nombre real para 3fef65f4081744a6b2768288948e7daa
+Podio: splash propio y proporciones para Destello
+Podio: nombre real para bf74708bf150306d7aa325d8ee5a8fb3
+Sin efectos decorativos de hover
+No duplica premio, apuesta, XP ni día
+JSON contiene clasificación completa
+Carga no reabre ni vuelve a liquidar una carrera terminada
+Resultados cubren viewport (1280, 720)
+Sin texto cortado en podio-2-primero (1280, 720)
+Volver al Hub funciona y restaura cursor
+Elige carrera del calendario
+Apuesta confirmada por ID real
+Carrera real completa y clasificación válida
+Todas las posiciones son únicas y todas las llegadas válidas
+Jugador ocupa el extremo previsto de la clasificación
+Se observó la carrera continuar tras el primer cruce
+Un avance de día y estadísticas base conservadas
+Cuotas congeladas y apuesta liquidada con ganador definitivo
+Premio y apuesta conservan los importes existentes
+XP única según resultado definitivo
+Cada animador restaura su base correspondiente
+Pantalla de resultados presente sólo al completar
+Puesto personal coincide con la clasificación
+Ranking incluye a todos, sin filas ficticias
+Podio muestra sólo los puestos existentes
+Podio: splash propio y proporciones para Luna
+Podio: nombre real para 6c288842888d4d96ac95eb1a77e1c836
+Sin efectos decorativos de hover
+No duplica premio, apuesta, XP ni día
+JSON contiene clasificación completa
+Carga no reabre ni vuelve a liquidar una carrera terminada
+Resultados cubren viewport (1280, 720)
+Sin texto cortado en podio-1-primero (1280, 720)
+Volver al Hub funciona y restaura cursor
+Parrilla para protección de liquidación
+Inicio de protección guardado
+API rechaza liquidación al primer ganador sin clasificación completa
+API rechaza ranking duplicado
+Fallo de guardado se comunica y conserva resultado en memoria
+UI ofrece reintentar y bloquea salida con guardado pendiente
+Resultados cubren viewport (1280, 720)
+Sin texto cortado en guardado-pendiente (1280, 720)
+Fallo de escritura no permite reliquidar
+Reintento todavía fallido conserva saldo y pantalla
+Fallos de escritura conservaron la copia anterior
+Botón reintentar guarda correctamente y habilita volver
+Reintento de guardado no altera economía ni calendario
+Lee fixture para compatibilidad
+Guardado anterior sin clasificación se carga correctamente
+Un fallo general sin premio pendiente no bloquea el retorno de la carrera
+Apuesta para carrera sin llegadas
+Sin llegadas: devolución, sin premio/penalización/XP inventados, un día
+Reembolso no se duplica
+Inicia carrera del día 7
+Cuota semanal y premio una sola vez día 7
+Calendario preservado al terminar día 7
+Guarda clasificación en transición semanal/final
+Inicia carrera del día 42
+Cuota semanal y premio una sola vez día 42
+Calendario preservado al terminar día 42
+Guarda clasificación en transición semanal/final
+Sin errores de UI ni excepciones inesperadas:

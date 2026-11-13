@@ -14,6 +14,7 @@ public static class BetaJugableValidation
     static int saldoAntes;
     static ApuestaCarrera apuestaEnCurso;
     static int premioEnCurso;
+    static int inscripcionEnCurso;
     static CarreraProgramada carreraSinApuesta;
     static int saldoSinApuesta;
     static string resultadoAnterior;
@@ -63,7 +64,7 @@ public static class BetaJugableValidation
             Exigir(resultado.idCarrera == apuestaEnCurso.idCarrera && resultado.estado != EstadoApuesta.Pendiente,
                 "La simulación liquidó la apuesta");
             var vista = UIManager.instance.viewCarrera.GetComponentInChildren<CarreraUI>();
-            int balanceCarrera = vista.textoEstado.text.Contains("Premio de carrera") ? premioEnCurso : -200;
+            int balanceCarrera = (vista.textoEstado.text.Contains("Premio de carrera") ? premioEnCurso : 0) - inscripcionEnCurso;
             long pago = resultado.estado == EstadoApuesta.Ganada ? resultado.Pago : 0;
             Exigir(juego.dinero == saldoAntes + balanceCarrera + pago, "Balance real de carrera y apuesta");
             Recargar(juego);
@@ -81,8 +82,8 @@ public static class BetaJugableValidation
     static void VerificarEquipamiento(GameManager juego)
     {
         juego.dinero = 10000;
-        var catalogo = juego.CatalogoTienda().Where(p => p.tipoProducto == TipoProductoTienda.Equipable).ToArray();
-        Exigir(catalogo.Length == 5, "Cinco equipables");
+        var catalogo = juego.CatalogoTienda().Where(p => p.tipoProducto == TipoProductoTienda.Equipable && p.indiceLegacy >= 0).ToArray();
+        Exigir(catalogo.Length == 5, "Cinco equipables legacy conservados en el catálogo ampliado");
         foreach (var producto in catalogo)
         {
             juego.estadoTienda.idsProductosStock = new System.Collections.Generic.List<string> { producto.idDefinicion };
@@ -262,7 +263,14 @@ public static class BetaJugableValidation
         Exigir(juego.IniciarCarreraProgramada(carrera), "Inicio guardado");
         var ganador = juego.CrearVistaParticipante(carrera.participantes[0]);
         var rival = juego.CrearVistaParticipante(carrera.participantes[1]);
-        long esperado = saldo - 100 + carrera.apuesta.Pago + carrera.PremioGanador;
+        long esperado = saldo - 100 - carrera.inscripcion + carrera.apuesta.Pago + carrera.PremioGanador;
+        juego.FinalizarCarreraProgramada(carrera, ganador, rival);
+        Exigir(juego.dinero == saldo - 100 - carrera.inscripcion && carrera.apuesta.estado == EstadoApuesta.Pendiente,
+            "Una llegada aislada no liquida una carrera incompleta");
+        carrera.clasificacionFinal = carrera.participantes.Select((p, i) => new LlegadaCarrera
+        {
+            idCaballo = p.caballo.id, posicion = i + 1, tiempo = 10 + i, progreso = 100
+        }).ToList();
         juego.FinalizarCarreraProgramada(carrera, ganador, rival);
         Exigir(juego.dinero == esperado && juego.UltimaApuesta.estado == EstadoApuesta.Ganada, "Premio y apuesta separados");
         juego.FinalizarCarreraProgramada(carrera, ganador, rival);
@@ -336,6 +344,7 @@ public static class BetaJugableValidation
         saldoAntes = juego.dinero;
         apuestaEnCurso = carrera.apuesta;
         premioEnCurso = carrera.PremioGanador;
+        inscripcionEnCurso = carrera.inscripcion;
         UIManager.instance.AbrirCarrera();
         var vista = UIManager.instance.viewCarrera.GetComponentInChildren<CarreraUI>();
         vista.IniciarCarrera();
@@ -390,7 +399,7 @@ public static class BetaJugableValidation
     static void VerificarResultadoSinApuesta(GameManager juego)
     {
         var pantalla = UIManager.instance.viewCarrera.GetComponentInChildren<CarreraUI>();
-        int balance = pantalla.textoEstado.text.Contains("Premio de carrera") ? carreraSinApuesta.PremioGanador : -200;
+        int balance = (pantalla.textoEstado.text.Contains("Premio de carrera") ? carreraSinApuesta.PremioGanador : 0) - carreraSinApuesta.inscripcion;
         Exigir(juego.dinero == saldoSinApuesta + balance &&
             JsonUtility.ToJson(juego.UltimaApuesta) == resultadoAnterior, "B: resultado sin débito ni pago de apuesta");
         int saldoFinal = juego.dinero;

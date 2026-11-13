@@ -1,0 +1,4 @@
+SUBASTAS PASS: 163 comprobaciones
+CARRERA 2D PASS: 17573 comprobaciones de integración
+BETA PASS: escenarios A–G, con apuesta y sin apuesta, persistencia, cambio de carrera y liquidación única.
+CATALOGOS ASSETS PASS: 12 comprobaciones

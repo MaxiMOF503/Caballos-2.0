@@ -27,8 +27,10 @@ internal static class TablonLayout
         Panel("WoodenBackground", board, new Rect(48, 36, 1576, 868), BoardSize, madera);
         var headerSize = new Vector2(1560, 82);
         var header = Panel("Header", board, new Rect(56, 42, headerSize.x, headerSize.y), BoardSize, madera);
-        Label("MainTitle", header, new Rect(286, 0, 988, 68), headerSize, font,
-            "TABLÓN DE APUESTAS", 54, TextAlignmentOptions.Center);
+        Label("MainTitle", header, new Rect(286, 0, 988, 48), headerSize, font,
+            "TABLÓN DE APUESTAS", 43, TextAlignmentOptions.Center);
+        view.inscripcionTexto = Label("Inscripcion", header, new Rect(286, 49, 988, 30), headerSize, font,
+            "", 21, TextAlignmentOptions.Center);
         var volver = Boton("BackButton", header, new Rect(1396, 12, 146, 44), headerSize, font, "Volver");
         volver.onClick.AddListener(() => GameManager.Instancia.VolverAlHub());
         view.cambiarCarrera = Boton("ChangeRaceButton", header, new Rect(30, 12, 240, 44), headerSize, font, "Cambiar carrera");

@@ -1,0 +1,28 @@
+Prueba de balance orientativa, simulación real EstadoCaballoCarrera.
+100 semillas por escenario, cinco rivales. No estima ganancias reales de una campaña.
+Se supone acceso a todo el catálogo: es una cota optimista; la tienda real ofrece tres productos.
+Presupuesto inicial $1000, incluye $50 por equipar cada unidad. Equipo de nivel 1.
+Premios existentes: $1000–5000; perder cuesta $200. No se modifican esos valores ni las cuotas.
+
+1200 m: equipo=manta_lana / herradura_oro / zapatillas; coste=960; consumible=ninguno.
+Rayo: sin compras 0/100; equipo disponible en presupuesto 53/100; stats=[8,5,3,5].
+Luna: sin compras 0/100; equipo disponible en presupuesto 30/100; stats=[7,6,6,4].
+Relámpago: sin compras 84/100; equipo disponible en presupuesto 100/100; stats=[11,8,5,9].
+
+1600 m: equipo=manta_lana / herradura_oro / zapatillas; coste=960; consumible=ninguno.
+Rayo: sin compras 0/100; equipo disponible en presupuesto 61/100; stats=[8,5,3,5].
+Luna: sin compras 0/100; equipo disponible en presupuesto 33/100; stats=[7,6,6,4].
+Relámpago: sin compras 84/100; equipo disponible en presupuesto 100/100; stats=[11,8,5,9].
+
+2100 m: equipo=visera_lino / manta_lana / vendas_lino / vendas_lino; coste=1000; consumible=ninguno.
+Rayo: sin compras 0/100; equipo disponible en presupuesto 3/100; stats=[5,8,4,5].
+Luna: sin compras 0/100; equipo disponible en presupuesto 0/100; stats=[4,9,7,4].
+Relámpago: sin compras 68/100; equipo disponible en presupuesto 95/100; stats=[8,11,6,9].
+
+2400 m: equipo=visera_lino / manta_lana / vendas_lino / vendas_lino; coste=1000; consumible=ninguno.
+Rayo: sin compras 0/100; equipo disponible en presupuesto 0/100; stats=[5,8,4,5].
+Luna: sin compras 0/100; equipo disponible en presupuesto 0/100; stats=[4,9,7,4].
+Relámpago: sin compras 44/100; equipo disponible en presupuesto 83/100; stats=[8,11,6,9].
+
+Precio inicial de subasta en muestra de 100 identidades, día 1: $425–$450. El precio final depende de las pujas; no se garantiza asequibilidad de todas las ofertas con el saldo inicial.
+Consumibles: una unidad por caballo y día, preparación máxima +2 por atributo, XP máxima 35 por uso. Ninguno supera los topes 1–16 de carrera.

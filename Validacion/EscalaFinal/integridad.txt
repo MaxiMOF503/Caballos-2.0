@@ -1,0 +1,1 @@
+200 imágenes (100 atlas y 100 splashes) coinciden con SHA256PNG/sha256Splash de Produccion.json; conservan sus .meta.

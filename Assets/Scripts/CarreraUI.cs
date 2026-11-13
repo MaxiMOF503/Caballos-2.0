@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -94,10 +94,19 @@ public sealed class EstadoCaballoCarrera
         tiempoHastaEventoSuerte = AleatorioEntre(INTERVALO_SUERTE_MINIMO, INTERVALO_SUERTE_MAXIMO);
     }
 
-    public void Actualizar(float deltaTime, float distanciaCarrera)
+    public void Actualizar(float deltaTime, float distanciaCarrera, float ritmoIniciacion = 0)
     {
         if (deltaTime <= 0f || distanciaCarrera <= 0f)
             return;
+
+        if (ritmoIniciacion > 0)
+        {
+            // The one-time welcome race uses frozen, proportional pace/acceleration
+            // from its saved grid. Normal races retain every original formula below.
+            velocidadActual = MoverHacia(velocidadActual, ritmoIniciacion, ritmoIniciacion * 2 * deltaTime);
+            distanciaRecorrida += velocidadActual * deltaTime;
+            return;
+        }
 
         ActualizarEventoSuerte(deltaTime);
 
@@ -323,22 +332,15 @@ public class CarreraUI : MonoBehaviour
     bool carreraActiva;
     Caballo caballoJugadorParticipante;
     CarreraProgramada carreraPreparada;
-
-    const float POS_INICIO = -1000f;
-    const float META_X = 1000f;
+    ClasificacionCarrera clasificacion;
+    ResultadosCarreraView resultadosView;
+    readonly List<AvanceCarrera> avances = new List<AvanceCarrera>();
+    PistaLateralCarrera pista;
+    float acumuladoSimulacion;
+    const float PasoSimulacion = .02f;
 
     [Header("Simulación")]
     [SerializeField] float distanciaCarrera = 100f;
-
-    Vector2[] posicionesIniciales =
-    {
-        new Vector2(-1000, 60),
-        new Vector2(-1000, 210),
-        new Vector2(-1000, 350),
-        new Vector2(-1000, -80),
-        new Vector2(-1000, -230),
-        new Vector2(-1000, -380)
-    };
 
     void OnEnable()
     {
@@ -350,6 +352,8 @@ public class CarreraUI : MonoBehaviour
     void PrepararCarrera()
     {
         carreraActiva = false;
+        clasificacion = null;
+        resultadosView?.Ocultar();
 
         textoEstado.text = "Listo para correr";
 
@@ -383,6 +387,9 @@ public class CarreraUI : MonoBehaviour
 
     void CrearCaballosUI()
     {
+        pista ??= new PistaLateralCarrera(this);
+        pista.Preparar(carreraPreparada, carreraPreparada == null ? 100 : DistanciaSimulada);
+        contenedorCaballos = pista.caballos;
         foreach (Transform child in contenedorCaballos)
             Destroy(child.gameObject);
 
@@ -401,20 +408,30 @@ public class CarreraUI : MonoBehaviour
             Image img = obj.GetComponentInChildren<Image>(true);
 
             var visual = obj.AddComponent<HorseVisualAnimator>();
-            visual.Bind(caballosData[i], img);
+            visual.Bind(caballosData[i], img, true);
             visualAnimators.Add(visual);
             caballosUI.Add(ui);
             caballosImg.Add(img);
 
-            ui.anchoredPosition = posicionesIniciales[Mathf.Min(i, posicionesIniciales.Length - 1)];
+            ui.anchorMin = ui.anchorMax = Vector2.zero;
+            ui.pivot = new Vector2(.5f, 0);
+            ui.localScale = Vector3.one;
+            ui.sizeDelta = new Vector2(228, PresentacionCaballoCarrera.AlturaVisible);
+            ui.anchoredPosition = new Vector2(pista.mapa.largada,
+                24 + (caballosData.Count - 1 - i) * PresentacionCaballoCarrera.SeparacionCarriles);
+            if (img != null)
+            {
+                img.raycastTarget = false;
+            }
+            if (caballosData[i].id == caballoJugadorParticipante?.id) pista.VincularJugador(ui);
+            pista.MarcarReferencia(ui, caballosData[i].id == caballoJugadorParticipante?.id);
 
             //  ASIGNAR SPRITE SEGURO
             if (img != null)
             {
                 if (caballosData[i].sprite != null)
                 {
-                    img.sprite = caballosData[i].sprite;
-                    img.preserveAspect = true;
+                    visual.StopRun();
                     img.enabled = true;
                 }
                 else
@@ -444,12 +461,6 @@ public class CarreraUI : MonoBehaviour
         if (caballosData.Count == 0)
             return;
 
-        if (!GameManager.Instancia.IniciarCarreraProgramada(carreraPreparada))
-        {
-            textoEstado.text = "No se pudo guardar el inicio de la carrera.";
-            return;
-        }
-
         estadosCarrera.Clear();
 
         for (int i = 0; i < caballosData.Count; i++)
@@ -459,10 +470,20 @@ public class CarreraUI : MonoBehaviour
                 carreraPreparada.participantes[i].semilla));
 
             Vector2 posicionInicial = caballosUI[i].anchoredPosition;
-            posicionInicial.x = POS_INICIO;
+            posicionInicial.x = pista.mapa.largada;
             caballosUI[i].anchoredPosition = posicionInicial;
         }
 
+        var ids = new List<string>();
+        foreach (var caballo in caballosData) ids.Add(caballo.id);
+        clasificacion = new ClasificacionCarrera(ids, DistanciaSimulada, mensaje => Debug.LogWarning(mensaje));
+        if (!GameManager.Instancia.IniciarCarreraProgramada(carreraPreparada))
+        {
+            textoEstado.text = GameManager.Instancia.ErrorInicioCarrera ?? "No se pudo guardar el inicio de la carrera.";
+            return;
+        }
+        acumuladoSimulacion = 0;
+        pista.Iniciar();
         foreach (var visual in visualAnimators) visual.StartRun();
         carreraActiva = true;
 
@@ -472,98 +493,108 @@ public class CarreraUI : MonoBehaviour
         textoEstado.text = "¡Carrera iniciada!";
     }
 
+    float DistanciaSimulada => Mathf.Max(1f, distanciaCarrera *
+        (carreraPreparada.distanciaMetros > 0 ? carreraPreparada.distanciaMetros / 1200f : 1f));
+
     void Update()
     {
-        if (!carreraActiva || MenuPausa.Activa) return;
-
-        float dt = Time.deltaTime;
-        // 1200 m is the reference length of the existing TV simulation.
-        float escalaDistancia = carreraPreparada.distanciaMetros > 0 ? carreraPreparada.distanciaMetros / 1200f : 1f;
-        float distanciaValida = Mathf.Max(1f, distanciaCarrera * escalaDistancia);
-        int ganador = -1;
-        float menorFraccionDeLlegada = float.PositiveInfinity;
-
-        for (int i = 0; i < estadosCarrera.Count; i++)
+        if (!MenuPausa.Activa)
         {
-            EstadoCaballoCarrera estado = estadosCarrera[i];
-            float distanciaAnterior = estado.distanciaRecorrida;
-
-            estado.Actualizar(dt, distanciaValida);
-
-            float t = Mathf.Clamp01(estado.distanciaRecorrida / distanciaValida);
-            float x = Mathf.Lerp(POS_INICIO, META_X, t);
-
-            Vector2 pos = caballosUI[i].anchoredPosition;
-            pos.x = x;
-            caballosUI[i].anchoredPosition = pos;
-
-            if (estado.distanciaRecorrida >= distanciaValida)
-            {
-                float avanceDelFrame = estado.distanciaRecorrida - distanciaAnterior;
-                float fraccionDeLlegada = avanceDelFrame > 0f
-                    ? (distanciaValida - distanciaAnterior) / avanceDelFrame
-                    : 1f;
-
-                if (fraccionDeLlegada < menorFraccionDeLlegada)
-                {
-                    ganador = i;
-                    menorFraccionDeLlegada = fraccionDeLlegada;
-                }
-            }
+            AvanzarCarrera(Time.deltaTime);
+            ActualizarPresentacion(Time.deltaTime, Input.GetKey(KeyCode.A));
         }
-
-        if (ganador >= 0)
-            Terminar(ganador);
+        resultadosView?.ActualizarGuardado();
     }
 
-    void Terminar(int ganador)
+    internal void AvanzarCarrera(float dt)
     {
-        if (!carreraActiva)
+        if (!carreraActiva || GameManager.Instancia.Derrotado || dt <= 0 || float.IsNaN(dt) || float.IsInfinity(dt)) return;
+        if (carreraPreparada.versionReglas <= 0)
+        {
+            // Already prepared legacy races retain their previous integration cadence.
+            SimularPaso(dt);
             return;
+        }
+        acumuladoSimulacion += dt;
+        // Fixed simulation ticks make the preconfigured welcome pace and normal
+        // crossings independent of rendering FPS. Pause does not add time.
+        while (acumuladoSimulacion + .000001f >= PasoSimulacion && carreraActiva)
+        {
+            acumuladoSimulacion = Mathf.Max(0, acumuladoSimulacion - PasoSimulacion);
+            SimularPaso(PasoSimulacion);
+        }
+    }
 
+    void SimularPaso(float dt)
+    {
+        avances.Clear();
+        for (int i = 0; i < estadosCarrera.Count; i++)
+        {
+            var estado = estadosCarrera[i];
+            if (clasificacion.Resuelto(estado.caballo.id)) continue;
+            float anterior = estado.distanciaRecorrida;
+            estado.Actualizar(dt, DistanciaSimulada, carreraPreparada.iniciacion ? carreraPreparada.Buscar(estado.caballo.id).ritmoIniciacion : 0);
+            avances.Add(new AvanceCarrera(estado.caballo.id, anterior, estado.distanciaRecorrida));
+            if (!float.IsNaN(estado.distanciaRecorrida) && !float.IsInfinity(estado.distanciaRecorrida))
+            {
+                Vector2 posicion = caballosUI[i].anchoredPosition;
+                posicion.x = pista.mapa.X(estado.distanciaRecorrida);
+                caballosUI[i].anchoredPosition = posicion;
+            }
+        }
+        clasificacion.Avanzar(dt, avances);
+        foreach (var avance in avances)
+            if (clasificacion.Resuelto(avance.id))
+            {
+                int indice = caballosData.FindIndex(c => c.id == avance.id);
+                visualAnimators[indice].StopRun();
+            }
+        if (clasificacion.Completa) { Terminar(); return; }
+        textoEstado.text = carreraPreparada.NombreVisible + $" · {carreraPreparada.distanciaMetros} m\nLlegadas: {clasificacion.Resultados.Count} de {caballosData.Count}";
+        foreach (var llegada in clasificacion.Resultados)
+            if (llegada.idCaballo == caballoJugadorParticipante?.id)
+                textoEstado.text += $" · Tu caballo: {llegada.posicion}.º · Esperando a los demás";
+    }
+
+    internal void ActualizarPresentacion(float dt, bool teclaA)
+    {
+        if (pista == null || caballoJugadorParticipante == null) return;
+        int indice = caballosData.FindIndex(c => c.id == caballoJugadorParticipante.id);
+        if (indice < 0) return;
+        bool campoEnEdicion = UnityEngine.EventSystems.EventSystem.current?.currentSelectedGameObject?.GetComponent<TMP_InputField>()?.isFocused == true;
+        pista.Actualizar(dt, caballosUI[indice].anchoredPosition.x,
+            clasificacion?.Resuelto(caballoJugadorParticipante.id) == true, teclaA && !campoEnEdicion && carreraActiva);
+    }
+
+    void OnDestroy() => pista?.Liberar();
+
+    void Terminar()
+    {
+        if (!carreraActiva || !clasificacion.Completa) return;
+        carreraPreparada.clasificacionFinal = new List<LlegadaCarrera>(clasificacion.Resultados);
+        if (!ClasificacionCarrera.Validar(carreraPreparada, carreraPreparada.clasificacionFinal))
+        {
+            Debug.LogError("Clasificación incompleta o inválida. No se liquidó la carrera.");
+            return;
+        }
         carreraActiva = false;
-
+        pista.Finalizar();
         foreach (var visual in visualAnimators) visual.StopRun();
-        Caballo caballoGanador = caballosData[ganador];
-        bool ganoJugador = EsCaballoJugadorParticipante(caballoGanador);
-        Caballo mejorRival = ganoJugador
-            ? ObtenerMejorRivalPorProgreso()
-            : caballoGanador;
-
-        string resultado = GameManager.Instancia.FinalizarCarreraProgramada(carreraPreparada, caballoGanador, mejorRival);
-        textoEstado.text = "Ganó: " + caballoGanador.nombre;
-        textoEstado.text += ganoJugador ? $" · Premio de carrera +${carreraPreparada.PremioGanador}" : " · Balance de carrera −$200";
+        var primero = carreraPreparada.clasificacionFinal[0];
+        Caballo ganador = primero.Finalizo ? caballosData.Find(c => c.id == primero.idCaballo) : null;
+        bool ganoJugador = EsCaballoJugadorParticipante(ganador);
+        string resultado = GameManager.Instancia.FinalizarCarreraProgramada(carreraPreparada, ganador, null);
+        textoEstado.text = ganador == null ? "Sin ganador · Carrera anulada por incidencias"
+            : "Ganó: " + ganador.nombre + (ganoJugador ? $" · Premio de carrera +{Moneda.Texto(carreraPreparada.PremioGanador)}"
+                : carreraPreparada.versionReglas > 0 ? " · Sin premio de carrera" : " · Balance de carrera −$200");
+        if (carreraPreparada.versionReglas > 0) textoEstado.text += $" · Inscripción abonada {Moneda.Texto(carreraPreparada.inscripcion)}";
         if (!string.IsNullOrEmpty(resultado)) textoEstado.text += " · " + resultado;
         textoEstado.enableAutoSizing = true;
         textoEstado.fontSizeMax = 36;
         botonIniciar.SetActive(false);
-        botonVolver.SetActive(true);
-    }
-
-    Caballo ObtenerMejorRivalPorProgreso()
-    {
-        Caballo mejorRival = null;
-        float mayorProgreso = float.NegativeInfinity;
-
-        for (int i = 0; i < caballosData.Count; i++)
-        {
-            Caballo candidato = caballosData[i];
-
-            if (candidato == null || EsCaballoJugadorParticipante(candidato))
-                continue;
-
-            float progresoCandidato = i < estadosCarrera.Count
-                ? estadosCarrera[i].distanciaRecorrida
-                : float.NegativeInfinity;
-
-            if (mejorRival == null || progresoCandidato > mayorProgreso)
-            {
-                mejorRival = candidato;
-                mayorProgreso = progresoCandidato;
-            }
-        }
-
-        return mejorRival;
+        botonVolver.SetActive(false);
+        resultadosView ??= new ResultadosCarreraView(this);
+        resultadosView.Mostrar(GameManager.Instancia.UltimoResultadoCarrera, textoEstado.text);
     }
 
     bool EsCaballoJugadorParticipante(Caballo caballo)
@@ -580,7 +611,9 @@ public class CarreraUI : MonoBehaviour
 
     public void Volver()
     {
-        if (carreraActiva) return;
+        if (carreraActiva || !GameManager.Instancia.ResultadoCarreraGuardado) return;
+        GameManager.Instancia.CerrarResultadosDerrota();
+        if (GameManager.Instancia.Derrotado) { GameManager.Instancia.CerrarResultadosDerrota(); return; }
         GameManager.Instancia.VolverAlHub();
     }
 }

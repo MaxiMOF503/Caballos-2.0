@@ -1,0 +1,222 @@
+[
+  {
+    "archivo": "AvisosSubasta.cs",
+    "igual": true
+  },
+  {
+    "archivo": "BannerCarreraGraphic.cs",
+    "igual": true
+  },
+  {
+    "archivo": "BotonBannerCarrera.cs",
+    "igual": true
+  },
+  {
+    "archivo": "Caballo.cs",
+    "igual": true
+  },
+  {
+    "archivo": "CaballoButtonUI.cs",
+    "igual": true
+  },
+  {
+    "archivo": "CaballoUICarrera.cs",
+    "igual": true
+  },
+  {
+    "archivo": "CameraController.cs",
+    "igual": true
+  },
+  {
+    "archivo": "CarreraProgramada.cs",
+    "igual": true
+  },
+  {
+    "archivo": "CarreraUI.cs",
+    "igual": false
+  },
+  {
+    "archivo": "CatalogoCaballos.cs",
+    "igual": true
+  },
+  {
+    "archivo": "CatalogoCarreras.cs",
+    "igual": true
+  },
+  {
+    "archivo": "ClasificacionCarrera.cs",
+    "igual": true
+  },
+  {
+    "archivo": "CursorCaballos.cs",
+    "igual": true
+  },
+  {
+    "archivo": "EstabloArrastre.cs",
+    "igual": true
+  },
+  {
+    "archivo": "EstabloDestinoEquipo.cs",
+    "igual": true
+  },
+  {
+    "archivo": "EstabloView.cs",
+    "igual": true
+  },
+  {
+    "archivo": "EstabloView.Interfaz.cs",
+    "igual": true
+  },
+  {
+    "archivo": "GameData.cs",
+    "igual": true
+  },
+  {
+    "archivo": "GameLaunch.cs",
+    "igual": true
+  },
+  {
+    "archivo": "GameManager.Carrera.cs",
+    "igual": true
+  },
+  {
+    "archivo": "GameManager.Consumibles.cs",
+    "igual": true
+  },
+  {
+    "archivo": "GameManager.cs",
+    "igual": true
+  },
+  {
+    "archivo": "GameManager.Subastas.cs",
+    "igual": true
+  },
+  {
+    "archivo": "HorseVisualAnimator.cs",
+    "igual": false
+  },
+  {
+    "archivo": "HorseVisualCatalog.cs",
+    "igual": true
+  },
+  {
+    "archivo": "HorseVisualProfile.cs",
+    "igual": true
+  },
+  {
+    "archivo": "hub.unity",
+    "igual": true
+  },
+  {
+    "archivo": "Interactable.cs",
+    "igual": true
+  },
+  {
+    "archivo": "Interactor.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MaderaSelectorGraphic.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MainMenuController.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MenuDiamondEmptyMask.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MenuDiamondGlow.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MenuDiamondOption.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MenuDiamondSelection.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MenuPausa.cs",
+    "igual": true
+  },
+  {
+    "archivo": "MenuSettings.cs",
+    "igual": true
+  },
+  {
+    "archivo": "PistaLateralCarrera.cs",
+    "igual": false
+  },
+  {
+    "archivo": "ProgresionCaballo.cs",
+    "igual": true
+  },
+  {
+    "archivo": "ProgresionSemanal.cs",
+    "igual": true
+  },
+  {
+    "archivo": "RangoCaballo.cs",
+    "igual": true
+  },
+  {
+    "archivo": "RecursosCatalogo.cs",
+    "igual": true
+  },
+  {
+    "archivo": "ReglasCarrera.cs",
+    "igual": true
+  },
+  {
+    "archivo": "ResultadosCarreraView.cs",
+    "igual": true
+  },
+  {
+    "archivo": "SaveSystem.cs",
+    "igual": true
+  },
+  {
+    "archivo": "SeleccionCarreraView.cs",
+    "igual": true
+  },
+  {
+    "archivo": "SistemaSubastas.cs",
+    "igual": true
+  },
+  {
+    "archivo": "SistemaTienda.cs",
+    "igual": true
+  },
+  {
+    "archivo": "SubastaView.cs",
+    "igual": true
+  },
+  {
+    "archivo": "TablonLayout.cs",
+    "igual": true
+  },
+  {
+    "archivo": "TablonView.cs",
+    "igual": true
+  },
+  {
+    "archivo": "TiendaLayout.cs",
+    "igual": true
+  },
+  {
+    "archivo": "TiendaProductoUI.cs",
+    "igual": true
+  },
+  {
+    "archivo": "TiendaView.cs",
+    "igual": true
+  },
+  {
+    "archivo": "UIManager.cs",
+    "igual": true
+  }
+]

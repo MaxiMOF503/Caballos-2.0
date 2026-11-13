@@ -8,6 +8,7 @@ public class Caballo
 
     public string id = System.Guid.NewGuid().ToString("N");
     public string nombre;
+    public string raza = "No registrada";
     public int edad = 3;
 
     public int nivel = 1;
@@ -26,10 +27,19 @@ public class Caballo
     public bool esDelJugador;
 
     public string visualProfileId;
+    public string catalogIdentityId;
+    public int preparacionVelocidad, preparacionStamina, preparacionSuerte, preparacionInteligencia;
+    public int ultimoDiaConsumible;
     public Sprite sprite;
 
     public void ValidarDatos()
     {
+        if (string.IsNullOrWhiteSpace(raza)) raza = "No registrada";
+        preparacionVelocidad = Mathf.Clamp(preparacionVelocidad, 0, 2);
+        preparacionStamina = Mathf.Clamp(preparacionStamina, 0, 2);
+        preparacionSuerte = Mathf.Clamp(preparacionSuerte, 0, 2);
+        preparacionInteligencia = Mathf.Clamp(preparacionInteligencia, 0, 2);
+        ultimoDiaConsumible = Mathf.Max(0, ultimoDiaConsumible);
         if (!System.Guid.TryParseExact(id, "N", out _))
             id = System.Guid.NewGuid().ToString("N");
 

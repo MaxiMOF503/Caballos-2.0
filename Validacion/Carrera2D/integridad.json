@@ -1,0 +1,25 @@
+{
+  "escenaHubConservada": true,
+  "camaraHubEstabloTiendaSubastasSinCambios": true,
+  "animadorYResultadosPreviosConservados": true,
+  "formulasNormalesConservadas": true,
+  "perfilesConservados": 100,
+  "framesConservados": 800,
+  "splashConservados": 100,
+  "metasNuevosUnicos": 2,
+  "codigoIgualALaCopiaValidada": true,
+  "buildAnteriorConservada": true,
+  "shaScripts": {
+    "ReglasCarrera.cs": "e36d4e92009e127c04fad637f89948f9eba33cf501e36cffbaba954c8072fc70",
+    "PistaLateralCarrera.cs": "1bdec1c8cc978ed4a40a033e23459a1ea8ff2e1d6fc31ad75313bbf021a0cbec",
+    "CarreraUI.cs": "70299eb28fba05468b6afe0136afc9cad9505d0f2bb6ecb3f4b6c80ba13fc32a",
+    "CarreraProgramada.cs": "6925466b44463e389b50b037a5d36890d74ff2f02b6c990710720a1abe2db54d",
+    "GameManager.Carrera.cs": "f606a81fad55928d0c4bb98b65fdebeb6f4ce1b06e721b8a08a3d738214d6fc7",
+    "GameManager.cs": "15d2f5e1f2e07799fa09b5f5ac638e14780ae864d3a6af1591be1aef04dfdf2e",
+    "GameData.cs": "8ba437cd313a776009cc5bb914dfe88080213cde619501c779f0be7dc4560243",
+    "CatalogoCarreras.cs": "812a6ad97251042a22dfb5bbeb86b241da4493c5bc302fc66d48d2ccc2a48e75",
+    "SeleccionCarreraView.cs": "ddb9553e8aa7ce2fa755caf15db71a19fe770d2c09fecb3e0e9307515666b6bb",
+    "TablonView.cs": "9f83c2acd5ea084f338975ae9c900f37c59ad02c95ab5a8b7961590e6d3b9c30",
+    "TablonLayout.cs": "9efebeaa0a63513038efef13ef532d66edc01d5ca425f463868ca36219d98a4d"
+  }
+}

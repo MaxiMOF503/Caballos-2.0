@@ -30,7 +30,6 @@ public sealed class MainMenuController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         settingsPanel.SetActive(false);
         confirmationPanel.SetActive(false);
         RefreshLoadState();

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 [Serializable]
@@ -12,8 +12,14 @@ public sealed class CarreraProgramada
     public TipoCarrera tipo;
     public int premio;
     public bool iniciada;
+    public int versionReglas;
+    public int inscripcion;
+    public bool inscripcionCobrada;
+    public bool iniciacion;
+    public int InscripcionPendiente => versionReglas > 0 && !inscripcionCobrada ? Math.Max(0, inscripcion) : 0;
     public List<ParticipanteCarrera> participantes = new List<ParticipanteCarrera>();
     public ApuestaCarrera apuesta;
+    public List<LlegadaCarrera> clasificacionFinal;
 
     public bool SeleccionBloqueada => iniciada || apuesta != null;
     public int PremioGanador => premio > 0 ? premio : 500;
@@ -43,10 +49,11 @@ public sealed class ParticipanteCarrera
     public CaballoData caballo;
     public int cuotaDecimas;
     public int semilla;
+    public float ritmoIniciacion;
     public int Rendimiento => 5 * caballo.velocidad + 3 * caballo.stamina + caballo.suerte + caballo.inteligencia;
 }
 
-public enum EstadoApuesta { Pendiente, Ganada, Perdida }
+public enum EstadoApuesta { Pendiente, Ganada, Perdida, Anulada }
 
 [Serializable]
 public sealed class ApuestaCarrera
@@ -59,8 +66,17 @@ public sealed class ApuestaCarrera
     public EstadoApuesta estado;
     public long Pago => (long)cantidad * cuotaDecimas / 10;
     public string Resultado => estado == EstadoApuesta.Ganada
-        ? $"¡Apuesta ganada! Cobraste ${Pago}."
-        : estado == EstadoApuesta.Perdida ? "Apuesta perdida." : $"Apuesta confirmada por {nombreCaballo}: ${cantidad}.";
+        ? $"¡Apuesta ganada! Cobraste {Moneda.Texto(Pago)}."
+        : estado == EstadoApuesta.Perdida ? "Apuesta perdida."
+        : estado == EstadoApuesta.Anulada ? $"Carrera sin llegadas válidas. Apuesta devuelta: {Moneda.Texto(cantidad)}."
+        : $"Apuesta confirmada por {nombreCaballo}: {Moneda.Texto(cantidad)}.";
+
+    public long Anular()
+    {
+        if (estado != EstadoApuesta.Pendiente) return 0;
+        estado = EstadoApuesta.Anulada;
+        return cantidad;
+    }
 
     public long Liquidar(string idGanador)
     {

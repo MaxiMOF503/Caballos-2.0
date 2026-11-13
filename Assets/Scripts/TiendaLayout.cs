@@ -42,10 +42,7 @@ internal static class TiendaLayout
         marco.sprite = cartel;
         marco.raycastTarget = false;
         Texto("Titulo", cabecera, new Rect(.05f, .08f, .9f, .84f), Vector2.one, fuente, "Tienda", 70, oscuro: false);
-        var subasta = BotonNuevo("Subasta", contenido, new Rect(1000, 44, 339, 83), "Subasta", fuente, pergamino, null);
-        subasta.interactable = false;
-        subasta.image.color = new Color32(112, 97, 83, 255);
-        Etiqueta(subasta).color = new Color32(211, 193, 163, 255);
+        BotonNuevo("Subasta", contenido, new Rect(1000, 44, 339, 83), "Subasta", fuente, pergamino, view.MostrarSubasta);
 
         var volver = BotonNuevo("Volver", contenido, new Rect(1474, 48, 180, 68), "‹ Volver", fuente, pergamino, view.Volver);
         Etiqueta(volver).fontSizeMax = 35;
@@ -107,6 +104,10 @@ internal static class TiendaLayout
             "Confirmar", fuente, pergamino, view.ConfirmarCompra);
         view.cancelar = view.botonNo.GetComponent<Button>();
         view.confirmacion.SetActive(false);
+        var raizSubasta = Rect("SeccionSubasta", lienzo, new Rect(Vector2.zero, Lienzo), Lienzo);
+        raizSubasta.gameObject.SetActive(false);
+        view.subasta = raizSubasta.gameObject.AddComponent<SubastaView>();
+        view.subasta.Configurar(view, pergamino, cartel, marcoBoton, fuente);
         foreach (var antiguo in anteriores)
             if (antiguo.parent == raiz) antiguo.gameObject.SetActive(false);
     }

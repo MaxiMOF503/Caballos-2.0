@@ -16,6 +16,9 @@ public sealed class DefinicionCarrera
     [Range(1, 5)] public int dificultad = 1;
     [Range(0, 15)] public int indiceBanner;
     public Sprite bannerAlternativo;
+    [Tooltip("-1 usa la tabla por distancia; especiales y distancias nuevas deben tener tarifa propia.")]
+    public int inscripcionInicial = -1;
+    public int inscripcionDesdeDia8 = -1;
 
     public string TipoVisible => tipo == TipoCarrera.Intermedia ? "Media / intermedia" : tipo.ToString();
 }
@@ -28,6 +31,27 @@ public sealed class CatalogoCarreras : ScriptableObject
     [Min(1)] public int maximoOfertas = 4;
     public string carreraEspecialSemanal;
     public List<DefinicionCarrera> carreras = new();
+    public List<TarifaCarrera> tarifas = new List<TarifaCarrera>
+    {
+        new TarifaCarrera { distanciaMetros = 1200, inicial = 200, desdeDia8 = 400 },
+        new TarifaCarrera { distanciaMetros = 1600, inicial = 300, desdeDia8 = 600 },
+        new TarifaCarrera { distanciaMetros = 2100, inicial = 400, desdeDia8 = 800 },
+        new TarifaCarrera { distanciaMetros = 2400, inicial = 500, desdeDia8 = 1000 }
+    };
+    public int tarifaNuevaDistanciaInicial = 500;
+    public int tarifaNuevaDistanciaDesdeDia8 = 1000;
+    public BandaRivalesCarrera bandasRivales = new BandaRivalesCarrera();
+    [Range(.5f, .95f)] public float ritmoRivalIniciacionMin = .82f;
+    [Range(.5f, .95f)] public float ritmoRivalIniciacionMax = .94f;
+
+    public int Inscripcion(DefinicionCarrera carrera, int diaGlobal)
+    {
+        int propia = diaGlobal >= 8 ? carrera.inscripcionDesdeDia8 : carrera.inscripcionInicial;
+        if (propia >= 0) return propia;
+        var tarifa = tarifas?.Find(t => t.distanciaMetros == carrera.distanciaMetros);
+        return Mathf.Max(0, tarifa != null ? (diaGlobal >= 8 ? tarifa.desdeDia8 : tarifa.inicial)
+            : diaGlobal >= 8 ? tarifaNuevaDistanciaDesdeDia8 : tarifaNuevaDistanciaInicial);
+    }
 
     public DefinicionCarrera Buscar(string id) => carreras.Find(c => c != null && c.id == id);
 

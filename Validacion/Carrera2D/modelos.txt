@@ -1,0 +1,354 @@
+Tarifa exacta día 7/8 para 1200
+No baja la tarifa al reiniciar la semana 1200
+Meta y conversión única 1200
+Límites de cámara 1200
+Tarifa exacta día 7/8 para 1600
+No baja la tarifa al reiniciar la semana 1600
+Meta y conversión única 1600
+Límites de cámara 1600
+Tarifa exacta día 7/8 para 2100
+No baja la tarifa al reiniciar la semana 2100
+Meta y conversión única 2100
+Límites de cámara 2100
+Tarifa exacta día 7/8 para 2400
+No baja la tarifa al reiniciar la semana 2400
+Meta y conversión única 2400
+Límites de cámara 2400
+Tarifa propia de carrera especial
+Nueva distancia con tarifa propia configurable
+Banda inicial acotada 0/0
+Banda inicial acotada 0/1
+Banda inicial acotada 0/2
+Banda inicial acotada 0/3
+Banda inicial acotada 0/4
+Banda inicial acotada 1/0
+Banda inicial acotada 1/1
+Banda inicial acotada 1/2
+Banda inicial acotada 1/3
+Banda inicial acotada 1/4
+Banda inicial acotada 2/0
+Banda inicial acotada 2/1
+Banda inicial acotada 2/2
+Banda inicial acotada 2/3
+Banda inicial acotada 2/4
+Banda inicial acotada 3/0
+Banda inicial acotada 3/1
+Banda inicial acotada 3/2
+Banda inicial acotada 3/3
+Banda inicial acotada 3/4
+Banda inicial acotada 4/0
+Banda inicial acotada 4/1
+Banda inicial acotada 4/2
+Banda inicial acotada 4/3
+Banda inicial acotada 4/4
+Banda inicial acotada 5/0
+Banda inicial acotada 5/1
+Banda inicial acotada 5/2
+Banda inicial acotada 5/3
+Banda inicial acotada 5/4
+Banda inicial acotada 6/0
+Banda inicial acotada 6/1
+Banda inicial acotada 6/2
+Banda inicial acotada 6/3
+Banda inicial acotada 6/4
+Banda inicial acotada 7/0
+Banda inicial acotada 7/1
+Banda inicial acotada 7/2
+Banda inicial acotada 7/3
+Banda inicial acotada 7/4
+Banda inicial acotada 8/0
+Banda inicial acotada 8/1
+Banda inicial acotada 8/2
+Banda inicial acotada 8/3
+Banda inicial acotada 8/4
+Banda inicial acotada 9/0
+Banda inicial acotada 9/1
+Banda inicial acotada 9/2
+Banda inicial acotada 9/3
+Banda inicial acotada 9/4
+Banda inicial acotada 10/0
+Banda inicial acotada 10/1
+Banda inicial acotada 10/2
+Banda inicial acotada 10/3
+Banda inicial acotada 10/4
+Banda inicial acotada 11/0
+Banda inicial acotada 11/1
+Banda inicial acotada 11/2
+Banda inicial acotada 11/3
+Banda inicial acotada 11/4
+Banda inicial acotada 12/0
+Banda inicial acotada 12/1
+Banda inicial acotada 12/2
+Banda inicial acotada 12/3
+Banda inicial acotada 12/4
+Banda inicial acotada 13/0
+Banda inicial acotada 13/1
+Banda inicial acotada 13/2
+Banda inicial acotada 13/3
+Banda inicial acotada 13/4
+Banda inicial acotada 14/0
+Banda inicial acotada 14/1
+Banda inicial acotada 14/2
+Banda inicial acotada 14/3
+Banda inicial acotada 14/4
+Banda inicial acotada 15/0
+Banda inicial acotada 15/1
+Banda inicial acotada 15/2
+Banda inicial acotada 15/3
+Banda inicial acotada 15/4
+Banda inicial acotada 16/0
+Banda inicial acotada 16/1
+Banda inicial acotada 16/2
+Banda inicial acotada 16/3
+Banda inicial acotada 16/4
+Banda inicial acotada 17/0
+Banda inicial acotada 17/1
+Banda inicial acotada 17/2
+Banda inicial acotada 17/3
+Banda inicial acotada 17/4
+Banda inicial acotada 18/0
+Banda inicial acotada 18/1
+Banda inicial acotada 18/2
+Banda inicial acotada 18/3
+Banda inicial acotada 18/4
+Banda inicial acotada 19/0
+Banda inicial acotada 19/1
+Banda inicial acotada 19/2
+Banda inicial acotada 19/3
+Banda inicial acotada 19/4
+Banda inicial acotada 20/0
+Banda inicial acotada 20/1
+Banda inicial acotada 20/2
+Banda inicial acotada 20/3
+Banda inicial acotada 20/4
+Banda inicial acotada 21/0
+Banda inicial acotada 21/1
+Banda inicial acotada 21/2
+Banda inicial acotada 21/3
+Banda inicial acotada 21/4
+Banda inicial acotada 22/0
+Banda inicial acotada 22/1
+Banda inicial acotada 22/2
+Banda inicial acotada 22/3
+Banda inicial acotada 22/4
+Banda inicial acotada 23/0
+Banda inicial acotada 23/1
+Banda inicial acotada 23/2
+Banda inicial acotada 23/3
+Banda inicial acotada 23/4
+Banda inicial acotada 24/0
+Banda inicial acotada 24/1
+Banda inicial acotada 24/2
+Banda inicial acotada 24/3
+Banda inicial acotada 24/4
+Banda inicial acotada 25/0
+Banda inicial acotada 25/1
+Banda inicial acotada 25/2
+Banda inicial acotada 25/3
+Banda inicial acotada 25/4
+Banda inicial acotada 26/0
+Banda inicial acotada 26/1
+Banda inicial acotada 26/2
+Banda inicial acotada 26/3
+Banda inicial acotada 26/4
+Banda inicial acotada 27/0
+Banda inicial acotada 27/1
+Banda inicial acotada 27/2
+Banda inicial acotada 27/3
+Banda inicial acotada 27/4
+Banda inicial acotada 28/0
+Banda inicial acotada 28/1
+Banda inicial acotada 28/2
+Banda inicial acotada 28/3
+Banda inicial acotada 28/4
+Banda inicial acotada 29/0
+Banda inicial acotada 29/1
+Banda inicial acotada 29/2
+Banda inicial acotada 29/3
+Banda inicial acotada 29/4
+Banda inicial acotada 30/0
+Banda inicial acotada 30/1
+Banda inicial acotada 30/2
+Banda inicial acotada 30/3
+Banda inicial acotada 30/4
+Banda inicial acotada 31/0
+Banda inicial acotada 31/1
+Banda inicial acotada 31/2
+Banda inicial acotada 31/3
+Banda inicial acotada 31/4
+Banda inicial acotada 32/0
+Banda inicial acotada 32/1
+Banda inicial acotada 32/2
+Banda inicial acotada 32/3
+Banda inicial acotada 32/4
+Banda inicial acotada 33/0
+Banda inicial acotada 33/1
+Banda inicial acotada 33/2
+Banda inicial acotada 33/3
+Banda inicial acotada 33/4
+Banda inicial acotada 34/0
+Banda inicial acotada 34/1
+Banda inicial acotada 34/2
+Banda inicial acotada 34/3
+Banda inicial acotada 34/4
+Banda inicial acotada 35/0
+Banda inicial acotada 35/1
+Banda inicial acotada 35/2
+Banda inicial acotada 35/3
+Banda inicial acotada 35/4
+Banda inicial acotada 36/0
+Banda inicial acotada 36/1
+Banda inicial acotada 36/2
+Banda inicial acotada 36/3
+Banda inicial acotada 36/4
+Banda inicial acotada 37/0
+Banda inicial acotada 37/1
+Banda inicial acotada 37/2
+Banda inicial acotada 37/3
+Banda inicial acotada 37/4
+Banda inicial acotada 38/0
+Banda inicial acotada 38/1
+Banda inicial acotada 38/2
+Banda inicial acotada 38/3
+Banda inicial acotada 38/4
+Banda inicial acotada 39/0
+Banda inicial acotada 39/1
+Banda inicial acotada 39/2
+Banda inicial acotada 39/3
+Banda inicial acotada 39/4
+Banda inicial acotada 40/0
+Banda inicial acotada 40/1
+Banda inicial acotada 40/2
+Banda inicial acotada 40/3
+Banda inicial acotada 40/4
+Banda inicial acotada 41/0
+Banda inicial acotada 41/1
+Banda inicial acotada 41/2
+Banda inicial acotada 41/3
+Banda inicial acotada 41/4
+Banda inicial acotada 42/0
+Banda inicial acotada 42/1
+Banda inicial acotada 42/2
+Banda inicial acotada 42/3
+Banda inicial acotada 42/4
+Banda inicial acotada 43/0
+Banda inicial acotada 43/1
+Banda inicial acotada 43/2
+Banda inicial acotada 43/3
+Banda inicial acotada 43/4
+Banda inicial acotada 44/0
+Banda inicial acotada 44/1
+Banda inicial acotada 44/2
+Banda inicial acotada 44/3
+Banda inicial acotada 44/4
+Banda inicial acotada 45/0
+Banda inicial acotada 45/1
+Banda inicial acotada 45/2
+Banda inicial acotada 45/3
+Banda inicial acotada 45/4
+Banda inicial acotada 46/0
+Banda inicial acotada 46/1
+Banda inicial acotada 46/2
+Banda inicial acotada 46/3
+Banda inicial acotada 46/4
+Banda inicial acotada 47/0
+Banda inicial acotada 47/1
+Banda inicial acotada 47/2
+Banda inicial acotada 47/3
+Banda inicial acotada 47/4
+Banda inicial acotada 48/0
+Banda inicial acotada 48/1
+Banda inicial acotada 48/2
+Banda inicial acotada 48/3
+Banda inicial acotada 48/4
+Banda inicial acotada 49/0
+Banda inicial acotada 49/1
+Banda inicial acotada 49/2
+Banda inicial acotada 49/3
+Banda inicial acotada 49/4
+Banda inicial acotada 50/0
+Banda inicial acotada 50/1
+Banda inicial acotada 50/2
+Banda inicial acotada 50/3
+Banda inicial acotada 50/4
+Banda inicial acotada 51/0
+Banda inicial acotada 51/1
+Banda inicial acotada 51/2
+Banda inicial acotada 51/3
+Banda inicial acotada 51/4
+Banda inicial acotada 52/0
+Banda inicial acotada 52/1
+Banda inicial acotada 52/2
+Banda inicial acotada 52/3
+Banda inicial acotada 52/4
+Banda inicial acotada 53/0
+Banda inicial acotada 53/1
+Banda inicial acotada 53/2
+Banda inicial acotada 53/3
+Banda inicial acotada 53/4
+Banda inicial acotada 54/0
+Banda inicial acotada 54/1
+Banda inicial acotada 54/2
+Banda inicial acotada 54/3
+Banda inicial acotada 54/4
+Banda inicial acotada 55/0
+Banda inicial acotada 55/1
+Banda inicial acotada 55/2
+Banda inicial acotada 55/3
+Banda inicial acotada 55/4
+Banda inicial acotada 56/0
+Banda inicial acotada 56/1
+Banda inicial acotada 56/2
+Banda inicial acotada 56/3
+Banda inicial acotada 56/4
+Banda inicial acotada 57/0
+Banda inicial acotada 57/1
+Banda inicial acotada 57/2
+Banda inicial acotada 57/3
+Banda inicial acotada 57/4
+Banda inicial acotada 58/0
+Banda inicial acotada 58/1
+Banda inicial acotada 58/2
+Banda inicial acotada 58/3
+Banda inicial acotada 58/4
+Banda inicial acotada 59/0
+Banda inicial acotada 59/1
+Banda inicial acotada 59/2
+Banda inicial acotada 59/3
+Banda inicial acotada 59/4
+Carreras normales conservan victoria y derrota: 24/60 victorias iniciales
+Guion real sin azar ni salto, atributo 1, 1200m
+Guion real sin azar ni salto, atributo 1, 2400m
+Guion real sin azar ni salto, atributo 2, 1200m
+Guion real sin azar ni salto, atributo 2, 2400m
+Guion real sin azar ni salto, atributo 3, 1200m
+Guion real sin azar ni salto, atributo 3, 2400m
+Guion real sin azar ni salto, atributo 4, 1200m
+Guion real sin azar ni salto, atributo 4, 2400m
+Guion real sin azar ni salto, atributo 5, 1200m
+Guion real sin azar ni salto, atributo 5, 2400m
+Guion real sin azar ni salto, atributo 6, 1200m
+Guion real sin azar ni salto, atributo 6, 2400m
+Guion real sin azar ni salto, atributo 7, 1200m
+Guion real sin azar ni salto, atributo 7, 2400m
+Guion real sin azar ni salto, atributo 8, 1200m
+Guion real sin azar ni salto, atributo 8, 2400m
+Guion real sin azar ni salto, atributo 9, 1200m
+Guion real sin azar ni salto, atributo 9, 2400m
+Guion real sin azar ni salto, atributo 10, 1200m
+Guion real sin azar ni salto, atributo 10, 2400m
+Guion real sin azar ni salto, atributo 11, 1200m
+Guion real sin azar ni salto, atributo 11, 2400m
+Guion real sin azar ni salto, atributo 12, 1200m
+Guion real sin azar ni salto, atributo 12, 2400m
+Guion real sin azar ni salto, atributo 13, 1200m
+Guion real sin azar ni salto, atributo 13, 2400m
+Guion real sin azar ni salto, atributo 14, 1200m
+Guion real sin azar ni salto, atributo 14, 2400m
+Guion real sin azar ni salto, atributo 15, 1200m
+Guion real sin azar ni salto, atributo 15, 2400m
+Guion real sin azar ni salto, atributo 16, 1200m
+Guion real sin azar ni salto, atributo 16, 2400m
+Primera derrota activa segunda de iniciación
+Tercera normal
+Primera victoria y migración nunca activan guion

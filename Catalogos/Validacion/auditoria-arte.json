@@ -1,0 +1,2705 @@
+{
+  "imagenes": [
+    {
+      "id": "herradura_plata",
+      "ruta": "Assets/Sprites/items/Heradura gris.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        431,
+        155,
+        1107,
+        909
+      ],
+      "sha256": "3619577437cdadf0bb8222e2b81a5ed14e62dee300fd4304db42fabe40af70a5"
+    },
+    {
+      "id": "manzana_dorada",
+      "ruta": "Assets/Sprites/items/Manzana Dorada.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        461,
+        115,
+        1153,
+        901
+      ],
+      "sha256": "507a7c28cb2028888addecbbcd1ccb52d7c2699c3c968ee590bf0658e983d007"
+    },
+    {
+      "id": "herradura_oro",
+      "ruta": "Assets/Sprites/items/Heradura.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        431,
+        165,
+        1105,
+        916
+      ],
+      "sha256": "d8f4e70f7fe00fe2fecfa3376d9b9b53f1fd9a0ef8586f07ca2e9e9fd6611757"
+    },
+    {
+      "id": "zapatillas",
+      "ruta": "Assets/Sprites/items/Zapas.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        45,
+        97,
+        1521,
+        890
+      ],
+      "sha256": "4d085163d51a822c1878434c3ceccb8e4fb9eece47d53695d0bdb87315cf22bd"
+    },
+    {
+      "id": "sombrero_copa",
+      "ruta": "Assets/Sprites/items/Sombrero Copa.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        392,
+        175,
+        1157,
+        803
+      ],
+      "sha256": "17afb3d061634122904916a78243f6d24931a8d39cf2606eef16833eb700f6b7"
+    },
+    {
+      "id": "sombrero_noble",
+      "ruta": "Assets/Sprites/items/Sombrero plata.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        301,
+        198,
+        1228,
+        781
+      ],
+      "sha256": "3307d97786dd60487b64dd82389ad1abdd3512de5aa9b5c147cb061888f9626b"
+    },
+    {
+      "id": "brida_cuero",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_cuero.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        455,
+        40,
+        1120,
+        977
+      ],
+      "sha256": "f7c8a9ddaea6e9fed3889f3f137a973dcad7fd5c8f4f121242823bc425cef954"
+    },
+    {
+      "id": "cabezada_lona",
+      "ruta": "Assets/Resources/Catalogos/Items/cabezada_lona.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        404,
+        92,
+        1095,
+        950
+      ],
+      "sha256": "722a20dde10ba465d06644486b31677aee398199d7e75570c922e3ad9d702223"
+    },
+    {
+      "id": "orejeras_fieltro",
+      "ruta": "Assets/Resources/Catalogos/Items/orejeras_fieltro.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        363,
+        63,
+        1149,
+        940
+      ],
+      "sha256": "78692f65b2b3e42e92c48d008c89991aa5c988cc757ec379f6a948351c98384a"
+    },
+    {
+      "id": "anteojeras_laterales",
+      "ruta": "Assets/Resources/Catalogos/Items/anteojeras_laterales.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        384,
+        134,
+        1110,
+        921
+      ],
+      "sha256": "930d4e5a9d3fda05d2d3a85b9c72ff879d6928671b58f3995ad966d5f67eaf40"
+    },
+    {
+      "id": "visera_lino",
+      "ruta": "Assets/Resources/Catalogos/Items/visera_lino.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        274,
+        131,
+        1194,
+        847
+      ],
+      "sha256": "047955bebfd597b0166ec1eceb443f9c764903135b694536f2c3ed5bfcdaaa5f"
+    },
+    {
+      "id": "cabestro_cuerda",
+      "ruta": "Assets/Resources/Catalogos/Items/cabestro_cuerda.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        394,
+        47,
+        1050,
+        972
+      ],
+      "sha256": "089d8f76bd71dde48e81f19cc31593f7a87103ff71c290154870c8236f2f9bb3"
+    },
+    {
+      "id": "brida_doble_rienda",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_doble_rienda.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        397,
+        24,
+        1150,
+        1002
+      ],
+      "sha256": "413acd69b93f8a2694e988a1adcb4a672364ac8712a9be92f6b27a71a5b0867d"
+    },
+    {
+      "id": "capucha_cuadros",
+      "ruta": "Assets/Resources/Catalogos/Items/capucha_cuadros.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        415,
+        48,
+        1114,
+        976
+      ],
+      "sha256": "3d3657cf1fb66c47a15e69a862aa16dcc6a54370590bc880e88d8f9a1c1cf5d2"
+    },
+    {
+      "id": "gorro_lluvia",
+      "ruta": "Assets/Resources/Catalogos/Items/gorro_lluvia.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        359,
+        31,
+        1171,
+        964
+      ],
+      "sha256": "1aba41a5d91798614977644cd2e613c3b86bb89434d3c4bbad6ca465568d9b7d"
+    },
+    {
+      "id": "brida_bronce",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_bronce.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        423,
+        54,
+        1116,
+        940
+      ],
+      "sha256": "758a4d4c5656d4346145d8dc8bedfd8ea4595543afee6444a859cc83d7d0f316"
+    },
+    {
+      "id": "sombrero_campo",
+      "ruta": "Assets/Resources/Catalogos/Items/sombrero_campo.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        244,
+        148,
+        1296,
+        873
+      ],
+      "sha256": "73f3b2c1ed31145e52e019762c9fc5220f9d227129f8ba8def26496d4898b1d9"
+    },
+    {
+      "id": "mascara_moscas",
+      "ruta": "Assets/Resources/Catalogos/Items/mascara_moscas.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        390,
+        32,
+        1133,
+        1006
+      ],
+      "sha256": "11a5cdd2e385b139d92f775ee55ffd8d511de519d50277a9b77c4ea7fdcfbb5d"
+    },
+    {
+      "id": "orejeras_competicion",
+      "ruta": "Assets/Resources/Catalogos/Items/orejeras_competicion.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        382,
+        64,
+        1155,
+        921
+      ],
+      "sha256": "ad3eeea0b47df38fcd17bb737825dd416826ff279eb45e70f9c5fac2b20a43da"
+    },
+    {
+      "id": "anteojeras_sprint",
+      "ruta": "Assets/Resources/Catalogos/Items/anteojeras_sprint.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        349,
+        97,
+        1133,
+        937
+      ],
+      "sha256": "f9ff4d2cd083a4349123816e7d57ebb7633f4df634217781e3dfb916b95f6f26"
+    },
+    {
+      "id": "cabezada_reflectante",
+      "ruta": "Assets/Resources/Catalogos/Items/cabezada_reflectante.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        365,
+        22,
+        1158,
+        997
+      ],
+      "sha256": "9747672dbedad3e47482ba2e0948f028c43354b147eb6a2c87783cd80cf81d2e"
+    },
+    {
+      "id": "capucha_termica",
+      "ruta": "Assets/Resources/Catalogos/Items/capucha_termica.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        321,
+        23,
+        1227,
+        994
+      ],
+      "sha256": "d0d33f4443f0f971ca2b0050fd5b3af416b71c7b1ab4b3521133924419876c28"
+    },
+    {
+      "id": "brida_escuela",
+      "ruta": "Assets/Resources/Catalogos/Items/brida_escuela.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        460,
+        22,
+        1060,
+        995
+      ],
+      "sha256": "f4b1c6f24063a9adb3d214ea8afeabc8f4119368b18f0ad1c2192c9f4beb9de2"
+    },
+    {
+      "id": "sombrero_pluma",
+      "ruta": "Assets/Resources/Catalogos/Items/sombrero_pluma.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        340,
+        133,
+        1196,
+        819
+      ],
+      "sha256": "f5270f87eaecb3ff6dff1e785e84e5ea6d9dcf823a0968086891df878552354b"
+    },
+    {
+      "id": "silla_cuero",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_cuero.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        361,
+        84,
+        1177,
+        948
+      ],
+      "sha256": "df7d5486067c0b5544ad114b50e3d79620882cb33552546de5dd9c293f415e9b"
+    },
+    {
+      "id": "manta_lana",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_lana.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        225,
+        216,
+        1305,
+        847
+      ],
+      "sha256": "837218038080bd2b2ce3674bc512715f8f973dd352b87870a54d352d8188b5fb"
+    },
+    {
+      "id": "sudadero_algodon",
+      "ruta": "Assets/Resources/Catalogos/Items/sudadero_algodon.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        287,
+        168,
+        1249,
+        893
+      ],
+      "sha256": "956fab25391f6855b229e87686c038885e796a0593090910c4631d3aaf811fc0"
+    },
+    {
+      "id": "silla_ligera",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_ligera.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        275,
+        101,
+        1266,
+        946
+      ],
+      "sha256": "a41465b1c7e49c68ae7307027f834c4ea03b5f7eb6099a22113712e65fe9a964"
+    },
+    {
+      "id": "manta_viaje",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_viaje.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        213,
+        183,
+        1321,
+        890
+      ],
+      "sha256": "c8822af7c2db8d9906f6c28550b2fe042f0d6004a814930c01a3f53fbb6e3e81"
+    },
+    {
+      "id": "silla_doma",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_doma.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        350,
+        46,
+        1175,
+        982
+      ],
+      "sha256": "ffaadde28fb1a4f1ab250d7b7795b46c5c137432f421d3359631a1b6d870c49c"
+    },
+    {
+      "id": "mantilla_bordada",
+      "ruta": "Assets/Resources/Catalogos/Items/mantilla_bordada.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        288,
+        167,
+        1241,
+        848
+      ],
+      "sha256": "dfd51bcf6d2e8d969e4b1287b63647fa5ba19b5232ce1b358f5b28d4c59a6108"
+    },
+    {
+      "id": "silla_resistencia",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_resistencia.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        296,
+        75,
+        1236,
+        962
+      ],
+      "sha256": "ec024794d573aaaba53ac11681d98ff617f57aa010af5d2b4282ddc6f4ee9069"
+    },
+    {
+      "id": "sudadero_malla",
+      "ruta": "Assets/Resources/Catalogos/Items/sudadero_malla.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        251,
+        121,
+        1274,
+        904
+      ],
+      "sha256": "8883820963327139df2b1fdb2a2948d055ae573a7c01cbbf04871f7df410a2b4"
+    },
+    {
+      "id": "manta_encerada",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_encerada.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        172,
+        183,
+        1367,
+        892
+      ],
+      "sha256": "a2ee18547944db7abf3b78179780395f977d1230d4fefd580ea5bc757ed87cdf"
+    },
+    {
+      "id": "cincha_anatomica",
+      "ruta": "Assets/Resources/Catalogos/Items/cincha_anatomica.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        124,
+        171,
+        1440,
+        828
+      ],
+      "sha256": "1a665562da0973cd67c1a3e747d6dfcf997b8e1b99935739d4ae749516ad60ff"
+    },
+    {
+      "id": "silla_competicion",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_competicion.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        258,
+        63,
+        1276,
+        974
+      ],
+      "sha256": "f43eb603b7cdb01158f4083c45c6c0a989da22228c0f8b1b898a0e775fdbb033"
+    },
+    {
+      "id": "manta_ceremonial",
+      "ruta": "Assets/Resources/Catalogos/Items/manta_ceremonial.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        286,
+        217,
+        1261,
+        821
+      ],
+      "sha256": "fab52a8c287f6a984553604a13f328055cc7893aa661e031cf4911c7b5b8afa9"
+    },
+    {
+      "id": "silla_veterana",
+      "ruta": "Assets/Resources/Catalogos/Items/silla_veterana.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        339,
+        79,
+        1199,
+        944
+      ],
+      "sha256": "461faad7dfcb8138830a7ca291a7898e649628eb912bd7a9e63369c7ae6be446"
+    },
+    {
+      "id": "sudadero_tactico",
+      "ruta": "Assets/Resources/Catalogos/Items/sudadero_tactico.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        222,
+        140,
+        1305,
+        883
+      ],
+      "sha256": "74cb465363a0ba9d0fbedf86192de0094f4c08bdca5ae4fb159a732201e5d8f1"
+    },
+    {
+      "id": "herradura_bronce",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_bronce.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        334,
+        94,
+        1195,
+        929
+      ],
+      "sha256": "1cd34f1d72eb0a3f6364f13396109f99e47f7a5b2610788b748c8daeed6597a0"
+    },
+    {
+      "id": "herradura_hierro",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_hierro.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        341,
+        142,
+        1193,
+        892
+      ],
+      "sha256": "60e90204bd191bb47f7211edb4f937696471a80c588240fc57d2723e5c4f9526"
+    },
+    {
+      "id": "herradura_aluminio",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_aluminio.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        314,
+        150,
+        1169,
+        889
+      ],
+      "sha256": "cf96c5627e7f880352e4eb9df8627bbc739f595d207227c7cf86c7027a01f2f8"
+    },
+    {
+      "id": "herradura_acero",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_acero.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        229,
+        32,
+        1334,
+        979
+      ],
+      "sha256": "8e39393a908541ac6ae032a7a9db9a18df3bd4a8a3f77d5eb3813446177584ad"
+    },
+    {
+      "id": "herradura_liviana",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_liviana.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        360,
+        133,
+        1178,
+        888
+      ],
+      "sha256": "6c88e939c8fa3ed65f8c77fa9c07d75cb34894d126a23ca0e1504967143685aa"
+    },
+    {
+      "id": "herradura_traccion",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_traccion.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        316,
+        148,
+        1214,
+        866
+      ],
+      "sha256": "498cee260ab3581657f593dd7318815881a0da28d1e32eb49bbde1034fc54dbe"
+    },
+    {
+      "id": "herradura_cuarzo",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_cuarzo.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        349,
+        121,
+        1175,
+        899
+      ],
+      "sha256": "fbaaa381cb766de6e973f8e4635ce71e264543d80bc7dcdfcbdea0ecf0081002"
+    },
+    {
+      "id": "herradura_ortopedica",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_ortopedica.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        303,
+        142,
+        1236,
+        876
+      ],
+      "sha256": "5ae421aa616f1d3388684308f201beeea165359411e3e20a5228d262b81ceb6e"
+    },
+    {
+      "id": "herradura_remache",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_remache.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        316,
+        56,
+        1211,
+        929
+      ],
+      "sha256": "4abac728277aace134abbbaa1d47f9017212740079998bdaab6b13a60994deea"
+    },
+    {
+      "id": "herradura_titanio",
+      "ruta": "Assets/Resources/Catalogos/Items/herradura_titanio.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        336,
+        148,
+        1209,
+        853
+      ],
+      "sha256": "3f9624cf5c94f5abd9a6d0c39966384cfd41f03e002d42d59c1cd92693f877d6"
+    },
+    {
+      "id": "vendas_lino",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_lino.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        372,
+        157,
+        1174,
+        866
+      ],
+      "sha256": "5f01326b413cf3afec80f8f6bf6cab35f49c87672fac5725a91eceb884572111"
+    },
+    {
+      "id": "vendas_algodon",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_algodon.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        352,
+        129,
+        1194,
+        886
+      ],
+      "sha256": "2c576e5fbf7c08fc06f3fa275fe2d1bf66f5679644f8088ea37a9484439134e3"
+    },
+    {
+      "id": "vendas_elasticas",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_elasticas.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        292,
+        138,
+        1252,
+        895
+      ],
+      "sha256": "820d18edbcac7989d2b723d5397c0672539b21eb9ad8d301178d7008f3b5ff88"
+    },
+    {
+      "id": "vendas_termicas",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_termicas.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        391,
+        84,
+        1140,
+        940
+      ],
+      "sha256": "386b3612248eab1a966866451e4a1ce09f78bc280cf0d8107940b980c8c503e9"
+    },
+    {
+      "id": "vendas_compresion",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_compresion.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        423,
+        90,
+        1115,
+        947
+      ],
+      "sha256": "a9e21f70bc9b463a0c651cb1ae32d139ee6f336e8375f76f8661c6cd9d6755c5"
+    },
+    {
+      "id": "vendas_tejidas",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_tejidas.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        360,
+        116,
+        1179,
+        896
+      ],
+      "sha256": "57bb308d649ac93a1f75694c828258e9fb66aeb6d1758717f73b998deb7e881e"
+    },
+    {
+      "id": "vendas_cera",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_cera.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        328,
+        122,
+        1202,
+        900
+      ],
+      "sha256": "33c31ffbaeed0896ca548a78373d23c942513ff02718c9eee9bc09848deda0ea"
+    },
+    {
+      "id": "vendas_profesionales",
+      "ruta": "Assets/Resources/Catalogos/Items/vendas_profesionales.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        332,
+        125,
+        1204,
+        914
+      ],
+      "sha256": "8af115bd243eb85b2bda0b97cd1935f6d88b75d356b33ab3978579239060c953"
+    },
+    {
+      "id": "protectores_cuero",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_cuero.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        387,
+        66,
+        1105,
+        965
+      ],
+      "sha256": "8f96144de090c8a5c680e490b39bfe67454b0f8585a99477167985f99adc5f9d"
+    },
+    {
+      "id": "protectores_neopreno",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_neopreno.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        383,
+        87,
+        1124,
+        954
+      ],
+      "sha256": "f0c6cd8add2c33c76ed546ce75320ec7de72abd82a543ea8e1a2ceede8753acf"
+    },
+    {
+      "id": "protectores_campo",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_campo.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        398,
+        86,
+        1119,
+        938
+      ],
+      "sha256": "b349e4cb694488e2432d42984bb2ed4d8825f62f6bfc2a9756d16d07afa271ec"
+    },
+    {
+      "id": "protectores_articulados",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_articulados.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        398,
+        29,
+        1130,
+        995
+      ],
+      "sha256": "2266ef453295deaeb6bac25b52d99265aa637a61a7aec34a7097823c9b28e9f2"
+    },
+    {
+      "id": "botas_lluvia",
+      "ruta": "Assets/Resources/Catalogos/Items/botas_lluvia.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        245,
+        110,
+        1265,
+        912
+      ],
+      "sha256": "bdc9579988b4c9f433706cc1b9d3edbb677d7eafbaef1421571aade12bce397b"
+    },
+    {
+      "id": "botines_pista",
+      "ruta": "Assets/Resources/Catalogos/Items/botines_pista.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        373,
+        85,
+        1140,
+        939
+      ],
+      "sha256": "47058c1c6aae03202aeaa9a68d5cbefe0ba0ac17098189cd7c1ae9422b8423af"
+    },
+    {
+      "id": "campanas_caucho",
+      "ruta": "Assets/Resources/Catalogos/Items/campanas_caucho.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        198,
+        135,
+        1330,
+        891
+      ],
+      "sha256": "1f91238eead238d8619bb82158ce5130c0a0a5e1c800d8a49c9407e46e48e285"
+    },
+    {
+      "id": "campanas_reforzadas",
+      "ruta": "Assets/Resources/Catalogos/Items/campanas_reforzadas.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        206,
+        143,
+        1335,
+        907
+      ],
+      "sha256": "47b234f11c21c5331e96cb40001189296d73346859d32f99ade1119b051cb42d"
+    },
+    {
+      "id": "protectores_pista",
+      "ruta": "Assets/Resources/Catalogos/Items/protectores_pista.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        348,
+        74,
+        1149,
+        968
+      ],
+      "sha256": "27aaa1123de1c38eac20988621d87762b8246062ba5a4bb518d624916d61c37a"
+    },
+    {
+      "id": "zanahoria_crujiente",
+      "ruta": "Assets/Resources/Catalogos/Items/zanahoria_crujiente.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        282,
+        84,
+        1327,
+        898
+      ],
+      "sha256": "6df2216296c667b44faab46605ff6123119e59fb2bf382775f8e794faf5aa142"
+    },
+    {
+      "id": "avena_integral",
+      "ruta": "Assets/Resources/Catalogos/Items/avena_integral.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        409,
+        108,
+        1109,
+        881
+      ],
+      "sha256": "d7926f6522dea87935d2fd2f88d93e7c644bd2bec07282d0b7a8701bb34ca869"
+    },
+    {
+      "id": "te_manzanilla",
+      "ruta": "Assets/Resources/Catalogos/Items/te_manzanilla.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        382,
+        155,
+        1234,
+        849
+      ],
+      "sha256": "d2fb2fb71ea5a69a74b46e65f50e9c0693d0a498ca725b6bb0f4fc305d0056d7"
+    },
+    {
+      "id": "trebol_seco",
+      "ruta": "Assets/Resources/Catalogos/Items/trebol_seco.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        292,
+        157,
+        1281,
+        843
+      ],
+      "sha256": "21f6b3c09b53c37f1bae533de5ee23f52bae4fde0403a2d543409a8ec5510244"
+    },
+    {
+      "id": "mezcla_cereales",
+      "ruta": "Assets/Resources/Catalogos/Items/mezcla_cereales.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        190,
+        179,
+        1403,
+        821
+      ],
+      "sha256": "18c4f35c88db60c2fe3bf7e85c71ee85e11c4252861a3f85c971471270055814"
+    },
+    {
+      "id": "infusion_menta",
+      "ruta": "Assets/Resources/Catalogos/Items/infusion_menta.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        518,
+        62,
+        1038,
+        940
+      ],
+      "sha256": "b7f689552f453594f55153491a26489872e8803d6e53441d281f8a88c1cff0f6"
+    },
+    {
+      "id": "pera_madura",
+      "ruta": "Assets/Resources/Catalogos/Items/pera_madura.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        442,
+        67,
+        1086,
+        937
+      ],
+      "sha256": "83b2be17d71647180b4d534434978b0957fa8494049941822db64585b7800caf"
+    },
+    {
+      "id": "barrita_melaza",
+      "ruta": "Assets/Resources/Catalogos/Items/barrita_melaza.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        265,
+        210,
+        1276,
+        837
+      ],
+      "sha256": "4c7c5272c50e3226d85dbf0d1f1741188bed5a7598022c94377f8143a4a7a879"
+    },
+    {
+      "id": "sal_mineral",
+      "ruta": "Assets/Resources/Catalogos/Items/sal_mineral.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        379,
+        192,
+        1115,
+        820
+      ],
+      "sha256": "5c084d0b266d06c958babc8bd43f04eb8e31b69a8effc3c5d343ed31309f8fc6"
+    },
+    {
+      "id": "galleta_avena",
+      "ruta": "Assets/Resources/Catalogos/Items/galleta_avena.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        323,
+        169,
+        1213,
+        866
+      ],
+      "sha256": "3cf0065cbc7aa5fca5cada0d41fd9484f27fd20b85b8a45ebcc9a2c4f535a15c"
+    },
+    {
+      "id": "racion_larga",
+      "ruta": "Assets/Resources/Catalogos/Items/racion_larga.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        404,
+        101,
+        1108,
+        908
+      ],
+      "sha256": "998d15b4a1c93a94dcd8c9e0dd6b1f84a3d7ab5212d6608b9361a3a83713f989"
+    },
+    {
+      "id": "fruta_campo",
+      "ruta": "Assets/Resources/Catalogos/Items/fruta_campo.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        388,
+        114,
+        1149,
+        904
+      ],
+      "sha256": "5c73159b63c37bc902f35b14b367fe1ebc870be48c98697120b36908f3ea6809"
+    },
+    {
+      "id": "bocado_herbal",
+      "ruta": "Assets/Resources/Catalogos/Items/bocado_herbal.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        341,
+        123,
+        1195,
+        870
+      ],
+      "sha256": "ec957f99555e4cfa4462e9a94d77e1e907b7f06e299cd5897f1bf1ba68cc0738"
+    },
+    {
+      "id": "manual_ejercicios",
+      "ruta": "Assets/Resources/Catalogos/Items/manual_ejercicios.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        392,
+        166,
+        1145,
+        860
+      ],
+      "sha256": "8b48dd3362e644ceb5b33961a632a8b13cbe0c7017cb660cee56ba7b1280d438"
+    },
+    {
+      "id": "caballo_001",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_001.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        237,
+        29,
+        1307,
+        992
+      ],
+      "sha256": "324e34f80a3d02497fe91b74f0eccb59ca3c5977673df1ef0225bc0c2927e23e"
+    },
+    {
+      "id": "caballo_002",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_002.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        264,
+        105,
+        1283,
+        980
+      ],
+      "sha256": "f4a2873ac02cdfa0691677233c9a8b18cc355d57eaef16bd1926dbd2d934b757"
+    },
+    {
+      "id": "caballo_003",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_003.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        272,
+        43,
+        1296,
+        988
+      ],
+      "sha256": "1eff1a5a8b1817c906abe7af8ba646ce5c778bc60e501fd18c44c66e3f11b45c"
+    },
+    {
+      "id": "caballo_004",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_004.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        296,
+        63,
+        1288,
+        988
+      ],
+      "sha256": "0a5c279e27bab55708ff14910780523ee1f3371ed172c4a76626b880f51aef3a"
+    },
+    {
+      "id": "caballo_005",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_005.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        288,
+        51,
+        1312,
+        990
+      ],
+      "sha256": "d1edbfc15d985dbbaa887c0c3cfc0d43d565b72f24dc66450b7f4b6409d08fbd"
+    },
+    {
+      "id": "caballo_006",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_006.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        244,
+        43,
+        1250,
+        990
+      ],
+      "sha256": "d44b989e53407b68faf6760411a4511241ecc566e87cae271a865a1116ad0717"
+    },
+    {
+      "id": "caballo_007",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_007.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        241,
+        32,
+        1293,
+        993
+      ],
+      "sha256": "c61b035f4ffac8f76208a0abfd2afc02acd68fce07c55f3fadfbbf0e3e16136f"
+    },
+    {
+      "id": "caballo_008",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_008.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        200,
+        32,
+        1306,
+        993
+      ],
+      "sha256": "bb7ee47517cdcde75b664c7e84bb306d0ac1d65cd2dc9b99aac98bd6d3ce62b3"
+    },
+    {
+      "id": "caballo_009",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_009.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        257,
+        41,
+        1279,
+        984
+      ],
+      "sha256": "d41ab1a052b32e73f9094c08c6d50b58317eda7b794674a42342b4d032eceb2b"
+    },
+    {
+      "id": "caballo_010",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_010.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        249,
+        31,
+        1289,
+        992
+      ],
+      "sha256": "5ea316578608ea80d5b8d5f7476a8b3341a0277a77c05e50fb435f32d30e61e0"
+    },
+    {
+      "id": "caballo_011",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_011.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        234,
+        37,
+        1305,
+        992
+      ],
+      "sha256": "5c56b1067071cb1717c4acaee3b02a1b36c1ad0d89ce0a74e949a52bae689a9b"
+    },
+    {
+      "id": "caballo_012",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_012.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        231,
+        161,
+        1353,
+        988
+      ],
+      "sha256": "ebdf59a03979cb27d7ba596ebd0e812358400fb18f3de6c38f9a618fd4448894"
+    },
+    {
+      "id": "caballo_013",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_013.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        246,
+        19,
+        1278,
+        989
+      ],
+      "sha256": "c1b7521a448f822d90c03fab84c6a35396973308f46bd5cc1b00899d843b95b6"
+    },
+    {
+      "id": "caballo_014",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_014.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        240,
+        28,
+        1304,
+        992
+      ],
+      "sha256": "9a5bbace66bf985311a6e9035f6084e14c4844c675999b353b09bb2116c1b1f4"
+    },
+    {
+      "id": "caballo_015",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_015.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        259,
+        31,
+        1247,
+        990
+      ],
+      "sha256": "e3688d5e5acf2e11cbd90f24107518628fcfcf68ddcc0331cb7aa4b71efc582f"
+    },
+    {
+      "id": "caballo_016",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_016.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        232,
+        27,
+        1297,
+        991
+      ],
+      "sha256": "74e3cbee46a17fa670253600fb1d5fe4d7dfc40af3a90725a8610fc6ecb902b1"
+    },
+    {
+      "id": "caballo_017",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_017.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        242,
+        30,
+        1326,
+        992
+      ],
+      "sha256": "50791961ac3b1144b1e7385156d0844284d58ab569c3d8a28c81a21089e6ccd1"
+    },
+    {
+      "id": "caballo_018",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_018.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        128,
+        26,
+        1316,
+        992
+      ],
+      "sha256": "61cad2c7145a96f366a086bd7686c5e56b6db3c9ff139c2b0a2130a44214185f"
+    },
+    {
+      "id": "caballo_019",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_019.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        255,
+        30,
+        1301,
+        990
+      ],
+      "sha256": "c703a20a393731383b05a710c326144b7822797754f9338a3463de19f25c08e0"
+    },
+    {
+      "id": "caballo_020",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_020.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        252,
+        29,
+        1307,
+        993
+      ],
+      "sha256": "fa54b570157d16fc9632f336003ca5f25d7f4515b4035340ad9559abbf063537"
+    },
+    {
+      "id": "caballo_021",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_021.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        231,
+        139,
+        1329,
+        970
+      ],
+      "sha256": "9ca675b62b227cdda163c84d28b2d2e8c2f75749e4b87202cde76dfb495962aa"
+    },
+    {
+      "id": "caballo_022",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_022.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        224,
+        25,
+        1300,
+        991
+      ],
+      "sha256": "84b3c76cd6bf59e823db2ba03d9b424d9945fce8def259cd9f63e7fb26dd3a03"
+    },
+    {
+      "id": "caballo_023",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_023.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        255,
+        23,
+        1306,
+        992
+      ],
+      "sha256": "bf2f3a0344160dbb3566b751ac5d824dffe9b00a086c25c87fe895c28219fff1"
+    },
+    {
+      "id": "caballo_024",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_024.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        296,
+        24,
+        1239,
+        993
+      ],
+      "sha256": "07cb6fa1eb34baa690dab27bbe074d7f84701eb1360fd5960d527c36f0495ba4"
+    },
+    {
+      "id": "caballo_025",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_025.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        224,
+        57,
+        1326,
+        980
+      ],
+      "sha256": "dfb9f4da0acdacf85c734f2bed67e9d4af5a0a81da998e0469536170aacf6f5c"
+    },
+    {
+      "id": "caballo_026",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_026.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        233,
+        22,
+        1308,
+        992
+      ],
+      "sha256": "1579ee99e64040e568d2f29691f5c07d4ccf4f11b366658aa40f1eaaaa6e2066"
+    },
+    {
+      "id": "caballo_027",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_027.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        143,
+        48,
+        1314,
+        989
+      ],
+      "sha256": "30767d1038b3d08aeade2a524f72fabfac44fcb19dfd765b359dd4b6fc0eda10"
+    },
+    {
+      "id": "caballo_028",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_028.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        253,
+        32,
+        1307,
+        993
+      ],
+      "sha256": "2ea84fcbc3b5fd494895bdb7f14675a978713782638e90f4533c9c5045447121"
+    },
+    {
+      "id": "caballo_029",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_029.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        245,
+        30,
+        1310,
+        991
+      ],
+      "sha256": "9bfc5886e8d2a7f7370f41aa663264db15d7d0370a28224040fcd2e87a56169f"
+    },
+    {
+      "id": "caballo_030",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_030.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        190,
+        161,
+        1329,
+        962
+      ],
+      "sha256": "5fc8744672ed3fb9f78e6640ed4eb583ac94abf4c4d710b1779e829acd224f7b"
+    },
+    {
+      "id": "caballo_031",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_031.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        228,
+        28,
+        1298,
+        992
+      ],
+      "sha256": "7996718462d0411c1ff4c70f135be8dcf3f2f079f5cde55efd8726cd0f06cd30"
+    },
+    {
+      "id": "caballo_032",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_032.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        248,
+        32,
+        1307,
+        993
+      ],
+      "sha256": "5f6f4243b864a6ae062640d616ed2a0e810a65b3b4161697eba348b2e6c34a0b"
+    },
+    {
+      "id": "caballo_033",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_033.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        259,
+        40,
+        1248,
+        991
+      ],
+      "sha256": "246778bcdc14b1a626a02e3caec4d2198bfa9b9fe326839fc98ec7524cb168cc"
+    },
+    {
+      "id": "caballo_034",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_034.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        252,
+        35,
+        1293,
+        993
+      ],
+      "sha256": "0f3de98c8df31dbacd49600867d64489a9465ad87cf7b3adc619d7af79202774"
+    },
+    {
+      "id": "caballo_035",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_035.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        267,
+        29,
+        1307,
+        993
+      ],
+      "sha256": "48a4e5dcde9c1b05eb3471b62996196ca975474c02f53be08ed80ab64ecfb84f"
+    },
+    {
+      "id": "caballo_036",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_036.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        114,
+        20,
+        1350,
+        998
+      ],
+      "sha256": "5dc323d08674a827fa67813e32eaba64cf5e5792ce2231ed5f0434a4e28bbdd9"
+    },
+    {
+      "id": "caballo_037",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_037.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        288,
+        31,
+        1284,
+        991
+      ],
+      "sha256": "d6d88a988fc8026613f532c2b98b7b58458b6978a6d7f09a9a33fe6cf6615ff2"
+    },
+    {
+      "id": "caballo_038",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_038.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        233,
+        40,
+        1289,
+        989
+      ],
+      "sha256": "c16731f1243aa9560f2b93aacd6539e24aff35bfa55e36c795f29b27e60002f4"
+    },
+    {
+      "id": "caballo_039",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_039.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        256,
+        127,
+        1268,
+        980
+      ],
+      "sha256": "435019f998550328bf1e9ca12edc6a81d128693a2ae2e6fa211622f7bae655ad"
+    },
+    {
+      "id": "caballo_040",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_040.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        212,
+        28,
+        1307,
+        992
+      ],
+      "sha256": "94aba92b994cbfaadfdabde860ddbc441e4a3c2654bf6c0df0f089c57d00c3c6"
+    },
+    {
+      "id": "caballo_041",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_041.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        253,
+        30,
+        1301,
+        991
+      ],
+      "sha256": "5c569d3b85e6e99f231606d40d8c9924311d812a7b38d8ee6da8fc48ab6d5235"
+    },
+    {
+      "id": "caballo_042",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_042.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        237,
+        14,
+        1240,
+        991
+      ],
+      "sha256": "80313bd5b1c9a51e48be572893e291ce1381d1be640364244ac33c3d76ebdf19"
+    },
+    {
+      "id": "caballo_043",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_043.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        238,
+        23,
+        1279,
+        992
+      ],
+      "sha256": "874650a3e1622c87c3b15a1e3a89b8950695f064de2063af443387aecf750abd"
+    },
+    {
+      "id": "caballo_044",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_044.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        232,
+        33,
+        1301,
+        988
+      ],
+      "sha256": "d2c83d14d667e8b963baec0644b63ad8f78b963b750d10afc754d47ca7512371"
+    },
+    {
+      "id": "caballo_045",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_045.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        162,
+        28,
+        1314,
+        996
+      ],
+      "sha256": "534758cbde5960efa9c65dc28ce7a84dde002b8bba1a9da646456543166dbf9f"
+    },
+    {
+      "id": "caballo_046",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_046.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        227,
+        30,
+        1296,
+        990
+      ],
+      "sha256": "e96059a87e5628ec408f638b01457fd00eb40fbe154fb6e55ad8708aed34476e"
+    },
+    {
+      "id": "caballo_047",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_047.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        241,
+        29,
+        1304,
+        989
+      ],
+      "sha256": "18832edb12be369d363bd6b497289e3a4dfe193ee5ee9ba78317457b2568c332"
+    },
+    {
+      "id": "caballo_048",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_048.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        266,
+        130,
+        1313,
+        973
+      ],
+      "sha256": "555b30d5d994e1b56485ca802b5ed127c6494dadff505bbff18e03d0652c4c85"
+    },
+    {
+      "id": "caballo_049",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_049.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        218,
+        17,
+        1294,
+        993
+      ],
+      "sha256": "ea3b8d15a82b47a4c58049878192a4a08293eacc0e00ecf9fd73d78776fde241"
+    },
+    {
+      "id": "caballo_050",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_050.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        236,
+        24,
+        1310,
+        991
+      ],
+      "sha256": "0c9a4ef3250301c5ade913bb329911e38c8ffa3df908bc85ff076ca76c7de10c"
+    },
+    {
+      "id": "caballo_051",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_051.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        263,
+        30,
+        1238,
+        994
+      ],
+      "sha256": "caa341efc23f2729be98bda0adf8c9afc2e8822f6301c2f72b09c4dd90634d1a"
+    },
+    {
+      "id": "caballo_052",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_052.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "limitesVisibles": [
+        242,
+        26,
+        1289,
+        990
+      ],
+      "sha256": "e26a115ce7cd63e4fd63a4055f7786ec45b7e2dfe4a1a2ad2ecdac6684eccb3f"
+    },
+    {
+      "id": "caballo_053",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_053.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        233,
+        28,
+        1313,
+        989
+      ],
+      "sha256": "87a9e97cb08a662dd4877b1e5ec93b626eb3df8a47482b6c50216f1bc0f314a9"
+    },
+    {
+      "id": "caballo_054",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_054.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        129,
+        19,
+        1309,
+        993
+      ],
+      "sha256": "0098a899e0d08debd69a83fcf3e84b95c20808178d46f2b4fc41724b53e3ff19"
+    },
+    {
+      "id": "caballo_055",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_055.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        249,
+        30,
+        1295,
+        993
+      ],
+      "sha256": "420ecd8296d197aa2d723c9ff1b36074084098a4ceff923a469d0e6a8bae28b0"
+    },
+    {
+      "id": "caballo_056",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_056.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        236,
+        41,
+        1304,
+        988
+      ],
+      "sha256": "108fdca137214901ea2f494349195a1851f7618ca20fb7d703c6469fac543fba"
+    },
+    {
+      "id": "caballo_057",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_057.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        234,
+        142,
+        1324,
+        985
+      ],
+      "sha256": "818036acde8c3da883832fcfbb7c136db087a813d276d0519206a8821839d399"
+    },
+    {
+      "id": "caballo_058",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_058.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        245,
+        23,
+        1300,
+        993
+      ],
+      "sha256": "85a3e76cb8e71db31ee9897a45d11fd530b0f3bef66cd52abf66132db58a2e7a"
+    },
+    {
+      "id": "caballo_059",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_059.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        239,
+        22,
+        1309,
+        991
+      ],
+      "sha256": "b51fad82e207997cd553f2ca84c84f6e9b89b4ad116027afb052cc9b59599165"
+    },
+    {
+      "id": "caballo_060",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_060.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        249,
+        36,
+        1265,
+        993
+      ],
+      "sha256": "ef68b28ca1d575bc643e0b2fe1ec6438e257f38210d843ae63f9dab30149ba76"
+    },
+    {
+      "id": "caballo_061",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_061.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        236,
+        75,
+        1281,
+        972
+      ],
+      "sha256": "b12ef159b4853660ba4c0f626e8a0343f3209133db1148966f4e84d3c92e66ec"
+    },
+    {
+      "id": "caballo_062",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_062.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        231,
+        26,
+        1299,
+        992
+      ],
+      "sha256": "769ffee42d7ede99f14604264ed72114c12788e6212b1ee8bcc6d6eb7282fbde"
+    },
+    {
+      "id": "caballo_063",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_063.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        214,
+        16,
+        1308,
+        993
+      ],
+      "sha256": "4b489e77b11c39412eac329c3a52e0885c669c2e451be6c7938b326f058ed867"
+    },
+    {
+      "id": "caballo_064",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_064.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        250,
+        39,
+        1311,
+        988
+      ],
+      "sha256": "843714330fd0188ccce70712627834a0587a3a852756e94a32f1dfbedb3458a1"
+    },
+    {
+      "id": "caballo_065",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_065.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        202,
+        24,
+        1306,
+        991
+      ],
+      "sha256": "80428f803dd71f83d9f762dc8b5dcf5addbfd501fc8b3661681b185e0f2a3056"
+    },
+    {
+      "id": "caballo_066",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_066.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        234,
+        162,
+        1284,
+        920
+      ],
+      "sha256": "a82bdf3710fcec147634995e973e9a89a697c31167974945b62c45f2f6c3fa9d"
+    },
+    {
+      "id": "caballo_067",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_067.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        231,
+        29,
+        1307,
+        992
+      ],
+      "sha256": "09de85c802c5ca89eb2646ade4487f5bbbe7a86cbf6d2166e56c78a31cf13f49"
+    },
+    {
+      "id": "caballo_068",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_068.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        259,
+        27,
+        1299,
+        985
+      ],
+      "sha256": "38317e7d3a397528759b79669b552ec5a397a9ab2cb1572e8ed9449f3b2332ed"
+    },
+    {
+      "id": "caballo_069",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_069.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        239,
+        27,
+        1248,
+        994
+      ],
+      "sha256": "6517f23e8236141aa1d1c8a78a2ee400cf7ae1d4dcdc5b466221868a11b68216"
+    },
+    {
+      "id": "caballo_070",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_070.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        262,
+        29,
+        1293,
+        992
+      ],
+      "sha256": "624e28668e832f86452f2ab8a1d240d8302b8341e0907dcbac25c52479d458fd"
+    },
+    {
+      "id": "caballo_071",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_071.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        250,
+        29,
+        1304,
+        991
+      ],
+      "sha256": "c950b0982a11aee9b309ed753ea302d5c08b8bafdd19b79a2262e9dfadfe5141"
+    },
+    {
+      "id": "caballo_072",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_072.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        99,
+        29,
+        1360,
+        982
+      ],
+      "sha256": "c7cf6a5b22c8dfcfe96566cf8815148ce862be440985c9cdd4770a70b5642508"
+    },
+    {
+      "id": "caballo_073",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_073.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        262,
+        72,
+        1312,
+        992
+      ],
+      "sha256": "54c13ef66be00f631f98cc62c201397e5891c4576d877811f4a7c4bf4933b6ed"
+    },
+    {
+      "id": "caballo_074",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_074.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        228,
+        46,
+        1303,
+        989
+      ],
+      "sha256": "afa1725b7b27f9a41e313eaba05a05b68b79542341a0638c42630fcd5a9e6860"
+    },
+    {
+      "id": "caballo_075",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_075.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        254,
+        161,
+        1315,
+        984
+      ],
+      "sha256": "b417104b3f2113a39970f0ca517a501baf4e92f23a0d1e9f013b01bd45230790"
+    },
+    {
+      "id": "caballo_076",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_076.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        216,
+        22,
+        1307,
+        993
+      ],
+      "sha256": "ad0cf2835e970773d767b9da3a2490f3ee9920da1484f4fa8436d4c12c991eb7"
+    },
+    {
+      "id": "caballo_077",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_077.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        252,
+        26,
+        1308,
+        992
+      ],
+      "sha256": "31c2f3b10fc65322c2414b115aa4b449a054379b1d29f2eee72995db01b1cd88"
+    },
+    {
+      "id": "caballo_078",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_078.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        258,
+        34,
+        1268,
+        989
+      ],
+      "sha256": "049f39fd511bc603adebcefe23cfa08b03454eae34c75a35b3796bc6e376c362"
+    },
+    {
+      "id": "caballo_079",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_079.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        243,
+        32,
+        1299,
+        992
+      ],
+      "sha256": "327c6361482b8628eb357558c9f007eccce5bb2c9caea117081556b1c38274ba"
+    },
+    {
+      "id": "caballo_080",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_080.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        240,
+        34,
+        1323,
+        992
+      ],
+      "sha256": "a5392a1146c0da626aa41924f7e2b84ad14443b17db4ab2bbc7f1003ba5ef356"
+    },
+    {
+      "id": "caballo_081",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_081.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        141,
+        17,
+        1319,
+        994
+      ],
+      "sha256": "73646cc8590f955d85a1196a04becb807620b89addf3678d287fe6be913e433e"
+    },
+    {
+      "id": "caballo_082",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_082.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        279,
+        44,
+        1322,
+        992
+      ],
+      "sha256": "978663ef3503be47bbfa3a6327f4960d8aade90c26a02825dab30521ceb92326"
+    },
+    {
+      "id": "caballo_083",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_083.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        231,
+        20,
+        1297,
+        992
+      ],
+      "sha256": "e792d810d6ebfab8256d47d93cef1a416f41ff928e77f826fe217c6d7d8a8f98"
+    },
+    {
+      "id": "caballo_084",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_084.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        184,
+        134,
+        1368,
+        972
+      ],
+      "sha256": "5e88ab44601d1403de5fad37def8090a3b39963307f70a951e2b41deef473ee7"
+    },
+    {
+      "id": "caballo_085",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_085.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        245,
+        20,
+        1265,
+        993
+      ],
+      "sha256": "05e1b6b019da8f48a76d416478b9521e49d74b00422dd55ec8c1c5aee45371d2"
+    },
+    {
+      "id": "caballo_086",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_086.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        238,
+        29,
+        1296,
+        991
+      ],
+      "sha256": "a67c6f8cc81e1e1cc887c260784f990d512fc5f5966d3ff8d81d4b02fa204ad0"
+    },
+    {
+      "id": "caballo_087",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_087.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        232,
+        26,
+        1232,
+        991
+      ],
+      "sha256": "bf88899cb0cefc397e42a0902eec24aef92eda0d6aa1880ec00f6b5dcae3cb76"
+    },
+    {
+      "id": "caballo_088",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_088.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        248,
+        25,
+        1273,
+        991
+      ],
+      "sha256": "80e7388c0b7de92cebeb19035f995760000799a8e2492264dc6c4362ead8f6bd"
+    },
+    {
+      "id": "caballo_089",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_089.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        232,
+        18,
+        1302,
+        989
+      ],
+      "sha256": "cb3a59516a91bda0dff06a55c0f1542d1ca3f59c68580e0b5376c4e81001f3e8"
+    },
+    {
+      "id": "caballo_090",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_090.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        182,
+        25,
+        1289,
+        990
+      ],
+      "sha256": "16b51b8524b7fdae1624ce1d80077337258dbcbb257067de79400e286185aec3"
+    },
+    {
+      "id": "caballo_091",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_091.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        238,
+        21,
+        1304,
+        992
+      ],
+      "sha256": "a4d1e814b2705e7dec07822c4c2600ed39296ae8a3559a5626061ac07b6b3341"
+    },
+    {
+      "id": "caballo_092",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_092.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        226,
+        38,
+        1305,
+        986
+      ],
+      "sha256": "a522a7922a75b1aaef2553e3ac17f375193ccbdf192b1294194be4c70a5575cb"
+    },
+    {
+      "id": "caballo_093",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_093.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        261,
+        112,
+        1278,
+        990
+      ],
+      "sha256": "b810e7ebb00514d39d1adc0518098ab3734582cb65c45be1a96b4c80ded44592"
+    },
+    {
+      "id": "caballo_094",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_094.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        224,
+        25,
+        1300,
+        993
+      ],
+      "sha256": "1ae3f6a866f1cdfd6001148cf4fabaf26107010f5a771d8a5223cb594c1fd7c5"
+    },
+    {
+      "id": "caballo_095",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_095.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        253,
+        29,
+        1294,
+        992
+      ],
+      "sha256": "f96ede2af86862baddf1839b3d7773e16b703d415ebfd94e057e96fb4eb15050"
+    },
+    {
+      "id": "caballo_096",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_096.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        239,
+        41,
+        1238,
+        991
+      ],
+      "sha256": "783a0981d625463f7b095fee8e5f44e6118d25d4c7c5c077d3278cd11c8a0ad0"
+    },
+    {
+      "id": "caballo_097",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_097.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        254,
+        51,
+        1322,
+        988
+      ],
+      "sha256": "6cd05064ed10d7efdfc8091c2ad76018ad04f0a6c697baaaf5d3601a02566db8"
+    },
+    {
+      "id": "caballo_098",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_098.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        239,
+        17,
+        1311,
+        989
+      ],
+      "sha256": "1d7fc19a43b7b5f9e6e1905f840adf2bdbf96c90ae03d9d3ff2236e9b09e523f"
+    },
+    {
+      "id": "caballo_099",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_099.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        161,
+        22,
+        1296,
+        993
+      ],
+      "sha256": "7fd3e8abc83f21f8e0fa6765bd69cd3b715048152091a6ff407b3ad616cd8d00"
+    },
+    {
+      "id": "caballo_100",
+      "ruta": "Assets/Resources/Catalogos/Caballos/caballo_100.png",
+      "ancho": 1536,
+      "alto": 1024,
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "limitesVisibles": [
+        255,
+        31,
+        1298,
+        993
+      ],
+      "sha256": "8d662471a92c12e8481e088aee10c04b69b1641e9a2178a56c7d3b5a6308b742"
+    }
+  ],
+  "revisar": []
+}

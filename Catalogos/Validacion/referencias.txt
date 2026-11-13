@@ -1,0 +1,12 @@
+Escena sin scripts perdidos: Assets/Scenes/MainMenu.unity
+Escena sin scripts perdidos: Assets/Scenes/hub.unity
+Escena sin scripts perdidos: Assets/Scenes/SampleScene.unity
+Referencias de escena/prefab resueltas: Assets\Scenes\hub.unity
+Referencias de escena/prefab resueltas: Assets\Scenes\MainMenu.unity
+Referencias de escena/prefab resueltas: Assets\Scenes\SampleScene.unity
+Referencias de escena/prefab resueltas: Assets\Scripts\Caballo.prefab
+Referencias de escena/prefab resueltas: Assets\Scripts\caballoPrefab.prefab
+Referencias de escena/prefab resueltas: Assets\_Recovery\0.unity
+Referencias de escena/prefab resueltas: Assets\Art\Hub\Prefabs\Hub_Visuals.prefab
+Referencias de escena/prefab resueltas: Assets\Art\Hub\SalaRenovada\SalaRenovada.prefab
+12 perfiles y 96 frames de carrera válidos

@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e535dc94d461c344693c7824eeb039f5, type: 2}
   - {fileID: 11400000, guid: 21e958f35ebbda64b83efa0f4bc87455, type: 2}
   - {fileID: 11400000, guid: 6b1fc6b2b3304894db062af7e62cc968, type: 2}
+  catalogAnimationsEnabled: 1

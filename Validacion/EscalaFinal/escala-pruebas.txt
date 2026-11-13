@@ -1,0 +1,2189 @@
+Perfil propio caballo_001
+Límites medidos válidos caballo_001
+148 unidades sin deformar caballo_001
+Previa misma lámina caballo_001
+Fase sin resize caballo_001/0
+Fase sin resize caballo_001/1
+Fase sin resize caballo_001/2
+Fase sin resize caballo_001/3
+Fase sin resize caballo_001/4
+Fase sin resize caballo_001/5
+Fase sin resize caballo_001/6
+Fase sin resize caballo_001/7
+Llegada misma escala y máscara caballo_001
+Perfil propio caballo_002
+Límites medidos válidos caballo_002
+148 unidades sin deformar caballo_002
+Previa misma lámina caballo_002
+Fase sin resize caballo_002/0
+Fase sin resize caballo_002/1
+Fase sin resize caballo_002/2
+Fase sin resize caballo_002/3
+Fase sin resize caballo_002/4
+Fase sin resize caballo_002/5
+Fase sin resize caballo_002/6
+Fase sin resize caballo_002/7
+Llegada misma escala y máscara caballo_002
+Perfil propio caballo_003
+Límites medidos válidos caballo_003
+148 unidades sin deformar caballo_003
+Previa misma lámina caballo_003
+Fase sin resize caballo_003/0
+Fase sin resize caballo_003/1
+Fase sin resize caballo_003/2
+Fase sin resize caballo_003/3
+Fase sin resize caballo_003/4
+Fase sin resize caballo_003/5
+Fase sin resize caballo_003/6
+Fase sin resize caballo_003/7
+Llegada misma escala y máscara caballo_003
+Perfil propio caballo_004
+Límites medidos válidos caballo_004
+148 unidades sin deformar caballo_004
+Previa misma lámina caballo_004
+Fase sin resize caballo_004/0
+Fase sin resize caballo_004/1
+Fase sin resize caballo_004/2
+Fase sin resize caballo_004/3
+Fase sin resize caballo_004/4
+Fase sin resize caballo_004/5
+Fase sin resize caballo_004/6
+Fase sin resize caballo_004/7
+Llegada misma escala y máscara caballo_004
+Perfil propio caballo_005
+Límites medidos válidos caballo_005
+148 unidades sin deformar caballo_005
+Previa misma lámina caballo_005
+Fase sin resize caballo_005/0
+Fase sin resize caballo_005/1
+Fase sin resize caballo_005/2
+Fase sin resize caballo_005/3
+Fase sin resize caballo_005/4
+Fase sin resize caballo_005/5
+Fase sin resize caballo_005/6
+Fase sin resize caballo_005/7
+Llegada misma escala y máscara caballo_005
+Perfil propio caballo_006
+Límites medidos válidos caballo_006
+148 unidades sin deformar caballo_006
+Previa misma lámina caballo_006
+Fase sin resize caballo_006/0
+Fase sin resize caballo_006/1
+Fase sin resize caballo_006/2
+Fase sin resize caballo_006/3
+Fase sin resize caballo_006/4
+Fase sin resize caballo_006/5
+Fase sin resize caballo_006/6
+Fase sin resize caballo_006/7
+Llegada misma escala y máscara caballo_006
+Perfil propio caballo_007
+Límites medidos válidos caballo_007
+148 unidades sin deformar caballo_007
+Previa misma lámina caballo_007
+Fase sin resize caballo_007/0
+Fase sin resize caballo_007/1
+Fase sin resize caballo_007/2
+Fase sin resize caballo_007/3
+Fase sin resize caballo_007/4
+Fase sin resize caballo_007/5
+Fase sin resize caballo_007/6
+Fase sin resize caballo_007/7
+Llegada misma escala y máscara caballo_007
+Perfil propio caballo_008
+Límites medidos válidos caballo_008
+148 unidades sin deformar caballo_008
+Previa misma lámina caballo_008
+Fase sin resize caballo_008/0
+Fase sin resize caballo_008/1
+Fase sin resize caballo_008/2
+Fase sin resize caballo_008/3
+Fase sin resize caballo_008/4
+Fase sin resize caballo_008/5
+Fase sin resize caballo_008/6
+Fase sin resize caballo_008/7
+Llegada misma escala y máscara caballo_008
+Perfil propio caballo_009
+Límites medidos válidos caballo_009
+148 unidades sin deformar caballo_009
+Previa misma lámina caballo_009
+Fase sin resize caballo_009/0
+Fase sin resize caballo_009/1
+Fase sin resize caballo_009/2
+Fase sin resize caballo_009/3
+Fase sin resize caballo_009/4
+Fase sin resize caballo_009/5
+Fase sin resize caballo_009/6
+Fase sin resize caballo_009/7
+Llegada misma escala y máscara caballo_009
+Perfil propio caballo_010
+Límites medidos válidos caballo_010
+148 unidades sin deformar caballo_010
+Previa misma lámina caballo_010
+Fase sin resize caballo_010/0
+Fase sin resize caballo_010/1
+Fase sin resize caballo_010/2
+Fase sin resize caballo_010/3
+Fase sin resize caballo_010/4
+Fase sin resize caballo_010/5
+Fase sin resize caballo_010/6
+Fase sin resize caballo_010/7
+Llegada misma escala y máscara caballo_010
+Perfil propio caballo_011
+Límites medidos válidos caballo_011
+148 unidades sin deformar caballo_011
+Previa misma lámina caballo_011
+Fase sin resize caballo_011/0
+Fase sin resize caballo_011/1
+Fase sin resize caballo_011/2
+Fase sin resize caballo_011/3
+Fase sin resize caballo_011/4
+Fase sin resize caballo_011/5
+Fase sin resize caballo_011/6
+Fase sin resize caballo_011/7
+Llegada misma escala y máscara caballo_011
+Perfil propio caballo_012
+Límites medidos válidos caballo_012
+148 unidades sin deformar caballo_012
+Previa misma lámina caballo_012
+Fase sin resize caballo_012/0
+Fase sin resize caballo_012/1
+Fase sin resize caballo_012/2
+Fase sin resize caballo_012/3
+Fase sin resize caballo_012/4
+Fase sin resize caballo_012/5
+Fase sin resize caballo_012/6
+Fase sin resize caballo_012/7
+Llegada misma escala y máscara caballo_012
+Perfil propio caballo_013
+Límites medidos válidos caballo_013
+148 unidades sin deformar caballo_013
+Previa misma lámina caballo_013
+Fase sin resize caballo_013/0
+Fase sin resize caballo_013/1
+Fase sin resize caballo_013/2
+Fase sin resize caballo_013/3
+Fase sin resize caballo_013/4
+Fase sin resize caballo_013/5
+Fase sin resize caballo_013/6
+Fase sin resize caballo_013/7
+Llegada misma escala y máscara caballo_013
+Perfil propio caballo_014
+Límites medidos válidos caballo_014
+148 unidades sin deformar caballo_014
+Previa misma lámina caballo_014
+Fase sin resize caballo_014/0
+Fase sin resize caballo_014/1
+Fase sin resize caballo_014/2
+Fase sin resize caballo_014/3
+Fase sin resize caballo_014/4
+Fase sin resize caballo_014/5
+Fase sin resize caballo_014/6
+Fase sin resize caballo_014/7
+Llegada misma escala y máscara caballo_014
+Perfil propio caballo_015
+Límites medidos válidos caballo_015
+148 unidades sin deformar caballo_015
+Previa misma lámina caballo_015
+Fase sin resize caballo_015/0
+Fase sin resize caballo_015/1
+Fase sin resize caballo_015/2
+Fase sin resize caballo_015/3
+Fase sin resize caballo_015/4
+Fase sin resize caballo_015/5
+Fase sin resize caballo_015/6
+Fase sin resize caballo_015/7
+Llegada misma escala y máscara caballo_015
+Perfil propio caballo_016
+Límites medidos válidos caballo_016
+148 unidades sin deformar caballo_016
+Previa misma lámina caballo_016
+Fase sin resize caballo_016/0
+Fase sin resize caballo_016/1
+Fase sin resize caballo_016/2
+Fase sin resize caballo_016/3
+Fase sin resize caballo_016/4
+Fase sin resize caballo_016/5
+Fase sin resize caballo_016/6
+Fase sin resize caballo_016/7
+Llegada misma escala y máscara caballo_016
+Perfil propio caballo_017
+Límites medidos válidos caballo_017
+148 unidades sin deformar caballo_017
+Previa misma lámina caballo_017
+Fase sin resize caballo_017/0
+Fase sin resize caballo_017/1
+Fase sin resize caballo_017/2
+Fase sin resize caballo_017/3
+Fase sin resize caballo_017/4
+Fase sin resize caballo_017/5
+Fase sin resize caballo_017/6
+Fase sin resize caballo_017/7
+Llegada misma escala y máscara caballo_017
+Perfil propio caballo_018
+Límites medidos válidos caballo_018
+148 unidades sin deformar caballo_018
+Previa misma lámina caballo_018
+Fase sin resize caballo_018/0
+Fase sin resize caballo_018/1
+Fase sin resize caballo_018/2
+Fase sin resize caballo_018/3
+Fase sin resize caballo_018/4
+Fase sin resize caballo_018/5
+Fase sin resize caballo_018/6
+Fase sin resize caballo_018/7
+Llegada misma escala y máscara caballo_018
+Perfil propio caballo_019
+Límites medidos válidos caballo_019
+148 unidades sin deformar caballo_019
+Previa misma lámina caballo_019
+Fase sin resize caballo_019/0
+Fase sin resize caballo_019/1
+Fase sin resize caballo_019/2
+Fase sin resize caballo_019/3
+Fase sin resize caballo_019/4
+Fase sin resize caballo_019/5
+Fase sin resize caballo_019/6
+Fase sin resize caballo_019/7
+Llegada misma escala y máscara caballo_019
+Perfil propio caballo_020
+Límites medidos válidos caballo_020
+148 unidades sin deformar caballo_020
+Previa misma lámina caballo_020
+Fase sin resize caballo_020/0
+Fase sin resize caballo_020/1
+Fase sin resize caballo_020/2
+Fase sin resize caballo_020/3
+Fase sin resize caballo_020/4
+Fase sin resize caballo_020/5
+Fase sin resize caballo_020/6
+Fase sin resize caballo_020/7
+Llegada misma escala y máscara caballo_020
+Perfil propio caballo_021
+Límites medidos válidos caballo_021
+148 unidades sin deformar caballo_021
+Previa misma lámina caballo_021
+Fase sin resize caballo_021/0
+Fase sin resize caballo_021/1
+Fase sin resize caballo_021/2
+Fase sin resize caballo_021/3
+Fase sin resize caballo_021/4
+Fase sin resize caballo_021/5
+Fase sin resize caballo_021/6
+Fase sin resize caballo_021/7
+Llegada misma escala y máscara caballo_021
+Perfil propio caballo_022
+Límites medidos válidos caballo_022
+148 unidades sin deformar caballo_022
+Previa misma lámina caballo_022
+Fase sin resize caballo_022/0
+Fase sin resize caballo_022/1
+Fase sin resize caballo_022/2
+Fase sin resize caballo_022/3
+Fase sin resize caballo_022/4
+Fase sin resize caballo_022/5
+Fase sin resize caballo_022/6
+Fase sin resize caballo_022/7
+Llegada misma escala y máscara caballo_022
+Perfil propio caballo_023
+Límites medidos válidos caballo_023
+148 unidades sin deformar caballo_023
+Previa misma lámina caballo_023
+Fase sin resize caballo_023/0
+Fase sin resize caballo_023/1
+Fase sin resize caballo_023/2
+Fase sin resize caballo_023/3
+Fase sin resize caballo_023/4
+Fase sin resize caballo_023/5
+Fase sin resize caballo_023/6
+Fase sin resize caballo_023/7
+Llegada misma escala y máscara caballo_023
+Perfil propio caballo_024
+Límites medidos válidos caballo_024
+148 unidades sin deformar caballo_024
+Previa misma lámina caballo_024
+Fase sin resize caballo_024/0
+Fase sin resize caballo_024/1
+Fase sin resize caballo_024/2
+Fase sin resize caballo_024/3
+Fase sin resize caballo_024/4
+Fase sin resize caballo_024/5
+Fase sin resize caballo_024/6
+Fase sin resize caballo_024/7
+Llegada misma escala y máscara caballo_024
+Perfil propio caballo_025
+Límites medidos válidos caballo_025
+148 unidades sin deformar caballo_025
+Previa misma lámina caballo_025
+Fase sin resize caballo_025/0
+Fase sin resize caballo_025/1
+Fase sin resize caballo_025/2
+Fase sin resize caballo_025/3
+Fase sin resize caballo_025/4
+Fase sin resize caballo_025/5
+Fase sin resize caballo_025/6
+Fase sin resize caballo_025/7
+Llegada misma escala y máscara caballo_025
+Perfil propio caballo_026
+Límites medidos válidos caballo_026
+148 unidades sin deformar caballo_026
+Previa misma lámina caballo_026
+Fase sin resize caballo_026/0
+Fase sin resize caballo_026/1
+Fase sin resize caballo_026/2
+Fase sin resize caballo_026/3
+Fase sin resize caballo_026/4
+Fase sin resize caballo_026/5
+Fase sin resize caballo_026/6
+Fase sin resize caballo_026/7
+Llegada misma escala y máscara caballo_026
+Perfil propio caballo_027
+Límites medidos válidos caballo_027
+148 unidades sin deformar caballo_027
+Previa misma lámina caballo_027
+Fase sin resize caballo_027/0
+Fase sin resize caballo_027/1
+Fase sin resize caballo_027/2
+Fase sin resize caballo_027/3
+Fase sin resize caballo_027/4
+Fase sin resize caballo_027/5
+Fase sin resize caballo_027/6
+Fase sin resize caballo_027/7
+Llegada misma escala y máscara caballo_027
+Perfil propio caballo_028
+Límites medidos válidos caballo_028
+148 unidades sin deformar caballo_028
+Previa misma lámina caballo_028
+Fase sin resize caballo_028/0
+Fase sin resize caballo_028/1
+Fase sin resize caballo_028/2
+Fase sin resize caballo_028/3
+Fase sin resize caballo_028/4
+Fase sin resize caballo_028/5
+Fase sin resize caballo_028/6
+Fase sin resize caballo_028/7
+Llegada misma escala y máscara caballo_028
+Perfil propio caballo_029
+Límites medidos válidos caballo_029
+148 unidades sin deformar caballo_029
+Previa misma lámina caballo_029
+Fase sin resize caballo_029/0
+Fase sin resize caballo_029/1
+Fase sin resize caballo_029/2
+Fase sin resize caballo_029/3
+Fase sin resize caballo_029/4
+Fase sin resize caballo_029/5
+Fase sin resize caballo_029/6
+Fase sin resize caballo_029/7
+Llegada misma escala y máscara caballo_029
+Perfil propio caballo_030
+Límites medidos válidos caballo_030
+148 unidades sin deformar caballo_030
+Previa misma lámina caballo_030
+Fase sin resize caballo_030/0
+Fase sin resize caballo_030/1
+Fase sin resize caballo_030/2
+Fase sin resize caballo_030/3
+Fase sin resize caballo_030/4
+Fase sin resize caballo_030/5
+Fase sin resize caballo_030/6
+Fase sin resize caballo_030/7
+Llegada misma escala y máscara caballo_030
+Perfil propio caballo_031
+Límites medidos válidos caballo_031
+148 unidades sin deformar caballo_031
+Previa misma lámina caballo_031
+Fase sin resize caballo_031/0
+Fase sin resize caballo_031/1
+Fase sin resize caballo_031/2
+Fase sin resize caballo_031/3
+Fase sin resize caballo_031/4
+Fase sin resize caballo_031/5
+Fase sin resize caballo_031/6
+Fase sin resize caballo_031/7
+Llegada misma escala y máscara caballo_031
+Perfil propio caballo_032
+Límites medidos válidos caballo_032
+148 unidades sin deformar caballo_032
+Previa misma lámina caballo_032
+Fase sin resize caballo_032/0
+Fase sin resize caballo_032/1
+Fase sin resize caballo_032/2
+Fase sin resize caballo_032/3
+Fase sin resize caballo_032/4
+Fase sin resize caballo_032/5
+Fase sin resize caballo_032/6
+Fase sin resize caballo_032/7
+Llegada misma escala y máscara caballo_032
+Perfil propio caballo_033
+Límites medidos válidos caballo_033
+148 unidades sin deformar caballo_033
+Previa misma lámina caballo_033
+Fase sin resize caballo_033/0
+Fase sin resize caballo_033/1
+Fase sin resize caballo_033/2
+Fase sin resize caballo_033/3
+Fase sin resize caballo_033/4
+Fase sin resize caballo_033/5
+Fase sin resize caballo_033/6
+Fase sin resize caballo_033/7
+Llegada misma escala y máscara caballo_033
+Perfil propio caballo_034
+Límites medidos válidos caballo_034
+148 unidades sin deformar caballo_034
+Previa misma lámina caballo_034
+Fase sin resize caballo_034/0
+Fase sin resize caballo_034/1
+Fase sin resize caballo_034/2
+Fase sin resize caballo_034/3
+Fase sin resize caballo_034/4
+Fase sin resize caballo_034/5
+Fase sin resize caballo_034/6
+Fase sin resize caballo_034/7
+Llegada misma escala y máscara caballo_034
+Perfil propio caballo_035
+Límites medidos válidos caballo_035
+148 unidades sin deformar caballo_035
+Previa misma lámina caballo_035
+Fase sin resize caballo_035/0
+Fase sin resize caballo_035/1
+Fase sin resize caballo_035/2
+Fase sin resize caballo_035/3
+Fase sin resize caballo_035/4
+Fase sin resize caballo_035/5
+Fase sin resize caballo_035/6
+Fase sin resize caballo_035/7
+Llegada misma escala y máscara caballo_035
+Perfil propio caballo_036
+Límites medidos válidos caballo_036
+148 unidades sin deformar caballo_036
+Previa misma lámina caballo_036
+Fase sin resize caballo_036/0
+Fase sin resize caballo_036/1
+Fase sin resize caballo_036/2
+Fase sin resize caballo_036/3
+Fase sin resize caballo_036/4
+Fase sin resize caballo_036/5
+Fase sin resize caballo_036/6
+Fase sin resize caballo_036/7
+Llegada misma escala y máscara caballo_036
+Perfil propio caballo_037
+Límites medidos válidos caballo_037
+148 unidades sin deformar caballo_037
+Previa misma lámina caballo_037
+Fase sin resize caballo_037/0
+Fase sin resize caballo_037/1
+Fase sin resize caballo_037/2
+Fase sin resize caballo_037/3
+Fase sin resize caballo_037/4
+Fase sin resize caballo_037/5
+Fase sin resize caballo_037/6
+Fase sin resize caballo_037/7
+Llegada misma escala y máscara caballo_037
+Perfil propio caballo_038
+Límites medidos válidos caballo_038
+148 unidades sin deformar caballo_038
+Previa misma lámina caballo_038
+Fase sin resize caballo_038/0
+Fase sin resize caballo_038/1
+Fase sin resize caballo_038/2
+Fase sin resize caballo_038/3
+Fase sin resize caballo_038/4
+Fase sin resize caballo_038/5
+Fase sin resize caballo_038/6
+Fase sin resize caballo_038/7
+Llegada misma escala y máscara caballo_038
+Perfil propio caballo_039
+Límites medidos válidos caballo_039
+148 unidades sin deformar caballo_039
+Previa misma lámina caballo_039
+Fase sin resize caballo_039/0
+Fase sin resize caballo_039/1
+Fase sin resize caballo_039/2
+Fase sin resize caballo_039/3
+Fase sin resize caballo_039/4
+Fase sin resize caballo_039/5
+Fase sin resize caballo_039/6
+Fase sin resize caballo_039/7
+Llegada misma escala y máscara caballo_039
+Perfil propio caballo_040
+Límites medidos válidos caballo_040
+148 unidades sin deformar caballo_040
+Previa misma lámina caballo_040
+Fase sin resize caballo_040/0
+Fase sin resize caballo_040/1
+Fase sin resize caballo_040/2
+Fase sin resize caballo_040/3
+Fase sin resize caballo_040/4
+Fase sin resize caballo_040/5
+Fase sin resize caballo_040/6
+Fase sin resize caballo_040/7
+Llegada misma escala y máscara caballo_040
+Perfil propio caballo_041
+Límites medidos válidos caballo_041
+148 unidades sin deformar caballo_041
+Previa misma lámina caballo_041
+Fase sin resize caballo_041/0
+Fase sin resize caballo_041/1
+Fase sin resize caballo_041/2
+Fase sin resize caballo_041/3
+Fase sin resize caballo_041/4
+Fase sin resize caballo_041/5
+Fase sin resize caballo_041/6
+Fase sin resize caballo_041/7
+Llegada misma escala y máscara caballo_041
+Perfil propio caballo_042
+Límites medidos válidos caballo_042
+148 unidades sin deformar caballo_042
+Previa misma lámina caballo_042
+Fase sin resize caballo_042/0
+Fase sin resize caballo_042/1
+Fase sin resize caballo_042/2
+Fase sin resize caballo_042/3
+Fase sin resize caballo_042/4
+Fase sin resize caballo_042/5
+Fase sin resize caballo_042/6
+Fase sin resize caballo_042/7
+Llegada misma escala y máscara caballo_042
+Perfil propio caballo_043
+Límites medidos válidos caballo_043
+148 unidades sin deformar caballo_043
+Previa misma lámina caballo_043
+Fase sin resize caballo_043/0
+Fase sin resize caballo_043/1
+Fase sin resize caballo_043/2
+Fase sin resize caballo_043/3
+Fase sin resize caballo_043/4
+Fase sin resize caballo_043/5
+Fase sin resize caballo_043/6
+Fase sin resize caballo_043/7
+Llegada misma escala y máscara caballo_043
+Perfil propio caballo_044
+Límites medidos válidos caballo_044
+148 unidades sin deformar caballo_044
+Previa misma lámina caballo_044
+Fase sin resize caballo_044/0
+Fase sin resize caballo_044/1
+Fase sin resize caballo_044/2
+Fase sin resize caballo_044/3
+Fase sin resize caballo_044/4
+Fase sin resize caballo_044/5
+Fase sin resize caballo_044/6
+Fase sin resize caballo_044/7
+Llegada misma escala y máscara caballo_044
+Perfil propio caballo_045
+Límites medidos válidos caballo_045
+148 unidades sin deformar caballo_045
+Previa misma lámina caballo_045
+Fase sin resize caballo_045/0
+Fase sin resize caballo_045/1
+Fase sin resize caballo_045/2
+Fase sin resize caballo_045/3
+Fase sin resize caballo_045/4
+Fase sin resize caballo_045/5
+Fase sin resize caballo_045/6
+Fase sin resize caballo_045/7
+Llegada misma escala y máscara caballo_045
+Perfil propio caballo_046
+Límites medidos válidos caballo_046
+148 unidades sin deformar caballo_046
+Previa misma lámina caballo_046
+Fase sin resize caballo_046/0
+Fase sin resize caballo_046/1
+Fase sin resize caballo_046/2
+Fase sin resize caballo_046/3
+Fase sin resize caballo_046/4
+Fase sin resize caballo_046/5
+Fase sin resize caballo_046/6
+Fase sin resize caballo_046/7
+Llegada misma escala y máscara caballo_046
+Perfil propio caballo_047
+Límites medidos válidos caballo_047
+148 unidades sin deformar caballo_047
+Previa misma lámina caballo_047
+Fase sin resize caballo_047/0
+Fase sin resize caballo_047/1
+Fase sin resize caballo_047/2
+Fase sin resize caballo_047/3
+Fase sin resize caballo_047/4
+Fase sin resize caballo_047/5
+Fase sin resize caballo_047/6
+Fase sin resize caballo_047/7
+Llegada misma escala y máscara caballo_047
+Perfil propio caballo_048
+Límites medidos válidos caballo_048
+148 unidades sin deformar caballo_048
+Previa misma lámina caballo_048
+Fase sin resize caballo_048/0
+Fase sin resize caballo_048/1
+Fase sin resize caballo_048/2
+Fase sin resize caballo_048/3
+Fase sin resize caballo_048/4
+Fase sin resize caballo_048/5
+Fase sin resize caballo_048/6
+Fase sin resize caballo_048/7
+Llegada misma escala y máscara caballo_048
+Perfil propio caballo_049
+Límites medidos válidos caballo_049
+148 unidades sin deformar caballo_049
+Previa misma lámina caballo_049
+Fase sin resize caballo_049/0
+Fase sin resize caballo_049/1
+Fase sin resize caballo_049/2
+Fase sin resize caballo_049/3
+Fase sin resize caballo_049/4
+Fase sin resize caballo_049/5
+Fase sin resize caballo_049/6
+Fase sin resize caballo_049/7
+Llegada misma escala y máscara caballo_049
+Perfil propio caballo_050
+Límites medidos válidos caballo_050
+148 unidades sin deformar caballo_050
+Previa misma lámina caballo_050
+Fase sin resize caballo_050/0
+Fase sin resize caballo_050/1
+Fase sin resize caballo_050/2
+Fase sin resize caballo_050/3
+Fase sin resize caballo_050/4
+Fase sin resize caballo_050/5
+Fase sin resize caballo_050/6
+Fase sin resize caballo_050/7
+Llegada misma escala y máscara caballo_050
+Perfil propio caballo_051
+Límites medidos válidos caballo_051
+148 unidades sin deformar caballo_051
+Previa misma lámina caballo_051
+Fase sin resize caballo_051/0
+Fase sin resize caballo_051/1
+Fase sin resize caballo_051/2
+Fase sin resize caballo_051/3
+Fase sin resize caballo_051/4
+Fase sin resize caballo_051/5
+Fase sin resize caballo_051/6
+Fase sin resize caballo_051/7
+Llegada misma escala y máscara caballo_051
+Perfil propio caballo_052
+Límites medidos válidos caballo_052
+148 unidades sin deformar caballo_052
+Previa misma lámina caballo_052
+Fase sin resize caballo_052/0
+Fase sin resize caballo_052/1
+Fase sin resize caballo_052/2
+Fase sin resize caballo_052/3
+Fase sin resize caballo_052/4
+Fase sin resize caballo_052/5
+Fase sin resize caballo_052/6
+Fase sin resize caballo_052/7
+Llegada misma escala y máscara caballo_052
+Perfil propio caballo_053
+Límites medidos válidos caballo_053
+148 unidades sin deformar caballo_053
+Previa misma lámina caballo_053
+Fase sin resize caballo_053/0
+Fase sin resize caballo_053/1
+Fase sin resize caballo_053/2
+Fase sin resize caballo_053/3
+Fase sin resize caballo_053/4
+Fase sin resize caballo_053/5
+Fase sin resize caballo_053/6
+Fase sin resize caballo_053/7
+Llegada misma escala y máscara caballo_053
+Perfil propio caballo_054
+Límites medidos válidos caballo_054
+148 unidades sin deformar caballo_054
+Previa misma lámina caballo_054
+Fase sin resize caballo_054/0
+Fase sin resize caballo_054/1
+Fase sin resize caballo_054/2
+Fase sin resize caballo_054/3
+Fase sin resize caballo_054/4
+Fase sin resize caballo_054/5
+Fase sin resize caballo_054/6
+Fase sin resize caballo_054/7
+Llegada misma escala y máscara caballo_054
+Perfil propio caballo_055
+Límites medidos válidos caballo_055
+148 unidades sin deformar caballo_055
+Previa misma lámina caballo_055
+Fase sin resize caballo_055/0
+Fase sin resize caballo_055/1
+Fase sin resize caballo_055/2
+Fase sin resize caballo_055/3
+Fase sin resize caballo_055/4
+Fase sin resize caballo_055/5
+Fase sin resize caballo_055/6
+Fase sin resize caballo_055/7
+Llegada misma escala y máscara caballo_055
+Perfil propio caballo_056
+Límites medidos válidos caballo_056
+148 unidades sin deformar caballo_056
+Previa misma lámina caballo_056
+Fase sin resize caballo_056/0
+Fase sin resize caballo_056/1
+Fase sin resize caballo_056/2
+Fase sin resize caballo_056/3
+Fase sin resize caballo_056/4
+Fase sin resize caballo_056/5
+Fase sin resize caballo_056/6
+Fase sin resize caballo_056/7
+Llegada misma escala y máscara caballo_056
+Perfil propio caballo_057
+Límites medidos válidos caballo_057
+148 unidades sin deformar caballo_057
+Previa misma lámina caballo_057
+Fase sin resize caballo_057/0
+Fase sin resize caballo_057/1
+Fase sin resize caballo_057/2
+Fase sin resize caballo_057/3
+Fase sin resize caballo_057/4
+Fase sin resize caballo_057/5
+Fase sin resize caballo_057/6
+Fase sin resize caballo_057/7
+Llegada misma escala y máscara caballo_057
+Perfil propio caballo_058
+Límites medidos válidos caballo_058
+148 unidades sin deformar caballo_058
+Previa misma lámina caballo_058
+Fase sin resize caballo_058/0
+Fase sin resize caballo_058/1
+Fase sin resize caballo_058/2
+Fase sin resize caballo_058/3
+Fase sin resize caballo_058/4
+Fase sin resize caballo_058/5
+Fase sin resize caballo_058/6
+Fase sin resize caballo_058/7
+Llegada misma escala y máscara caballo_058
+Perfil propio caballo_059
+Límites medidos válidos caballo_059
+148 unidades sin deformar caballo_059
+Previa misma lámina caballo_059
+Fase sin resize caballo_059/0
+Fase sin resize caballo_059/1
+Fase sin resize caballo_059/2
+Fase sin resize caballo_059/3
+Fase sin resize caballo_059/4
+Fase sin resize caballo_059/5
+Fase sin resize caballo_059/6
+Fase sin resize caballo_059/7
+Llegada misma escala y máscara caballo_059
+Perfil propio caballo_060
+Límites medidos válidos caballo_060
+148 unidades sin deformar caballo_060
+Previa misma lámina caballo_060
+Fase sin resize caballo_060/0
+Fase sin resize caballo_060/1
+Fase sin resize caballo_060/2
+Fase sin resize caballo_060/3
+Fase sin resize caballo_060/4
+Fase sin resize caballo_060/5
+Fase sin resize caballo_060/6
+Fase sin resize caballo_060/7
+Llegada misma escala y máscara caballo_060
+Perfil propio caballo_061
+Límites medidos válidos caballo_061
+148 unidades sin deformar caballo_061
+Previa misma lámina caballo_061
+Fase sin resize caballo_061/0
+Fase sin resize caballo_061/1
+Fase sin resize caballo_061/2
+Fase sin resize caballo_061/3
+Fase sin resize caballo_061/4
+Fase sin resize caballo_061/5
+Fase sin resize caballo_061/6
+Fase sin resize caballo_061/7
+Llegada misma escala y máscara caballo_061
+Perfil propio caballo_062
+Límites medidos válidos caballo_062
+148 unidades sin deformar caballo_062
+Previa misma lámina caballo_062
+Fase sin resize caballo_062/0
+Fase sin resize caballo_062/1
+Fase sin resize caballo_062/2
+Fase sin resize caballo_062/3
+Fase sin resize caballo_062/4
+Fase sin resize caballo_062/5
+Fase sin resize caballo_062/6
+Fase sin resize caballo_062/7
+Llegada misma escala y máscara caballo_062
+Perfil propio caballo_063
+Límites medidos válidos caballo_063
+148 unidades sin deformar caballo_063
+Previa misma lámina caballo_063
+Fase sin resize caballo_063/0
+Fase sin resize caballo_063/1
+Fase sin resize caballo_063/2
+Fase sin resize caballo_063/3
+Fase sin resize caballo_063/4
+Fase sin resize caballo_063/5
+Fase sin resize caballo_063/6
+Fase sin resize caballo_063/7
+Llegada misma escala y máscara caballo_063
+Perfil propio caballo_064
+Límites medidos válidos caballo_064
+148 unidades sin deformar caballo_064
+Previa misma lámina caballo_064
+Fase sin resize caballo_064/0
+Fase sin resize caballo_064/1
+Fase sin resize caballo_064/2
+Fase sin resize caballo_064/3
+Fase sin resize caballo_064/4
+Fase sin resize caballo_064/5
+Fase sin resize caballo_064/6
+Fase sin resize caballo_064/7
+Llegada misma escala y máscara caballo_064
+Perfil propio caballo_065
+Límites medidos válidos caballo_065
+148 unidades sin deformar caballo_065
+Previa misma lámina caballo_065
+Fase sin resize caballo_065/0
+Fase sin resize caballo_065/1
+Fase sin resize caballo_065/2
+Fase sin resize caballo_065/3
+Fase sin resize caballo_065/4
+Fase sin resize caballo_065/5
+Fase sin resize caballo_065/6
+Fase sin resize caballo_065/7
+Llegada misma escala y máscara caballo_065
+Perfil propio caballo_066
+Límites medidos válidos caballo_066
+148 unidades sin deformar caballo_066
+Previa misma lámina caballo_066
+Fase sin resize caballo_066/0
+Fase sin resize caballo_066/1
+Fase sin resize caballo_066/2
+Fase sin resize caballo_066/3
+Fase sin resize caballo_066/4
+Fase sin resize caballo_066/5
+Fase sin resize caballo_066/6
+Fase sin resize caballo_066/7
+Llegada misma escala y máscara caballo_066
+Perfil propio caballo_067
+Límites medidos válidos caballo_067
+148 unidades sin deformar caballo_067
+Previa misma lámina caballo_067
+Fase sin resize caballo_067/0
+Fase sin resize caballo_067/1
+Fase sin resize caballo_067/2
+Fase sin resize caballo_067/3
+Fase sin resize caballo_067/4
+Fase sin resize caballo_067/5
+Fase sin resize caballo_067/6
+Fase sin resize caballo_067/7
+Llegada misma escala y máscara caballo_067
+Perfil propio caballo_068
+Límites medidos válidos caballo_068
+148 unidades sin deformar caballo_068
+Previa misma lámina caballo_068
+Fase sin resize caballo_068/0
+Fase sin resize caballo_068/1
+Fase sin resize caballo_068/2
+Fase sin resize caballo_068/3
+Fase sin resize caballo_068/4
+Fase sin resize caballo_068/5
+Fase sin resize caballo_068/6
+Fase sin resize caballo_068/7
+Llegada misma escala y máscara caballo_068
+Perfil propio caballo_069
+Límites medidos válidos caballo_069
+148 unidades sin deformar caballo_069
+Previa misma lámina caballo_069
+Fase sin resize caballo_069/0
+Fase sin resize caballo_069/1
+Fase sin resize caballo_069/2
+Fase sin resize caballo_069/3
+Fase sin resize caballo_069/4
+Fase sin resize caballo_069/5
+Fase sin resize caballo_069/6
+Fase sin resize caballo_069/7
+Llegada misma escala y máscara caballo_069
+Perfil propio caballo_070
+Límites medidos válidos caballo_070
+148 unidades sin deformar caballo_070
+Previa misma lámina caballo_070
+Fase sin resize caballo_070/0
+Fase sin resize caballo_070/1
+Fase sin resize caballo_070/2
+Fase sin resize caballo_070/3
+Fase sin resize caballo_070/4
+Fase sin resize caballo_070/5
+Fase sin resize caballo_070/6
+Fase sin resize caballo_070/7
+Llegada misma escala y máscara caballo_070
+Perfil propio caballo_071
+Límites medidos válidos caballo_071
+148 unidades sin deformar caballo_071
+Previa misma lámina caballo_071
+Fase sin resize caballo_071/0
+Fase sin resize caballo_071/1
+Fase sin resize caballo_071/2
+Fase sin resize caballo_071/3
+Fase sin resize caballo_071/4
+Fase sin resize caballo_071/5
+Fase sin resize caballo_071/6
+Fase sin resize caballo_071/7
+Llegada misma escala y máscara caballo_071
+Perfil propio caballo_072
+Límites medidos válidos caballo_072
+148 unidades sin deformar caballo_072
+Previa misma lámina caballo_072
+Fase sin resize caballo_072/0
+Fase sin resize caballo_072/1
+Fase sin resize caballo_072/2
+Fase sin resize caballo_072/3
+Fase sin resize caballo_072/4
+Fase sin resize caballo_072/5
+Fase sin resize caballo_072/6
+Fase sin resize caballo_072/7
+Llegada misma escala y máscara caballo_072
+Perfil propio caballo_073
+Límites medidos válidos caballo_073
+148 unidades sin deformar caballo_073
+Previa misma lámina caballo_073
+Fase sin resize caballo_073/0
+Fase sin resize caballo_073/1
+Fase sin resize caballo_073/2
+Fase sin resize caballo_073/3
+Fase sin resize caballo_073/4
+Fase sin resize caballo_073/5
+Fase sin resize caballo_073/6
+Fase sin resize caballo_073/7
+Llegada misma escala y máscara caballo_073
+Perfil propio caballo_074
+Límites medidos válidos caballo_074
+148 unidades sin deformar caballo_074
+Previa misma lámina caballo_074
+Fase sin resize caballo_074/0
+Fase sin resize caballo_074/1
+Fase sin resize caballo_074/2
+Fase sin resize caballo_074/3
+Fase sin resize caballo_074/4
+Fase sin resize caballo_074/5
+Fase sin resize caballo_074/6
+Fase sin resize caballo_074/7
+Llegada misma escala y máscara caballo_074
+Perfil propio caballo_075
+Límites medidos válidos caballo_075
+148 unidades sin deformar caballo_075
+Previa misma lámina caballo_075
+Fase sin resize caballo_075/0
+Fase sin resize caballo_075/1
+Fase sin resize caballo_075/2
+Fase sin resize caballo_075/3
+Fase sin resize caballo_075/4
+Fase sin resize caballo_075/5
+Fase sin resize caballo_075/6
+Fase sin resize caballo_075/7
+Llegada misma escala y máscara caballo_075
+Perfil propio caballo_076
+Límites medidos válidos caballo_076
+148 unidades sin deformar caballo_076
+Previa misma lámina caballo_076
+Fase sin resize caballo_076/0
+Fase sin resize caballo_076/1
+Fase sin resize caballo_076/2
+Fase sin resize caballo_076/3
+Fase sin resize caballo_076/4
+Fase sin resize caballo_076/5
+Fase sin resize caballo_076/6
+Fase sin resize caballo_076/7
+Llegada misma escala y máscara caballo_076
+Perfil propio caballo_077
+Límites medidos válidos caballo_077
+148 unidades sin deformar caballo_077
+Previa misma lámina caballo_077
+Fase sin resize caballo_077/0
+Fase sin resize caballo_077/1
+Fase sin resize caballo_077/2
+Fase sin resize caballo_077/3
+Fase sin resize caballo_077/4
+Fase sin resize caballo_077/5
+Fase sin resize caballo_077/6
+Fase sin resize caballo_077/7
+Llegada misma escala y máscara caballo_077
+Perfil propio caballo_078
+Límites medidos válidos caballo_078
+148 unidades sin deformar caballo_078
+Previa misma lámina caballo_078
+Fase sin resize caballo_078/0
+Fase sin resize caballo_078/1
+Fase sin resize caballo_078/2
+Fase sin resize caballo_078/3
+Fase sin resize caballo_078/4
+Fase sin resize caballo_078/5
+Fase sin resize caballo_078/6
+Fase sin resize caballo_078/7
+Llegada misma escala y máscara caballo_078
+Perfil propio caballo_079
+Límites medidos válidos caballo_079
+148 unidades sin deformar caballo_079
+Previa misma lámina caballo_079
+Fase sin resize caballo_079/0
+Fase sin resize caballo_079/1
+Fase sin resize caballo_079/2
+Fase sin resize caballo_079/3
+Fase sin resize caballo_079/4
+Fase sin resize caballo_079/5
+Fase sin resize caballo_079/6
+Fase sin resize caballo_079/7
+Llegada misma escala y máscara caballo_079
+Perfil propio caballo_080
+Límites medidos válidos caballo_080
+148 unidades sin deformar caballo_080
+Previa misma lámina caballo_080
+Fase sin resize caballo_080/0
+Fase sin resize caballo_080/1
+Fase sin resize caballo_080/2
+Fase sin resize caballo_080/3
+Fase sin resize caballo_080/4
+Fase sin resize caballo_080/5
+Fase sin resize caballo_080/6
+Fase sin resize caballo_080/7
+Llegada misma escala y máscara caballo_080
+Perfil propio caballo_081
+Límites medidos válidos caballo_081
+148 unidades sin deformar caballo_081
+Previa misma lámina caballo_081
+Fase sin resize caballo_081/0
+Fase sin resize caballo_081/1
+Fase sin resize caballo_081/2
+Fase sin resize caballo_081/3
+Fase sin resize caballo_081/4
+Fase sin resize caballo_081/5
+Fase sin resize caballo_081/6
+Fase sin resize caballo_081/7
+Llegada misma escala y máscara caballo_081
+Perfil propio caballo_082
+Límites medidos válidos caballo_082
+148 unidades sin deformar caballo_082
+Previa misma lámina caballo_082
+Fase sin resize caballo_082/0
+Fase sin resize caballo_082/1
+Fase sin resize caballo_082/2
+Fase sin resize caballo_082/3
+Fase sin resize caballo_082/4
+Fase sin resize caballo_082/5
+Fase sin resize caballo_082/6
+Fase sin resize caballo_082/7
+Llegada misma escala y máscara caballo_082
+Perfil propio caballo_083
+Límites medidos válidos caballo_083
+148 unidades sin deformar caballo_083
+Previa misma lámina caballo_083
+Fase sin resize caballo_083/0
+Fase sin resize caballo_083/1
+Fase sin resize caballo_083/2
+Fase sin resize caballo_083/3
+Fase sin resize caballo_083/4
+Fase sin resize caballo_083/5
+Fase sin resize caballo_083/6
+Fase sin resize caballo_083/7
+Llegada misma escala y máscara caballo_083
+Perfil propio caballo_084
+Límites medidos válidos caballo_084
+148 unidades sin deformar caballo_084
+Previa misma lámina caballo_084
+Fase sin resize caballo_084/0
+Fase sin resize caballo_084/1
+Fase sin resize caballo_084/2
+Fase sin resize caballo_084/3
+Fase sin resize caballo_084/4
+Fase sin resize caballo_084/5
+Fase sin resize caballo_084/6
+Fase sin resize caballo_084/7
+Llegada misma escala y máscara caballo_084
+Perfil propio caballo_085
+Límites medidos válidos caballo_085
+148 unidades sin deformar caballo_085
+Previa misma lámina caballo_085
+Fase sin resize caballo_085/0
+Fase sin resize caballo_085/1
+Fase sin resize caballo_085/2
+Fase sin resize caballo_085/3
+Fase sin resize caballo_085/4
+Fase sin resize caballo_085/5
+Fase sin resize caballo_085/6
+Fase sin resize caballo_085/7
+Llegada misma escala y máscara caballo_085
+Perfil propio caballo_086
+Límites medidos válidos caballo_086
+148 unidades sin deformar caballo_086
+Previa misma lámina caballo_086
+Fase sin resize caballo_086/0
+Fase sin resize caballo_086/1
+Fase sin resize caballo_086/2
+Fase sin resize caballo_086/3
+Fase sin resize caballo_086/4
+Fase sin resize caballo_086/5
+Fase sin resize caballo_086/6
+Fase sin resize caballo_086/7
+Llegada misma escala y máscara caballo_086
+Perfil propio caballo_087
+Límites medidos válidos caballo_087
+148 unidades sin deformar caballo_087
+Previa misma lámina caballo_087
+Fase sin resize caballo_087/0
+Fase sin resize caballo_087/1
+Fase sin resize caballo_087/2
+Fase sin resize caballo_087/3
+Fase sin resize caballo_087/4
+Fase sin resize caballo_087/5
+Fase sin resize caballo_087/6
+Fase sin resize caballo_087/7
+Llegada misma escala y máscara caballo_087
+Perfil propio caballo_088
+Límites medidos válidos caballo_088
+148 unidades sin deformar caballo_088
+Previa misma lámina caballo_088
+Fase sin resize caballo_088/0
+Fase sin resize caballo_088/1
+Fase sin resize caballo_088/2
+Fase sin resize caballo_088/3
+Fase sin resize caballo_088/4
+Fase sin resize caballo_088/5
+Fase sin resize caballo_088/6
+Fase sin resize caballo_088/7
+Llegada misma escala y máscara caballo_088
+Perfil propio caballo_089
+Límites medidos válidos caballo_089
+148 unidades sin deformar caballo_089
+Previa misma lámina caballo_089
+Fase sin resize caballo_089/0
+Fase sin resize caballo_089/1
+Fase sin resize caballo_089/2
+Fase sin resize caballo_089/3
+Fase sin resize caballo_089/4
+Fase sin resize caballo_089/5
+Fase sin resize caballo_089/6
+Fase sin resize caballo_089/7
+Llegada misma escala y máscara caballo_089
+Perfil propio caballo_090
+Límites medidos válidos caballo_090
+148 unidades sin deformar caballo_090
+Previa misma lámina caballo_090
+Fase sin resize caballo_090/0
+Fase sin resize caballo_090/1
+Fase sin resize caballo_090/2
+Fase sin resize caballo_090/3
+Fase sin resize caballo_090/4
+Fase sin resize caballo_090/5
+Fase sin resize caballo_090/6
+Fase sin resize caballo_090/7
+Llegada misma escala y máscara caballo_090
+Perfil propio caballo_091
+Límites medidos válidos caballo_091
+148 unidades sin deformar caballo_091
+Previa misma lámina caballo_091
+Fase sin resize caballo_091/0
+Fase sin resize caballo_091/1
+Fase sin resize caballo_091/2
+Fase sin resize caballo_091/3
+Fase sin resize caballo_091/4
+Fase sin resize caballo_091/5
+Fase sin resize caballo_091/6
+Fase sin resize caballo_091/7
+Llegada misma escala y máscara caballo_091
+Perfil propio caballo_092
+Límites medidos válidos caballo_092
+148 unidades sin deformar caballo_092
+Previa misma lámina caballo_092
+Fase sin resize caballo_092/0
+Fase sin resize caballo_092/1
+Fase sin resize caballo_092/2
+Fase sin resize caballo_092/3
+Fase sin resize caballo_092/4
+Fase sin resize caballo_092/5
+Fase sin resize caballo_092/6
+Fase sin resize caballo_092/7
+Llegada misma escala y máscara caballo_092
+Perfil propio caballo_093
+Límites medidos válidos caballo_093
+148 unidades sin deformar caballo_093
+Previa misma lámina caballo_093
+Fase sin resize caballo_093/0
+Fase sin resize caballo_093/1
+Fase sin resize caballo_093/2
+Fase sin resize caballo_093/3
+Fase sin resize caballo_093/4
+Fase sin resize caballo_093/5
+Fase sin resize caballo_093/6
+Fase sin resize caballo_093/7
+Llegada misma escala y máscara caballo_093
+Perfil propio caballo_094
+Límites medidos válidos caballo_094
+148 unidades sin deformar caballo_094
+Previa misma lámina caballo_094
+Fase sin resize caballo_094/0
+Fase sin resize caballo_094/1
+Fase sin resize caballo_094/2
+Fase sin resize caballo_094/3
+Fase sin resize caballo_094/4
+Fase sin resize caballo_094/5
+Fase sin resize caballo_094/6
+Fase sin resize caballo_094/7
+Llegada misma escala y máscara caballo_094
+Perfil propio caballo_095
+Límites medidos válidos caballo_095
+148 unidades sin deformar caballo_095
+Previa misma lámina caballo_095
+Fase sin resize caballo_095/0
+Fase sin resize caballo_095/1
+Fase sin resize caballo_095/2
+Fase sin resize caballo_095/3
+Fase sin resize caballo_095/4
+Fase sin resize caballo_095/5
+Fase sin resize caballo_095/6
+Fase sin resize caballo_095/7
+Llegada misma escala y máscara caballo_095
+Perfil propio caballo_096
+Límites medidos válidos caballo_096
+148 unidades sin deformar caballo_096
+Previa misma lámina caballo_096
+Fase sin resize caballo_096/0
+Fase sin resize caballo_096/1
+Fase sin resize caballo_096/2
+Fase sin resize caballo_096/3
+Fase sin resize caballo_096/4
+Fase sin resize caballo_096/5
+Fase sin resize caballo_096/6
+Fase sin resize caballo_096/7
+Llegada misma escala y máscara caballo_096
+Perfil propio caballo_097
+Límites medidos válidos caballo_097
+148 unidades sin deformar caballo_097
+Previa misma lámina caballo_097
+Fase sin resize caballo_097/0
+Fase sin resize caballo_097/1
+Fase sin resize caballo_097/2
+Fase sin resize caballo_097/3
+Fase sin resize caballo_097/4
+Fase sin resize caballo_097/5
+Fase sin resize caballo_097/6
+Fase sin resize caballo_097/7
+Llegada misma escala y máscara caballo_097
+Perfil propio caballo_098
+Límites medidos válidos caballo_098
+148 unidades sin deformar caballo_098
+Previa misma lámina caballo_098
+Fase sin resize caballo_098/0
+Fase sin resize caballo_098/1
+Fase sin resize caballo_098/2
+Fase sin resize caballo_098/3
+Fase sin resize caballo_098/4
+Fase sin resize caballo_098/5
+Fase sin resize caballo_098/6
+Fase sin resize caballo_098/7
+Llegada misma escala y máscara caballo_098
+Perfil propio caballo_099
+Límites medidos válidos caballo_099
+148 unidades sin deformar caballo_099
+Previa misma lámina caballo_099
+Fase sin resize caballo_099/0
+Fase sin resize caballo_099/1
+Fase sin resize caballo_099/2
+Fase sin resize caballo_099/3
+Fase sin resize caballo_099/4
+Fase sin resize caballo_099/5
+Fase sin resize caballo_099/6
+Fase sin resize caballo_099/7
+Llegada misma escala y máscara caballo_099
+Perfil propio caballo_100
+Límites medidos válidos caballo_100
+148 unidades sin deformar caballo_100
+Previa misma lámina caballo_100
+Fase sin resize caballo_100/0
+Fase sin resize caballo_100/1
+Fase sin resize caballo_100/2
+Fase sin resize caballo_100/3
+Fase sin resize caballo_100/4
+Fase sin resize caballo_100/5
+Fase sin resize caballo_100/6
+Fase sin resize caballo_100/7
+Llegada misma escala y máscara caballo_100
+Legacy sin animación conserva sprite y layout
+Prepara carrera 5
+Actores escala uniforme 5
+Sin puntitos dibujados 5
+Carriles separados 5/0
+Carriles separados 5/1
+Carriles separados 5/2
+Carriles separados 5/3
+Todos caben verticalmente 5
+Render previa-5 (1920, 1080)
+Render previa-5 (1600, 900)
+Render previa-5 (1366, 768)
+Render previa-5 (1280, 720)
+Cobro al iniciar 5
+Cobro único 5
+Flecha ID real fuera del centro 5
+Flecha inicial 5
+Dos segundos 5
+A mantenida 5
+Soltar A 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Continúa después del primero 5
+Todos llegan y ranking completo 5
+Clasificación válida 5
+Llegada conserva referencia 5
+Meta gráfica y competitiva coinciden 5
+Premio y día una sola vez 5
+Prepara carrera 6
+Actores escala uniforme 6
+Sin puntitos dibujados 6
+Carriles separados 6/0
+Carriles separados 6/1
+Carriles separados 6/2
+Carriles separados 6/3
+Carriles separados 6/4
+Todos caben verticalmente 6
+Render previa-6 (1920, 1080)
+Render previa-6 (1600, 900)
+Render previa-6 (1366, 768)
+Render previa-6 (1280, 720)
+Cobro al iniciar 6
+Cobro único 6
+Flecha ID real fuera del centro 6
+Flecha inicial 6
+Dos segundos 6
+A mantenida 6
+Soltar A 6
+Render fase-0 (1600, 900)
+Render fase-1 (1600, 900)
+Render fase-2 (1600, 900)
+Render fase-3 (1600, 900)
+Render fase-4 (1600, 900)
+Render fase-5 (1600, 900)
+Render fase-6 (1600, 900)
+Render fase-7 (1600, 900)
+Render primero-en-meta (1600, 900)
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Continúa después del primero 6
+Todos llegan y ranking completo 6
+Clasificación válida 6
+Llegada conserva referencia 6
+Meta gráfica y competitiva coinciden 6
+Premio y día una sola vez 6
+Render clasificacion (1600, 900)
+Prepara carrera 8
+Actores escala uniforme 8
+Sin puntitos dibujados 8
+Carriles separados 8/0
+Carriles separados 8/1
+Carriles separados 8/2
+Carriles separados 8/3
+Carriles separados 8/4
+Carriles separados 8/5
+Carriles separados 8/6
+Todos caben verticalmente 8
+Render previa-8 (1920, 1080)
+Render previa-8 (1600, 900)
+Render previa-8 (1366, 768)
+Render previa-8 (1280, 720)
+Cobro al iniciar 8
+Cobro único 8
+Flecha ID real fuera del centro 8
+Flecha inicial 8
+Dos segundos 8
+A mantenida 8
+Soltar A 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Continúa después del primero 8
+Todos llegan y ranking completo 8
+Clasificación válida 8
+Llegada conserva referencia 8
+Meta gráfica y competitiva coinciden 8
+Premio y día una sola vez 8
+Prepara bloqueo Game Over
+Saldo negativo confirmado durante carrera
+Game Over congela carrera sin premio ni avance de día

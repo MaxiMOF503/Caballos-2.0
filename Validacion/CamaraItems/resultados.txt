@@ -1,0 +1,4 @@
+camara-items-final: CAMARA ITEMS PASS: 7812 comprobaciones; mouse físico pendiente.
+camara-items-cursor: CURSOR PASS: 110 comprobaciones.
+camara-items-windows: CATALOGOS WINDOWS SCRIPTS PASS: 27 ensamblados; no se genera ejecutable.
+camara-items-referencias: CATALOGOS ASSETS PASS: 12 comprobaciones

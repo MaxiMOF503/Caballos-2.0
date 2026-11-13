@@ -9,14 +9,31 @@ public sealed class HorseVisualAnimator : MonoBehaviour
     Sprite baseSprite;
     float elapsed;
 
-    public void Bind(Caballo horse, Image target)
+    public void Bind(Caballo horse, Image target, bool presentacionCarrera = false)
     {
         image = target;
         var catalog = HorseVisualCatalog.Default;
-        Profile = catalog != null ? catalog.Resolve(horse.visualProfileId) : null;
+        Profile = catalog != null ? catalog.ResolveForRace(horse) : null;
         baseSprite = Profile != null ? Profile.baseSprite : horse.sprite;
+        bool normalizada = presentacionCarrera && image != null && Profile != null && Profile.IsValid;
+        if (normalizada)
+        {
+            PresentacionCaballoCarrera.Configurar(image, Profile);
+            // A supported stance from the same sheet, also used at the finish.
+            baseSprite = Profile.runFrames[2];
+        }
+        else if (presentacionCarrera && image != null)
+        {
+            // Keep the previous layout for a legacy sprite with no animation.
+            var rect = image.rectTransform;
+            rect.anchorMin = Vector2.zero;
+            rect.anchorMax = Vector2.one;
+            rect.offsetMin = Vector2.zero;
+            rect.offsetMax = new Vector2(0, -18);
+            rect.localScale = Vector3.one;
+        }
         StopRun();
-        if (image != null) image.preserveAspect = true;
+        if (image != null) image.preserveAspect = !normalizada;
     }
 
     public void StartRun()

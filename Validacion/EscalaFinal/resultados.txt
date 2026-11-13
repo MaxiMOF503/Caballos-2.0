@@ -1,0 +1,6 @@
+ESCALA PRESENTACION PASS: 2189
+SEMANA PASS: 78
+CARRERA 2D PASS: 17547 comprobaciones de integración
+ANIMACIONES CATALOGO PASS: 2824 comprobaciones
+CATALOGOS WINDOWS SCRIPTS PASS: 27 ensamblados; no se genera ejecutable.
+CATALOGOS ASSETS PASS: 12 comprobaciones

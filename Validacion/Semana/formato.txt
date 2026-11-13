@@ -1,0 +1,8 @@
+CarreraProgramada.cs
+CarreraUI.cs
+EstabloView.cs
+EstabloView.Interfaz.cs
+GameManager.Carrera.cs
+PistaLateralCarrera.cs
+TablonView.cs
+TiendaView.cs

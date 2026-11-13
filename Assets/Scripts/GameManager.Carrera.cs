@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,7 +8,12 @@ public partial class GameManager
     CarreraProgramada carreraProgramada;
     int semillaOfertaCarreras;
     bool procesandoResultado;
+    ProgresoInicioCarreras inicioCarreras = ProgresoInicioCarreras.Anterior();
+    public ProgresoInicioCarreras ProgresoInicio => inicioCarreras;
+    public string ErrorInicioCarrera { get; private set; }
     public ApuestaCarrera UltimaApuesta { get; private set; }
+    public ResultadoCarrera UltimoResultadoCarrera { get; private set; }
+    public bool ResultadoCarreraGuardado { get; private set; } = true;
 
     public int EstadisticaEfectiva(Caballo caballo, TipoEstadisticaCaballo tipo)
     {
@@ -20,15 +25,15 @@ public partial class GameManager
             _ => caballo.inteligencia
         };
         if (!EsCaballoJugador(caballo)) return valor;
+        valor += Preparacion(caballo, tipo);
         var catalogo = CatalogoTienda();
         foreach (var ranura in SistemaEquipamiento.Ranuras)
         {
             var item = ObtenerItemEquipado(caballo, ranura);
             var producto = item == null ? null : SistemaTienda.Buscar(catalogo, item.idDefinicion);
             if (producto != null && producto.tieneSlotEquipable &&
-                SistemaEquipamiento.EsCompatible(producto.slotPermitido, ranura) &&
-                producto.estadistica == tipo)
-                valor += producto.bonificacion;
+                SistemaEquipamiento.EsCompatible(producto.slotPermitido, ranura))
+                valor += producto.BonoPara(tipo);
         }
         return Caballo.NormalizarEstadistica(valor);
     }
@@ -37,17 +42,19 @@ public partial class GameManager
     {
         int efectiva = EstadisticaEfectiva(caballo, tipo);
         string rango = RangoCaballo.ObtenerRango(efectiva);
-        return efectiva == valorBase ? rango : $"{rango} ({valorBase} → {efectiva}, +{efectiva - valorBase})";
+        return efectiva == valorBase ? rango : $"{rango} ({valorBase} → {efectiva}, {efectiva - valorBase:+0;-0})";
     }
 
     public CatalogoCarreras CatalogoDeCarreras => Resources.Load<CatalogoCarreras>("Carreras/Catalogo");
+    public int PrecioInscripcionOferta(DefinicionCarrera carrera) => ObtenerCarreraProgramada()?.idDefinicion == carrera.id
+        ? Math.Max(0, carreraProgramada.inscripcion) : CatalogoDeCarreras.Inscripcion(carrera, dia);
 
     public CarreraProgramada ObtenerCarreraProgramada() =>
         !campanaCompletada && carreraProgramada?.dia == dia ? carreraProgramada : null;
 
     public IReadOnlyList<DefinicionCarrera> ObtenerOfertaCarreras()
     {
-        if (campanaCompletada) return Array.Empty<DefinicionCarrera>();
+        if (campanaCompletada || Derrotado) return Array.Empty<DefinicionCarrera>();
         var catalogo = CatalogoDeCarreras;
         var guardada = ObtenerCarreraProgramada();
         if (guardada?.SeleccionBloqueada == true)
@@ -61,13 +68,21 @@ public partial class GameManager
             }};
         }
 
-        return catalogo?.Oferta(dia, semillaOfertaCarreras) ?? Array.Empty<DefinicionCarrera>();
+        var oferta = catalogo?.Oferta(dia, semillaOfertaCarreras) ?? Array.Empty<DefinicionCarrera>();
+        if (inicioCarreras.IniciacionPendiente && ObtenerDiaDeSemana(dia) != 7 &&
+            !oferta.Any(c => catalogo.Inscripcion(c, dia) <= dinero))
+        {
+            var accesible = catalogo.carreras.Where(c => c.id != catalogo.carreraEspecialSemanal)
+                .OrderBy(c => catalogo.Inscripcion(c, dia)).ThenBy(c => c.id, StringComparer.Ordinal).FirstOrDefault();
+            if (accesible != null && !oferta.Any(c => c.id == accesible.id)) return oferta.Concat(new[] { accesible }).ToArray();
+        }
+        return oferta;
     }
 
     public bool ElegirCarrera(string id, out string mensaje)
     {
         mensaje = null;
-        if (campanaCompletada)
+        if (campanaCompletada || Derrotado)
         {
             mensaje = "La campaña terminó.";
             return false;
@@ -80,7 +95,7 @@ public partial class GameManager
             return false;
         }
         var definicion = ObtenerOfertaCarreras().FirstOrDefault(c => c.id == id);
-        var jugador = caballosJugador.FirstOrDefault(c => c != null);
+        var jugador = CaballoActivo;
         if (definicion == null || jugador == null)
         {
             mensaje = "Esta carrera no está disponible.";
@@ -105,7 +120,9 @@ public partial class GameManager
         var carrera = new CarreraProgramada
         {
             dia = dia, idDefinicion = definicion.id, nombreCarrera = definicion.nombre,
-            tipo = definicion.tipo, distanciaMetros = definicion.distanciaMetros, premio = definicion.premio
+            tipo = definicion.tipo, distanciaMetros = definicion.distanciaMetros, premio = definicion.premio,
+            versionReglas = 1, inscripcion = CatalogoDeCarreras.Inscripcion(definicion, dia),
+            iniciacion = inicioCarreras.IniciacionPendiente
         };
         int semilla = CatalogoCarreras.Semilla(semillaOfertaCarreras, dia, definicion.id);
         var azar = new System.Random(semilla);
@@ -135,7 +152,7 @@ public partial class GameManager
             int cantidad = definicion.dificultad >= 3 ? 5 : 4;
             for (int i = 0; i < cantidad; i++)
             {
-                var rival = CrearRivalParaCarrera(definicion, i == 0 ? persistente : null, azar);
+                var rival = CrearRivalParaCarrera(definicion, i == 0 ? persistente : null, datos, azar);
                 carrera.participantes.Add(new ParticipanteCarrera
                 {
                     caballo = CaballoData.DesdeCaballo(rival, ObtenerIndiceSprite(rival.sprite)),
@@ -145,11 +162,19 @@ public partial class GameManager
         }
         finally { UnityEngine.Random.state = estado; }
 
+        if (carrera.iniciacion)
+        {
+            float ritmo = Mathf.Lerp(8, 18, Mathf.InverseLerp(1, 16, datos.velocidad)) * .8f;
+            foreach (var participante in carrera.participantes)
+                participante.ritmoIniciacion = participante.caballo.id == jugador.id ? ritmo :
+                    ritmo * Mathf.Lerp(Mathf.Clamp(CatalogoDeCarreras.ritmoRivalIniciacionMin, .5f, .95f),
+                        Mathf.Clamp(CatalogoDeCarreras.ritmoRivalIniciacionMax, .5f, .95f), (float)azar.NextDouble());
+        }
         carrera.FijarCuotas();
         return carrera;
     }
 
-    Caballo CrearRivalParaCarrera(DefinicionCarrera carrera, Caballo anterior, System.Random azar)
+    Caballo CrearRivalParaCarrera(DefinicionCarrera carrera, Caballo anterior, CaballoData activo, System.Random azar)
     {
         Caballo rival;
         if (anterior != null)
@@ -170,15 +195,10 @@ public partial class GameManager
             AsignarVisualNuevo(rival);
         }
 
-        int distancia = Mathf.Clamp(Mathf.RoundToInt((carrera.distanciaMetros - 1200) / 400f), 0, 3);
-        int dificultad = Mathf.Clamp(carrera.dificultad, 1, 5);
-        int velocidad = 5 + dificultad / 2 + (distancia == 0 ? 1 : 0);
-        int stamina = 2 + distancia * 2 + dificultad / 2;
-        int tecnica = 3 + dificultad / 2 + (distancia == 0 ? 1 : 0);
-        rival.velocidad = AjustarAtributo(velocidad, anterior?.velocidad, azar);
-        rival.stamina = AjustarAtributo(stamina, anterior?.stamina, azar);
-        rival.inteligencia = AjustarAtributo(tecnica, anterior?.inteligencia, azar);
-        rival.suerte = AjustarAtributo(3 + dificultad / 2, anterior?.suerte, azar);
+        var identidad = CatalogoCaballos.Buscar(rival.catalogIdentityId);
+        if (anterior == null && identidad != null)
+            rival.potencial = Mathf.Clamp(rival.potencial, identidad.potencialMinimo, identidad.potencialMaximo);
+        (CatalogoDeCarreras.bandasRivales ?? new BandaRivalesCarrera()).Aplicar(rival, activo, carrera.distanciaMetros, dia, azar);
         rival.esDelJugador = false;
         rival.estres = 0;
         rival.relacion = 0;
@@ -186,9 +206,13 @@ public partial class GameManager
         return rival;
     }
 
-    static int AjustarAtributo(int objetivo, int? anterior, System.Random azar) => anterior.HasValue
-        ? Mathf.Clamp(anterior.Value, objetivo - 2, objetivo + 2)
-        : objetivo + azar.Next(-2, 3);
+    // The available money already excludes auction escrow. During the first race,
+    // protect the cheapest next entry as well, so an optional bet cannot soft-lock the welcome race.
+    public int ReservaSiguienteIniciacion(CarreraProgramada carrera) => carrera?.versionReglas > 0 && inicioCarreras.completadas == 0
+        ? CatalogoDeCarreras.carreras.Where(c => c.id != CatalogoDeCarreras.carreraEspecialSemanal)
+            .Select(c => CatalogoDeCarreras.Inscripcion(c, dia + 1)).DefaultIfEmpty(0).Min() : 0;
+    public int MaximoApuestaCarrera(CarreraProgramada carrera) => (int)Math.Max(0L,
+        (long)dinero - (carrera?.InscripcionPendiente ?? 0) - ReservaSiguienteIniciacion(carrera));
 
     public Caballo CrearVistaParticipante(ParticipanteCarrera participante)
     {
@@ -200,15 +224,15 @@ public partial class GameManager
     public bool Apostar(string idCarrera, string idCaballo, int cantidad, out string mensaje)
     {
         var carrera = ObtenerCarreraProgramada();
-        if (carrera == null || carrera.id != idCarrera || carrera.iniciada || carrera.apuesta != null)
+        if (carrera == null || carrera.id != idCarrera || carrera.iniciada || carrera.apuesta != null || carrera.iniciacion)
         {
-            mensaje = "Las apuestas están cerradas para esta carrera.";
+            mensaje = carrera?.iniciacion == true ? "Carrera de iniciación: apuestas deshabilitadas." : "Las apuestas están cerradas para esta carrera.";
             return false;
         }
         var participante = carrera.Buscar(idCaballo);
-        if (participante == null || cantidad <= 0 || cantidad > dinero)
+        if (participante == null || cantidad <= 0 || cantidad > MaximoApuestaCarrera(carrera))
         {
-            mensaje = "Elegí un participante e ingresá un importe positivo que puedas pagar.";
+            mensaje = $"Elegí un participante. Máximo para apostar: ${MaximoApuestaCarrera(carrera)}; se conserva el dinero de inscripción.";
             return false;
         }
         var apuesta = new ApuestaCarrera
@@ -237,32 +261,64 @@ public partial class GameManager
 
     public bool IniciarCarreraProgramada(CarreraProgramada carrera)
     {
-        if (carrera == null || carrera != carreraProgramada || campanaCompletada) return false;
+        ErrorInicioCarrera = null;
+        if (carrera == null || carrera != carreraProgramada || campanaCompletada || Derrotado) return false;
         if (carrera.iniciada) return true; // Reanudar una carrera guardada con la misma parrilla.
+        if (carrera.participantes == null || carrera.participantes.Count == 0 ||
+            carrera.participantes.Any(p => string.IsNullOrEmpty(p?.caballo?.id)) ||
+            carrera.participantes.Select(p => p.caballo.id).Distinct().Count() != carrera.participantes.Count)
+        { ErrorInicioCarrera = "Parrilla inválida: no se cobró la inscripción."; return false; }
+        int costo = carrera.InscripcionPendiente;
+        if (costo > 0 && dinero < costo)
+        { ErrorInicioCarrera = $"Inscripción: {Moneda.Texto(costo)}. Faltan {Moneda.Texto((long)costo - dinero)} de saldo disponible."; return false; }
+        int anterior = dinero;
+        bool cobradaAntes = carrera.inscripcionCobrada;
+        dinero -= costo;
+        if (carrera.versionReglas > 0) carrera.inscripcionCobrada = true;
         carrera.iniciada = true;
-        if (GuardarPartida()) return true;
+        if (GuardarPartida()) { ActualizarHUD(); return true; }
+        dinero = anterior;
+        carrera.inscripcionCobrada = cobradaAntes;
         carrera.iniciada = false;
+        ErrorInicioCarrera = "No se pudo guardar el inicio: no se cobró la inscripción.";
         return false;
     }
 
     public string FinalizarCarreraProgramada(CarreraProgramada carrera, Caballo ganador, Caballo mejorRival)
     {
-        if (carrera == null || ganador == null || carrera != carreraProgramada ||
-            !carrera.iniciada || carrera.Buscar(ganador.id) == null) return "";
+        if (carrera == null || carrera != carreraProgramada || !carrera.iniciada ||
+            !ClasificacionCarrera.Validar(carrera, carrera.clasificacionFinal)) return "";
+        var primero = carrera.clasificacionFinal[0];
+        bool anulada = !primero.Finalizo;
+        if (!anulada && (ganador == null || ganador.id != primero.idCaballo)) return "";
         var apuesta = carrera.apuesta;
         var jugador = caballosJugador.Find(c => c != null && carrera.Buscar(c.id) != null);
-        bool ganoJugador = jugador != null && jugador.id == ganador.id;
+        bool ganoJugador = !anulada && jugador != null && jugador.id == primero.idCaballo;
+        mejorRival = null;
+        foreach (var llegada in carrera.clasificacionFinal)
+            if (llegada.Finalizo && llegada.idCaballo != jugador?.id)
+            {
+                mejorRival = CrearVistaParticipante(carrera.Buscar(llegada.idCaballo));
+                break;
+            }
+        var resultadoFinal = new ResultadoCarrera { carrera = carrera, idCaballoJugador = jugador?.id };
+        ResultadoCarreraGuardado = false;
         // Los guardados habituales de XP y cambio de día forman una sola escritura.
         procesandoResultado = true;
         try
         {
-            long pago = apuesta?.Liquidar(ganador.id) ?? 0;
-            dinero = (int)Math.Min(int.MaxValue, (long)dinero + pago + (ganoJugador ? carrera.PremioGanador : -200));
+            long pago = anulada ? apuesta?.Anular() ?? 0 : apuesta?.Liquidar(primero.idCaballo) ?? 0;
+            dinero = (int)Math.Min(int.MaxValue - DineroReservado, (long)dinero + pago + (anulada ? 0 : ganoJugador ? carrera.PremioGanador : carrera.versionReglas > 0 ? 0 : -200));
             EstablecerRivalPersistente(mejorRival);
-            if (jugador != null) ProgresionCaballo.AgregarExperiencia(jugador, ganoJugador ? 100 : 25);
+            if (jugador != null && !anulada) ProgresionCaballo.AgregarExperiencia(jugador, ganoJugador ? 100 : 25);
+            if (!anulada) inicioCarreras.Completar(ganoJugador);
             carreraProgramada = null;
+            resultadosAntesDerrota = true;
             SiguienteDia();
+            resultadosAntesDerrota = Derrotado;
             if (apuesta != null) UltimaApuesta = apuesta;
+            UltimoResultadoCarrera = resultadoFinal;
+            ResultadoCarreraGuardado = false;
         }
         finally { procesandoResultado = false; }
         string resultado = apuesta?.Resultado ?? "";
@@ -271,13 +327,19 @@ public partial class GameManager
 
     void CargarCarreraProgramada(GameData datos)
     {
+        inicioCarreras = datos.inicioCarreras?.version == 1 ? datos.inicioCarreras : ProgresoInicioCarreras.Anterior();
         semillaOfertaCarreras = datos.semillaOfertaCarreras;
         carreraProgramada = datos.carreraProgramada;
+        if (carreraProgramada?.participantes != null)
+            foreach (var participante in carreraProgramada.participantes)
+                MigrarIdentidadVisual(participante?.caballo);
         if (carreraProgramada?.participantes == null || carreraProgramada.participantes.Count == 0 ||
             carreraProgramada.dia != dia) carreraProgramada = null;
         if (carreraProgramada != null && string.IsNullOrEmpty(carreraProgramada.apuesta?.idCarrera))
             carreraProgramada.apuesta = null;
         UltimaApuesta = string.IsNullOrEmpty(datos.ultimaApuesta?.idCarrera) ? null : datos.ultimaApuesta;
+        UltimoResultadoCarrera = datos.ultimoResultadoCarrera != null && datos.ultimoResultadoCarrera.Valido ? datos.ultimoResultadoCarrera : null;
+        ResultadoCarreraGuardado = true;
         RestaurarRivalesDeCarrera();
     }
 

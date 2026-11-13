@@ -1,0 +1,2634 @@
+100 perfiles nuevos de carrera disponibles
+Perfil revisado caballo_001
+ID propio y 9 FPS caballo_001
+Splash y salida propios caballo_001
+Ocho frames propios caballo_001
+Marco y pivote uniformes caballo_001
+Importación pixel art y BC7 caballo_001
+Inicia animación propia caballo_001
+Fase 1 caballo_001
+Fase 2 caballo_001
+Fase 3 caballo_001
+Fase 4 caballo_001
+Fase 5 caballo_001
+Fase 6 caballo_001
+Fase 7 caballo_001
+Fase 8 caballo_001
+Perfil enlazado no cambia durante la competición caballo_001
+Restaura splash correspondiente caballo_001
+Restaura catálogo caballo_001
+JSON conserva instancia, estadísticas y animación caballo_001
+Perfil revisado caballo_002
+ID propio y 9 FPS caballo_002
+Splash y salida propios caballo_002
+Ocho frames propios caballo_002
+Marco y pivote uniformes caballo_002
+Importación pixel art y BC7 caballo_002
+Inicia animación propia caballo_002
+Fase 1 caballo_002
+Fase 2 caballo_002
+Fase 3 caballo_002
+Fase 4 caballo_002
+Fase 5 caballo_002
+Fase 6 caballo_002
+Fase 7 caballo_002
+Fase 8 caballo_002
+Perfil enlazado no cambia durante la competición caballo_002
+Restaura splash correspondiente caballo_002
+Restaura catálogo caballo_002
+JSON conserva instancia, estadísticas y animación caballo_002
+Perfil revisado caballo_003
+ID propio y 9 FPS caballo_003
+Splash y salida propios caballo_003
+Ocho frames propios caballo_003
+Marco y pivote uniformes caballo_003
+Importación pixel art y BC7 caballo_003
+Inicia animación propia caballo_003
+Fase 1 caballo_003
+Fase 2 caballo_003
+Fase 3 caballo_003
+Fase 4 caballo_003
+Fase 5 caballo_003
+Fase 6 caballo_003
+Fase 7 caballo_003
+Fase 8 caballo_003
+Perfil enlazado no cambia durante la competición caballo_003
+Restaura splash correspondiente caballo_003
+Restaura catálogo caballo_003
+JSON conserva instancia, estadísticas y animación caballo_003
+Perfil revisado caballo_004
+ID propio y 9 FPS caballo_004
+Splash y salida propios caballo_004
+Ocho frames propios caballo_004
+Marco y pivote uniformes caballo_004
+Importación pixel art y BC7 caballo_004
+Inicia animación propia caballo_004
+Fase 1 caballo_004
+Fase 2 caballo_004
+Fase 3 caballo_004
+Fase 4 caballo_004
+Fase 5 caballo_004
+Fase 6 caballo_004
+Fase 7 caballo_004
+Fase 8 caballo_004
+Perfil enlazado no cambia durante la competición caballo_004
+Restaura splash correspondiente caballo_004
+Restaura catálogo caballo_004
+JSON conserva instancia, estadísticas y animación caballo_004
+Perfil revisado caballo_005
+ID propio y 9 FPS caballo_005
+Splash y salida propios caballo_005
+Ocho frames propios caballo_005
+Marco y pivote uniformes caballo_005
+Importación pixel art y BC7 caballo_005
+Inicia animación propia caballo_005
+Fase 1 caballo_005
+Fase 2 caballo_005
+Fase 3 caballo_005
+Fase 4 caballo_005
+Fase 5 caballo_005
+Fase 6 caballo_005
+Fase 7 caballo_005
+Fase 8 caballo_005
+Perfil enlazado no cambia durante la competición caballo_005
+Restaura splash correspondiente caballo_005
+Restaura catálogo caballo_005
+JSON conserva instancia, estadísticas y animación caballo_005
+Perfil revisado caballo_006
+ID propio y 9 FPS caballo_006
+Splash y salida propios caballo_006
+Ocho frames propios caballo_006
+Marco y pivote uniformes caballo_006
+Importación pixel art y BC7 caballo_006
+Inicia animación propia caballo_006
+Fase 1 caballo_006
+Fase 2 caballo_006
+Fase 3 caballo_006
+Fase 4 caballo_006
+Fase 5 caballo_006
+Fase 6 caballo_006
+Fase 7 caballo_006
+Fase 8 caballo_006
+Perfil enlazado no cambia durante la competición caballo_006
+Restaura splash correspondiente caballo_006
+Restaura catálogo caballo_006
+JSON conserva instancia, estadísticas y animación caballo_006
+Perfil revisado caballo_007
+ID propio y 9 FPS caballo_007
+Splash y salida propios caballo_007
+Ocho frames propios caballo_007
+Marco y pivote uniformes caballo_007
+Importación pixel art y BC7 caballo_007
+Inicia animación propia caballo_007
+Fase 1 caballo_007
+Fase 2 caballo_007
+Fase 3 caballo_007
+Fase 4 caballo_007
+Fase 5 caballo_007
+Fase 6 caballo_007
+Fase 7 caballo_007
+Fase 8 caballo_007
+Perfil enlazado no cambia durante la competición caballo_007
+Restaura splash correspondiente caballo_007
+Restaura catálogo caballo_007
+JSON conserva instancia, estadísticas y animación caballo_007
+Perfil revisado caballo_008
+ID propio y 9 FPS caballo_008
+Splash y salida propios caballo_008
+Ocho frames propios caballo_008
+Marco y pivote uniformes caballo_008
+Importación pixel art y BC7 caballo_008
+Inicia animación propia caballo_008
+Fase 1 caballo_008
+Fase 2 caballo_008
+Fase 3 caballo_008
+Fase 4 caballo_008
+Fase 5 caballo_008
+Fase 6 caballo_008
+Fase 7 caballo_008
+Fase 8 caballo_008
+Perfil enlazado no cambia durante la competición caballo_008
+Restaura splash correspondiente caballo_008
+Restaura catálogo caballo_008
+JSON conserva instancia, estadísticas y animación caballo_008
+Perfil revisado caballo_009
+ID propio y 9 FPS caballo_009
+Splash y salida propios caballo_009
+Ocho frames propios caballo_009
+Marco y pivote uniformes caballo_009
+Importación pixel art y BC7 caballo_009
+Inicia animación propia caballo_009
+Fase 1 caballo_009
+Fase 2 caballo_009
+Fase 3 caballo_009
+Fase 4 caballo_009
+Fase 5 caballo_009
+Fase 6 caballo_009
+Fase 7 caballo_009
+Fase 8 caballo_009
+Perfil enlazado no cambia durante la competición caballo_009
+Restaura splash correspondiente caballo_009
+Restaura catálogo caballo_009
+JSON conserva instancia, estadísticas y animación caballo_009
+Perfil revisado caballo_010
+ID propio y 9 FPS caballo_010
+Splash y salida propios caballo_010
+Ocho frames propios caballo_010
+Marco y pivote uniformes caballo_010
+Importación pixel art y BC7 caballo_010
+Inicia animación propia caballo_010
+Fase 1 caballo_010
+Fase 2 caballo_010
+Fase 3 caballo_010
+Fase 4 caballo_010
+Fase 5 caballo_010
+Fase 6 caballo_010
+Fase 7 caballo_010
+Fase 8 caballo_010
+Perfil enlazado no cambia durante la competición caballo_010
+Restaura splash correspondiente caballo_010
+Restaura catálogo caballo_010
+JSON conserva instancia, estadísticas y animación caballo_010
+Perfil revisado caballo_011
+ID propio y 9 FPS caballo_011
+Splash y salida propios caballo_011
+Ocho frames propios caballo_011
+Marco y pivote uniformes caballo_011
+Importación pixel art y BC7 caballo_011
+Inicia animación propia caballo_011
+Fase 1 caballo_011
+Fase 2 caballo_011
+Fase 3 caballo_011
+Fase 4 caballo_011
+Fase 5 caballo_011
+Fase 6 caballo_011
+Fase 7 caballo_011
+Fase 8 caballo_011
+Perfil enlazado no cambia durante la competición caballo_011
+Restaura splash correspondiente caballo_011
+Restaura catálogo caballo_011
+JSON conserva instancia, estadísticas y animación caballo_011
+Perfil revisado caballo_012
+ID propio y 9 FPS caballo_012
+Splash y salida propios caballo_012
+Ocho frames propios caballo_012
+Marco y pivote uniformes caballo_012
+Importación pixel art y BC7 caballo_012
+Inicia animación propia caballo_012
+Fase 1 caballo_012
+Fase 2 caballo_012
+Fase 3 caballo_012
+Fase 4 caballo_012
+Fase 5 caballo_012
+Fase 6 caballo_012
+Fase 7 caballo_012
+Fase 8 caballo_012
+Perfil enlazado no cambia durante la competición caballo_012
+Restaura splash correspondiente caballo_012
+Restaura catálogo caballo_012
+JSON conserva instancia, estadísticas y animación caballo_012
+Perfil revisado caballo_013
+ID propio y 9 FPS caballo_013
+Splash y salida propios caballo_013
+Ocho frames propios caballo_013
+Marco y pivote uniformes caballo_013
+Importación pixel art y BC7 caballo_013
+Inicia animación propia caballo_013
+Fase 1 caballo_013
+Fase 2 caballo_013
+Fase 3 caballo_013
+Fase 4 caballo_013
+Fase 5 caballo_013
+Fase 6 caballo_013
+Fase 7 caballo_013
+Fase 8 caballo_013
+Perfil enlazado no cambia durante la competición caballo_013
+Restaura splash correspondiente caballo_013
+Restaura catálogo caballo_013
+JSON conserva instancia, estadísticas y animación caballo_013
+Perfil revisado caballo_014
+ID propio y 9 FPS caballo_014
+Splash y salida propios caballo_014
+Ocho frames propios caballo_014
+Marco y pivote uniformes caballo_014
+Importación pixel art y BC7 caballo_014
+Inicia animación propia caballo_014
+Fase 1 caballo_014
+Fase 2 caballo_014
+Fase 3 caballo_014
+Fase 4 caballo_014
+Fase 5 caballo_014
+Fase 6 caballo_014
+Fase 7 caballo_014
+Fase 8 caballo_014
+Perfil enlazado no cambia durante la competición caballo_014
+Restaura splash correspondiente caballo_014
+Restaura catálogo caballo_014
+JSON conserva instancia, estadísticas y animación caballo_014
+Perfil revisado caballo_015
+ID propio y 9 FPS caballo_015
+Splash y salida propios caballo_015
+Ocho frames propios caballo_015
+Marco y pivote uniformes caballo_015
+Importación pixel art y BC7 caballo_015
+Inicia animación propia caballo_015
+Fase 1 caballo_015
+Fase 2 caballo_015
+Fase 3 caballo_015
+Fase 4 caballo_015
+Fase 5 caballo_015
+Fase 6 caballo_015
+Fase 7 caballo_015
+Fase 8 caballo_015
+Perfil enlazado no cambia durante la competición caballo_015
+Restaura splash correspondiente caballo_015
+Restaura catálogo caballo_015
+JSON conserva instancia, estadísticas y animación caballo_015
+Perfil revisado caballo_016
+ID propio y 9 FPS caballo_016
+Splash y salida propios caballo_016
+Ocho frames propios caballo_016
+Marco y pivote uniformes caballo_016
+Importación pixel art y BC7 caballo_016
+Inicia animación propia caballo_016
+Fase 1 caballo_016
+Fase 2 caballo_016
+Fase 3 caballo_016
+Fase 4 caballo_016
+Fase 5 caballo_016
+Fase 6 caballo_016
+Fase 7 caballo_016
+Fase 8 caballo_016
+Perfil enlazado no cambia durante la competición caballo_016
+Restaura splash correspondiente caballo_016
+Restaura catálogo caballo_016
+JSON conserva instancia, estadísticas y animación caballo_016
+Perfil revisado caballo_017
+ID propio y 9 FPS caballo_017
+Splash y salida propios caballo_017
+Ocho frames propios caballo_017
+Marco y pivote uniformes caballo_017
+Importación pixel art y BC7 caballo_017
+Inicia animación propia caballo_017
+Fase 1 caballo_017
+Fase 2 caballo_017
+Fase 3 caballo_017
+Fase 4 caballo_017
+Fase 5 caballo_017
+Fase 6 caballo_017
+Fase 7 caballo_017
+Fase 8 caballo_017
+Perfil enlazado no cambia durante la competición caballo_017
+Restaura splash correspondiente caballo_017
+Restaura catálogo caballo_017
+JSON conserva instancia, estadísticas y animación caballo_017
+Perfil revisado caballo_018
+ID propio y 9 FPS caballo_018
+Splash y salida propios caballo_018
+Ocho frames propios caballo_018
+Marco y pivote uniformes caballo_018
+Importación pixel art y BC7 caballo_018
+Inicia animación propia caballo_018
+Fase 1 caballo_018
+Fase 2 caballo_018
+Fase 3 caballo_018
+Fase 4 caballo_018
+Fase 5 caballo_018
+Fase 6 caballo_018
+Fase 7 caballo_018
+Fase 8 caballo_018
+Perfil enlazado no cambia durante la competición caballo_018
+Restaura splash correspondiente caballo_018
+Restaura catálogo caballo_018
+JSON conserva instancia, estadísticas y animación caballo_018
+Perfil revisado caballo_019
+ID propio y 9 FPS caballo_019
+Splash y salida propios caballo_019
+Ocho frames propios caballo_019
+Marco y pivote uniformes caballo_019
+Importación pixel art y BC7 caballo_019
+Inicia animación propia caballo_019
+Fase 1 caballo_019
+Fase 2 caballo_019
+Fase 3 caballo_019
+Fase 4 caballo_019
+Fase 5 caballo_019
+Fase 6 caballo_019
+Fase 7 caballo_019
+Fase 8 caballo_019
+Perfil enlazado no cambia durante la competición caballo_019
+Restaura splash correspondiente caballo_019
+Restaura catálogo caballo_019
+JSON conserva instancia, estadísticas y animación caballo_019
+Perfil revisado caballo_020
+ID propio y 9 FPS caballo_020
+Splash y salida propios caballo_020
+Ocho frames propios caballo_020
+Marco y pivote uniformes caballo_020
+Importación pixel art y BC7 caballo_020
+Inicia animación propia caballo_020
+Fase 1 caballo_020
+Fase 2 caballo_020
+Fase 3 caballo_020
+Fase 4 caballo_020
+Fase 5 caballo_020
+Fase 6 caballo_020
+Fase 7 caballo_020
+Fase 8 caballo_020
+Perfil enlazado no cambia durante la competición caballo_020
+Restaura splash correspondiente caballo_020
+Restaura catálogo caballo_020
+JSON conserva instancia, estadísticas y animación caballo_020
+Perfil revisado caballo_021
+ID propio y 9 FPS caballo_021
+Splash y salida propios caballo_021
+Ocho frames propios caballo_021
+Marco y pivote uniformes caballo_021
+Importación pixel art y BC7 caballo_021
+Inicia animación propia caballo_021
+Fase 1 caballo_021
+Fase 2 caballo_021
+Fase 3 caballo_021
+Fase 4 caballo_021
+Fase 5 caballo_021
+Fase 6 caballo_021
+Fase 7 caballo_021
+Fase 8 caballo_021
+Perfil enlazado no cambia durante la competición caballo_021
+Restaura splash correspondiente caballo_021
+Restaura catálogo caballo_021
+JSON conserva instancia, estadísticas y animación caballo_021
+Perfil revisado caballo_022
+ID propio y 9 FPS caballo_022
+Splash y salida propios caballo_022
+Ocho frames propios caballo_022
+Marco y pivote uniformes caballo_022
+Importación pixel art y BC7 caballo_022
+Inicia animación propia caballo_022
+Fase 1 caballo_022
+Fase 2 caballo_022
+Fase 3 caballo_022
+Fase 4 caballo_022
+Fase 5 caballo_022
+Fase 6 caballo_022
+Fase 7 caballo_022
+Fase 8 caballo_022
+Perfil enlazado no cambia durante la competición caballo_022
+Restaura splash correspondiente caballo_022
+Restaura catálogo caballo_022
+JSON conserva instancia, estadísticas y animación caballo_022
+Perfil revisado caballo_023
+ID propio y 9 FPS caballo_023
+Splash y salida propios caballo_023
+Ocho frames propios caballo_023
+Marco y pivote uniformes caballo_023
+Importación pixel art y BC7 caballo_023
+Inicia animación propia caballo_023
+Fase 1 caballo_023
+Fase 2 caballo_023
+Fase 3 caballo_023
+Fase 4 caballo_023
+Fase 5 caballo_023
+Fase 6 caballo_023
+Fase 7 caballo_023
+Fase 8 caballo_023
+Perfil enlazado no cambia durante la competición caballo_023
+Restaura splash correspondiente caballo_023
+Restaura catálogo caballo_023
+JSON conserva instancia, estadísticas y animación caballo_023
+Perfil revisado caballo_024
+ID propio y 9 FPS caballo_024
+Splash y salida propios caballo_024
+Ocho frames propios caballo_024
+Marco y pivote uniformes caballo_024
+Importación pixel art y BC7 caballo_024
+Inicia animación propia caballo_024
+Fase 1 caballo_024
+Fase 2 caballo_024
+Fase 3 caballo_024
+Fase 4 caballo_024
+Fase 5 caballo_024
+Fase 6 caballo_024
+Fase 7 caballo_024
+Fase 8 caballo_024
+Perfil enlazado no cambia durante la competición caballo_024
+Restaura splash correspondiente caballo_024
+Restaura catálogo caballo_024
+JSON conserva instancia, estadísticas y animación caballo_024
+Perfil revisado caballo_025
+ID propio y 9 FPS caballo_025
+Splash y salida propios caballo_025
+Ocho frames propios caballo_025
+Marco y pivote uniformes caballo_025
+Importación pixel art y BC7 caballo_025
+Inicia animación propia caballo_025
+Fase 1 caballo_025
+Fase 2 caballo_025
+Fase 3 caballo_025
+Fase 4 caballo_025
+Fase 5 caballo_025
+Fase 6 caballo_025
+Fase 7 caballo_025
+Fase 8 caballo_025
+Perfil enlazado no cambia durante la competición caballo_025
+Restaura splash correspondiente caballo_025
+Restaura catálogo caballo_025
+JSON conserva instancia, estadísticas y animación caballo_025
+Perfil revisado caballo_026
+ID propio y 9 FPS caballo_026
+Splash y salida propios caballo_026
+Ocho frames propios caballo_026
+Marco y pivote uniformes caballo_026
+Importación pixel art y BC7 caballo_026
+Inicia animación propia caballo_026
+Fase 1 caballo_026
+Fase 2 caballo_026
+Fase 3 caballo_026
+Fase 4 caballo_026
+Fase 5 caballo_026
+Fase 6 caballo_026
+Fase 7 caballo_026
+Fase 8 caballo_026
+Perfil enlazado no cambia durante la competición caballo_026
+Restaura splash correspondiente caballo_026
+Restaura catálogo caballo_026
+JSON conserva instancia, estadísticas y animación caballo_026
+Perfil revisado caballo_027
+ID propio y 9 FPS caballo_027
+Splash y salida propios caballo_027
+Ocho frames propios caballo_027
+Marco y pivote uniformes caballo_027
+Importación pixel art y BC7 caballo_027
+Inicia animación propia caballo_027
+Fase 1 caballo_027
+Fase 2 caballo_027
+Fase 3 caballo_027
+Fase 4 caballo_027
+Fase 5 caballo_027
+Fase 6 caballo_027
+Fase 7 caballo_027
+Fase 8 caballo_027
+Perfil enlazado no cambia durante la competición caballo_027
+Restaura splash correspondiente caballo_027
+Restaura catálogo caballo_027
+JSON conserva instancia, estadísticas y animación caballo_027
+Perfil revisado caballo_028
+ID propio y 9 FPS caballo_028
+Splash y salida propios caballo_028
+Ocho frames propios caballo_028
+Marco y pivote uniformes caballo_028
+Importación pixel art y BC7 caballo_028
+Inicia animación propia caballo_028
+Fase 1 caballo_028
+Fase 2 caballo_028
+Fase 3 caballo_028
+Fase 4 caballo_028
+Fase 5 caballo_028
+Fase 6 caballo_028
+Fase 7 caballo_028
+Fase 8 caballo_028
+Perfil enlazado no cambia durante la competición caballo_028
+Restaura splash correspondiente caballo_028
+Restaura catálogo caballo_028
+JSON conserva instancia, estadísticas y animación caballo_028
+Perfil revisado caballo_029
+ID propio y 9 FPS caballo_029
+Splash y salida propios caballo_029
+Ocho frames propios caballo_029
+Marco y pivote uniformes caballo_029
+Importación pixel art y BC7 caballo_029
+Inicia animación propia caballo_029
+Fase 1 caballo_029
+Fase 2 caballo_029
+Fase 3 caballo_029
+Fase 4 caballo_029
+Fase 5 caballo_029
+Fase 6 caballo_029
+Fase 7 caballo_029
+Fase 8 caballo_029
+Perfil enlazado no cambia durante la competición caballo_029
+Restaura splash correspondiente caballo_029
+Restaura catálogo caballo_029
+JSON conserva instancia, estadísticas y animación caballo_029
+Perfil revisado caballo_030
+ID propio y 9 FPS caballo_030
+Splash y salida propios caballo_030
+Ocho frames propios caballo_030
+Marco y pivote uniformes caballo_030
+Importación pixel art y BC7 caballo_030
+Inicia animación propia caballo_030
+Fase 1 caballo_030
+Fase 2 caballo_030
+Fase 3 caballo_030
+Fase 4 caballo_030
+Fase 5 caballo_030
+Fase 6 caballo_030
+Fase 7 caballo_030
+Fase 8 caballo_030
+Perfil enlazado no cambia durante la competición caballo_030
+Restaura splash correspondiente caballo_030
+Restaura catálogo caballo_030
+JSON conserva instancia, estadísticas y animación caballo_030
+Perfil revisado caballo_031
+ID propio y 9 FPS caballo_031
+Splash y salida propios caballo_031
+Ocho frames propios caballo_031
+Marco y pivote uniformes caballo_031
+Importación pixel art y BC7 caballo_031
+Inicia animación propia caballo_031
+Fase 1 caballo_031
+Fase 2 caballo_031
+Fase 3 caballo_031
+Fase 4 caballo_031
+Fase 5 caballo_031
+Fase 6 caballo_031
+Fase 7 caballo_031
+Fase 8 caballo_031
+Perfil enlazado no cambia durante la competición caballo_031
+Restaura splash correspondiente caballo_031
+Restaura catálogo caballo_031
+JSON conserva instancia, estadísticas y animación caballo_031
+Perfil revisado caballo_032
+ID propio y 9 FPS caballo_032
+Splash y salida propios caballo_032
+Ocho frames propios caballo_032
+Marco y pivote uniformes caballo_032
+Importación pixel art y BC7 caballo_032
+Inicia animación propia caballo_032
+Fase 1 caballo_032
+Fase 2 caballo_032
+Fase 3 caballo_032
+Fase 4 caballo_032
+Fase 5 caballo_032
+Fase 6 caballo_032
+Fase 7 caballo_032
+Fase 8 caballo_032
+Perfil enlazado no cambia durante la competición caballo_032
+Restaura splash correspondiente caballo_032
+Restaura catálogo caballo_032
+JSON conserva instancia, estadísticas y animación caballo_032
+Perfil revisado caballo_033
+ID propio y 9 FPS caballo_033
+Splash y salida propios caballo_033
+Ocho frames propios caballo_033
+Marco y pivote uniformes caballo_033
+Importación pixel art y BC7 caballo_033
+Inicia animación propia caballo_033
+Fase 1 caballo_033
+Fase 2 caballo_033
+Fase 3 caballo_033
+Fase 4 caballo_033
+Fase 5 caballo_033
+Fase 6 caballo_033
+Fase 7 caballo_033
+Fase 8 caballo_033
+Perfil enlazado no cambia durante la competición caballo_033
+Restaura splash correspondiente caballo_033
+Restaura catálogo caballo_033
+JSON conserva instancia, estadísticas y animación caballo_033
+Perfil revisado caballo_034
+ID propio y 9 FPS caballo_034
+Splash y salida propios caballo_034
+Ocho frames propios caballo_034
+Marco y pivote uniformes caballo_034
+Importación pixel art y BC7 caballo_034
+Inicia animación propia caballo_034
+Fase 1 caballo_034
+Fase 2 caballo_034
+Fase 3 caballo_034
+Fase 4 caballo_034
+Fase 5 caballo_034
+Fase 6 caballo_034
+Fase 7 caballo_034
+Fase 8 caballo_034
+Perfil enlazado no cambia durante la competición caballo_034
+Restaura splash correspondiente caballo_034
+Restaura catálogo caballo_034
+JSON conserva instancia, estadísticas y animación caballo_034
+Perfil revisado caballo_035
+ID propio y 9 FPS caballo_035
+Splash y salida propios caballo_035
+Ocho frames propios caballo_035
+Marco y pivote uniformes caballo_035
+Importación pixel art y BC7 caballo_035
+Inicia animación propia caballo_035
+Fase 1 caballo_035
+Fase 2 caballo_035
+Fase 3 caballo_035
+Fase 4 caballo_035
+Fase 5 caballo_035
+Fase 6 caballo_035
+Fase 7 caballo_035
+Fase 8 caballo_035
+Perfil enlazado no cambia durante la competición caballo_035
+Restaura splash correspondiente caballo_035
+Restaura catálogo caballo_035
+JSON conserva instancia, estadísticas y animación caballo_035
+Perfil revisado caballo_036
+ID propio y 9 FPS caballo_036
+Splash y salida propios caballo_036
+Ocho frames propios caballo_036
+Marco y pivote uniformes caballo_036
+Importación pixel art y BC7 caballo_036
+Inicia animación propia caballo_036
+Fase 1 caballo_036
+Fase 2 caballo_036
+Fase 3 caballo_036
+Fase 4 caballo_036
+Fase 5 caballo_036
+Fase 6 caballo_036
+Fase 7 caballo_036
+Fase 8 caballo_036
+Perfil enlazado no cambia durante la competición caballo_036
+Restaura splash correspondiente caballo_036
+Restaura catálogo caballo_036
+JSON conserva instancia, estadísticas y animación caballo_036
+Perfil revisado caballo_037
+ID propio y 9 FPS caballo_037
+Splash y salida propios caballo_037
+Ocho frames propios caballo_037
+Marco y pivote uniformes caballo_037
+Importación pixel art y BC7 caballo_037
+Inicia animación propia caballo_037
+Fase 1 caballo_037
+Fase 2 caballo_037
+Fase 3 caballo_037
+Fase 4 caballo_037
+Fase 5 caballo_037
+Fase 6 caballo_037
+Fase 7 caballo_037
+Fase 8 caballo_037
+Perfil enlazado no cambia durante la competición caballo_037
+Restaura splash correspondiente caballo_037
+Restaura catálogo caballo_037
+JSON conserva instancia, estadísticas y animación caballo_037
+Perfil revisado caballo_038
+ID propio y 9 FPS caballo_038
+Splash y salida propios caballo_038
+Ocho frames propios caballo_038
+Marco y pivote uniformes caballo_038
+Importación pixel art y BC7 caballo_038
+Inicia animación propia caballo_038
+Fase 1 caballo_038
+Fase 2 caballo_038
+Fase 3 caballo_038
+Fase 4 caballo_038
+Fase 5 caballo_038
+Fase 6 caballo_038
+Fase 7 caballo_038
+Fase 8 caballo_038
+Perfil enlazado no cambia durante la competición caballo_038
+Restaura splash correspondiente caballo_038
+Restaura catálogo caballo_038
+JSON conserva instancia, estadísticas y animación caballo_038
+Perfil revisado caballo_039
+ID propio y 9 FPS caballo_039
+Splash y salida propios caballo_039
+Ocho frames propios caballo_039
+Marco y pivote uniformes caballo_039
+Importación pixel art y BC7 caballo_039
+Inicia animación propia caballo_039
+Fase 1 caballo_039
+Fase 2 caballo_039
+Fase 3 caballo_039
+Fase 4 caballo_039
+Fase 5 caballo_039
+Fase 6 caballo_039
+Fase 7 caballo_039
+Fase 8 caballo_039
+Perfil enlazado no cambia durante la competición caballo_039
+Restaura splash correspondiente caballo_039
+Restaura catálogo caballo_039
+JSON conserva instancia, estadísticas y animación caballo_039
+Perfil revisado caballo_040
+ID propio y 9 FPS caballo_040
+Splash y salida propios caballo_040
+Ocho frames propios caballo_040
+Marco y pivote uniformes caballo_040
+Importación pixel art y BC7 caballo_040
+Inicia animación propia caballo_040
+Fase 1 caballo_040
+Fase 2 caballo_040
+Fase 3 caballo_040
+Fase 4 caballo_040
+Fase 5 caballo_040
+Fase 6 caballo_040
+Fase 7 caballo_040
+Fase 8 caballo_040
+Perfil enlazado no cambia durante la competición caballo_040
+Restaura splash correspondiente caballo_040
+Restaura catálogo caballo_040
+JSON conserva instancia, estadísticas y animación caballo_040
+Perfil revisado caballo_041
+ID propio y 9 FPS caballo_041
+Splash y salida propios caballo_041
+Ocho frames propios caballo_041
+Marco y pivote uniformes caballo_041
+Importación pixel art y BC7 caballo_041
+Inicia animación propia caballo_041
+Fase 1 caballo_041
+Fase 2 caballo_041
+Fase 3 caballo_041
+Fase 4 caballo_041
+Fase 5 caballo_041
+Fase 6 caballo_041
+Fase 7 caballo_041
+Fase 8 caballo_041
+Perfil enlazado no cambia durante la competición caballo_041
+Restaura splash correspondiente caballo_041
+Restaura catálogo caballo_041
+JSON conserva instancia, estadísticas y animación caballo_041
+Perfil revisado caballo_042
+ID propio y 9 FPS caballo_042
+Splash y salida propios caballo_042
+Ocho frames propios caballo_042
+Marco y pivote uniformes caballo_042
+Importación pixel art y BC7 caballo_042
+Inicia animación propia caballo_042
+Fase 1 caballo_042
+Fase 2 caballo_042
+Fase 3 caballo_042
+Fase 4 caballo_042
+Fase 5 caballo_042
+Fase 6 caballo_042
+Fase 7 caballo_042
+Fase 8 caballo_042
+Perfil enlazado no cambia durante la competición caballo_042
+Restaura splash correspondiente caballo_042
+Restaura catálogo caballo_042
+JSON conserva instancia, estadísticas y animación caballo_042
+Perfil revisado caballo_043
+ID propio y 9 FPS caballo_043
+Splash y salida propios caballo_043
+Ocho frames propios caballo_043
+Marco y pivote uniformes caballo_043
+Importación pixel art y BC7 caballo_043
+Inicia animación propia caballo_043
+Fase 1 caballo_043
+Fase 2 caballo_043
+Fase 3 caballo_043
+Fase 4 caballo_043
+Fase 5 caballo_043
+Fase 6 caballo_043
+Fase 7 caballo_043
+Fase 8 caballo_043
+Perfil enlazado no cambia durante la competición caballo_043
+Restaura splash correspondiente caballo_043
+Restaura catálogo caballo_043
+JSON conserva instancia, estadísticas y animación caballo_043
+Perfil revisado caballo_044
+ID propio y 9 FPS caballo_044
+Splash y salida propios caballo_044
+Ocho frames propios caballo_044
+Marco y pivote uniformes caballo_044
+Importación pixel art y BC7 caballo_044
+Inicia animación propia caballo_044
+Fase 1 caballo_044
+Fase 2 caballo_044
+Fase 3 caballo_044
+Fase 4 caballo_044
+Fase 5 caballo_044
+Fase 6 caballo_044
+Fase 7 caballo_044
+Fase 8 caballo_044
+Perfil enlazado no cambia durante la competición caballo_044
+Restaura splash correspondiente caballo_044
+Restaura catálogo caballo_044
+JSON conserva instancia, estadísticas y animación caballo_044
+Perfil revisado caballo_045
+ID propio y 9 FPS caballo_045
+Splash y salida propios caballo_045
+Ocho frames propios caballo_045
+Marco y pivote uniformes caballo_045
+Importación pixel art y BC7 caballo_045
+Inicia animación propia caballo_045
+Fase 1 caballo_045
+Fase 2 caballo_045
+Fase 3 caballo_045
+Fase 4 caballo_045
+Fase 5 caballo_045
+Fase 6 caballo_045
+Fase 7 caballo_045
+Fase 8 caballo_045
+Perfil enlazado no cambia durante la competición caballo_045
+Restaura splash correspondiente caballo_045
+Restaura catálogo caballo_045
+JSON conserva instancia, estadísticas y animación caballo_045
+Perfil revisado caballo_046
+ID propio y 9 FPS caballo_046
+Splash y salida propios caballo_046
+Ocho frames propios caballo_046
+Marco y pivote uniformes caballo_046
+Importación pixel art y BC7 caballo_046
+Inicia animación propia caballo_046
+Fase 1 caballo_046
+Fase 2 caballo_046
+Fase 3 caballo_046
+Fase 4 caballo_046
+Fase 5 caballo_046
+Fase 6 caballo_046
+Fase 7 caballo_046
+Fase 8 caballo_046
+Perfil enlazado no cambia durante la competición caballo_046
+Restaura splash correspondiente caballo_046
+Restaura catálogo caballo_046
+JSON conserva instancia, estadísticas y animación caballo_046
+Perfil revisado caballo_047
+ID propio y 9 FPS caballo_047
+Splash y salida propios caballo_047
+Ocho frames propios caballo_047
+Marco y pivote uniformes caballo_047
+Importación pixel art y BC7 caballo_047
+Inicia animación propia caballo_047
+Fase 1 caballo_047
+Fase 2 caballo_047
+Fase 3 caballo_047
+Fase 4 caballo_047
+Fase 5 caballo_047
+Fase 6 caballo_047
+Fase 7 caballo_047
+Fase 8 caballo_047
+Perfil enlazado no cambia durante la competición caballo_047
+Restaura splash correspondiente caballo_047
+Restaura catálogo caballo_047
+JSON conserva instancia, estadísticas y animación caballo_047
+Perfil revisado caballo_048
+ID propio y 9 FPS caballo_048
+Splash y salida propios caballo_048
+Ocho frames propios caballo_048
+Marco y pivote uniformes caballo_048
+Importación pixel art y BC7 caballo_048
+Inicia animación propia caballo_048
+Fase 1 caballo_048
+Fase 2 caballo_048
+Fase 3 caballo_048
+Fase 4 caballo_048
+Fase 5 caballo_048
+Fase 6 caballo_048
+Fase 7 caballo_048
+Fase 8 caballo_048
+Perfil enlazado no cambia durante la competición caballo_048
+Restaura splash correspondiente caballo_048
+Restaura catálogo caballo_048
+JSON conserva instancia, estadísticas y animación caballo_048
+Perfil revisado caballo_049
+ID propio y 9 FPS caballo_049
+Splash y salida propios caballo_049
+Ocho frames propios caballo_049
+Marco y pivote uniformes caballo_049
+Importación pixel art y BC7 caballo_049
+Inicia animación propia caballo_049
+Fase 1 caballo_049
+Fase 2 caballo_049
+Fase 3 caballo_049
+Fase 4 caballo_049
+Fase 5 caballo_049
+Fase 6 caballo_049
+Fase 7 caballo_049
+Fase 8 caballo_049
+Perfil enlazado no cambia durante la competición caballo_049
+Restaura splash correspondiente caballo_049
+Restaura catálogo caballo_049
+JSON conserva instancia, estadísticas y animación caballo_049
+Perfil revisado caballo_050
+ID propio y 9 FPS caballo_050
+Splash y salida propios caballo_050
+Ocho frames propios caballo_050
+Marco y pivote uniformes caballo_050
+Importación pixel art y BC7 caballo_050
+Inicia animación propia caballo_050
+Fase 1 caballo_050
+Fase 2 caballo_050
+Fase 3 caballo_050
+Fase 4 caballo_050
+Fase 5 caballo_050
+Fase 6 caballo_050
+Fase 7 caballo_050
+Fase 8 caballo_050
+Perfil enlazado no cambia durante la competición caballo_050
+Restaura splash correspondiente caballo_050
+Restaura catálogo caballo_050
+JSON conserva instancia, estadísticas y animación caballo_050
+Perfil revisado caballo_051
+ID propio y 9 FPS caballo_051
+Splash y salida propios caballo_051
+Ocho frames propios caballo_051
+Marco y pivote uniformes caballo_051
+Importación pixel art y BC7 caballo_051
+Inicia animación propia caballo_051
+Fase 1 caballo_051
+Fase 2 caballo_051
+Fase 3 caballo_051
+Fase 4 caballo_051
+Fase 5 caballo_051
+Fase 6 caballo_051
+Fase 7 caballo_051
+Fase 8 caballo_051
+Perfil enlazado no cambia durante la competición caballo_051
+Restaura splash correspondiente caballo_051
+Restaura catálogo caballo_051
+JSON conserva instancia, estadísticas y animación caballo_051
+Perfil revisado caballo_052
+ID propio y 9 FPS caballo_052
+Splash y salida propios caballo_052
+Ocho frames propios caballo_052
+Marco y pivote uniformes caballo_052
+Importación pixel art y BC7 caballo_052
+Inicia animación propia caballo_052
+Fase 1 caballo_052
+Fase 2 caballo_052
+Fase 3 caballo_052
+Fase 4 caballo_052
+Fase 5 caballo_052
+Fase 6 caballo_052
+Fase 7 caballo_052
+Fase 8 caballo_052
+Perfil enlazado no cambia durante la competición caballo_052
+Restaura splash correspondiente caballo_052
+Restaura catálogo caballo_052
+JSON conserva instancia, estadísticas y animación caballo_052
+Perfil revisado caballo_053
+ID propio y 9 FPS caballo_053
+Splash y salida propios caballo_053
+Ocho frames propios caballo_053
+Marco y pivote uniformes caballo_053
+Importación pixel art y BC7 caballo_053
+Inicia animación propia caballo_053
+Fase 1 caballo_053
+Fase 2 caballo_053
+Fase 3 caballo_053
+Fase 4 caballo_053
+Fase 5 caballo_053
+Fase 6 caballo_053
+Fase 7 caballo_053
+Fase 8 caballo_053
+Perfil enlazado no cambia durante la competición caballo_053
+Restaura splash correspondiente caballo_053
+Restaura catálogo caballo_053
+JSON conserva instancia, estadísticas y animación caballo_053
+Perfil revisado caballo_054
+ID propio y 9 FPS caballo_054
+Splash y salida propios caballo_054
+Ocho frames propios caballo_054
+Marco y pivote uniformes caballo_054
+Importación pixel art y BC7 caballo_054
+Inicia animación propia caballo_054
+Fase 1 caballo_054
+Fase 2 caballo_054
+Fase 3 caballo_054
+Fase 4 caballo_054
+Fase 5 caballo_054
+Fase 6 caballo_054
+Fase 7 caballo_054
+Fase 8 caballo_054
+Perfil enlazado no cambia durante la competición caballo_054
+Restaura splash correspondiente caballo_054
+Restaura catálogo caballo_054
+JSON conserva instancia, estadísticas y animación caballo_054
+Perfil revisado caballo_055
+ID propio y 9 FPS caballo_055
+Splash y salida propios caballo_055
+Ocho frames propios caballo_055
+Marco y pivote uniformes caballo_055
+Importación pixel art y BC7 caballo_055
+Inicia animación propia caballo_055
+Fase 1 caballo_055
+Fase 2 caballo_055
+Fase 3 caballo_055
+Fase 4 caballo_055
+Fase 5 caballo_055
+Fase 6 caballo_055
+Fase 7 caballo_055
+Fase 8 caballo_055
+Perfil enlazado no cambia durante la competición caballo_055
+Restaura splash correspondiente caballo_055
+Restaura catálogo caballo_055
+JSON conserva instancia, estadísticas y animación caballo_055
+Perfil revisado caballo_056
+ID propio y 9 FPS caballo_056
+Splash y salida propios caballo_056
+Ocho frames propios caballo_056
+Marco y pivote uniformes caballo_056
+Importación pixel art y BC7 caballo_056
+Inicia animación propia caballo_056
+Fase 1 caballo_056
+Fase 2 caballo_056
+Fase 3 caballo_056
+Fase 4 caballo_056
+Fase 5 caballo_056
+Fase 6 caballo_056
+Fase 7 caballo_056
+Fase 8 caballo_056
+Perfil enlazado no cambia durante la competición caballo_056
+Restaura splash correspondiente caballo_056
+Restaura catálogo caballo_056
+JSON conserva instancia, estadísticas y animación caballo_056
+Perfil revisado caballo_057
+ID propio y 9 FPS caballo_057
+Splash y salida propios caballo_057
+Ocho frames propios caballo_057
+Marco y pivote uniformes caballo_057
+Importación pixel art y BC7 caballo_057
+Inicia animación propia caballo_057
+Fase 1 caballo_057
+Fase 2 caballo_057
+Fase 3 caballo_057
+Fase 4 caballo_057
+Fase 5 caballo_057
+Fase 6 caballo_057
+Fase 7 caballo_057
+Fase 8 caballo_057
+Perfil enlazado no cambia durante la competición caballo_057
+Restaura splash correspondiente caballo_057
+Restaura catálogo caballo_057
+JSON conserva instancia, estadísticas y animación caballo_057
+Perfil revisado caballo_058
+ID propio y 9 FPS caballo_058
+Splash y salida propios caballo_058
+Ocho frames propios caballo_058
+Marco y pivote uniformes caballo_058
+Importación pixel art y BC7 caballo_058
+Inicia animación propia caballo_058
+Fase 1 caballo_058
+Fase 2 caballo_058
+Fase 3 caballo_058
+Fase 4 caballo_058
+Fase 5 caballo_058
+Fase 6 caballo_058
+Fase 7 caballo_058
+Fase 8 caballo_058
+Perfil enlazado no cambia durante la competición caballo_058
+Restaura splash correspondiente caballo_058
+Restaura catálogo caballo_058
+JSON conserva instancia, estadísticas y animación caballo_058
+Perfil revisado caballo_059
+ID propio y 9 FPS caballo_059
+Splash y salida propios caballo_059
+Ocho frames propios caballo_059
+Marco y pivote uniformes caballo_059
+Importación pixel art y BC7 caballo_059
+Inicia animación propia caballo_059
+Fase 1 caballo_059
+Fase 2 caballo_059
+Fase 3 caballo_059
+Fase 4 caballo_059
+Fase 5 caballo_059
+Fase 6 caballo_059
+Fase 7 caballo_059
+Fase 8 caballo_059
+Perfil enlazado no cambia durante la competición caballo_059
+Restaura splash correspondiente caballo_059
+Restaura catálogo caballo_059
+JSON conserva instancia, estadísticas y animación caballo_059
+Perfil revisado caballo_060
+ID propio y 9 FPS caballo_060
+Splash y salida propios caballo_060
+Ocho frames propios caballo_060
+Marco y pivote uniformes caballo_060
+Importación pixel art y BC7 caballo_060
+Inicia animación propia caballo_060
+Fase 1 caballo_060
+Fase 2 caballo_060
+Fase 3 caballo_060
+Fase 4 caballo_060
+Fase 5 caballo_060
+Fase 6 caballo_060
+Fase 7 caballo_060
+Fase 8 caballo_060
+Perfil enlazado no cambia durante la competición caballo_060
+Restaura splash correspondiente caballo_060
+Restaura catálogo caballo_060
+JSON conserva instancia, estadísticas y animación caballo_060
+Perfil revisado caballo_061
+ID propio y 9 FPS caballo_061
+Splash y salida propios caballo_061
+Ocho frames propios caballo_061
+Marco y pivote uniformes caballo_061
+Importación pixel art y BC7 caballo_061
+Inicia animación propia caballo_061
+Fase 1 caballo_061
+Fase 2 caballo_061
+Fase 3 caballo_061
+Fase 4 caballo_061
+Fase 5 caballo_061
+Fase 6 caballo_061
+Fase 7 caballo_061
+Fase 8 caballo_061
+Perfil enlazado no cambia durante la competición caballo_061
+Restaura splash correspondiente caballo_061
+Restaura catálogo caballo_061
+JSON conserva instancia, estadísticas y animación caballo_061
+Perfil revisado caballo_062
+ID propio y 9 FPS caballo_062
+Splash y salida propios caballo_062
+Ocho frames propios caballo_062
+Marco y pivote uniformes caballo_062
+Importación pixel art y BC7 caballo_062
+Inicia animación propia caballo_062
+Fase 1 caballo_062
+Fase 2 caballo_062
+Fase 3 caballo_062
+Fase 4 caballo_062
+Fase 5 caballo_062
+Fase 6 caballo_062
+Fase 7 caballo_062
+Fase 8 caballo_062
+Perfil enlazado no cambia durante la competición caballo_062
+Restaura splash correspondiente caballo_062
+Restaura catálogo caballo_062
+JSON conserva instancia, estadísticas y animación caballo_062
+Perfil revisado caballo_063
+ID propio y 9 FPS caballo_063
+Splash y salida propios caballo_063
+Ocho frames propios caballo_063
+Marco y pivote uniformes caballo_063
+Importación pixel art y BC7 caballo_063
+Inicia animación propia caballo_063
+Fase 1 caballo_063
+Fase 2 caballo_063
+Fase 3 caballo_063
+Fase 4 caballo_063
+Fase 5 caballo_063
+Fase 6 caballo_063
+Fase 7 caballo_063
+Fase 8 caballo_063
+Perfil enlazado no cambia durante la competición caballo_063
+Restaura splash correspondiente caballo_063
+Restaura catálogo caballo_063
+JSON conserva instancia, estadísticas y animación caballo_063
+Perfil revisado caballo_064
+ID propio y 9 FPS caballo_064
+Splash y salida propios caballo_064
+Ocho frames propios caballo_064
+Marco y pivote uniformes caballo_064
+Importación pixel art y BC7 caballo_064
+Inicia animación propia caballo_064
+Fase 1 caballo_064
+Fase 2 caballo_064
+Fase 3 caballo_064
+Fase 4 caballo_064
+Fase 5 caballo_064
+Fase 6 caballo_064
+Fase 7 caballo_064
+Fase 8 caballo_064
+Perfil enlazado no cambia durante la competición caballo_064
+Restaura splash correspondiente caballo_064
+Restaura catálogo caballo_064
+JSON conserva instancia, estadísticas y animación caballo_064
+Perfil revisado caballo_065
+ID propio y 9 FPS caballo_065
+Splash y salida propios caballo_065
+Ocho frames propios caballo_065
+Marco y pivote uniformes caballo_065
+Importación pixel art y BC7 caballo_065
+Inicia animación propia caballo_065
+Fase 1 caballo_065
+Fase 2 caballo_065
+Fase 3 caballo_065
+Fase 4 caballo_065
+Fase 5 caballo_065
+Fase 6 caballo_065
+Fase 7 caballo_065
+Fase 8 caballo_065
+Perfil enlazado no cambia durante la competición caballo_065
+Restaura splash correspondiente caballo_065
+Restaura catálogo caballo_065
+JSON conserva instancia, estadísticas y animación caballo_065
+Perfil revisado caballo_066
+ID propio y 9 FPS caballo_066
+Splash y salida propios caballo_066
+Ocho frames propios caballo_066
+Marco y pivote uniformes caballo_066
+Importación pixel art y BC7 caballo_066
+Inicia animación propia caballo_066
+Fase 1 caballo_066
+Fase 2 caballo_066
+Fase 3 caballo_066
+Fase 4 caballo_066
+Fase 5 caballo_066
+Fase 6 caballo_066
+Fase 7 caballo_066
+Fase 8 caballo_066
+Perfil enlazado no cambia durante la competición caballo_066
+Restaura splash correspondiente caballo_066
+Restaura catálogo caballo_066
+JSON conserva instancia, estadísticas y animación caballo_066
+Perfil revisado caballo_067
+ID propio y 9 FPS caballo_067
+Splash y salida propios caballo_067
+Ocho frames propios caballo_067
+Marco y pivote uniformes caballo_067
+Importación pixel art y BC7 caballo_067
+Inicia animación propia caballo_067
+Fase 1 caballo_067
+Fase 2 caballo_067
+Fase 3 caballo_067
+Fase 4 caballo_067
+Fase 5 caballo_067
+Fase 6 caballo_067
+Fase 7 caballo_067
+Fase 8 caballo_067
+Perfil enlazado no cambia durante la competición caballo_067
+Restaura splash correspondiente caballo_067
+Restaura catálogo caballo_067
+JSON conserva instancia, estadísticas y animación caballo_067
+Perfil revisado caballo_068
+ID propio y 9 FPS caballo_068
+Splash y salida propios caballo_068
+Ocho frames propios caballo_068
+Marco y pivote uniformes caballo_068
+Importación pixel art y BC7 caballo_068
+Inicia animación propia caballo_068
+Fase 1 caballo_068
+Fase 2 caballo_068
+Fase 3 caballo_068
+Fase 4 caballo_068
+Fase 5 caballo_068
+Fase 6 caballo_068
+Fase 7 caballo_068
+Fase 8 caballo_068
+Perfil enlazado no cambia durante la competición caballo_068
+Restaura splash correspondiente caballo_068
+Restaura catálogo caballo_068
+JSON conserva instancia, estadísticas y animación caballo_068
+Perfil revisado caballo_069
+ID propio y 9 FPS caballo_069
+Splash y salida propios caballo_069
+Ocho frames propios caballo_069
+Marco y pivote uniformes caballo_069
+Importación pixel art y BC7 caballo_069
+Inicia animación propia caballo_069
+Fase 1 caballo_069
+Fase 2 caballo_069
+Fase 3 caballo_069
+Fase 4 caballo_069
+Fase 5 caballo_069
+Fase 6 caballo_069
+Fase 7 caballo_069
+Fase 8 caballo_069
+Perfil enlazado no cambia durante la competición caballo_069
+Restaura splash correspondiente caballo_069
+Restaura catálogo caballo_069
+JSON conserva instancia, estadísticas y animación caballo_069
+Perfil revisado caballo_070
+ID propio y 9 FPS caballo_070
+Splash y salida propios caballo_070
+Ocho frames propios caballo_070
+Marco y pivote uniformes caballo_070
+Importación pixel art y BC7 caballo_070
+Inicia animación propia caballo_070
+Fase 1 caballo_070
+Fase 2 caballo_070
+Fase 3 caballo_070
+Fase 4 caballo_070
+Fase 5 caballo_070
+Fase 6 caballo_070
+Fase 7 caballo_070
+Fase 8 caballo_070
+Perfil enlazado no cambia durante la competición caballo_070
+Restaura splash correspondiente caballo_070
+Restaura catálogo caballo_070
+JSON conserva instancia, estadísticas y animación caballo_070
+Perfil revisado caballo_071
+ID propio y 9 FPS caballo_071
+Splash y salida propios caballo_071
+Ocho frames propios caballo_071
+Marco y pivote uniformes caballo_071
+Importación pixel art y BC7 caballo_071
+Inicia animación propia caballo_071
+Fase 1 caballo_071
+Fase 2 caballo_071
+Fase 3 caballo_071
+Fase 4 caballo_071
+Fase 5 caballo_071
+Fase 6 caballo_071
+Fase 7 caballo_071
+Fase 8 caballo_071
+Perfil enlazado no cambia durante la competición caballo_071
+Restaura splash correspondiente caballo_071
+Restaura catálogo caballo_071
+JSON conserva instancia, estadísticas y animación caballo_071
+Perfil revisado caballo_072
+ID propio y 9 FPS caballo_072
+Splash y salida propios caballo_072
+Ocho frames propios caballo_072
+Marco y pivote uniformes caballo_072
+Importación pixel art y BC7 caballo_072
+Inicia animación propia caballo_072
+Fase 1 caballo_072
+Fase 2 caballo_072
+Fase 3 caballo_072
+Fase 4 caballo_072
+Fase 5 caballo_072
+Fase 6 caballo_072
+Fase 7 caballo_072
+Fase 8 caballo_072
+Perfil enlazado no cambia durante la competición caballo_072
+Restaura splash correspondiente caballo_072
+Restaura catálogo caballo_072
+JSON conserva instancia, estadísticas y animación caballo_072
+Perfil revisado caballo_073
+ID propio y 9 FPS caballo_073
+Splash y salida propios caballo_073
+Ocho frames propios caballo_073
+Marco y pivote uniformes caballo_073
+Importación pixel art y BC7 caballo_073
+Inicia animación propia caballo_073
+Fase 1 caballo_073
+Fase 2 caballo_073
+Fase 3 caballo_073
+Fase 4 caballo_073
+Fase 5 caballo_073
+Fase 6 caballo_073
+Fase 7 caballo_073
+Fase 8 caballo_073
+Perfil enlazado no cambia durante la competición caballo_073
+Restaura splash correspondiente caballo_073
+Restaura catálogo caballo_073
+JSON conserva instancia, estadísticas y animación caballo_073
+Perfil revisado caballo_074
+ID propio y 9 FPS caballo_074
+Splash y salida propios caballo_074
+Ocho frames propios caballo_074
+Marco y pivote uniformes caballo_074
+Importación pixel art y BC7 caballo_074
+Inicia animación propia caballo_074
+Fase 1 caballo_074
+Fase 2 caballo_074
+Fase 3 caballo_074
+Fase 4 caballo_074
+Fase 5 caballo_074
+Fase 6 caballo_074
+Fase 7 caballo_074
+Fase 8 caballo_074
+Perfil enlazado no cambia durante la competición caballo_074
+Restaura splash correspondiente caballo_074
+Restaura catálogo caballo_074
+JSON conserva instancia, estadísticas y animación caballo_074
+Perfil revisado caballo_075
+ID propio y 9 FPS caballo_075
+Splash y salida propios caballo_075
+Ocho frames propios caballo_075
+Marco y pivote uniformes caballo_075
+Importación pixel art y BC7 caballo_075
+Inicia animación propia caballo_075
+Fase 1 caballo_075
+Fase 2 caballo_075
+Fase 3 caballo_075
+Fase 4 caballo_075
+Fase 5 caballo_075
+Fase 6 caballo_075
+Fase 7 caballo_075
+Fase 8 caballo_075
+Perfil enlazado no cambia durante la competición caballo_075
+Restaura splash correspondiente caballo_075
+Restaura catálogo caballo_075
+JSON conserva instancia, estadísticas y animación caballo_075
+Perfil revisado caballo_076
+ID propio y 9 FPS caballo_076
+Splash y salida propios caballo_076
+Ocho frames propios caballo_076
+Marco y pivote uniformes caballo_076
+Importación pixel art y BC7 caballo_076
+Inicia animación propia caballo_076
+Fase 1 caballo_076
+Fase 2 caballo_076
+Fase 3 caballo_076
+Fase 4 caballo_076
+Fase 5 caballo_076
+Fase 6 caballo_076
+Fase 7 caballo_076
+Fase 8 caballo_076
+Perfil enlazado no cambia durante la competición caballo_076
+Restaura splash correspondiente caballo_076
+Restaura catálogo caballo_076
+JSON conserva instancia, estadísticas y animación caballo_076
+Perfil revisado caballo_077
+ID propio y 9 FPS caballo_077
+Splash y salida propios caballo_077
+Ocho frames propios caballo_077
+Marco y pivote uniformes caballo_077
+Importación pixel art y BC7 caballo_077
+Inicia animación propia caballo_077
+Fase 1 caballo_077
+Fase 2 caballo_077
+Fase 3 caballo_077
+Fase 4 caballo_077
+Fase 5 caballo_077
+Fase 6 caballo_077
+Fase 7 caballo_077
+Fase 8 caballo_077
+Perfil enlazado no cambia durante la competición caballo_077
+Restaura splash correspondiente caballo_077
+Restaura catálogo caballo_077
+JSON conserva instancia, estadísticas y animación caballo_077
+Perfil revisado caballo_078
+ID propio y 9 FPS caballo_078
+Splash y salida propios caballo_078
+Ocho frames propios caballo_078
+Marco y pivote uniformes caballo_078
+Importación pixel art y BC7 caballo_078
+Inicia animación propia caballo_078
+Fase 1 caballo_078
+Fase 2 caballo_078
+Fase 3 caballo_078
+Fase 4 caballo_078
+Fase 5 caballo_078
+Fase 6 caballo_078
+Fase 7 caballo_078
+Fase 8 caballo_078
+Perfil enlazado no cambia durante la competición caballo_078
+Restaura splash correspondiente caballo_078
+Restaura catálogo caballo_078
+JSON conserva instancia, estadísticas y animación caballo_078
+Perfil revisado caballo_079
+ID propio y 9 FPS caballo_079
+Splash y salida propios caballo_079
+Ocho frames propios caballo_079
+Marco y pivote uniformes caballo_079
+Importación pixel art y BC7 caballo_079
+Inicia animación propia caballo_079
+Fase 1 caballo_079
+Fase 2 caballo_079
+Fase 3 caballo_079
+Fase 4 caballo_079
+Fase 5 caballo_079
+Fase 6 caballo_079
+Fase 7 caballo_079
+Fase 8 caballo_079
+Perfil enlazado no cambia durante la competición caballo_079
+Restaura splash correspondiente caballo_079
+Restaura catálogo caballo_079
+JSON conserva instancia, estadísticas y animación caballo_079
+Perfil revisado caballo_080
+ID propio y 9 FPS caballo_080
+Splash y salida propios caballo_080
+Ocho frames propios caballo_080
+Marco y pivote uniformes caballo_080
+Importación pixel art y BC7 caballo_080
+Inicia animación propia caballo_080
+Fase 1 caballo_080
+Fase 2 caballo_080
+Fase 3 caballo_080
+Fase 4 caballo_080
+Fase 5 caballo_080
+Fase 6 caballo_080
+Fase 7 caballo_080
+Fase 8 caballo_080
+Perfil enlazado no cambia durante la competición caballo_080
+Restaura splash correspondiente caballo_080
+Restaura catálogo caballo_080
+JSON conserva instancia, estadísticas y animación caballo_080
+Perfil revisado caballo_081
+ID propio y 9 FPS caballo_081
+Splash y salida propios caballo_081
+Ocho frames propios caballo_081
+Marco y pivote uniformes caballo_081
+Importación pixel art y BC7 caballo_081
+Inicia animación propia caballo_081
+Fase 1 caballo_081
+Fase 2 caballo_081
+Fase 3 caballo_081
+Fase 4 caballo_081
+Fase 5 caballo_081
+Fase 6 caballo_081
+Fase 7 caballo_081
+Fase 8 caballo_081
+Perfil enlazado no cambia durante la competición caballo_081
+Restaura splash correspondiente caballo_081
+Restaura catálogo caballo_081
+JSON conserva instancia, estadísticas y animación caballo_081
+Perfil revisado caballo_082
+ID propio y 9 FPS caballo_082
+Splash y salida propios caballo_082
+Ocho frames propios caballo_082
+Marco y pivote uniformes caballo_082
+Importación pixel art y BC7 caballo_082
+Inicia animación propia caballo_082
+Fase 1 caballo_082
+Fase 2 caballo_082
+Fase 3 caballo_082
+Fase 4 caballo_082
+Fase 5 caballo_082
+Fase 6 caballo_082
+Fase 7 caballo_082
+Fase 8 caballo_082
+Perfil enlazado no cambia durante la competición caballo_082
+Restaura splash correspondiente caballo_082
+Restaura catálogo caballo_082
+JSON conserva instancia, estadísticas y animación caballo_082
+Perfil revisado caballo_083
+ID propio y 9 FPS caballo_083
+Splash y salida propios caballo_083
+Ocho frames propios caballo_083
+Marco y pivote uniformes caballo_083
+Importación pixel art y BC7 caballo_083
+Inicia animación propia caballo_083
+Fase 1 caballo_083
+Fase 2 caballo_083
+Fase 3 caballo_083
+Fase 4 caballo_083
+Fase 5 caballo_083
+Fase 6 caballo_083
+Fase 7 caballo_083
+Fase 8 caballo_083
+Perfil enlazado no cambia durante la competición caballo_083
+Restaura splash correspondiente caballo_083
+Restaura catálogo caballo_083
+JSON conserva instancia, estadísticas y animación caballo_083
+Perfil revisado caballo_084
+ID propio y 9 FPS caballo_084
+Splash y salida propios caballo_084
+Ocho frames propios caballo_084
+Marco y pivote uniformes caballo_084
+Importación pixel art y BC7 caballo_084
+Inicia animación propia caballo_084
+Fase 1 caballo_084
+Fase 2 caballo_084
+Fase 3 caballo_084
+Fase 4 caballo_084
+Fase 5 caballo_084
+Fase 6 caballo_084
+Fase 7 caballo_084
+Fase 8 caballo_084
+Perfil enlazado no cambia durante la competición caballo_084
+Restaura splash correspondiente caballo_084
+Restaura catálogo caballo_084
+JSON conserva instancia, estadísticas y animación caballo_084
+Perfil revisado caballo_085
+ID propio y 9 FPS caballo_085
+Splash y salida propios caballo_085
+Ocho frames propios caballo_085
+Marco y pivote uniformes caballo_085
+Importación pixel art y BC7 caballo_085
+Inicia animación propia caballo_085
+Fase 1 caballo_085
+Fase 2 caballo_085
+Fase 3 caballo_085
+Fase 4 caballo_085
+Fase 5 caballo_085
+Fase 6 caballo_085
+Fase 7 caballo_085
+Fase 8 caballo_085
+Perfil enlazado no cambia durante la competición caballo_085
+Restaura splash correspondiente caballo_085
+Restaura catálogo caballo_085
+JSON conserva instancia, estadísticas y animación caballo_085
+Perfil revisado caballo_086
+ID propio y 9 FPS caballo_086
+Splash y salida propios caballo_086
+Ocho frames propios caballo_086
+Marco y pivote uniformes caballo_086
+Importación pixel art y BC7 caballo_086
+Inicia animación propia caballo_086
+Fase 1 caballo_086
+Fase 2 caballo_086
+Fase 3 caballo_086
+Fase 4 caballo_086
+Fase 5 caballo_086
+Fase 6 caballo_086
+Fase 7 caballo_086
+Fase 8 caballo_086
+Perfil enlazado no cambia durante la competición caballo_086
+Restaura splash correspondiente caballo_086
+Restaura catálogo caballo_086
+JSON conserva instancia, estadísticas y animación caballo_086
+Perfil revisado caballo_087
+ID propio y 9 FPS caballo_087
+Splash y salida propios caballo_087
+Ocho frames propios caballo_087
+Marco y pivote uniformes caballo_087
+Importación pixel art y BC7 caballo_087
+Inicia animación propia caballo_087
+Fase 1 caballo_087
+Fase 2 caballo_087
+Fase 3 caballo_087
+Fase 4 caballo_087
+Fase 5 caballo_087
+Fase 6 caballo_087
+Fase 7 caballo_087
+Fase 8 caballo_087
+Perfil enlazado no cambia durante la competición caballo_087
+Restaura splash correspondiente caballo_087
+Restaura catálogo caballo_087
+JSON conserva instancia, estadísticas y animación caballo_087
+Perfil revisado caballo_088
+ID propio y 9 FPS caballo_088
+Splash y salida propios caballo_088
+Ocho frames propios caballo_088
+Marco y pivote uniformes caballo_088
+Importación pixel art y BC7 caballo_088
+Inicia animación propia caballo_088
+Fase 1 caballo_088
+Fase 2 caballo_088
+Fase 3 caballo_088
+Fase 4 caballo_088
+Fase 5 caballo_088
+Fase 6 caballo_088
+Fase 7 caballo_088
+Fase 8 caballo_088
+Perfil enlazado no cambia durante la competición caballo_088
+Restaura splash correspondiente caballo_088
+Restaura catálogo caballo_088
+JSON conserva instancia, estadísticas y animación caballo_088
+Perfil revisado caballo_089
+ID propio y 9 FPS caballo_089
+Splash y salida propios caballo_089
+Ocho frames propios caballo_089
+Marco y pivote uniformes caballo_089
+Importación pixel art y BC7 caballo_089
+Inicia animación propia caballo_089
+Fase 1 caballo_089
+Fase 2 caballo_089
+Fase 3 caballo_089
+Fase 4 caballo_089
+Fase 5 caballo_089
+Fase 6 caballo_089
+Fase 7 caballo_089
+Fase 8 caballo_089
+Perfil enlazado no cambia durante la competición caballo_089
+Restaura splash correspondiente caballo_089
+Restaura catálogo caballo_089
+JSON conserva instancia, estadísticas y animación caballo_089
+Perfil revisado caballo_090
+ID propio y 9 FPS caballo_090
+Splash y salida propios caballo_090
+Ocho frames propios caballo_090
+Marco y pivote uniformes caballo_090
+Importación pixel art y BC7 caballo_090
+Inicia animación propia caballo_090
+Fase 1 caballo_090
+Fase 2 caballo_090
+Fase 3 caballo_090
+Fase 4 caballo_090
+Fase 5 caballo_090
+Fase 6 caballo_090
+Fase 7 caballo_090
+Fase 8 caballo_090
+Perfil enlazado no cambia durante la competición caballo_090
+Restaura splash correspondiente caballo_090
+Restaura catálogo caballo_090
+JSON conserva instancia, estadísticas y animación caballo_090
+Perfil revisado caballo_091
+ID propio y 9 FPS caballo_091
+Splash y salida propios caballo_091
+Ocho frames propios caballo_091
+Marco y pivote uniformes caballo_091
+Importación pixel art y BC7 caballo_091
+Inicia animación propia caballo_091
+Fase 1 caballo_091
+Fase 2 caballo_091
+Fase 3 caballo_091
+Fase 4 caballo_091
+Fase 5 caballo_091
+Fase 6 caballo_091
+Fase 7 caballo_091
+Fase 8 caballo_091
+Perfil enlazado no cambia durante la competición caballo_091
+Restaura splash correspondiente caballo_091
+Restaura catálogo caballo_091
+JSON conserva instancia, estadísticas y animación caballo_091
+Perfil revisado caballo_092
+ID propio y 9 FPS caballo_092
+Splash y salida propios caballo_092
+Ocho frames propios caballo_092
+Marco y pivote uniformes caballo_092
+Importación pixel art y BC7 caballo_092
+Inicia animación propia caballo_092
+Fase 1 caballo_092
+Fase 2 caballo_092
+Fase 3 caballo_092
+Fase 4 caballo_092
+Fase 5 caballo_092
+Fase 6 caballo_092
+Fase 7 caballo_092
+Fase 8 caballo_092
+Perfil enlazado no cambia durante la competición caballo_092
+Restaura splash correspondiente caballo_092
+Restaura catálogo caballo_092
+JSON conserva instancia, estadísticas y animación caballo_092
+Perfil revisado caballo_093
+ID propio y 9 FPS caballo_093
+Splash y salida propios caballo_093
+Ocho frames propios caballo_093
+Marco y pivote uniformes caballo_093
+Importación pixel art y BC7 caballo_093
+Inicia animación propia caballo_093
+Fase 1 caballo_093
+Fase 2 caballo_093
+Fase 3 caballo_093
+Fase 4 caballo_093
+Fase 5 caballo_093
+Fase 6 caballo_093
+Fase 7 caballo_093
+Fase 8 caballo_093
+Perfil enlazado no cambia durante la competición caballo_093
+Restaura splash correspondiente caballo_093
+Restaura catálogo caballo_093
+JSON conserva instancia, estadísticas y animación caballo_093
+Perfil revisado caballo_094
+ID propio y 9 FPS caballo_094
+Splash y salida propios caballo_094
+Ocho frames propios caballo_094
+Marco y pivote uniformes caballo_094
+Importación pixel art y BC7 caballo_094
+Inicia animación propia caballo_094
+Fase 1 caballo_094
+Fase 2 caballo_094
+Fase 3 caballo_094
+Fase 4 caballo_094
+Fase 5 caballo_094
+Fase 6 caballo_094
+Fase 7 caballo_094
+Fase 8 caballo_094
+Perfil enlazado no cambia durante la competición caballo_094
+Restaura splash correspondiente caballo_094
+Restaura catálogo caballo_094
+JSON conserva instancia, estadísticas y animación caballo_094
+Perfil revisado caballo_095
+ID propio y 9 FPS caballo_095
+Splash y salida propios caballo_095
+Ocho frames propios caballo_095
+Marco y pivote uniformes caballo_095
+Importación pixel art y BC7 caballo_095
+Inicia animación propia caballo_095
+Fase 1 caballo_095
+Fase 2 caballo_095
+Fase 3 caballo_095
+Fase 4 caballo_095
+Fase 5 caballo_095
+Fase 6 caballo_095
+Fase 7 caballo_095
+Fase 8 caballo_095
+Perfil enlazado no cambia durante la competición caballo_095
+Restaura splash correspondiente caballo_095
+Restaura catálogo caballo_095
+JSON conserva instancia, estadísticas y animación caballo_095
+Perfil revisado caballo_096
+ID propio y 9 FPS caballo_096
+Splash y salida propios caballo_096
+Ocho frames propios caballo_096
+Marco y pivote uniformes caballo_096
+Importación pixel art y BC7 caballo_096
+Inicia animación propia caballo_096
+Fase 1 caballo_096
+Fase 2 caballo_096
+Fase 3 caballo_096
+Fase 4 caballo_096
+Fase 5 caballo_096
+Fase 6 caballo_096
+Fase 7 caballo_096
+Fase 8 caballo_096
+Perfil enlazado no cambia durante la competición caballo_096
+Restaura splash correspondiente caballo_096
+Restaura catálogo caballo_096
+JSON conserva instancia, estadísticas y animación caballo_096
+Perfil revisado caballo_097
+ID propio y 9 FPS caballo_097
+Splash y salida propios caballo_097
+Ocho frames propios caballo_097
+Marco y pivote uniformes caballo_097
+Importación pixel art y BC7 caballo_097
+Inicia animación propia caballo_097
+Fase 1 caballo_097
+Fase 2 caballo_097
+Fase 3 caballo_097
+Fase 4 caballo_097
+Fase 5 caballo_097
+Fase 6 caballo_097
+Fase 7 caballo_097
+Fase 8 caballo_097
+Perfil enlazado no cambia durante la competición caballo_097
+Restaura splash correspondiente caballo_097
+Restaura catálogo caballo_097
+JSON conserva instancia, estadísticas y animación caballo_097
+Perfil revisado caballo_098
+ID propio y 9 FPS caballo_098
+Splash y salida propios caballo_098
+Ocho frames propios caballo_098
+Marco y pivote uniformes caballo_098
+Importación pixel art y BC7 caballo_098
+Inicia animación propia caballo_098
+Fase 1 caballo_098
+Fase 2 caballo_098
+Fase 3 caballo_098
+Fase 4 caballo_098
+Fase 5 caballo_098
+Fase 6 caballo_098
+Fase 7 caballo_098
+Fase 8 caballo_098
+Perfil enlazado no cambia durante la competición caballo_098
+Restaura splash correspondiente caballo_098
+Restaura catálogo caballo_098
+JSON conserva instancia, estadísticas y animación caballo_098
+Perfil revisado caballo_099
+ID propio y 9 FPS caballo_099
+Splash y salida propios caballo_099
+Ocho frames propios caballo_099
+Marco y pivote uniformes caballo_099
+Importación pixel art y BC7 caballo_099
+Inicia animación propia caballo_099
+Fase 1 caballo_099
+Fase 2 caballo_099
+Fase 3 caballo_099
+Fase 4 caballo_099
+Fase 5 caballo_099
+Fase 6 caballo_099
+Fase 7 caballo_099
+Fase 8 caballo_099
+Perfil enlazado no cambia durante la competición caballo_099
+Restaura splash correspondiente caballo_099
+Restaura catálogo caballo_099
+JSON conserva instancia, estadísticas y animación caballo_099
+Perfil revisado caballo_100
+ID propio y 9 FPS caballo_100
+Splash y salida propios caballo_100
+Ocho frames propios caballo_100
+Marco y pivote uniformes caballo_100
+Importación pixel art y BC7 caballo_100
+Inicia animación propia caballo_100
+Fase 1 caballo_100
+Fase 2 caballo_100
+Fase 3 caballo_100
+Fase 4 caballo_100
+Fase 5 caballo_100
+Fase 6 caballo_100
+Fase 7 caballo_100
+Fase 8 caballo_100
+Perfil enlazado no cambia durante la competición caballo_100
+Restaura splash correspondiente caballo_100
+Restaura catálogo caballo_100
+JSON conserva instancia, estadísticas y animación caballo_100
+Cada identidad disponible tiene su perfil y spritesheet propios
+Atlas nuevos disponibles por debajo de 128 MiB cargados en el Editor
+Migra familia recuperada horse_01
+Migración conserva pelaje, nombre, instancia y estadísticas horse_01
+Migración idempotente horse_01
+Migra familia recuperada horse_02
+Migración conserva pelaje, nombre, instancia y estadísticas horse_02
+Migración idempotente horse_02
+Migra familia recuperada horse_03
+Migración conserva pelaje, nombre, instancia y estadísticas horse_03
+Migración idempotente horse_03
+Migra familia recuperada horse_04
+Migración conserva pelaje, nombre, instancia y estadísticas horse_04
+Migración idempotente horse_04
+Migra familia recuperada horse_05
+Migración conserva pelaje, nombre, instancia y estadísticas horse_05
+Migración idempotente horse_05
+Migra familia recuperada horse_06
+Migración conserva pelaje, nombre, instancia y estadísticas horse_06
+Migración idempotente horse_06
+Migra familia recuperada horse_07
+Migración conserva pelaje, nombre, instancia y estadísticas horse_07
+Migración idempotente horse_07
+Migra familia recuperada horse_08
+Migración conserva pelaje, nombre, instancia y estadísticas horse_08
+Migración idempotente horse_08
+Migra familia recuperada horse_09
+Migración conserva pelaje, nombre, instancia y estadísticas horse_09
+Migración idempotente horse_09
+Migra familia recuperada horse_10
+Migración conserva pelaje, nombre, instancia y estadísticas horse_10
+Migración idempotente horse_10
+Migra familia recuperada horse_11
+Migración conserva pelaje, nombre, instancia y estadísticas horse_11
+Migración idempotente horse_11
+Migra familia recuperada horse_12
+Migración conserva pelaje, nombre, instancia y estadísticas horse_12
+Migración idempotente horse_12
+Sprite legacy no reconocido no se reasigna por nombre
+Guarda sin rival persistente
+Lee DTO de rival ausente
+Rival ausente no se convierte en un caballo vacío al cargar
+Carga rival legacy real
+La protección del DTO vacío conserva un rival legacy legítimo
+Segundo guardado/carga no reintroduce el rival vacío
+Puja por caballo con animación propia
+Entrega conserva identidad y animación ofertadas
+Selecciona caballo adquirido
+Guarda caballo adquirido
+Carga caballo adquirido
+Activo y animación persisten al cargar
+Prepara carrera real
+Toda la parrilla usa perfiles nuevos
+No hay sprites antiguos en carrera del catálogo
+Identidad fija en carrera actor 0 frame 0
+Identidad fija en carrera actor 1 frame 0
+Identidad fija en carrera actor 2 frame 0
+Identidad fija en carrera actor 3 frame 0
+Identidad fija en carrera actor 4 frame 0
+Identidad fija en carrera actor 0 frame 1
+Identidad fija en carrera actor 1 frame 1
+Identidad fija en carrera actor 2 frame 1
+Identidad fija en carrera actor 3 frame 1
+Identidad fija en carrera actor 4 frame 1
+Identidad fija en carrera actor 0 frame 2
+Identidad fija en carrera actor 1 frame 2
+Identidad fija en carrera actor 2 frame 2
+Identidad fija en carrera actor 3 frame 2
+Identidad fija en carrera actor 4 frame 2
+Identidad fija en carrera actor 0 frame 3
+Identidad fija en carrera actor 1 frame 3
+Identidad fija en carrera actor 2 frame 3
+Identidad fija en carrera actor 3 frame 3
+Identidad fija en carrera actor 4 frame 3
+Identidad fija en carrera actor 0 frame 4
+Identidad fija en carrera actor 1 frame 4
+Identidad fija en carrera actor 2 frame 4
+Identidad fija en carrera actor 3 frame 4
+Identidad fija en carrera actor 4 frame 4
+Identidad fija en carrera actor 0 frame 5
+Identidad fija en carrera actor 1 frame 5
+Identidad fija en carrera actor 2 frame 5
+Identidad fija en carrera actor 3 frame 5
+Identidad fija en carrera actor 4 frame 5
+Identidad fija en carrera actor 0 frame 6
+Identidad fija en carrera actor 1 frame 6
+Identidad fija en carrera actor 2 frame 6
+Identidad fija en carrera actor 3 frame 6
+Identidad fija en carrera actor 4 frame 6
+Identidad fija en carrera actor 0 frame 7
+Identidad fija en carrera actor 1 frame 7
+Identidad fija en carrera actor 2 frame 7
+Identidad fija en carrera actor 3 frame 7
+Identidad fija en carrera actor 4 frame 7
+Identidad fija en carrera actor 0 frame 8
+Identidad fija en carrera actor 1 frame 8
+Identidad fija en carrera actor 2 frame 8
+Identidad fija en carrera actor 3 frame 8
+Identidad fija en carrera actor 4 frame 8
+Identidad fija en carrera actor 0 frame 9
+Identidad fija en carrera actor 1 frame 9
+Identidad fija en carrera actor 2 frame 9
+Identidad fija en carrera actor 3 frame 9
+Identidad fija en carrera actor 4 frame 9
+Identidad fija en carrera actor 0 frame 10
+Identidad fija en carrera actor 1 frame 10
+Identidad fija en carrera actor 2 frame 10
+Identidad fija en carrera actor 3 frame 10
+Identidad fija en carrera actor 4 frame 10
+Identidad fija en carrera actor 0 frame 11
+Identidad fija en carrera actor 1 frame 11
+Identidad fija en carrera actor 2 frame 11
+Identidad fija en carrera actor 3 frame 11
+Identidad fija en carrera actor 4 frame 11
+Identidad fija en carrera actor 0 frame 12
+Identidad fija en carrera actor 1 frame 12
+Identidad fija en carrera actor 2 frame 12
+Identidad fija en carrera actor 3 frame 12
+Identidad fija en carrera actor 4 frame 12
+Identidad fija en carrera actor 0 frame 13
+Identidad fija en carrera actor 1 frame 13
+Identidad fija en carrera actor 2 frame 13
+Identidad fija en carrera actor 3 frame 13
+Identidad fija en carrera actor 4 frame 13
+Identidad fija en carrera actor 0 frame 14
+Identidad fija en carrera actor 1 frame 14
+Identidad fija en carrera actor 2 frame 14
+Identidad fija en carrera actor 3 frame 14
+Identidad fija en carrera actor 4 frame 14
+Identidad fija en carrera actor 0 frame 15
+Identidad fija en carrera actor 1 frame 15
+Identidad fija en carrera actor 2 frame 15
+Identidad fija en carrera actor 3 frame 15
+Identidad fija en carrera actor 4 frame 15
+Identidad fija en carrera actor 0 frame 16
+Identidad fija en carrera actor 1 frame 16
+Identidad fija en carrera actor 2 frame 16
+Identidad fija en carrera actor 3 frame 16
+Identidad fija en carrera actor 4 frame 16
+Identidad fija en carrera actor 0 frame 17
+Identidad fija en carrera actor 1 frame 17
+Identidad fija en carrera actor 2 frame 17
+Identidad fija en carrera actor 3 frame 17
+Identidad fija en carrera actor 4 frame 17
+Identidad fija en carrera actor 0 frame 18
+Identidad fija en carrera actor 1 frame 18
+Identidad fija en carrera actor 2 frame 18
+Identidad fija en carrera actor 3 frame 18
+Identidad fija en carrera actor 4 frame 18
+Identidad fija en carrera actor 0 frame 19
+Identidad fija en carrera actor 1 frame 19
+Identidad fija en carrera actor 2 frame 19
+Identidad fija en carrera actor 3 frame 19
+Identidad fija en carrera actor 4 frame 19
+Identidad fija en carrera actor 0 frame 20
+Identidad fija en carrera actor 1 frame 20
+Identidad fija en carrera actor 2 frame 20
+Identidad fija en carrera actor 3 frame 20
+Identidad fija en carrera actor 4 frame 20
+Identidad fija en carrera actor 0 frame 21
+Identidad fija en carrera actor 1 frame 21
+Identidad fija en carrera actor 2 frame 21
+Identidad fija en carrera actor 3 frame 21
+Identidad fija en carrera actor 4 frame 21
+Identidad fija en carrera actor 0 frame 22
+Identidad fija en carrera actor 1 frame 22
+Identidad fija en carrera actor 2 frame 22
+Identidad fija en carrera actor 3 frame 22
+Identidad fija en carrera actor 4 frame 22
+Identidad fija en carrera actor 0 frame 23
+Identidad fija en carrera actor 1 frame 23
+Identidad fija en carrera actor 2 frame 23
+Identidad fija en carrera actor 3 frame 23
+Identidad fija en carrera actor 4 frame 23
+Identidad fija en carrera actor 0 frame 24
+Identidad fija en carrera actor 1 frame 24
+Identidad fija en carrera actor 2 frame 24
+Identidad fija en carrera actor 3 frame 24
+Identidad fija en carrera actor 4 frame 24
+Identidad fija en carrera actor 0 frame 25
+Identidad fija en carrera actor 1 frame 25
+Identidad fija en carrera actor 2 frame 25
+Identidad fija en carrera actor 3 frame 25
+Identidad fija en carrera actor 4 frame 25
+Identidad fija en carrera actor 0 frame 26
+Identidad fija en carrera actor 1 frame 26
+Identidad fija en carrera actor 2 frame 26
+Identidad fija en carrera actor 3 frame 26
+Identidad fija en carrera actor 4 frame 26
+Identidad fija en carrera actor 0 frame 27
+Identidad fija en carrera actor 1 frame 27
+Identidad fija en carrera actor 2 frame 27
+Identidad fija en carrera actor 3 frame 27
+Identidad fija en carrera actor 4 frame 27
+Identidad fija en carrera actor 0 frame 28
+Identidad fija en carrera actor 1 frame 28
+Identidad fija en carrera actor 2 frame 28
+Identidad fija en carrera actor 3 frame 28
+Identidad fija en carrera actor 4 frame 28
+Identidad fija en carrera actor 0 frame 29
+Identidad fija en carrera actor 1 frame 29
+Identidad fija en carrera actor 2 frame 29
+Identidad fija en carrera actor 3 frame 29
+Identidad fija en carrera actor 4 frame 29
+Identidad fija en carrera actor 0 frame 30
+Identidad fija en carrera actor 1 frame 30
+Identidad fija en carrera actor 2 frame 30
+Identidad fija en carrera actor 3 frame 30
+Identidad fija en carrera actor 4 frame 30
+Identidad fija en carrera actor 0 frame 31
+Identidad fija en carrera actor 1 frame 31
+Identidad fija en carrera actor 2 frame 31
+Identidad fija en carrera actor 3 frame 31
+Identidad fija en carrera actor 4 frame 31
+Identidad fija en carrera actor 0 frame 32
+Identidad fija en carrera actor 1 frame 32
+Identidad fija en carrera actor 2 frame 32
+Identidad fija en carrera actor 3 frame 32
+Identidad fija en carrera actor 4 frame 32
+Identidad fija en carrera actor 0 frame 33
+Identidad fija en carrera actor 1 frame 33
+Identidad fija en carrera actor 2 frame 33
+Identidad fija en carrera actor 3 frame 33
+Identidad fija en carrera actor 4 frame 33
+Identidad fija en carrera actor 0 frame 34
+Identidad fija en carrera actor 1 frame 34
+Identidad fija en carrera actor 2 frame 34
+Identidad fija en carrera actor 3 frame 34
+Identidad fija en carrera actor 4 frame 34
+Identidad fija en carrera actor 0 frame 35
+Identidad fija en carrera actor 1 frame 35
+Identidad fija en carrera actor 2 frame 35
+Identidad fija en carrera actor 3 frame 35
+Identidad fija en carrera actor 4 frame 35
+Identidad fija en carrera actor 0 frame 36
+Identidad fija en carrera actor 1 frame 36
+Identidad fija en carrera actor 2 frame 36
+Identidad fija en carrera actor 3 frame 36
+Identidad fija en carrera actor 4 frame 36
+Identidad fija en carrera actor 0 frame 37
+Identidad fija en carrera actor 1 frame 37
+Identidad fija en carrera actor 2 frame 37
+Identidad fija en carrera actor 3 frame 37
+Identidad fija en carrera actor 4 frame 37
+Identidad fija en carrera actor 0 frame 38
+Identidad fija en carrera actor 1 frame 38
+Identidad fija en carrera actor 2 frame 38
+Identidad fija en carrera actor 3 frame 38
+Identidad fija en carrera actor 4 frame 38
+Identidad fija en carrera actor 0 frame 39
+Identidad fija en carrera actor 1 frame 39
+Identidad fija en carrera actor 2 frame 39
+Identidad fija en carrera actor 3 frame 39
+Identidad fija en carrera actor 4 frame 39
+Identidad fija en carrera actor 0 frame 40
+Identidad fija en carrera actor 1 frame 40
+Identidad fija en carrera actor 2 frame 40
+Identidad fija en carrera actor 3 frame 40
+Identidad fija en carrera actor 4 frame 40
+Identidad fija en carrera actor 0 frame 41
+Identidad fija en carrera actor 1 frame 41
+Identidad fija en carrera actor 2 frame 41
+Identidad fija en carrera actor 3 frame 41
+Identidad fija en carrera actor 4 frame 41
+Identidad fija en carrera actor 0 frame 42
+Identidad fija en carrera actor 1 frame 42
+Identidad fija en carrera actor 2 frame 42
+Identidad fija en carrera actor 3 frame 42
+Identidad fija en carrera actor 4 frame 42
+Identidad fija en carrera actor 0 frame 43
+Identidad fija en carrera actor 1 frame 43
+Identidad fija en carrera actor 2 frame 43
+Identidad fija en carrera actor 3 frame 43
+Identidad fija en carrera actor 4 frame 43
+Identidad fija en carrera actor 0 frame 44
+Identidad fija en carrera actor 1 frame 44
+Identidad fija en carrera actor 2 frame 44
+Identidad fija en carrera actor 3 frame 44
+Identidad fija en carrera actor 4 frame 44
+Identidad fija en carrera actor 0 frame 45
+Identidad fija en carrera actor 1 frame 45
+Identidad fija en carrera actor 2 frame 45
+Identidad fija en carrera actor 3 frame 45
+Identidad fija en carrera actor 4 frame 45
+Identidad fija en carrera actor 0 frame 46
+Identidad fija en carrera actor 1 frame 46
+Identidad fija en carrera actor 2 frame 46
+Identidad fija en carrera actor 3 frame 46
+Identidad fija en carrera actor 4 frame 46
+Identidad fija en carrera actor 0 frame 47
+Identidad fija en carrera actor 1 frame 47
+Identidad fija en carrera actor 2 frame 47
+Identidad fija en carrera actor 3 frame 47
+Identidad fija en carrera actor 4 frame 47
+Identidad fija en carrera actor 0 frame 48
+Identidad fija en carrera actor 1 frame 48
+Identidad fija en carrera actor 2 frame 48
+Identidad fija en carrera actor 3 frame 48
+Identidad fija en carrera actor 4 frame 48
+Identidad fija en carrera actor 0 frame 49
+Identidad fija en carrera actor 1 frame 49
+Identidad fija en carrera actor 2 frame 49
+Identidad fija en carrera actor 3 frame 49
+Identidad fija en carrera actor 4 frame 49
+Identidad fija en carrera actor 0 frame 50
+Identidad fija en carrera actor 1 frame 50
+Identidad fija en carrera actor 2 frame 50
+Identidad fija en carrera actor 3 frame 50
+Identidad fija en carrera actor 4 frame 50
+Identidad fija en carrera actor 0 frame 51
+Identidad fija en carrera actor 1 frame 51
+Identidad fija en carrera actor 2 frame 51
+Identidad fija en carrera actor 3 frame 51
+Identidad fija en carrera actor 4 frame 51
+Identidad fija en carrera actor 0 frame 52
+Identidad fija en carrera actor 1 frame 52
+Identidad fija en carrera actor 2 frame 52
+Identidad fija en carrera actor 3 frame 52
+Identidad fija en carrera actor 4 frame 52
+Identidad fija en carrera actor 0 frame 53
+Identidad fija en carrera actor 1 frame 53
+Identidad fija en carrera actor 2 frame 53
+Identidad fija en carrera actor 3 frame 53
+Identidad fija en carrera actor 4 frame 53
+Identidad fija en carrera actor 0 frame 54
+Identidad fija en carrera actor 1 frame 54
+Identidad fija en carrera actor 2 frame 54
+Identidad fija en carrera actor 3 frame 54
+Identidad fija en carrera actor 4 frame 54
+Identidad fija en carrera actor 0 frame 55
+Identidad fija en carrera actor 1 frame 55
+Identidad fija en carrera actor 2 frame 55
+Identidad fija en carrera actor 3 frame 55
+Identidad fija en carrera actor 4 frame 55
+Identidad fija en carrera actor 0 frame 56
+Identidad fija en carrera actor 1 frame 56
+Identidad fija en carrera actor 2 frame 56
+Identidad fija en carrera actor 3 frame 56
+Identidad fija en carrera actor 4 frame 56
+Identidad fija en carrera actor 0 frame 57
+Identidad fija en carrera actor 1 frame 57
+Identidad fija en carrera actor 2 frame 57
+Identidad fija en carrera actor 3 frame 57
+Identidad fija en carrera actor 4 frame 57
+Identidad fija en carrera actor 0 frame 58
+Identidad fija en carrera actor 1 frame 58
+Identidad fija en carrera actor 2 frame 58
+Identidad fija en carrera actor 3 frame 58
+Identidad fija en carrera actor 4 frame 58
+Identidad fija en carrera actor 0 frame 59
+Identidad fija en carrera actor 1 frame 59
+Identidad fija en carrera actor 2 frame 59
+Identidad fija en carrera actor 3 frame 59
+Identidad fija en carrera actor 4 frame 59
+Identidad fija en carrera actor 0 frame 60
+Identidad fija en carrera actor 1 frame 60
+Identidad fija en carrera actor 2 frame 60
+Identidad fija en carrera actor 3 frame 60
+Identidad fija en carrera actor 4 frame 60
+Identidad fija en carrera actor 0 frame 61
+Identidad fija en carrera actor 1 frame 61
+Identidad fija en carrera actor 2 frame 61
+Identidad fija en carrera actor 3 frame 61
+Identidad fija en carrera actor 4 frame 61
+Identidad fija en carrera actor 0 frame 62
+Identidad fija en carrera actor 1 frame 62
+Identidad fija en carrera actor 2 frame 62
+Identidad fija en carrera actor 3 frame 62
+Identidad fija en carrera actor 4 frame 62
+Identidad fija en carrera actor 0 frame 63
+Identidad fija en carrera actor 1 frame 63
+Identidad fija en carrera actor 2 frame 63
+Identidad fija en carrera actor 3 frame 63
+Identidad fija en carrera actor 4 frame 63
+Identidad fija en carrera actor 0 frame 64
+Identidad fija en carrera actor 1 frame 64
+Identidad fija en carrera actor 2 frame 64
+Identidad fija en carrera actor 3 frame 64
+Identidad fija en carrera actor 4 frame 64
+Identidad fija en carrera actor 0 frame 65
+Identidad fija en carrera actor 1 frame 65
+Identidad fija en carrera actor 2 frame 65
+Identidad fija en carrera actor 3 frame 65
+Identidad fija en carrera actor 4 frame 65
+Identidad fija en carrera actor 0 frame 66
+Identidad fija en carrera actor 1 frame 66
+Identidad fija en carrera actor 2 frame 66
+Identidad fija en carrera actor 3 frame 66
+Identidad fija en carrera actor 4 frame 66
+Identidad fija en carrera actor 0 frame 67
+Identidad fija en carrera actor 1 frame 67
+Identidad fija en carrera actor 2 frame 67
+Identidad fija en carrera actor 3 frame 67
+Identidad fija en carrera actor 4 frame 67
+Identidad fija en carrera actor 0 frame 68
+Identidad fija en carrera actor 1 frame 68
+Identidad fija en carrera actor 2 frame 68
+Identidad fija en carrera actor 3 frame 68
+Identidad fija en carrera actor 4 frame 68
+Identidad fija en carrera actor 0 frame 69
+Identidad fija en carrera actor 1 frame 69
+Identidad fija en carrera actor 2 frame 69
+Identidad fija en carrera actor 3 frame 69
+Identidad fija en carrera actor 4 frame 69
+Identidad fija en carrera actor 0 frame 70
+Identidad fija en carrera actor 1 frame 70
+Identidad fija en carrera actor 2 frame 70
+Identidad fija en carrera actor 3 frame 70
+Identidad fija en carrera actor 4 frame 70
+Identidad fija en carrera actor 0 frame 71
+Identidad fija en carrera actor 1 frame 71
+Identidad fija en carrera actor 2 frame 71
+Identidad fija en carrera actor 3 frame 71
+Identidad fija en carrera actor 4 frame 71
+Identidad fija en carrera actor 0 frame 72
+Identidad fija en carrera actor 1 frame 72
+Identidad fija en carrera actor 2 frame 72
+Identidad fija en carrera actor 3 frame 72
+Identidad fija en carrera actor 4 frame 72
+Identidad fija en carrera actor 0 frame 73
+Identidad fija en carrera actor 1 frame 73
+Identidad fija en carrera actor 2 frame 73
+Identidad fija en carrera actor 3 frame 73
+Identidad fija en carrera actor 4 frame 73
+Identidad fija en carrera actor 0 frame 74
+Identidad fija en carrera actor 1 frame 74
+Identidad fija en carrera actor 2 frame 74
+Identidad fija en carrera actor 3 frame 74
+Identidad fija en carrera actor 4 frame 74
+Identidad fija en carrera actor 0 frame 75
+Identidad fija en carrera actor 1 frame 75
+Identidad fija en carrera actor 2 frame 75
+Identidad fija en carrera actor 3 frame 75
+Identidad fija en carrera actor 4 frame 75
+Identidad fija en carrera actor 0 frame 76
+Identidad fija en carrera actor 1 frame 76
+Identidad fija en carrera actor 2 frame 76
+Identidad fija en carrera actor 3 frame 76
+Identidad fija en carrera actor 4 frame 76
+Identidad fija en carrera actor 0 frame 77
+Identidad fija en carrera actor 1 frame 77
+Identidad fija en carrera actor 2 frame 77
+Identidad fija en carrera actor 3 frame 77
+Identidad fija en carrera actor 4 frame 77
+Identidad fija en carrera actor 0 frame 78
+Identidad fija en carrera actor 1 frame 78
+Identidad fija en carrera actor 2 frame 78
+Identidad fija en carrera actor 3 frame 78
+Identidad fija en carrera actor 4 frame 78
+Identidad fija en carrera actor 0 frame 79
+Identidad fija en carrera actor 1 frame 79
+Identidad fija en carrera actor 2 frame 79
+Identidad fija en carrera actor 3 frame 79
+Identidad fija en carrera actor 4 frame 79
+Identidad fija en carrera actor 0 frame 80
+Identidad fija en carrera actor 1 frame 80
+Identidad fija en carrera actor 2 frame 80
+Identidad fija en carrera actor 3 frame 80
+Identidad fija en carrera actor 4 frame 80
+Identidad fija en carrera actor 0 frame 81
+Identidad fija en carrera actor 1 frame 81
+Identidad fija en carrera actor 2 frame 81
+Identidad fija en carrera actor 3 frame 81
+Identidad fija en carrera actor 4 frame 81
+Identidad fija en carrera actor 0 frame 82
+Identidad fija en carrera actor 1 frame 82
+Identidad fija en carrera actor 2 frame 82
+Identidad fija en carrera actor 3 frame 82
+Identidad fija en carrera actor 4 frame 82
+Identidad fija en carrera actor 0 frame 83
+Identidad fija en carrera actor 1 frame 83
+Identidad fija en carrera actor 2 frame 83
+Identidad fija en carrera actor 3 frame 83
+Identidad fija en carrera actor 4 frame 83
+Identidad fija en carrera actor 0 frame 84
+Identidad fija en carrera actor 1 frame 84
+Identidad fija en carrera actor 2 frame 84
+Identidad fija en carrera actor 3 frame 84
+Identidad fija en carrera actor 4 frame 84
+Identidad fija en carrera actor 0 frame 85
+Identidad fija en carrera actor 1 frame 85
+Identidad fija en carrera actor 2 frame 85
+Identidad fija en carrera actor 3 frame 85
+Identidad fija en carrera actor 4 frame 85
+Identidad fija en carrera actor 0 frame 86
+Identidad fija en carrera actor 1 frame 86
+Identidad fija en carrera actor 2 frame 86
+Identidad fija en carrera actor 3 frame 86
+Identidad fija en carrera actor 4 frame 86
+Identidad fija en carrera actor 0 frame 87
+Identidad fija en carrera actor 1 frame 87
+Identidad fija en carrera actor 2 frame 87
+Identidad fija en carrera actor 3 frame 87
+Identidad fija en carrera actor 4 frame 87
+Identidad fija en carrera actor 0 frame 88
+Identidad fija en carrera actor 1 frame 88
+Identidad fija en carrera actor 2 frame 88
+Identidad fija en carrera actor 3 frame 88
+Identidad fija en carrera actor 4 frame 88
+Identidad fija en carrera actor 0 frame 89
+Identidad fija en carrera actor 1 frame 89
+Identidad fija en carrera actor 2 frame 89
+Identidad fija en carrera actor 3 frame 89
+Identidad fija en carrera actor 4 frame 89
+Identidad fija en carrera actor 0 frame 90
+Identidad fija en carrera actor 1 frame 90
+Identidad fija en carrera actor 2 frame 90
+Identidad fija en carrera actor 3 frame 90
+Identidad fija en carrera actor 4 frame 90
+Identidad fija en carrera actor 0 frame 91
+Identidad fija en carrera actor 1 frame 91
+Identidad fija en carrera actor 2 frame 91
+Identidad fija en carrera actor 3 frame 91
+Identidad fija en carrera actor 4 frame 91
+Identidad fija en carrera actor 0 frame 92
+Identidad fija en carrera actor 1 frame 92
+Identidad fija en carrera actor 2 frame 92
+Identidad fija en carrera actor 3 frame 92
+Identidad fija en carrera actor 4 frame 92
+Identidad fija en carrera actor 0 frame 93
+Identidad fija en carrera actor 1 frame 93
+Identidad fija en carrera actor 2 frame 93
+Identidad fija en carrera actor 3 frame 93
+Identidad fija en carrera actor 4 frame 93
+Identidad fija en carrera actor 0 frame 94
+Identidad fija en carrera actor 1 frame 94
+Identidad fija en carrera actor 2 frame 94
+Identidad fija en carrera actor 3 frame 94
+Identidad fija en carrera actor 4 frame 94
+Identidad fija en carrera actor 0 frame 95
+Identidad fija en carrera actor 1 frame 95
+Identidad fija en carrera actor 2 frame 95
+Identidad fija en carrera actor 3 frame 95
+Identidad fija en carrera actor 4 frame 95
+Identidad fija en carrera actor 0 frame 96
+Identidad fija en carrera actor 1 frame 96
+Identidad fija en carrera actor 2 frame 96
+Identidad fija en carrera actor 3 frame 96
+Identidad fija en carrera actor 4 frame 96
+Identidad fija en carrera actor 0 frame 97
+Identidad fija en carrera actor 1 frame 97
+Identidad fija en carrera actor 2 frame 97
+Identidad fija en carrera actor 3 frame 97
+Identidad fija en carrera actor 4 frame 97
+Identidad fija en carrera actor 0 frame 98
+Identidad fija en carrera actor 1 frame 98
+Identidad fija en carrera actor 2 frame 98
+Identidad fija en carrera actor 3 frame 98
+Identidad fija en carrera actor 4 frame 98
+Identidad fija en carrera actor 0 frame 99
+Identidad fija en carrera actor 1 frame 99
+Identidad fija en carrera actor 2 frame 99
+Identidad fija en carrera actor 3 frame 99
+Identidad fija en carrera actor 4 frame 99
+Identidad fija en carrera actor 0 frame 100
+Identidad fija en carrera actor 1 frame 100
+Identidad fija en carrera actor 2 frame 100
+Identidad fija en carrera actor 3 frame 100
+Identidad fija en carrera actor 4 frame 100
+Identidad fija en carrera actor 0 frame 101
+Identidad fija en carrera actor 1 frame 101
+Identidad fija en carrera actor 2 frame 101
+Identidad fija en carrera actor 3 frame 101
+Identidad fija en carrera actor 4 frame 101
+Identidad fija en carrera actor 0 frame 102
+Identidad fija en carrera actor 1 frame 102
+Identidad fija en carrera actor 2 frame 102
+Identidad fija en carrera actor 3 frame 102
+Identidad fija en carrera actor 4 frame 102
+Identidad fija en carrera actor 0 frame 103
+Identidad fija en carrera actor 1 frame 103
+Identidad fija en carrera actor 2 frame 103
+Identidad fija en carrera actor 3 frame 103
+Identidad fija en carrera actor 4 frame 103
+Identidad fija en carrera actor 0 frame 104
+Identidad fija en carrera actor 1 frame 104
+Identidad fija en carrera actor 2 frame 104
+Identidad fija en carrera actor 3 frame 104
+Identidad fija en carrera actor 4 frame 104
+Identidad fija en carrera actor 0 frame 105
+Identidad fija en carrera actor 1 frame 105
+Identidad fija en carrera actor 2 frame 105
+Identidad fija en carrera actor 3 frame 105
+Identidad fija en carrera actor 4 frame 105
+Identidad fija en carrera actor 0 frame 106
+Identidad fija en carrera actor 1 frame 106
+Identidad fija en carrera actor 2 frame 106
+Identidad fija en carrera actor 3 frame 106
+Identidad fija en carrera actor 4 frame 106
+Identidad fija en carrera actor 0 frame 107
+Identidad fija en carrera actor 1 frame 107
+Identidad fija en carrera actor 2 frame 107
+Identidad fija en carrera actor 3 frame 107
+Identidad fija en carrera actor 4 frame 107
+Identidad fija en carrera actor 0 frame 108
+Identidad fija en carrera actor 1 frame 108
+Identidad fija en carrera actor 2 frame 108
+Identidad fija en carrera actor 3 frame 108
+Identidad fija en carrera actor 4 frame 108
+Identidad fija en carrera actor 0 frame 109
+Identidad fija en carrera actor 1 frame 109
+Identidad fija en carrera actor 2 frame 109
+Identidad fija en carrera actor 3 frame 109
+Identidad fija en carrera actor 4 frame 109
+Identidad fija en carrera actor 0 frame 110
+Identidad fija en carrera actor 1 frame 110
+Identidad fija en carrera actor 2 frame 110
+Identidad fija en carrera actor 3 frame 110
+Identidad fija en carrera actor 4 frame 110
+Identidad fija en carrera actor 0 frame 111
+Identidad fija en carrera actor 1 frame 111
+Identidad fija en carrera actor 2 frame 111
+Identidad fija en carrera actor 3 frame 111
+Identidad fija en carrera actor 4 frame 111
+Identidad fija en carrera actor 0 frame 112
+Identidad fija en carrera actor 1 frame 112
+Identidad fija en carrera actor 2 frame 112
+Identidad fija en carrera actor 3 frame 112
+Identidad fija en carrera actor 4 frame 112
+Identidad fija en carrera actor 0 frame 113
+Identidad fija en carrera actor 1 frame 113
+Identidad fija en carrera actor 2 frame 113
+Identidad fija en carrera actor 3 frame 113
+Identidad fija en carrera actor 4 frame 113
+Identidad fija en carrera actor 0 frame 114
+Identidad fija en carrera actor 1 frame 114
+Identidad fija en carrera actor 2 frame 114
+Identidad fija en carrera actor 3 frame 114
+Identidad fija en carrera actor 4 frame 114
+Identidad fija en carrera actor 0 frame 115
+Identidad fija en carrera actor 1 frame 115
+Identidad fija en carrera actor 2 frame 115
+Identidad fija en carrera actor 3 frame 115
+Identidad fija en carrera actor 4 frame 115
+Identidad fija en carrera actor 0 frame 116
+Identidad fija en carrera actor 1 frame 116
+Identidad fija en carrera actor 2 frame 116
+Identidad fija en carrera actor 3 frame 116
+Identidad fija en carrera actor 4 frame 116
+Identidad fija en carrera actor 0 frame 117
+Identidad fija en carrera actor 1 frame 117
+Identidad fija en carrera actor 2 frame 117
+Identidad fija en carrera actor 3 frame 117
+Identidad fija en carrera actor 4 frame 117
+Identidad fija en carrera actor 0 frame 118
+Identidad fija en carrera actor 1 frame 118
+Identidad fija en carrera actor 2 frame 118
+Identidad fija en carrera actor 3 frame 118
+Identidad fija en carrera actor 4 frame 118
+Identidad fija en carrera actor 0 frame 119
+Identidad fija en carrera actor 1 frame 119
+Identidad fija en carrera actor 2 frame 119
+Identidad fija en carrera actor 3 frame 119
+Identidad fija en carrera actor 4 frame 119
+Identidad fija en carrera actor 0 frame 120
+Identidad fija en carrera actor 1 frame 120
+Identidad fija en carrera actor 2 frame 120
+Identidad fija en carrera actor 3 frame 120
+Identidad fija en carrera actor 4 frame 120
+Identidad fija en carrera actor 0 frame 121
+Identidad fija en carrera actor 1 frame 121
+Identidad fija en carrera actor 2 frame 121
+Identidad fija en carrera actor 3 frame 121
+Identidad fija en carrera actor 4 frame 121
+Identidad fija en carrera actor 0 frame 122
+Identidad fija en carrera actor 1 frame 122
+Identidad fija en carrera actor 2 frame 122
+Identidad fija en carrera actor 3 frame 122
+Identidad fija en carrera actor 4 frame 122
+Identidad fija en carrera actor 0 frame 123
+Identidad fija en carrera actor 1 frame 123
+Identidad fija en carrera actor 2 frame 123
+Identidad fija en carrera actor 3 frame 123
+Identidad fija en carrera actor 4 frame 123
+Identidad fija en carrera actor 0 frame 124
+Identidad fija en carrera actor 1 frame 124
+Identidad fija en carrera actor 2 frame 124
+Identidad fija en carrera actor 3 frame 124
+Identidad fija en carrera actor 4 frame 124
+Identidad fija en carrera actor 0 frame 125
+Identidad fija en carrera actor 1 frame 125
+Identidad fija en carrera actor 2 frame 125
+Identidad fija en carrera actor 3 frame 125
+Identidad fija en carrera actor 4 frame 125
+Identidad fija en carrera actor 0 frame 126
+Identidad fija en carrera actor 1 frame 126
+Identidad fija en carrera actor 2 frame 126
+Identidad fija en carrera actor 3 frame 126
+Identidad fija en carrera actor 4 frame 126
+Identidad fija en carrera actor 0 frame 127
+Identidad fija en carrera actor 1 frame 127
+Identidad fija en carrera actor 2 frame 127
+Identidad fija en carrera actor 3 frame 127
+Identidad fija en carrera actor 4 frame 127
+Identidad fija en carrera actor 0 frame 128
+Identidad fija en carrera actor 1 frame 128
+Identidad fija en carrera actor 2 frame 128
+Identidad fija en carrera actor 3 frame 128
+Identidad fija en carrera actor 4 frame 128
+Identidad fija en carrera actor 0 frame 129
+Identidad fija en carrera actor 1 frame 129
+Identidad fija en carrera actor 2 frame 129
+Identidad fija en carrera actor 3 frame 129
+Identidad fija en carrera actor 4 frame 129
+Identidad fija en carrera actor 0 frame 130
+Identidad fija en carrera actor 1 frame 130
+Identidad fija en carrera actor 2 frame 130
+Identidad fija en carrera actor 3 frame 130
+Identidad fija en carrera actor 4 frame 130
+Identidad fija en carrera actor 0 frame 131
+Identidad fija en carrera actor 1 frame 131
+Identidad fija en carrera actor 2 frame 131
+Identidad fija en carrera actor 3 frame 131
+Identidad fija en carrera actor 4 frame 131
+Identidad fija en carrera actor 0 frame 132
+Identidad fija en carrera actor 1 frame 132
+Identidad fija en carrera actor 2 frame 132
+Identidad fija en carrera actor 3 frame 132
+Identidad fija en carrera actor 4 frame 132
+Identidad fija en carrera actor 0 frame 133
+Identidad fija en carrera actor 1 frame 133
+Identidad fija en carrera actor 2 frame 133
+Identidad fija en carrera actor 3 frame 133
+Identidad fija en carrera actor 4 frame 133
+Identidad fija en carrera actor 0 frame 134
+Identidad fija en carrera actor 1 frame 134
+Identidad fija en carrera actor 2 frame 134
+Identidad fija en carrera actor 3 frame 134
+Identidad fija en carrera actor 4 frame 134
+Carrera real termina tras reproducir las ocho fases de todos los participantes
+Todos restauran su propio splash al terminar
+Guarda y carga después de carrera
+Aspecto del caballo activo sigue fijo al terminar

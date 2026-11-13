@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -14,6 +14,8 @@ public partial class EstabloView : MonoBehaviour
     [SerializeField] private Sprite retratoStats;
     [SerializeField] private Sprite iconosStats;
     [SerializeField] private Sprite spriteManiquiItems;
+    internal Sprite IconosStats => iconosStats;
+    internal Sprite TexturaMadera => madera;
 
     private enum Pestana { Stats, Up, Procrear, Items }
 
@@ -40,6 +42,7 @@ public partial class EstabloView : MonoBehaviour
     private void OnEnable()
     {
         ConstruirInterfaz();
+        indiceCaballo = Mathf.Max(0, Caballos?.IndexOf(Juego.CaballoActivo) ?? 0);
         AbrirCaballo();
     }
 
@@ -117,6 +120,11 @@ public partial class EstabloView : MonoBehaviour
         indiceCaballo = Mathf.Clamp(indiceCaballo, 0, Mathf.Max(0, cantidad - 1));
         foreach (var flecha in flechasCaballos)
             flecha.interactable = cantidad > 1;
+        selectorCaballo.text = NombreActual;
+        bool activo = CaballoActual?.id == Juego.CaballoActivo?.id;
+        Etiqueta(activarCaballo).text = activo ? "Activo" : "Hacer activo";
+        activarCaballo.interactable = !activo && Juego.PuedeCambiarCaballo;
+        estadoSeleccion.text = Juego.PuedeCambiarCaballo ? "" : "Caballo fijado para la carrera preparada";
 
         switch (pestanaActual)
         {
@@ -153,7 +161,7 @@ public partial class EstabloView : MonoBehaviour
     private void RefrescarStats()
     {
         nombreStats.text = NombreActual;
-        retratoEnStats.enabled = CaballoActual != null && retratoStats != null;
+        AsignarSprite(retratoEnStats, HorseVisualCatalog.Default?.Splash(CaballoActual) ?? CaballoActual?.sprite);
         var valores = ValoresStats(CaballoActual);
         for (int i = 0; i < valores.Length; i++)
             valoresStats[i].text = valores[i];
@@ -195,7 +203,7 @@ public partial class EstabloView : MonoBehaviour
     private void RefrescarUp()
     {
         nombreUp.text = NombreActual;
-        retratoEnUp.enabled = CaballoActual != null && retratoStats != null;
+        AsignarSprite(retratoEnUp, HorseVisualCatalog.Default?.Splash(CaballoActual) ?? CaballoActual?.sprite);
         puntosUp.text = $"Puntos disponibles: {Mathf.Max(0, PuntosDisponibles)}";
         var valores = ValoresStats(CaballoActual);
         for (int i = 0; i < indicesResumen.Length; i++)
@@ -252,7 +260,7 @@ public partial class EstabloView : MonoBehaviour
     {
         tituloItems.text = "Equipamiento: " + NombreActual;
         nombreItems.text = NombreActual;
-        AsignarSprite(maniquiItems, CaballoActual != null ? spriteManiquiItems : null);
+        AsignarSprite(maniquiItems, spriteManiquiItems);
         QuitarFilas(listaInventario);
         botonesInventario.Clear();
 
@@ -265,7 +273,8 @@ public partial class EstabloView : MonoBehaviour
             var boton = Fila("Item_" + clave, listaInventario, item.nombre + $"   × {grupo.Count()}", item.sprite);
             botonesInventario.Add(clave, boton);
             boton.onClick.AddListener(() => SeleccionarItem(clave));
-            boton.gameObject.AddComponent<EstabloArrastre>().Configurar(raiz, item, () => SeleccionarItem(clave));
+            if (Producto(item)?.tipoProducto != TipoProductoTienda.Consumible)
+                boton.gameObject.AddComponent<EstabloArrastre>().Configurar(raiz, item, () => SeleccionarItem(clave));
         }
 
         if (ItemSeleccionado() == null)
@@ -287,27 +296,22 @@ public partial class EstabloView : MonoBehaviour
 
         var seleccionado = ItemSeleccionado();
         descripcionItems.interactable = seleccionado != null;
-        Etiqueta(descripcionItems).text = seleccionado != null ? "Descripción" : "Selecciona un ítem";
+        Etiqueta(descripcionItems).text = seleccionado == null ? "Selecciona un ítem" :
+            Producto(seleccionado)?.tipoProducto == TipoProductoTienda.Consumible ? "Usar consumible" : "Descripción";
 
         foreach (var entrada in botonesRanura)
         {
             var equipado = Juego?.ObtenerItemEquipado(CaballoActual, entrada.Key);
             var boton = entrada.Value;
-            Etiqueta(boton).text = equipado == null ? "Vacío" : equipado.nombre + Bonificacion(equipado);
+            Etiqueta(boton).text = equipado == null ? "Vacío" : equipado.nombre;
             boton.interactable = equipado != null || (CaballoActual != null && seleccionado != null &&
+                Producto(seleccionado)?.tipoProducto != TipoProductoTienda.Consumible &&
                 SistemaEquipamiento.EsCompatible(seleccionado.slotPermitido, entrada.Key));
         }
     }
 
     private DefinicionProductoTienda Producto(ItemCaballo item) =>
         Juego == null ? null : SistemaTienda.Buscar(Juego.CatalogoTienda(), item.idDefinicion);
-
-    private string Bonificacion(ItemCaballo item)
-    {
-        var producto = Producto(item);
-        return producto != null && producto.bonificacion != 0
-            ? $" · +{producto.bonificacion} {producto.estadistica}" : "";
-    }
 
     private void MostrarDescripcion()
     {
@@ -316,9 +320,24 @@ public partial class EstabloView : MonoBehaviour
             return;
 
         var producto = Producto(item);
-        string efecto = producto != null && producto.bonificacion != 0
-            ? $"Estadística: {producto.estadistica}\nBonificación: +{producto.bonificacion}"
-            : "Sin bonificación registrada";
+        if (producto?.tipoProducto == TipoProductoTienda.Consumible)
+        {
+            bool puede = Juego.PuedeUsarConsumible(CaballoActual, item, out string motivo);
+            string duracion = producto.bonificacion != 0 || producto.bonificacionSecundaria != 0
+                ? "Preparación de este día. Usar antes de elegir carrera." : "Usar antes de elegir carrera.";
+            if (producto.experiencia > 0) duracion += " La XP obtenida es permanente.";
+            MostrarModal(producto.nombre, producto.descripcion + "\n" + producto.EfectoVisible +
+                "\n" + duracion + "\n" + motivo,
+                () =>
+                {
+                    Juego.UsarConsumible(CaballoActual, item, out string resultado);
+                    mensajeItems.text = resultado;
+                    RefrescarItems();
+                }, puede);
+            Etiqueta(confirmarModal).text = "Usar";
+            return;
+        }
+        string efecto = producto?.EfectoVisible ?? "Sin bonificación registrada";
         MostrarModal(producto?.nombre ?? item.nombre,
             $"{producto?.descripcion ?? item.descripcion}\n\n{efecto}\nRanura: {SistemaEquipamiento.NombreRanura(producto?.slotPermitido ?? item.slotPermitido)}");
     }
@@ -334,19 +353,28 @@ public partial class EstabloView : MonoBehaviour
             return;
         }
 
-        MostrarModal(equipado.nombre, $"Desequipar de {SistemaEquipamiento.NombreRanura(ranura)} cuesta ${SistemaEquipamiento.CostoDesequiparItem}.",
+        MostrarModal(equipado.nombre, (Producto(equipado)?.EfectoVisible ?? "") +
+            $"\nDesequipar de {SistemaEquipamiento.NombreRanura(ranura)} cuesta {Moneda.Texto(SistemaEquipamiento.CostoDesequiparItem)}.",
             () =>
             {
                 bool retirado = Juego.DesequiparItem(caballo, equipado);
                 mensajeItems.text = retirado ? "Ítem devuelto al inventario" : "No se pudo desequipar";
                 RefrescarItems();
             }, Juego.dinero >= SistemaEquipamiento.CostoDesequiparItem);
+        Etiqueta(confirmarModal).text = "Desequipar";
     }
 
     private void EquiparEnRanura(TipoSlotItem ranura, ItemCaballo item)
     {
         if (pestanaActual != Pestana.Items || CaballoActual == null || item == null)
             return;
+
+        int nivelNecesario = Producto(item)?.nivelMinimo ?? 1;
+        if (CaballoActual.nivel < nivelNecesario)
+        {
+            mensajeItems.text = "Requiere nivel " + nivelNecesario;
+            return;
+        }
 
         if (!SistemaEquipamiento.EsCompatible(item.slotPermitido, ranura))
         {

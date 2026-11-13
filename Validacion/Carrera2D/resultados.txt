@@ -1,0 +1,53 @@
+Carrera 2D, 13/11/2026 — Unity 6000.3.13f1
+
+Resultados aprobados:
+Carrera2DProbe.Run: 354 modelos + 17573 comprobaciones de integración en la ejecución final.
+CarreraCierreProbe.Run: 1056 bandas por distancia/progresión; 27 ensamblados Windows y 12 referencias.
+BetaJugableValidation.Run: escenarios A-G, dos carreras reales con/sin apuesta y persistencia.
+AnimacionesCatalogoProbe.Run: 2634 comprobaciones; 100 perfiles, ocho fases, carrera real y restauración.
+VerificarIntegridad.py: PASS; código principal idéntico a la copia validada, recursos y sistemas protegidos conservados.
+git diff --check: PASS (sólo avisos de normalización LF/CRLF).
+
+Logs completos de ejecuciones aprobadas:
+C:\Caballos\Validation\HubRefresh\Carrera2D-CompatibilidadFinal.log
+C:\Caballos\Validation\HubRefresh\Carrera2D-Cierre.log
+C:\Caballos\Validation\HubRefresh\Carrera2D-WindowsFinal.log
+C:\Caballos\Validation\HubRefresh\Carrera2D-Beta2.log
+C:\Caballos\Validation\HubRefresh\Carrera2D-Animaciones.log
+
+El conteo de integración incluye comprobaciones de posiciones/cruce en cada paso;
+puede variar al repetir por el caballo inicial elegido en la partida de prueba.
+Las 354 pruebas de modelos y las 1056 de bandas usan semillas configuradas.
+
+Se simula un fallo de escritura usando un archivo de fixture como directorio.
+El error de SaveSystem en ese caso es esperado: se comprueba el rollback de la
+inscripción y que el JSON anterior se conserve. El probe final no detectó errores
+inesperados de UI o referencias.
+
+Reproducción segura:
+- Usar una copia aislada con Assets, Packages y ProjectSettings actuales.
+- Copiar Carrera2DProbe.cs y CarreraCierreProbe.cs a Assets/Editor de esa copia.
+- CarreraCierreProbe usa los helpers CatalogosWindowsProbe y CatalogosAssetProbe,
+  conservados en las fuentes de validación anteriores; nunca poner probes en scripts de Player.
+- Definir CABALLOS_VALIDATION_SAVE_PATH en un directorio NUEVO dentro de
+  C:\Caballos\Validation\ValidationSave y CABALLOS_VALIDATION_PREFS_PREFIX exclusivo.
+- Iniciar Unity con Start-Process -WindowStyle Hidden, -batchmode -projectPath COPIA
+  -executeMethod Carrera2DProbe.Run -logFile LOG --burst-disable-compilation.
+- No pasar -quit al probe de Play Mode: sale por EditorApplication.Exit.
+- Para CarreraCierreProbe.Run puede usarse -nographics -quit: sólo Edit Mode,
+  compilación de scripts y comprobación de referencias, sin ejecutable.
+- La prueba de A alimenta un booleano al controlador; no usa el teclado de Windows.
+- Las capturas se renderizan a RenderTexture, sin cambiar resolución de Windows.
+
+Renders revisados: selector-inscripciones, tablon-inscripcion, preparacion,
+flecha-jugador, recorrido y ambiente de 1200/2400 m, meta de ambas distancias,
+pista en 1920x1080/1600x900/1366x768/1280x720 y podio.
+Ruta de imágenes: C:\Caballos\Validation\Carrera2D.
+
+Pendiente manual: uso físico de A, comodidad de encuadre y escalas DPI/ventana.
+Arte provisional: paisaje geométrico, espectadores añadidos y banderines;
+se reutilizan tribuna/césped originales. Fondos multicapa específicos y ciclos
+ilustrados de público quedan pendientes. Ver CARRERA_2D.md.
+
+Sin control del escritorio, cambios en Hub/establo/tienda/subastas, commit,
+push ni build de distribución. La integración económica se limita a las carreras.

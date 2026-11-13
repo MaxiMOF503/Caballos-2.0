@@ -1,0 +1,13 @@
+MODIFICADO Caballo.cs
+NUEVO CatalogoCaballos.cs
+MODIFICADO EstabloView.cs
+MODIFICADO GameData.cs
+MODIFICADO GameManager.Carrera.cs
+NUEVO GameManager.Consumibles.cs
+MODIFICADO GameManager.cs
+MODIFICADO HorseVisualCatalog.cs
+MODIFICADO ProgresionCaballo.cs
+NUEVO RecursosCatalogo.cs
+MODIFICADO SistemaSubastas.cs
+MODIFICADO SistemaTienda.cs
+MODIFICADO TiendaView.cs

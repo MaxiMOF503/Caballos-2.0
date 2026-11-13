@@ -1,0 +1,10 @@
+animaciones-catalogo-final: ANIMACIONES CATALOGO PASS: 2384 comprobaciones
+catalogos-100-regresion: CATALOGOS PASS: 1240 comprobaciones
+subastas-100-regresion: SUBASTAS PASS: 163 comprobaciones
+beta-100-regresion: TABLÓN PASS: marco de borde a borde en 1920×1080, 1600×900, 1366×768, 1280×720 y 2560×1080.
+beta-100-regresion: BETA PASS: escenarios A–G, con apuesta y sin apuesta, persistencia, cambio de carrera y liquidación única.
+economia-100-regresion: ECONOMIA SUBASTA PASS: 22 comprobaciones; negativo explicado por penalización de carrera, no por cobro duplicado de reserva.
+camara-100-regresion: CORRECCION CAMARA PASS: 2205 comprobaciones
+windows-100-compilacion: CATALOGOS WINDOWS SCRIPTS PASS: 27 ensamblados; no se genera ejecutable.
+referencias-100-final: CATALOGOS ASSETS PASS: 12 comprobaciones
+animaciones-100-render: ANIMACIONES RENDER PASS: 15 capturas de cinco identidades, cuatro resoluciones; sin entrada física.

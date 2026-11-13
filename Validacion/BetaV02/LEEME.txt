@@ -1,0 +1,49 @@
+CABALLOS 2.0 — BETA v0.2
+Versión 0.2.0 · Windows de 64 bits · Proyecto académico
+
+PARA JUGAR
+1. Extraer COMPLETO Caballos-2.0-Beta-v0.2-Windows.zip.
+2. Abrir Caballos-2.0.exe dentro de la carpeta extraída.
+3. Elegir Nueva partida o Cargar partida.
+
+No hace falta instalar Unity. Mantener el .exe junto a Caballos-2.0_Data,
+UnityPlayer.dll, MonoBleedingEdge y las demás dependencias incluidas.
+No abrir el juego desde dentro del ZIP. Para compartir o entregar, usar
+el ZIP completo: el .exe suelto no funciona por sí solo.
+
+CONTROLES
+- Mouse y clic izquierdo: seleccionar botones y objetos interactivos.
+- Hub: mover el mouse para mirar; hacer clic en tienda, establo, tablón o TV.
+- Menú principal: flechas arriba/abajo y Enter también permiten navegar.
+- Escape: abre/cierra la pausa en el Hub y durante la carrera. En ventanas
+  de confirmación o campos de texto puede atender primero esa interacción.
+  La pausa ofrece continuar, guardar cuando está disponible, volver al menú
+  principal y salir con confirmación.
+- Establo / Items: arrastrar con clic izquierdo y soltar en una ranura
+  compatible; revisar la confirmación de equipamiento.
+- Botones Volver: regresar a la pantalla anterior o al Hub.
+
+PARA CORRER
+Abrir el tablón del Hub, elegir una carrera y pulsar Seleccionar.
+En el tablón de apuestas, apostar dinero ficticio es opcional.
+Volver al Hub, abrir la TV e iniciar la carrera preparada. La inscripción
+se cobra al iniciar. La carrera es automática: no se maneja el caballo.
+La flecha amarilla identifica al caballo propio durante los dos segundos
+iniciales; después, mantener A para verla. Esperar a todos los participantes
+y usar Volver en los resultados.
+
+PANTALLA, SONIDO Y SALIDA
+Configuración, en el menú principal, permite ajustar volumen, resolución
+y pantalla completa. La ventana inicial es de 1920x1080 y redimensionable.
+Usar Salir en el menú principal o la opción de salida del menú Escape.
+
+PARTIDAS
+Los guardados se crean por usuario, fuera de esta carpeta, normalmente en:
+%USERPROFILE%\AppData\LocalLow\DefaultCompany\Caballos 2.0\gameData.json
+No se incluyen partidas personales en esta entrega. Nueva partida puede
+reemplazar un progreso anterior, previa confirmación si existe un guardado.
+
+ESTADO DE LA BETA
+Beta académica en desarrollo; puede contener defectos visuales o pendientes.
+Las animaciones actuales no equivalen a los originales perdidos.
+Las apuestas utilizan únicamente dinero ficticio del juego.

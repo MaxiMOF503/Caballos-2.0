@@ -1,0 +1,22 @@
+Primera puja aceptada
+Reserva sale del disponible una sola vez
+Aumenta puja propia
+Aumento descuenta solo diferencia de 50
+Doble clic en la misma puja no descuenta
+Puja impagable conserva ambos saldos
+Guarda la reserva
+Carga completa
+Carga no descuenta de nuevo la reserva
+Entrega no cobra dos veces la oferta reservada
+Cierre repetido no cobra ni duplica caballo
+Reserva para probar devolución
+IA supera puja y devuelve exactamente la reserva
+Perder la subasta no duplica la devolución
+Prepara carrera sin apuesta con saldo de 150
+Inicia carrera guardada
+Reproduce video: 150 menos penalización existente de 200 resulta en -50, sin reservas
+Guarda el resultado de la carrera
+Carga completa
+El saldo negativo ya está en el JSON y no se calcula en la vista de subasta
+Saldo negativo no permite nuevas pujas
+Intento rechazado no agrava el saldo

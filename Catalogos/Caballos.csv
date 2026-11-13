@@ -1,0 +1,101 @@
+﻿id,nombre,raza,visualProfileId,enfoque,ajusteVelocidad,ajusteStamina,ajusteSuerte,ajusteInteligencia,edadMinima,edadMaxima,potencialMinimo,potencialMaximo,splashRecurso,visualDefinitivo
+caballo_001,Rayo,Criollo,horse_01,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_001,True
+caballo_002,Luna,Criollo,horse_06,Equilibrado,0,0,0,0,3,7,6,13,Catalogos/Caballos/caballo_002,True
+caballo_003,Relámpago,Criollo,horse_09,Equilibrado,0,0,0,0,3,7,7,14,Catalogos/Caballos/caballo_003,True
+caballo_004,Tormenta,Criollo,horse_04,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_004,True
+caballo_005,Centella,Criollo,horse_05,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_005,True
+caballo_006,Pegaso,Criollo,horse_06,Velocista,1,-1,0,0,3,7,7,14,Catalogos/Caballos/caballo_006,True
+caballo_007,Trueno,Criollo,horse_07,Velocista,1,-1,0,0,3,7,5,12,Catalogos/Caballos/caballo_007,True
+caballo_008,Sombra,Criollo,horse_05,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_008,True
+caballo_009,Luna Negra,Criollo,horse_05,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_009,True
+caballo_010,Furia,Criollo,horse_10,Fondista,-1,1,0,0,3,7,5,12,Catalogos/Caballos/caballo_010,True
+caballo_011,Neblina,Criollo,horse_11,Fondista,-1,1,0,0,3,7,6,13,Catalogos/Caballos/caballo_011,True
+caballo_012,Tornado,Criollo,horse_12,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_012,True
+caballo_013,Azabache,Pura sangre,horse_05,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_013,True
+caballo_014,Cometa,Pura sangre,horse_02,Táctico,0,0,-1,1,3,7,6,13,Catalogos/Caballos/caballo_014,True
+caballo_015,Mistic,Pura sangre,horse_03,Táctico,0,0,-1,1,3,7,7,14,Catalogos/Caballos/caballo_015,True
+caballo_016,Gitano,Pura sangre,horse_04,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_016,True
+caballo_017,Alba,Pura sangre,horse_05,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_017,True
+caballo_018,Eclipse,Pura sangre,horse_06,Regular,0,0,1,-1,3,7,7,14,Catalogos/Caballos/caballo_018,True
+caballo_019,Fénix,Pura sangre,horse_07,Regular,0,0,1,-1,3,7,5,12,Catalogos/Caballos/caballo_019,True
+caballo_020,Bandido,Pura sangre,horse_08,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_020,True
+caballo_021,Céfiro,Pura sangre,horse_09,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_021,True
+caballo_022,Gala,Pura sangre,horse_10,Versátil,0,1,0,-1,3,7,5,12,Catalogos/Caballos/caballo_022,True
+caballo_023,Lucero,Pura sangre,horse_11,Versátil,0,1,0,-1,3,7,6,13,Catalogos/Caballos/caballo_023,True
+caballo_024,Indio,Pura sangre,horse_12,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_024,True
+caballo_025,Apolo,Cuarto de milla,horse_01,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_025,True
+caballo_026,Duque,Cuarto de milla,horse_02,Equilibrado,0,0,0,0,3,7,6,13,Catalogos/Caballos/caballo_026,True
+caballo_027,Marqués,Cuarto de milla,horse_03,Equilibrado,0,0,0,0,3,7,7,14,Catalogos/Caballos/caballo_027,True
+caballo_028,Capitán,Cuarto de milla,horse_04,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_028,True
+caballo_029,Valiente,Cuarto de milla,horse_05,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_029,True
+caballo_030,Aquiles,Cuarto de milla,horse_06,Velocista,1,-1,0,0,3,7,7,14,Catalogos/Caballos/caballo_030,True
+caballo_031,Hércules,Cuarto de milla,horse_07,Velocista,1,-1,0,0,3,7,5,12,Catalogos/Caballos/caballo_031,True
+caballo_032,Odín,Cuarto de milla,horse_08,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_032,True
+caballo_033,Thor,Cuarto de milla,horse_09,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_033,True
+caballo_034,Ares,Cuarto de milla,horse_10,Fondista,-1,1,0,0,3,7,5,12,Catalogos/Caballos/caballo_034,True
+caballo_035,Zafiro,Cuarto de milla,horse_11,Fondista,-1,1,0,0,3,7,6,13,Catalogos/Caballos/caballo_035,True
+caballo_036,Rubí,Cuarto de milla,horse_12,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_036,True
+caballo_037,Esmeralda,Árabe,horse_01,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_037,True
+caballo_038,Diamante,Árabe,horse_02,Táctico,0,0,-1,1,3,7,6,13,Catalogos/Caballos/caballo_038,True
+caballo_039,Aurora,Árabe,horse_03,Táctico,0,0,-1,1,3,7,7,14,Catalogos/Caballos/caballo_039,True
+caballo_040,Bruma,Árabe,horse_04,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_040,True
+caballo_041,Granizo,Árabe,horse_05,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_041,True
+caballo_042,Viento Sur,Árabe,horse_06,Regular,0,0,1,-1,3,7,7,14,Catalogos/Caballos/caballo_042,True
+caballo_043,Estrella,Árabe,horse_07,Regular,0,0,1,-1,3,7,5,12,Catalogos/Caballos/caballo_043,True
+caballo_044,Centinela,Árabe,horse_08,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_044,True
+caballo_045,Mistral,Árabe,horse_09,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_045,True
+caballo_046,Alazán,Árabe,horse_07,Versátil,0,1,0,-1,3,7,5,12,Catalogos/Caballos/caballo_046,True
+caballo_047,Campanero,Árabe,horse_11,Versátil,0,1,0,-1,3,7,6,13,Catalogos/Caballos/caballo_047,True
+caballo_048,Canelita,Árabe,horse_12,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_048,True
+caballo_049,Carbonero,Criollo,horse_05,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_049,True
+caballo_050,Castaño,Criollo,horse_03,Equilibrado,0,0,0,0,3,7,6,13,Catalogos/Caballos/caballo_050,True
+caballo_051,Cobre,Criollo,horse_09,Equilibrado,0,0,0,0,3,7,7,14,Catalogos/Caballos/caballo_051,True
+caballo_052,Coral,Criollo,horse_04,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_052,True
+caballo_053,Destello,Criollo,horse_05,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_053,True
+caballo_054,Dorado,Criollo,horse_04,Velocista,1,-1,0,0,3,7,7,14,Catalogos/Caballos/caballo_054,True
+caballo_055,Espiga,Criollo,horse_07,Velocista,1,-1,0,0,3,7,5,12,Catalogos/Caballos/caballo_055,True
+caballo_056,Fandango,Criollo,horse_08,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_056,True
+caballo_057,Flecha,Criollo,horse_09,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_057,True
+caballo_058,Girasol,Criollo,horse_10,Fondista,-1,1,0,0,3,7,5,12,Catalogos/Caballos/caballo_058,True
+caballo_059,Horizonte,Criollo,horse_11,Fondista,-1,1,0,0,3,7,6,13,Catalogos/Caballos/caballo_059,True
+caballo_060,Jade,Criollo,horse_12,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_060,True
+caballo_061,Jaspe,Pura sangre,horse_01,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_061,True
+caballo_062,Junco,Pura sangre,horse_02,Táctico,0,0,-1,1,3,7,6,13,Catalogos/Caballos/caballo_062,True
+caballo_063,Leyenda,Pura sangre,horse_03,Táctico,0,0,-1,1,3,7,7,14,Catalogos/Caballos/caballo_063,True
+caballo_064,Lince,Pura sangre,horse_04,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_064,True
+caballo_065,Litoral,Pura sangre,horse_05,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_065,True
+caballo_066,Malambo,Pura sangre,horse_06,Regular,0,0,1,-1,3,7,7,14,Catalogos/Caballos/caballo_066,True
+caballo_067,Marea,Pura sangre,horse_07,Regular,0,0,1,-1,3,7,5,12,Catalogos/Caballos/caballo_067,True
+caballo_068,Melodía,Pura sangre,horse_08,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_068,True
+caballo_069,Mercurio,Pura sangre,horse_09,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_069,True
+caballo_070,Milonga,Pura sangre,horse_10,Versátil,0,1,0,-1,3,7,5,12,Catalogos/Caballos/caballo_070,True
+caballo_071,Montaña,Pura sangre,horse_11,Versátil,0,1,0,-1,3,7,6,13,Catalogos/Caballos/caballo_071,True
+caballo_072,Nácar,Pura sangre,horse_06,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_072,True
+caballo_073,Niebla Azul,Cuarto de milla,horse_08,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_073,True
+caballo_074,Nogal,Cuarto de milla,horse_03,Equilibrado,0,0,0,0,3,7,6,13,Catalogos/Caballos/caballo_074,True
+caballo_075,Olivo,Cuarto de milla,horse_03,Equilibrado,0,0,0,0,3,7,7,14,Catalogos/Caballos/caballo_075,True
+caballo_076,Ónix,Cuarto de milla,horse_05,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_076,True
+caballo_077,Paladín,Cuarto de milla,horse_05,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_077,True
+caballo_078,Pampero,Cuarto de milla,horse_06,Velocista,1,-1,0,0,3,7,7,14,Catalogos/Caballos/caballo_078,True
+caballo_079,Pampa,Cuarto de milla,horse_07,Velocista,1,-1,0,0,3,7,5,12,Catalogos/Caballos/caballo_079,True
+caballo_080,Perla,Cuarto de milla,horse_06,Velocista,1,-1,0,0,3,7,6,13,Catalogos/Caballos/caballo_080,True
+caballo_081,Pionero,Cuarto de milla,horse_09,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_081,True
+caballo_082,Platero,Cuarto de milla,horse_01,Fondista,-1,1,0,0,3,7,5,12,Catalogos/Caballos/caballo_082,True
+caballo_083,Quebracho,Cuarto de milla,horse_11,Fondista,-1,1,0,0,3,7,6,13,Catalogos/Caballos/caballo_083,True
+caballo_084,Rastro,Cuarto de milla,horse_12,Fondista,-1,1,0,0,3,7,7,14,Catalogos/Caballos/caballo_084,True
+caballo_085,Rebelde,Árabe,horse_01,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_085,True
+caballo_086,Resplandor,Árabe,horse_02,Táctico,0,0,-1,1,3,7,6,13,Catalogos/Caballos/caballo_086,True
+caballo_087,Rocío,Árabe,horse_03,Táctico,0,0,-1,1,3,7,7,14,Catalogos/Caballos/caballo_087,True
+caballo_088,Romero,Árabe,horse_04,Táctico,0,0,-1,1,3,7,5,12,Catalogos/Caballos/caballo_088,True
+caballo_089,Sendero,Árabe,horse_05,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_089,True
+caballo_090,Sereno,Árabe,horse_06,Regular,0,0,1,-1,3,7,7,14,Catalogos/Caballos/caballo_090,True
+caballo_091,Sierra,Árabe,horse_07,Regular,0,0,1,-1,3,7,5,12,Catalogos/Caballos/caballo_091,True
+caballo_092,Solano,Árabe,horse_08,Regular,0,0,1,-1,3,7,6,13,Catalogos/Caballos/caballo_092,True
+caballo_093,Talismán,Árabe,horse_09,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_093,True
+caballo_094,Tango,Árabe,horse_10,Versátil,0,1,0,-1,3,7,5,12,Catalogos/Caballos/caballo_094,True
+caballo_095,Tempestad,Árabe,horse_11,Versátil,0,1,0,-1,3,7,6,13,Catalogos/Caballos/caballo_095,True
+caballo_096,Tesoro,Árabe,horse_12,Versátil,0,1,0,-1,3,7,7,14,Catalogos/Caballos/caballo_096,True
+caballo_097,Travesía,Criollo,horse_01,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_097,True
+caballo_098,Trigal,Criollo,horse_02,Equilibrado,0,0,0,0,3,7,6,13,Catalogos/Caballos/caballo_098,True
+caballo_099,Victoria,Criollo,horse_03,Equilibrado,0,0,0,0,3,7,7,14,Catalogos/Caballos/caballo_099,True
+caballo_100,Vigía,Criollo,horse_04,Equilibrado,0,0,0,0,3,7,5,12,Catalogos/Caballos/caballo_100,True

@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -14,6 +14,7 @@ public class TablonView : MonoBehaviour
     public Button apostar, confirmar, cancelar;
     [SerializeField] Sprite marco, madera;
     internal TMP_Text saldo, feedback;
+    internal TMP_Text inscripcionTexto;
     internal Button cambiarCarrera;
     Sprite marcoRecortado;
 
@@ -136,10 +137,11 @@ public class TablonView : MonoBehaviour
     {
         int dinero = GameManager.Instancia.dinero;
         bool vigente = carrera != null && carrera == GameManager.Instancia.ObtenerCarreraProgramada();
-        bool abierta = vigente && !carrera.SeleccionBloqueada;
+        bool abierta = vigente && !carrera.SeleccionBloqueada && !carrera.iniciacion;
         cambiarCarrera.interactable = vigente && !carrera.SeleccionBloqueada;
         var participante = carrera?.Buscar(elegido?.id);
-        bool valida = int.TryParse(importe.text, out int cantidad) && cantidad > 0 && cantidad <= dinero;
+        int maximo = GameManager.Instancia.MaximoApuestaCarrera(carrera);
+        bool valida = int.TryParse(importe.text, out int cantidad) && cantidad > 0 && cantidad <= maximo;
         importe.interactable = abierta && importeConfirmacion == 0;
         apostar.gameObject.SetActive(importeConfirmacion == 0);
         apostar.interactable = abierta && participante != null && valida;
@@ -149,23 +151,25 @@ public class TablonView : MonoBehaviour
         var confirmada = carrera?.apuesta;
         long pago = confirmada?.Pago ?? (abierta && valida && participante != null
             ? (long)cantidad * participante.cuotaDecimas / 10 : 0);
-        saldo.text = $"Saldo: ${dinero}";
-        textoPotencial.text = $"Pago estimado: ${pago}";
+        saldo.text = $"Saldo: {Moneda.Texto(dinero)}";
+        inscripcionTexto.text = carrera == null ? "" : $"Inscripción: {Moneda.Texto(carrera.inscripcion)} · Premio: {Moneda.Texto(carrera.PremioGanador)} · Inscripción al iniciar por TV";
+        textoPotencial.text = $"Pago estimado: {Moneda.Texto(pago)}";
 
         if (confirmada != null)
         {
-            feedback.text = $"Apuesta confirmada · {confirmada.nombreCaballo} · ${confirmada.cantidad} · {CuotaTexto(confirmada.cuotaDecimas)}";
+            feedback.text = $"Apuesta confirmada · {confirmada.nombreCaballo} · {Moneda.Texto(confirmada.cantidad)} · {CuotaTexto(confirmada.cuotaDecimas)}";
             return;
         }
         if (importeConfirmacion > 0)
-            feedback.text = $"Confirmar ${importeConfirmacion} por {elegido.nombre} · {CuotaTexto(participante.cuotaDecimas)}";
+            feedback.text = $"Confirmar {Moneda.Texto(importeConfirmacion)} por {elegido.nombre} · {CuotaTexto(participante.cuotaDecimas)}";
         else if (!string.IsNullOrEmpty(mensaje)) feedback.text = mensaje;
         else if (carrera == null && !GameManager.Instancia.campanaCompletada)
             feedback.text = "Elegí una carrera en el tablón de apuestas.";
+        else if (carrera?.iniciacion == true) feedback.text = "Carrera de iniciación · Apuestas deshabilitadas. Inscripción y premio normales.";
         else if (!abierta) feedback.text = "Apuestas cerradas.";
         else if (participante == null) feedback.text = "Elegí un caballo de la lista.";
-        else if (importe.text.Length > 0 && !valida) feedback.text = "Ingresá un importe positivo dentro de tu saldo.";
-        else feedback.text = carrera.NombreVisible + " · Podés correr sin apostar.";
+        else if (importe.text.Length > 0 && !valida) feedback.text = $"Máximo para apostar: {Moneda.Texto(maximo)}. Se reserva la inscripción y, al debutar, la próxima entrada mínima.";
+        else feedback.text = carrera.NombreVisible + $" · Apuesta opcional (máximo {Moneda.Texto(maximo)}).";
     }
 
     internal static string CuotaTexto(int decimas) =>

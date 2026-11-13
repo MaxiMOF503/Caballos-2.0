@@ -1,0 +1,11 @@
+Fuente validada idéntica: CameraController.cs
+Fuente validada idéntica: EstabloView.cs
+Conservado: EstabloView.Interfaz.cs
+Conservado: CursorCaballos.cs
+Conservado: MenuPausa.cs
+Conservado: UIManager.cs
+Conservado: Interactor.cs
+Conservado: GameManager.cs
+Conservado: GameData.cs
+Escena hub.unity conservada.
+Silueta original idéntica al OID LFS de HEAD.

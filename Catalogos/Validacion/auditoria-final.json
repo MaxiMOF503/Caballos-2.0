@@ -1,0 +1,15 @@
+{
+  "items": 80,
+  "identidades": 100,
+  "iconosNuevos": 74,
+  "iconosAnteriores": 6,
+  "splashesNuevos": 100,
+  "pngCatalogoConMeta": 175,
+  "imagenesAuditadas": 180,
+  "guidDuplicados": [],
+  "archivosConservados": {
+    "Assets\\Scripts\\CameraController.cs": true,
+    "Assets\\Scenes\\hub.unity": true
+  },
+  "errores": []
+}

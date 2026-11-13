@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +18,7 @@ public class TiendaView : MonoBehaviour
     [Header("Presentación")]
     [SerializeField] Sprite fondo, estanteria, pergamino, casilla, marcoCartel, marcoBoton;
     [SerializeField] Sprite vendedor;
+    internal Sprite PapelInterfaz => pergamino;
 
     internal readonly List<TiendaProductoUI> ofertas = new();
     internal Button botonReroll;
@@ -25,6 +26,7 @@ public class TiendaView : MonoBehaviour
     internal CanvasGroup contenido;
     internal GameObject confirmacion;
     internal Button cancelar;
+    internal SubastaView subasta;
     string productoSeleccionadoId;
     string compraPendienteId;
     int precioConfirmado;
@@ -39,12 +41,28 @@ public class TiendaView : MonoBehaviour
                 fondo, estanteria, pergamino, casilla, marcoCartel, marcoBoton, vendedor);
             interfazConfigurada = true;
         }
-        RefrescarTienda(false);
+        MostrarProductos();
     }
 
     void OnDisable()
     {
         CerrarConfirmacion();
+        if (subasta != null) subasta.gameObject.SetActive(false);
+    }
+
+    internal void MostrarSubasta()
+    {
+        CerrarConfirmacion();
+        foreach (var oferta in ofertas) oferta.QuitarHover();
+        contenido.gameObject.SetActive(false);
+        subasta.gameObject.SetActive(true);
+    }
+
+    internal void MostrarProductos()
+    {
+        if (subasta != null) subasta.gameObject.SetActive(false);
+        contenido.gameObject.SetActive(true);
+        RefrescarTienda(false);
     }
 
     internal DefinicionProductoTienda ProductoDisponible(string id)
@@ -106,7 +124,6 @@ public class TiendaView : MonoBehaviour
     static bool PuedeComprar(DefinicionProductoTienda producto)
     {
         return producto != null && GameManager.Instancia != null &&
-            producto.tipoProducto == TipoProductoTienda.Equipable && producto.tieneSlotEquipable &&
             producto.sprite != null && GameManager.Instancia.dinero >= producto.precio;
     }
 
@@ -121,13 +138,15 @@ public class TiendaView : MonoBehaviour
             textoDescripcion.text = producto.descripcion;
             if (producto.tipoProducto == TipoProductoTienda.Equipable)
             {
-                textoDescripcion.text += $"\nBonificación: +{producto.bonificacion} {producto.estadistica}";
+                textoDescripcion.text += "\n" + producto.EfectoVisible;
                 textoDescripcion.text += "\nRanura: " + SistemaEquipamiento.NombreRanura(producto.slotPermitido);
+                if (producto.nivelMinimo > 1) textoDescripcion.text += " · Nivel " + producto.nivelMinimo;
             }
             else
-                textoDescripcion.text += "\nConsumible · Próximamente";
+                textoDescripcion.text += "\n" + producto.EfectoVisible + " · Un uso por caballo y día";
+            if (!producto.visualDefinitivo) textoDescripcion.text += "\nIlustración pendiente de validación";
 
-            textoPrecio.text = $"Precio: ${producto.precio}";
+            textoPrecio.text = $"Precio: {Moneda.Texto(producto.precio)}";
             if (GameManager.Instancia.dinero < producto.precio)
                 textoPrecio.text += " · Saldo insuficiente";
         }
@@ -144,7 +163,7 @@ public class TiendaView : MonoBehaviour
         if (confirmacion.activeSelf || !PuedeComprar(producto)) return;
         compraPendienteId = producto.idDefinicion;
         precioConfirmado = producto.precio;
-        textoConfirmacion.text = producto.nombre + $" — ${producto.precio}";
+        textoConfirmacion.text = producto.nombre + $" — {Moneda.Texto(producto.precio)}";
         foreach (var oferta in ofertas) oferta.QuitarHover();
         focoAnterior = UnityEngine.EventSystems.EventSystem.current?.currentSelectedGameObject;
         contenido.interactable = false;
@@ -192,7 +211,7 @@ public class TiendaView : MonoBehaviour
 
     void ActualizarReroll()
     {
-        botonReroll.GetComponentInChildren<TMP_Text>().text = "Reroll $" + SistemaTienda.CostoRerollManual;
+        botonReroll.GetComponentInChildren<TMP_Text>().text = "Reroll " + Moneda.Texto(SistemaTienda.CostoRerollManual);
         botonReroll.interactable = GameManager.Instancia.dinero >= SistemaTienda.CostoRerollManual;
     }
 

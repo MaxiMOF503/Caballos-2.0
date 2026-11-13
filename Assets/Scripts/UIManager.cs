@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     GameObject avisoHub;
     Coroutine ocultarAviso;
 
-    internal bool HayInterfazAbierta => viewCarrera.activeInHierarchy || viewTienda.activeInHierarchy ||
+    internal bool HayInterfazAbierta => GameManager.Instancia?.Derrotado == true || viewCarrera.activeInHierarchy || viewTienda.activeInHierarchy ||
         viewEstablo.activeInHierarchy || viewTablon.activeInHierarchy ||
         (viewSeleccionCarrera != null && viewSeleccionCarrera.activeInHierarchy);
 
@@ -33,6 +33,7 @@ public class UIManager : MonoBehaviour
             return true;
 
         var tienda = viewTienda.GetComponentInChildren<TiendaView>();
+        if (tienda?.subasta?.CerrarPedigri() == true) return true;
         if (tienda != null && tienda.confirmacion != null && tienda.confirmacion.activeInHierarchy)
         {
             tienda.CancelarCompra();

@@ -1,0 +1,1240 @@
+80 productos con ID único
+100 identidades y nombres únicos
+15 consumibles
+Categoría Cabeza
+Categoría Espalda
+Categoría Patas
+Precios y utilidad de los 80 artículos
+IDs y precios anteriores conservados
+El catálogo no incorpora 100 caballos al establo
+Los 80 productos tienen iconos revisados
+74 iconos nuevos propios, sin marcador provisional
+100 splashes revisados disponibles
+100 recursos de presentación distintos
+Perfil animado válido caballo_001
+Resuelve presentación o respaldo explícito caballo_001
+Splash propio corresponde al ID y perfil caballo_001
+Perfil animado válido caballo_002
+Resuelve presentación o respaldo explícito caballo_002
+Splash propio corresponde al ID y perfil caballo_002
+Perfil animado válido caballo_003
+Resuelve presentación o respaldo explícito caballo_003
+Splash propio corresponde al ID y perfil caballo_003
+Perfil animado válido caballo_004
+Resuelve presentación o respaldo explícito caballo_004
+Splash propio corresponde al ID y perfil caballo_004
+Perfil animado válido caballo_005
+Resuelve presentación o respaldo explícito caballo_005
+Splash propio corresponde al ID y perfil caballo_005
+Perfil animado válido caballo_006
+Resuelve presentación o respaldo explícito caballo_006
+Splash propio corresponde al ID y perfil caballo_006
+Perfil animado válido caballo_007
+Resuelve presentación o respaldo explícito caballo_007
+Splash propio corresponde al ID y perfil caballo_007
+Perfil animado válido caballo_008
+Resuelve presentación o respaldo explícito caballo_008
+Splash propio corresponde al ID y perfil caballo_008
+Perfil animado válido caballo_009
+Resuelve presentación o respaldo explícito caballo_009
+Splash propio corresponde al ID y perfil caballo_009
+Perfil animado válido caballo_010
+Resuelve presentación o respaldo explícito caballo_010
+Splash propio corresponde al ID y perfil caballo_010
+Perfil animado válido caballo_011
+Resuelve presentación o respaldo explícito caballo_011
+Splash propio corresponde al ID y perfil caballo_011
+Perfil animado válido caballo_012
+Resuelve presentación o respaldo explícito caballo_012
+Splash propio corresponde al ID y perfil caballo_012
+Perfil animado válido caballo_013
+Resuelve presentación o respaldo explícito caballo_013
+Splash propio corresponde al ID y perfil caballo_013
+Perfil animado válido caballo_014
+Resuelve presentación o respaldo explícito caballo_014
+Splash propio corresponde al ID y perfil caballo_014
+Perfil animado válido caballo_015
+Resuelve presentación o respaldo explícito caballo_015
+Splash propio corresponde al ID y perfil caballo_015
+Perfil animado válido caballo_016
+Resuelve presentación o respaldo explícito caballo_016
+Splash propio corresponde al ID y perfil caballo_016
+Perfil animado válido caballo_017
+Resuelve presentación o respaldo explícito caballo_017
+Splash propio corresponde al ID y perfil caballo_017
+Perfil animado válido caballo_018
+Resuelve presentación o respaldo explícito caballo_018
+Splash propio corresponde al ID y perfil caballo_018
+Perfil animado válido caballo_019
+Resuelve presentación o respaldo explícito caballo_019
+Splash propio corresponde al ID y perfil caballo_019
+Perfil animado válido caballo_020
+Resuelve presentación o respaldo explícito caballo_020
+Splash propio corresponde al ID y perfil caballo_020
+Perfil animado válido caballo_021
+Resuelve presentación o respaldo explícito caballo_021
+Splash propio corresponde al ID y perfil caballo_021
+Perfil animado válido caballo_022
+Resuelve presentación o respaldo explícito caballo_022
+Splash propio corresponde al ID y perfil caballo_022
+Perfil animado válido caballo_023
+Resuelve presentación o respaldo explícito caballo_023
+Splash propio corresponde al ID y perfil caballo_023
+Perfil animado válido caballo_024
+Resuelve presentación o respaldo explícito caballo_024
+Splash propio corresponde al ID y perfil caballo_024
+Perfil animado válido caballo_025
+Resuelve presentación o respaldo explícito caballo_025
+Splash propio corresponde al ID y perfil caballo_025
+Perfil animado válido caballo_026
+Resuelve presentación o respaldo explícito caballo_026
+Splash propio corresponde al ID y perfil caballo_026
+Perfil animado válido caballo_027
+Resuelve presentación o respaldo explícito caballo_027
+Splash propio corresponde al ID y perfil caballo_027
+Perfil animado válido caballo_028
+Resuelve presentación o respaldo explícito caballo_028
+Splash propio corresponde al ID y perfil caballo_028
+Perfil animado válido caballo_029
+Resuelve presentación o respaldo explícito caballo_029
+Splash propio corresponde al ID y perfil caballo_029
+Perfil animado válido caballo_030
+Resuelve presentación o respaldo explícito caballo_030
+Splash propio corresponde al ID y perfil caballo_030
+Perfil animado válido caballo_031
+Resuelve presentación o respaldo explícito caballo_031
+Splash propio corresponde al ID y perfil caballo_031
+Perfil animado válido caballo_032
+Resuelve presentación o respaldo explícito caballo_032
+Splash propio corresponde al ID y perfil caballo_032
+Perfil animado válido caballo_033
+Resuelve presentación o respaldo explícito caballo_033
+Splash propio corresponde al ID y perfil caballo_033
+Perfil animado válido caballo_034
+Resuelve presentación o respaldo explícito caballo_034
+Splash propio corresponde al ID y perfil caballo_034
+Perfil animado válido caballo_035
+Resuelve presentación o respaldo explícito caballo_035
+Splash propio corresponde al ID y perfil caballo_035
+Perfil animado válido caballo_036
+Resuelve presentación o respaldo explícito caballo_036
+Splash propio corresponde al ID y perfil caballo_036
+Perfil animado válido caballo_037
+Resuelve presentación o respaldo explícito caballo_037
+Splash propio corresponde al ID y perfil caballo_037
+Perfil animado válido caballo_038
+Resuelve presentación o respaldo explícito caballo_038
+Splash propio corresponde al ID y perfil caballo_038
+Perfil animado válido caballo_039
+Resuelve presentación o respaldo explícito caballo_039
+Splash propio corresponde al ID y perfil caballo_039
+Perfil animado válido caballo_040
+Resuelve presentación o respaldo explícito caballo_040
+Splash propio corresponde al ID y perfil caballo_040
+Perfil animado válido caballo_041
+Resuelve presentación o respaldo explícito caballo_041
+Splash propio corresponde al ID y perfil caballo_041
+Perfil animado válido caballo_042
+Resuelve presentación o respaldo explícito caballo_042
+Splash propio corresponde al ID y perfil caballo_042
+Perfil animado válido caballo_043
+Resuelve presentación o respaldo explícito caballo_043
+Splash propio corresponde al ID y perfil caballo_043
+Perfil animado válido caballo_044
+Resuelve presentación o respaldo explícito caballo_044
+Splash propio corresponde al ID y perfil caballo_044
+Perfil animado válido caballo_045
+Resuelve presentación o respaldo explícito caballo_045
+Splash propio corresponde al ID y perfil caballo_045
+Perfil animado válido caballo_046
+Resuelve presentación o respaldo explícito caballo_046
+Splash propio corresponde al ID y perfil caballo_046
+Perfil animado válido caballo_047
+Resuelve presentación o respaldo explícito caballo_047
+Splash propio corresponde al ID y perfil caballo_047
+Perfil animado válido caballo_048
+Resuelve presentación o respaldo explícito caballo_048
+Splash propio corresponde al ID y perfil caballo_048
+Perfil animado válido caballo_049
+Resuelve presentación o respaldo explícito caballo_049
+Splash propio corresponde al ID y perfil caballo_049
+Perfil animado válido caballo_050
+Resuelve presentación o respaldo explícito caballo_050
+Splash propio corresponde al ID y perfil caballo_050
+Perfil animado válido caballo_051
+Resuelve presentación o respaldo explícito caballo_051
+Splash propio corresponde al ID y perfil caballo_051
+Perfil animado válido caballo_052
+Resuelve presentación o respaldo explícito caballo_052
+Splash propio corresponde al ID y perfil caballo_052
+Perfil animado válido caballo_053
+Resuelve presentación o respaldo explícito caballo_053
+Splash propio corresponde al ID y perfil caballo_053
+Perfil animado válido caballo_054
+Resuelve presentación o respaldo explícito caballo_054
+Splash propio corresponde al ID y perfil caballo_054
+Perfil animado válido caballo_055
+Resuelve presentación o respaldo explícito caballo_055
+Splash propio corresponde al ID y perfil caballo_055
+Perfil animado válido caballo_056
+Resuelve presentación o respaldo explícito caballo_056
+Splash propio corresponde al ID y perfil caballo_056
+Perfil animado válido caballo_057
+Resuelve presentación o respaldo explícito caballo_057
+Splash propio corresponde al ID y perfil caballo_057
+Perfil animado válido caballo_058
+Resuelve presentación o respaldo explícito caballo_058
+Splash propio corresponde al ID y perfil caballo_058
+Perfil animado válido caballo_059
+Resuelve presentación o respaldo explícito caballo_059
+Splash propio corresponde al ID y perfil caballo_059
+Perfil animado válido caballo_060
+Resuelve presentación o respaldo explícito caballo_060
+Splash propio corresponde al ID y perfil caballo_060
+Perfil animado válido caballo_061
+Resuelve presentación o respaldo explícito caballo_061
+Splash propio corresponde al ID y perfil caballo_061
+Perfil animado válido caballo_062
+Resuelve presentación o respaldo explícito caballo_062
+Splash propio corresponde al ID y perfil caballo_062
+Perfil animado válido caballo_063
+Resuelve presentación o respaldo explícito caballo_063
+Splash propio corresponde al ID y perfil caballo_063
+Perfil animado válido caballo_064
+Resuelve presentación o respaldo explícito caballo_064
+Splash propio corresponde al ID y perfil caballo_064
+Perfil animado válido caballo_065
+Resuelve presentación o respaldo explícito caballo_065
+Splash propio corresponde al ID y perfil caballo_065
+Perfil animado válido caballo_066
+Resuelve presentación o respaldo explícito caballo_066
+Splash propio corresponde al ID y perfil caballo_066
+Perfil animado válido caballo_067
+Resuelve presentación o respaldo explícito caballo_067
+Splash propio corresponde al ID y perfil caballo_067
+Perfil animado válido caballo_068
+Resuelve presentación o respaldo explícito caballo_068
+Splash propio corresponde al ID y perfil caballo_068
+Perfil animado válido caballo_069
+Resuelve presentación o respaldo explícito caballo_069
+Splash propio corresponde al ID y perfil caballo_069
+Perfil animado válido caballo_070
+Resuelve presentación o respaldo explícito caballo_070
+Splash propio corresponde al ID y perfil caballo_070
+Perfil animado válido caballo_071
+Resuelve presentación o respaldo explícito caballo_071
+Splash propio corresponde al ID y perfil caballo_071
+Perfil animado válido caballo_072
+Resuelve presentación o respaldo explícito caballo_072
+Splash propio corresponde al ID y perfil caballo_072
+Perfil animado válido caballo_073
+Resuelve presentación o respaldo explícito caballo_073
+Splash propio corresponde al ID y perfil caballo_073
+Perfil animado válido caballo_074
+Resuelve presentación o respaldo explícito caballo_074
+Splash propio corresponde al ID y perfil caballo_074
+Perfil animado válido caballo_075
+Resuelve presentación o respaldo explícito caballo_075
+Splash propio corresponde al ID y perfil caballo_075
+Perfil animado válido caballo_076
+Resuelve presentación o respaldo explícito caballo_076
+Splash propio corresponde al ID y perfil caballo_076
+Perfil animado válido caballo_077
+Resuelve presentación o respaldo explícito caballo_077
+Splash propio corresponde al ID y perfil caballo_077
+Perfil animado válido caballo_078
+Resuelve presentación o respaldo explícito caballo_078
+Splash propio corresponde al ID y perfil caballo_078
+Perfil animado válido caballo_079
+Resuelve presentación o respaldo explícito caballo_079
+Splash propio corresponde al ID y perfil caballo_079
+Perfil animado válido caballo_080
+Resuelve presentación o respaldo explícito caballo_080
+Splash propio corresponde al ID y perfil caballo_080
+Perfil animado válido caballo_081
+Resuelve presentación o respaldo explícito caballo_081
+Splash propio corresponde al ID y perfil caballo_081
+Perfil animado válido caballo_082
+Resuelve presentación o respaldo explícito caballo_082
+Splash propio corresponde al ID y perfil caballo_082
+Perfil animado válido caballo_083
+Resuelve presentación o respaldo explícito caballo_083
+Splash propio corresponde al ID y perfil caballo_083
+Perfil animado válido caballo_084
+Resuelve presentación o respaldo explícito caballo_084
+Splash propio corresponde al ID y perfil caballo_084
+Perfil animado válido caballo_085
+Resuelve presentación o respaldo explícito caballo_085
+Splash propio corresponde al ID y perfil caballo_085
+Perfil animado válido caballo_086
+Resuelve presentación o respaldo explícito caballo_086
+Splash propio corresponde al ID y perfil caballo_086
+Perfil animado válido caballo_087
+Resuelve presentación o respaldo explícito caballo_087
+Splash propio corresponde al ID y perfil caballo_087
+Perfil animado válido caballo_088
+Resuelve presentación o respaldo explícito caballo_088
+Splash propio corresponde al ID y perfil caballo_088
+Perfil animado válido caballo_089
+Resuelve presentación o respaldo explícito caballo_089
+Splash propio corresponde al ID y perfil caballo_089
+Perfil animado válido caballo_090
+Resuelve presentación o respaldo explícito caballo_090
+Splash propio corresponde al ID y perfil caballo_090
+Perfil animado válido caballo_091
+Resuelve presentación o respaldo explícito caballo_091
+Splash propio corresponde al ID y perfil caballo_091
+Perfil animado válido caballo_092
+Resuelve presentación o respaldo explícito caballo_092
+Splash propio corresponde al ID y perfil caballo_092
+Perfil animado válido caballo_093
+Resuelve presentación o respaldo explícito caballo_093
+Splash propio corresponde al ID y perfil caballo_093
+Perfil animado válido caballo_094
+Resuelve presentación o respaldo explícito caballo_094
+Splash propio corresponde al ID y perfil caballo_094
+Perfil animado válido caballo_095
+Resuelve presentación o respaldo explícito caballo_095
+Splash propio corresponde al ID y perfil caballo_095
+Perfil animado válido caballo_096
+Resuelve presentación o respaldo explícito caballo_096
+Splash propio corresponde al ID y perfil caballo_096
+Perfil animado válido caballo_097
+Resuelve presentación o respaldo explícito caballo_097
+Splash propio corresponde al ID y perfil caballo_097
+Perfil animado válido caballo_098
+Resuelve presentación o respaldo explícito caballo_098
+Splash propio corresponde al ID y perfil caballo_098
+Perfil animado válido caballo_099
+Resuelve presentación o respaldo explícito caballo_099
+Splash propio corresponde al ID y perfil caballo_099
+Perfil animado válido caballo_100
+Resuelve presentación o respaldo explícito caballo_100
+Splash propio corresponde al ID y perfil caballo_100
+Compra real herradura_plata
+Compra real manzana_dorada
+Compra real herradura_oro
+Compra real zapatillas
+Compra real sombrero_copa
+Compra real sombrero_noble
+Compra real brida_cuero
+Compra real cabezada_lona
+Compra real orejeras_fieltro
+Compra real anteojeras_laterales
+Compra real visera_lino
+Compra real cabestro_cuerda
+Compra real brida_doble_rienda
+Compra real capucha_cuadros
+Compra real gorro_lluvia
+Compra real brida_bronce
+Compra real sombrero_campo
+Compra real mascara_moscas
+Compra real orejeras_competicion
+Compra real anteojeras_sprint
+Compra real cabezada_reflectante
+Compra real capucha_termica
+Compra real brida_escuela
+Compra real sombrero_pluma
+Compra real silla_cuero
+Compra real manta_lana
+Compra real sudadero_algodon
+Compra real silla_ligera
+Compra real manta_viaje
+Compra real silla_doma
+Compra real mantilla_bordada
+Compra real silla_resistencia
+Compra real sudadero_malla
+Compra real manta_encerada
+Compra real cincha_anatomica
+Compra real silla_competicion
+Compra real manta_ceremonial
+Compra real silla_veterana
+Compra real sudadero_tactico
+Compra real herradura_bronce
+Compra real herradura_hierro
+Compra real herradura_aluminio
+Compra real herradura_acero
+Compra real herradura_liviana
+Compra real herradura_traccion
+Compra real herradura_cuarzo
+Compra real herradura_ortopedica
+Compra real herradura_remache
+Compra real herradura_titanio
+Compra real vendas_lino
+Compra real vendas_algodon
+Compra real vendas_elasticas
+Compra real vendas_termicas
+Compra real vendas_compresion
+Compra real vendas_tejidas
+Compra real vendas_cera
+Compra real vendas_profesionales
+Compra real protectores_cuero
+Compra real protectores_neopreno
+Compra real protectores_campo
+Compra real protectores_articulados
+Compra real botas_lluvia
+Compra real botines_pista
+Compra real campanas_caucho
+Compra real campanas_reforzadas
+Compra real protectores_pista
+Compra real zanahoria_crujiente
+Compra real avena_integral
+Compra real te_manzanilla
+Compra real trebol_seco
+Compra real mezcla_cereales
+Compra real infusion_menta
+Compra real pera_madura
+Compra real barrita_melaza
+Compra real sal_mineral
+Compra real galleta_avena
+Compra real racion_larga
+Compra real fruta_campo
+Compra real bocado_herbal
+Compra real manual_ejercicios
+Unidades de inventario tienen IDs independientes
+Equipa herradura_plata
+Bonificación efectiva herradura_plata Velocidad
+Bonificación efectiva herradura_plata Stamina
+Bonificación efectiva herradura_plata Suerte
+Bonificación efectiva herradura_plata Inteligencia
+Desequipa herradura_plata
+Equipa herradura_oro
+Bonificación efectiva herradura_oro Velocidad
+Bonificación efectiva herradura_oro Stamina
+Bonificación efectiva herradura_oro Suerte
+Bonificación efectiva herradura_oro Inteligencia
+Desequipa herradura_oro
+Equipa zapatillas
+Bonificación efectiva zapatillas Velocidad
+Bonificación efectiva zapatillas Stamina
+Bonificación efectiva zapatillas Suerte
+Bonificación efectiva zapatillas Inteligencia
+Desequipa zapatillas
+Equipa sombrero_copa
+Bonificación efectiva sombrero_copa Velocidad
+Bonificación efectiva sombrero_copa Stamina
+Bonificación efectiva sombrero_copa Suerte
+Bonificación efectiva sombrero_copa Inteligencia
+Desequipa sombrero_copa
+Equipa sombrero_noble
+Bonificación efectiva sombrero_noble Velocidad
+Bonificación efectiva sombrero_noble Stamina
+Bonificación efectiva sombrero_noble Suerte
+Bonificación efectiva sombrero_noble Inteligencia
+Desequipa sombrero_noble
+Equipa brida_cuero
+Bonificación efectiva brida_cuero Velocidad
+Bonificación efectiva brida_cuero Stamina
+Bonificación efectiva brida_cuero Suerte
+Bonificación efectiva brida_cuero Inteligencia
+Desequipa brida_cuero
+Equipa cabezada_lona
+Bonificación efectiva cabezada_lona Velocidad
+Bonificación efectiva cabezada_lona Stamina
+Bonificación efectiva cabezada_lona Suerte
+Bonificación efectiva cabezada_lona Inteligencia
+Desequipa cabezada_lona
+Equipa orejeras_fieltro
+Bonificación efectiva orejeras_fieltro Velocidad
+Bonificación efectiva orejeras_fieltro Stamina
+Bonificación efectiva orejeras_fieltro Suerte
+Bonificación efectiva orejeras_fieltro Inteligencia
+Desequipa orejeras_fieltro
+Nivel mínimo protege anteojeras_laterales
+Equipa anteojeras_laterales
+Bonificación efectiva anteojeras_laterales Velocidad
+Bonificación efectiva anteojeras_laterales Stamina
+Bonificación efectiva anteojeras_laterales Suerte
+Bonificación efectiva anteojeras_laterales Inteligencia
+Desequipa anteojeras_laterales
+Equipa visera_lino
+Bonificación efectiva visera_lino Velocidad
+Bonificación efectiva visera_lino Stamina
+Bonificación efectiva visera_lino Suerte
+Bonificación efectiva visera_lino Inteligencia
+Desequipa visera_lino
+Equipa cabestro_cuerda
+Bonificación efectiva cabestro_cuerda Velocidad
+Bonificación efectiva cabestro_cuerda Stamina
+Bonificación efectiva cabestro_cuerda Suerte
+Bonificación efectiva cabestro_cuerda Inteligencia
+Desequipa cabestro_cuerda
+Nivel mínimo protege brida_doble_rienda
+Equipa brida_doble_rienda
+Bonificación efectiva brida_doble_rienda Velocidad
+Bonificación efectiva brida_doble_rienda Stamina
+Bonificación efectiva brida_doble_rienda Suerte
+Bonificación efectiva brida_doble_rienda Inteligencia
+Desequipa brida_doble_rienda
+Equipa capucha_cuadros
+Bonificación efectiva capucha_cuadros Velocidad
+Bonificación efectiva capucha_cuadros Stamina
+Bonificación efectiva capucha_cuadros Suerte
+Bonificación efectiva capucha_cuadros Inteligencia
+Desequipa capucha_cuadros
+Nivel mínimo protege gorro_lluvia
+Equipa gorro_lluvia
+Bonificación efectiva gorro_lluvia Velocidad
+Bonificación efectiva gorro_lluvia Stamina
+Bonificación efectiva gorro_lluvia Suerte
+Bonificación efectiva gorro_lluvia Inteligencia
+Desequipa gorro_lluvia
+Nivel mínimo protege brida_bronce
+Equipa brida_bronce
+Bonificación efectiva brida_bronce Velocidad
+Bonificación efectiva brida_bronce Stamina
+Bonificación efectiva brida_bronce Suerte
+Bonificación efectiva brida_bronce Inteligencia
+Desequipa brida_bronce
+Equipa sombrero_campo
+Bonificación efectiva sombrero_campo Velocidad
+Bonificación efectiva sombrero_campo Stamina
+Bonificación efectiva sombrero_campo Suerte
+Bonificación efectiva sombrero_campo Inteligencia
+Desequipa sombrero_campo
+Equipa mascara_moscas
+Bonificación efectiva mascara_moscas Velocidad
+Bonificación efectiva mascara_moscas Stamina
+Bonificación efectiva mascara_moscas Suerte
+Bonificación efectiva mascara_moscas Inteligencia
+Desequipa mascara_moscas
+Nivel mínimo protege orejeras_competicion
+Equipa orejeras_competicion
+Bonificación efectiva orejeras_competicion Velocidad
+Bonificación efectiva orejeras_competicion Stamina
+Bonificación efectiva orejeras_competicion Suerte
+Bonificación efectiva orejeras_competicion Inteligencia
+Desequipa orejeras_competicion
+Nivel mínimo protege anteojeras_sprint
+Equipa anteojeras_sprint
+Bonificación efectiva anteojeras_sprint Velocidad
+Bonificación efectiva anteojeras_sprint Stamina
+Bonificación efectiva anteojeras_sprint Suerte
+Bonificación efectiva anteojeras_sprint Inteligencia
+Desequipa anteojeras_sprint
+Nivel mínimo protege cabezada_reflectante
+Equipa cabezada_reflectante
+Bonificación efectiva cabezada_reflectante Velocidad
+Bonificación efectiva cabezada_reflectante Stamina
+Bonificación efectiva cabezada_reflectante Suerte
+Bonificación efectiva cabezada_reflectante Inteligencia
+Desequipa cabezada_reflectante
+Nivel mínimo protege capucha_termica
+Equipa capucha_termica
+Bonificación efectiva capucha_termica Velocidad
+Bonificación efectiva capucha_termica Stamina
+Bonificación efectiva capucha_termica Suerte
+Bonificación efectiva capucha_termica Inteligencia
+Desequipa capucha_termica
+Nivel mínimo protege brida_escuela
+Equipa brida_escuela
+Bonificación efectiva brida_escuela Velocidad
+Bonificación efectiva brida_escuela Stamina
+Bonificación efectiva brida_escuela Suerte
+Bonificación efectiva brida_escuela Inteligencia
+Desequipa brida_escuela
+Nivel mínimo protege sombrero_pluma
+Equipa sombrero_pluma
+Bonificación efectiva sombrero_pluma Velocidad
+Bonificación efectiva sombrero_pluma Stamina
+Bonificación efectiva sombrero_pluma Suerte
+Bonificación efectiva sombrero_pluma Inteligencia
+Desequipa sombrero_pluma
+Nivel mínimo protege silla_cuero
+Equipa silla_cuero
+Bonificación efectiva silla_cuero Velocidad
+Bonificación efectiva silla_cuero Stamina
+Bonificación efectiva silla_cuero Suerte
+Bonificación efectiva silla_cuero Inteligencia
+Desequipa silla_cuero
+Equipa manta_lana
+Bonificación efectiva manta_lana Velocidad
+Bonificación efectiva manta_lana Stamina
+Bonificación efectiva manta_lana Suerte
+Bonificación efectiva manta_lana Inteligencia
+Desequipa manta_lana
+Equipa sudadero_algodon
+Bonificación efectiva sudadero_algodon Velocidad
+Bonificación efectiva sudadero_algodon Stamina
+Bonificación efectiva sudadero_algodon Suerte
+Bonificación efectiva sudadero_algodon Inteligencia
+Desequipa sudadero_algodon
+Nivel mínimo protege silla_ligera
+Equipa silla_ligera
+Bonificación efectiva silla_ligera Velocidad
+Bonificación efectiva silla_ligera Stamina
+Bonificación efectiva silla_ligera Suerte
+Bonificación efectiva silla_ligera Inteligencia
+Desequipa silla_ligera
+Nivel mínimo protege manta_viaje
+Equipa manta_viaje
+Bonificación efectiva manta_viaje Velocidad
+Bonificación efectiva manta_viaje Stamina
+Bonificación efectiva manta_viaje Suerte
+Bonificación efectiva manta_viaje Inteligencia
+Desequipa manta_viaje
+Nivel mínimo protege silla_doma
+Equipa silla_doma
+Bonificación efectiva silla_doma Velocidad
+Bonificación efectiva silla_doma Stamina
+Bonificación efectiva silla_doma Suerte
+Bonificación efectiva silla_doma Inteligencia
+Desequipa silla_doma
+Equipa mantilla_bordada
+Bonificación efectiva mantilla_bordada Velocidad
+Bonificación efectiva mantilla_bordada Stamina
+Bonificación efectiva mantilla_bordada Suerte
+Bonificación efectiva mantilla_bordada Inteligencia
+Desequipa mantilla_bordada
+Nivel mínimo protege silla_resistencia
+Equipa silla_resistencia
+Bonificación efectiva silla_resistencia Velocidad
+Bonificación efectiva silla_resistencia Stamina
+Bonificación efectiva silla_resistencia Suerte
+Bonificación efectiva silla_resistencia Inteligencia
+Desequipa silla_resistencia
+Nivel mínimo protege sudadero_malla
+Equipa sudadero_malla
+Bonificación efectiva sudadero_malla Velocidad
+Bonificación efectiva sudadero_malla Stamina
+Bonificación efectiva sudadero_malla Suerte
+Bonificación efectiva sudadero_malla Inteligencia
+Desequipa sudadero_malla
+Equipa manta_encerada
+Bonificación efectiva manta_encerada Velocidad
+Bonificación efectiva manta_encerada Stamina
+Bonificación efectiva manta_encerada Suerte
+Bonificación efectiva manta_encerada Inteligencia
+Desequipa manta_encerada
+Equipa cincha_anatomica
+Bonificación efectiva cincha_anatomica Velocidad
+Bonificación efectiva cincha_anatomica Stamina
+Bonificación efectiva cincha_anatomica Suerte
+Bonificación efectiva cincha_anatomica Inteligencia
+Desequipa cincha_anatomica
+Nivel mínimo protege silla_competicion
+Equipa silla_competicion
+Bonificación efectiva silla_competicion Velocidad
+Bonificación efectiva silla_competicion Stamina
+Bonificación efectiva silla_competicion Suerte
+Bonificación efectiva silla_competicion Inteligencia
+Desequipa silla_competicion
+Nivel mínimo protege manta_ceremonial
+Equipa manta_ceremonial
+Bonificación efectiva manta_ceremonial Velocidad
+Bonificación efectiva manta_ceremonial Stamina
+Bonificación efectiva manta_ceremonial Suerte
+Bonificación efectiva manta_ceremonial Inteligencia
+Desequipa manta_ceremonial
+Nivel mínimo protege silla_veterana
+Equipa silla_veterana
+Bonificación efectiva silla_veterana Velocidad
+Bonificación efectiva silla_veterana Stamina
+Bonificación efectiva silla_veterana Suerte
+Bonificación efectiva silla_veterana Inteligencia
+Desequipa silla_veterana
+Nivel mínimo protege sudadero_tactico
+Equipa sudadero_tactico
+Bonificación efectiva sudadero_tactico Velocidad
+Bonificación efectiva sudadero_tactico Stamina
+Bonificación efectiva sudadero_tactico Suerte
+Bonificación efectiva sudadero_tactico Inteligencia
+Desequipa sudadero_tactico
+Equipa herradura_bronce
+Bonificación efectiva herradura_bronce Velocidad
+Bonificación efectiva herradura_bronce Stamina
+Bonificación efectiva herradura_bronce Suerte
+Bonificación efectiva herradura_bronce Inteligencia
+Desequipa herradura_bronce
+Equipa herradura_hierro
+Bonificación efectiva herradura_hierro Velocidad
+Bonificación efectiva herradura_hierro Stamina
+Bonificación efectiva herradura_hierro Suerte
+Bonificación efectiva herradura_hierro Inteligencia
+Desequipa herradura_hierro
+Equipa herradura_aluminio
+Bonificación efectiva herradura_aluminio Velocidad
+Bonificación efectiva herradura_aluminio Stamina
+Bonificación efectiva herradura_aluminio Suerte
+Bonificación efectiva herradura_aluminio Inteligencia
+Desequipa herradura_aluminio
+Nivel mínimo protege herradura_acero
+Equipa herradura_acero
+Bonificación efectiva herradura_acero Velocidad
+Bonificación efectiva herradura_acero Stamina
+Bonificación efectiva herradura_acero Suerte
+Bonificación efectiva herradura_acero Inteligencia
+Desequipa herradura_acero
+Nivel mínimo protege herradura_liviana
+Equipa herradura_liviana
+Bonificación efectiva herradura_liviana Velocidad
+Bonificación efectiva herradura_liviana Stamina
+Bonificación efectiva herradura_liviana Suerte
+Bonificación efectiva herradura_liviana Inteligencia
+Desequipa herradura_liviana
+Nivel mínimo protege herradura_traccion
+Equipa herradura_traccion
+Bonificación efectiva herradura_traccion Velocidad
+Bonificación efectiva herradura_traccion Stamina
+Bonificación efectiva herradura_traccion Suerte
+Bonificación efectiva herradura_traccion Inteligencia
+Desequipa herradura_traccion
+Nivel mínimo protege herradura_cuarzo
+Equipa herradura_cuarzo
+Bonificación efectiva herradura_cuarzo Velocidad
+Bonificación efectiva herradura_cuarzo Stamina
+Bonificación efectiva herradura_cuarzo Suerte
+Bonificación efectiva herradura_cuarzo Inteligencia
+Desequipa herradura_cuarzo
+Nivel mínimo protege herradura_ortopedica
+Equipa herradura_ortopedica
+Bonificación efectiva herradura_ortopedica Velocidad
+Bonificación efectiva herradura_ortopedica Stamina
+Bonificación efectiva herradura_ortopedica Suerte
+Bonificación efectiva herradura_ortopedica Inteligencia
+Desequipa herradura_ortopedica
+Equipa herradura_remache
+Bonificación efectiva herradura_remache Velocidad
+Bonificación efectiva herradura_remache Stamina
+Bonificación efectiva herradura_remache Suerte
+Bonificación efectiva herradura_remache Inteligencia
+Desequipa herradura_remache
+Nivel mínimo protege herradura_titanio
+Equipa herradura_titanio
+Bonificación efectiva herradura_titanio Velocidad
+Bonificación efectiva herradura_titanio Stamina
+Bonificación efectiva herradura_titanio Suerte
+Bonificación efectiva herradura_titanio Inteligencia
+Desequipa herradura_titanio
+Equipa vendas_lino
+Bonificación efectiva vendas_lino Velocidad
+Bonificación efectiva vendas_lino Stamina
+Bonificación efectiva vendas_lino Suerte
+Bonificación efectiva vendas_lino Inteligencia
+Desequipa vendas_lino
+Equipa vendas_algodon
+Bonificación efectiva vendas_algodon Velocidad
+Bonificación efectiva vendas_algodon Stamina
+Bonificación efectiva vendas_algodon Suerte
+Bonificación efectiva vendas_algodon Inteligencia
+Desequipa vendas_algodon
+Nivel mínimo protege vendas_elasticas
+Equipa vendas_elasticas
+Bonificación efectiva vendas_elasticas Velocidad
+Bonificación efectiva vendas_elasticas Stamina
+Bonificación efectiva vendas_elasticas Suerte
+Bonificación efectiva vendas_elasticas Inteligencia
+Desequipa vendas_elasticas
+Nivel mínimo protege vendas_termicas
+Equipa vendas_termicas
+Bonificación efectiva vendas_termicas Velocidad
+Bonificación efectiva vendas_termicas Stamina
+Bonificación efectiva vendas_termicas Suerte
+Bonificación efectiva vendas_termicas Inteligencia
+Desequipa vendas_termicas
+Nivel mínimo protege vendas_compresion
+Equipa vendas_compresion
+Bonificación efectiva vendas_compresion Velocidad
+Bonificación efectiva vendas_compresion Stamina
+Bonificación efectiva vendas_compresion Suerte
+Bonificación efectiva vendas_compresion Inteligencia
+Desequipa vendas_compresion
+Equipa vendas_tejidas
+Bonificación efectiva vendas_tejidas Velocidad
+Bonificación efectiva vendas_tejidas Stamina
+Bonificación efectiva vendas_tejidas Suerte
+Bonificación efectiva vendas_tejidas Inteligencia
+Desequipa vendas_tejidas
+Nivel mínimo protege vendas_cera
+Equipa vendas_cera
+Bonificación efectiva vendas_cera Velocidad
+Bonificación efectiva vendas_cera Stamina
+Bonificación efectiva vendas_cera Suerte
+Bonificación efectiva vendas_cera Inteligencia
+Desequipa vendas_cera
+Nivel mínimo protege vendas_profesionales
+Equipa vendas_profesionales
+Bonificación efectiva vendas_profesionales Velocidad
+Bonificación efectiva vendas_profesionales Stamina
+Bonificación efectiva vendas_profesionales Suerte
+Bonificación efectiva vendas_profesionales Inteligencia
+Desequipa vendas_profesionales
+Equipa protectores_cuero
+Bonificación efectiva protectores_cuero Velocidad
+Bonificación efectiva protectores_cuero Stamina
+Bonificación efectiva protectores_cuero Suerte
+Bonificación efectiva protectores_cuero Inteligencia
+Desequipa protectores_cuero
+Nivel mínimo protege protectores_neopreno
+Equipa protectores_neopreno
+Bonificación efectiva protectores_neopreno Velocidad
+Bonificación efectiva protectores_neopreno Stamina
+Bonificación efectiva protectores_neopreno Suerte
+Bonificación efectiva protectores_neopreno Inteligencia
+Desequipa protectores_neopreno
+Equipa protectores_campo
+Bonificación efectiva protectores_campo Velocidad
+Bonificación efectiva protectores_campo Stamina
+Bonificación efectiva protectores_campo Suerte
+Bonificación efectiva protectores_campo Inteligencia
+Desequipa protectores_campo
+Nivel mínimo protege protectores_articulados
+Equipa protectores_articulados
+Bonificación efectiva protectores_articulados Velocidad
+Bonificación efectiva protectores_articulados Stamina
+Bonificación efectiva protectores_articulados Suerte
+Bonificación efectiva protectores_articulados Inteligencia
+Desequipa protectores_articulados
+Nivel mínimo protege botas_lluvia
+Equipa botas_lluvia
+Bonificación efectiva botas_lluvia Velocidad
+Bonificación efectiva botas_lluvia Stamina
+Bonificación efectiva botas_lluvia Suerte
+Bonificación efectiva botas_lluvia Inteligencia
+Desequipa botas_lluvia
+Nivel mínimo protege botines_pista
+Equipa botines_pista
+Bonificación efectiva botines_pista Velocidad
+Bonificación efectiva botines_pista Stamina
+Bonificación efectiva botines_pista Suerte
+Bonificación efectiva botines_pista Inteligencia
+Desequipa botines_pista
+Equipa campanas_caucho
+Bonificación efectiva campanas_caucho Velocidad
+Bonificación efectiva campanas_caucho Stamina
+Bonificación efectiva campanas_caucho Suerte
+Bonificación efectiva campanas_caucho Inteligencia
+Desequipa campanas_caucho
+Nivel mínimo protege campanas_reforzadas
+Equipa campanas_reforzadas
+Bonificación efectiva campanas_reforzadas Velocidad
+Bonificación efectiva campanas_reforzadas Stamina
+Bonificación efectiva campanas_reforzadas Suerte
+Bonificación efectiva campanas_reforzadas Inteligencia
+Desequipa campanas_reforzadas
+Nivel mínimo protege protectores_pista
+Equipa protectores_pista
+Bonificación efectiva protectores_pista Velocidad
+Bonificación efectiva protectores_pista Stamina
+Bonificación efectiva protectores_pista Suerte
+Bonificación efectiva protectores_pista Inteligencia
+Desequipa protectores_pista
+Equipo caro bloqueado en nivel inicial
+Consumible no ocupa ranura manzana_dorada
+Usa consumible por ID canónico manzana_dorada
+Retira una sola unidad manzana_dorada
+Experiencia real manzana_dorada
+Preparación efectiva manzana_dorada Velocidad
+Preparación efectiva manzana_dorada Stamina
+Preparación efectiva manzana_dorada Suerte
+Preparación efectiva manzana_dorada Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+Selecciona carrera preparada
+Parrilla incorpora preparación temporal
+Parrilla fijada impide consumos inconsistentes
+Parrilla mantiene valores fijados
+El cambio de día vence la preparación
+Consumible no ocupa ranura zanahoria_crujiente
+Usa consumible por ID canónico zanahoria_crujiente
+Retira una sola unidad zanahoria_crujiente
+Experiencia real zanahoria_crujiente
+Preparación efectiva zanahoria_crujiente Velocidad
+Preparación efectiva zanahoria_crujiente Stamina
+Preparación efectiva zanahoria_crujiente Suerte
+Preparación efectiva zanahoria_crujiente Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura avena_integral
+Usa consumible por ID canónico avena_integral
+Retira una sola unidad avena_integral
+Experiencia real avena_integral
+Preparación efectiva avena_integral Velocidad
+Preparación efectiva avena_integral Stamina
+Preparación efectiva avena_integral Suerte
+Preparación efectiva avena_integral Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura te_manzanilla
+Usa consumible por ID canónico te_manzanilla
+Retira una sola unidad te_manzanilla
+Experiencia real te_manzanilla
+Preparación efectiva te_manzanilla Velocidad
+Preparación efectiva te_manzanilla Stamina
+Preparación efectiva te_manzanilla Suerte
+Preparación efectiva te_manzanilla Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura trebol_seco
+Usa consumible por ID canónico trebol_seco
+Retira una sola unidad trebol_seco
+Experiencia real trebol_seco
+Preparación efectiva trebol_seco Velocidad
+Preparación efectiva trebol_seco Stamina
+Preparación efectiva trebol_seco Suerte
+Preparación efectiva trebol_seco Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura mezcla_cereales
+Usa consumible por ID canónico mezcla_cereales
+Retira una sola unidad mezcla_cereales
+Experiencia real mezcla_cereales
+Preparación efectiva mezcla_cereales Velocidad
+Preparación efectiva mezcla_cereales Stamina
+Preparación efectiva mezcla_cereales Suerte
+Preparación efectiva mezcla_cereales Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura infusion_menta
+Usa consumible por ID canónico infusion_menta
+Retira una sola unidad infusion_menta
+Experiencia real infusion_menta
+Preparación efectiva infusion_menta Velocidad
+Preparación efectiva infusion_menta Stamina
+Preparación efectiva infusion_menta Suerte
+Preparación efectiva infusion_menta Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura pera_madura
+Usa consumible por ID canónico pera_madura
+Retira una sola unidad pera_madura
+Experiencia real pera_madura
+Preparación efectiva pera_madura Velocidad
+Preparación efectiva pera_madura Stamina
+Preparación efectiva pera_madura Suerte
+Preparación efectiva pera_madura Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura barrita_melaza
+Usa consumible por ID canónico barrita_melaza
+Retira una sola unidad barrita_melaza
+Experiencia real barrita_melaza
+Preparación efectiva barrita_melaza Velocidad
+Preparación efectiva barrita_melaza Stamina
+Preparación efectiva barrita_melaza Suerte
+Preparación efectiva barrita_melaza Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura sal_mineral
+Usa consumible por ID canónico sal_mineral
+Retira una sola unidad sal_mineral
+Experiencia real sal_mineral
+Preparación efectiva sal_mineral Velocidad
+Preparación efectiva sal_mineral Stamina
+Preparación efectiva sal_mineral Suerte
+Preparación efectiva sal_mineral Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura galleta_avena
+Usa consumible por ID canónico galleta_avena
+Retira una sola unidad galleta_avena
+Experiencia real galleta_avena
+Preparación efectiva galleta_avena Velocidad
+Preparación efectiva galleta_avena Stamina
+Preparación efectiva galleta_avena Suerte
+Preparación efectiva galleta_avena Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura racion_larga
+Usa consumible por ID canónico racion_larga
+Retira una sola unidad racion_larga
+Experiencia real racion_larga
+Preparación efectiva racion_larga Velocidad
+Preparación efectiva racion_larga Stamina
+Preparación efectiva racion_larga Suerte
+Preparación efectiva racion_larga Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura fruta_campo
+Usa consumible por ID canónico fruta_campo
+Retira una sola unidad fruta_campo
+Experiencia real fruta_campo
+Preparación efectiva fruta_campo Velocidad
+Preparación efectiva fruta_campo Stamina
+Preparación efectiva fruta_campo Suerte
+Preparación efectiva fruta_campo Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura bocado_herbal
+Usa consumible por ID canónico bocado_herbal
+Retira una sola unidad bocado_herbal
+Experiencia real bocado_herbal
+Preparación efectiva bocado_herbal Velocidad
+Preparación efectiva bocado_herbal Stamina
+Preparación efectiva bocado_herbal Suerte
+Preparación efectiva bocado_herbal Inteligencia
+Un solo uso por caballo y día
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Consumible no ocupa ranura manual_ejercicios
+Usa consumible por ID canónico manual_ejercicios
+Retira una sola unidad manual_ejercicios
+Experiencia real manual_ejercicios
+Preparación efectiva manual_ejercicios Velocidad
+Preparación efectiva manual_ejercicios Stamina
+Preparación efectiva manual_ejercicios Suerte
+Preparación efectiva manual_ejercicios Inteligencia
+Guardado completo
+Carga completa
+Carga conserva efecto y límite diario
+El cambio de día vence la preparación
+Los 15 consumibles se usan y quedan 65 equipables
+Guardado completo
+Carga completa
+Guardar y cargar conserva IDs de unidades nuevas
+Subasta usa identidad de catálogo caballo_001
+Instancia y estadísticas persisten caballo_001
+Subasta usa identidad de catálogo caballo_002
+Instancia y estadísticas persisten caballo_002
+Subasta usa identidad de catálogo caballo_003
+Instancia y estadísticas persisten caballo_003
+Subasta usa identidad de catálogo caballo_004
+Instancia y estadísticas persisten caballo_004
+Subasta usa identidad de catálogo caballo_005
+Instancia y estadísticas persisten caballo_005
+Subasta usa identidad de catálogo caballo_006
+Instancia y estadísticas persisten caballo_006
+Subasta usa identidad de catálogo caballo_007
+Instancia y estadísticas persisten caballo_007
+Subasta usa identidad de catálogo caballo_008
+Instancia y estadísticas persisten caballo_008
+Subasta usa identidad de catálogo caballo_009
+Instancia y estadísticas persisten caballo_009
+Subasta usa identidad de catálogo caballo_010
+Instancia y estadísticas persisten caballo_010
+Subasta usa identidad de catálogo caballo_011
+Instancia y estadísticas persisten caballo_011
+Subasta usa identidad de catálogo caballo_012
+Instancia y estadísticas persisten caballo_012
+Subasta usa identidad de catálogo caballo_013
+Instancia y estadísticas persisten caballo_013
+Subasta usa identidad de catálogo caballo_014
+Instancia y estadísticas persisten caballo_014
+Subasta usa identidad de catálogo caballo_015
+Instancia y estadísticas persisten caballo_015
+Subasta usa identidad de catálogo caballo_016
+Instancia y estadísticas persisten caballo_016
+Subasta usa identidad de catálogo caballo_017
+Instancia y estadísticas persisten caballo_017
+Subasta usa identidad de catálogo caballo_018
+Instancia y estadísticas persisten caballo_018
+Subasta usa identidad de catálogo caballo_019
+Instancia y estadísticas persisten caballo_019
+Subasta usa identidad de catálogo caballo_020
+Instancia y estadísticas persisten caballo_020
+Subasta usa identidad de catálogo caballo_021
+Instancia y estadísticas persisten caballo_021
+Subasta usa identidad de catálogo caballo_022
+Instancia y estadísticas persisten caballo_022
+Subasta usa identidad de catálogo caballo_023
+Instancia y estadísticas persisten caballo_023
+Subasta usa identidad de catálogo caballo_024
+Instancia y estadísticas persisten caballo_024
+Subasta usa identidad de catálogo caballo_025
+Instancia y estadísticas persisten caballo_025
+Subasta usa identidad de catálogo caballo_026
+Instancia y estadísticas persisten caballo_026
+Subasta usa identidad de catálogo caballo_027
+Instancia y estadísticas persisten caballo_027
+Subasta usa identidad de catálogo caballo_028
+Instancia y estadísticas persisten caballo_028
+Subasta usa identidad de catálogo caballo_029
+Instancia y estadísticas persisten caballo_029
+Subasta usa identidad de catálogo caballo_030
+Instancia y estadísticas persisten caballo_030
+Subasta usa identidad de catálogo caballo_031
+Instancia y estadísticas persisten caballo_031
+Subasta usa identidad de catálogo caballo_032
+Instancia y estadísticas persisten caballo_032
+Subasta usa identidad de catálogo caballo_033
+Instancia y estadísticas persisten caballo_033
+Subasta usa identidad de catálogo caballo_034
+Instancia y estadísticas persisten caballo_034
+Subasta usa identidad de catálogo caballo_035
+Instancia y estadísticas persisten caballo_035
+Subasta usa identidad de catálogo caballo_036
+Instancia y estadísticas persisten caballo_036
+Subasta usa identidad de catálogo caballo_037
+Instancia y estadísticas persisten caballo_037
+Subasta usa identidad de catálogo caballo_038
+Instancia y estadísticas persisten caballo_038
+Subasta usa identidad de catálogo caballo_039
+Instancia y estadísticas persisten caballo_039
+Subasta usa identidad de catálogo caballo_040
+Instancia y estadísticas persisten caballo_040
+Subasta usa identidad de catálogo caballo_041
+Instancia y estadísticas persisten caballo_041
+Subasta usa identidad de catálogo caballo_042
+Instancia y estadísticas persisten caballo_042
+Subasta usa identidad de catálogo caballo_043
+Instancia y estadísticas persisten caballo_043
+Subasta usa identidad de catálogo caballo_044
+Instancia y estadísticas persisten caballo_044
+Subasta usa identidad de catálogo caballo_045
+Instancia y estadísticas persisten caballo_045
+Subasta usa identidad de catálogo caballo_046
+Instancia y estadísticas persisten caballo_046
+Subasta usa identidad de catálogo caballo_047
+Instancia y estadísticas persisten caballo_047
+Subasta usa identidad de catálogo caballo_048
+Instancia y estadísticas persisten caballo_048
+Subasta usa identidad de catálogo caballo_049
+Instancia y estadísticas persisten caballo_049
+Subasta usa identidad de catálogo caballo_050
+Instancia y estadísticas persisten caballo_050
+Subasta usa identidad de catálogo caballo_051
+Instancia y estadísticas persisten caballo_051
+Subasta usa identidad de catálogo caballo_052
+Instancia y estadísticas persisten caballo_052
+Subasta usa identidad de catálogo caballo_053
+Instancia y estadísticas persisten caballo_053
+Subasta usa identidad de catálogo caballo_054
+Instancia y estadísticas persisten caballo_054
+Subasta usa identidad de catálogo caballo_055
+Instancia y estadísticas persisten caballo_055
+Subasta usa identidad de catálogo caballo_056
+Instancia y estadísticas persisten caballo_056
+Subasta usa identidad de catálogo caballo_057
+Instancia y estadísticas persisten caballo_057
+Subasta usa identidad de catálogo caballo_058
+Instancia y estadísticas persisten caballo_058
+Subasta usa identidad de catálogo caballo_059
+Instancia y estadísticas persisten caballo_059
+Subasta usa identidad de catálogo caballo_060
+Instancia y estadísticas persisten caballo_060
+Subasta usa identidad de catálogo caballo_061
+Instancia y estadísticas persisten caballo_061
+Subasta usa identidad de catálogo caballo_062
+Instancia y estadísticas persisten caballo_062
+Subasta usa identidad de catálogo caballo_063
+Instancia y estadísticas persisten caballo_063
+Subasta usa identidad de catálogo caballo_064
+Instancia y estadísticas persisten caballo_064
+Subasta usa identidad de catálogo caballo_065
+Instancia y estadísticas persisten caballo_065
+Subasta usa identidad de catálogo caballo_066
+Instancia y estadísticas persisten caballo_066
+Subasta usa identidad de catálogo caballo_067
+Instancia y estadísticas persisten caballo_067
+Subasta usa identidad de catálogo caballo_068
+Instancia y estadísticas persisten caballo_068
+Subasta usa identidad de catálogo caballo_069
+Instancia y estadísticas persisten caballo_069
+Subasta usa identidad de catálogo caballo_070
+Instancia y estadísticas persisten caballo_070
+Subasta usa identidad de catálogo caballo_071
+Instancia y estadísticas persisten caballo_071
+Subasta usa identidad de catálogo caballo_072
+Instancia y estadísticas persisten caballo_072
+Subasta usa identidad de catálogo caballo_073
+Instancia y estadísticas persisten caballo_073
+Subasta usa identidad de catálogo caballo_074
+Instancia y estadísticas persisten caballo_074
+Subasta usa identidad de catálogo caballo_075
+Instancia y estadísticas persisten caballo_075
+Subasta usa identidad de catálogo caballo_076
+Instancia y estadísticas persisten caballo_076
+Subasta usa identidad de catálogo caballo_077
+Instancia y estadísticas persisten caballo_077
+Subasta usa identidad de catálogo caballo_078
+Instancia y estadísticas persisten caballo_078
+Subasta usa identidad de catálogo caballo_079
+Instancia y estadísticas persisten caballo_079
+Subasta usa identidad de catálogo caballo_080
+Instancia y estadísticas persisten caballo_080
+Subasta usa identidad de catálogo caballo_081
+Instancia y estadísticas persisten caballo_081
+Subasta usa identidad de catálogo caballo_082
+Instancia y estadísticas persisten caballo_082
+Subasta usa identidad de catálogo caballo_083
+Instancia y estadísticas persisten caballo_083
+Subasta usa identidad de catálogo caballo_084
+Instancia y estadísticas persisten caballo_084
+Subasta usa identidad de catálogo caballo_085
+Instancia y estadísticas persisten caballo_085
+Subasta usa identidad de catálogo caballo_086
+Instancia y estadísticas persisten caballo_086
+Subasta usa identidad de catálogo caballo_087
+Instancia y estadísticas persisten caballo_087
+Subasta usa identidad de catálogo caballo_088
+Instancia y estadísticas persisten caballo_088
+Subasta usa identidad de catálogo caballo_089
+Instancia y estadísticas persisten caballo_089
+Subasta usa identidad de catálogo caballo_090
+Instancia y estadísticas persisten caballo_090
+Subasta usa identidad de catálogo caballo_091
+Instancia y estadísticas persisten caballo_091
+Subasta usa identidad de catálogo caballo_092
+Instancia y estadísticas persisten caballo_092
+Subasta usa identidad de catálogo caballo_093
+Instancia y estadísticas persisten caballo_093
+Subasta usa identidad de catálogo caballo_094
+Instancia y estadísticas persisten caballo_094
+Subasta usa identidad de catálogo caballo_095
+Instancia y estadísticas persisten caballo_095
+Subasta usa identidad de catálogo caballo_096
+Instancia y estadísticas persisten caballo_096
+Subasta usa identidad de catálogo caballo_097
+Instancia y estadísticas persisten caballo_097
+Subasta usa identidad de catálogo caballo_098
+Instancia y estadísticas persisten caballo_098
+Subasta usa identidad de catálogo caballo_099
+Instancia y estadísticas persisten caballo_099
+Subasta usa identidad de catálogo caballo_100
+Instancia y estadísticas persisten caballo_100
+Guardado completo
+Carga completa
+Subasta ampliada conserva oferta, revelaciones y aspecto
+Carga fixture anterior
+Escribe caballo sin ID de catálogo
+Carga completa
+Caballo anterior conserva ID y apariencia sin reasignación por nombre
+Compra consumible para rollback
+Guardado completo
+Fallo de guardado revierte nivel, puntos, XP, preparación, límite, azar y unidad consumida
+Consumible que cruza nivel concede puntos una sola vez
+Guardado completo
+Carga completa
+Nivel y XP de consumible persisten después de cargar
+Texturas de catálogo por debajo de 96 MiB con todos sus recursos cargados
+Texturas nuevas limitadas a 384, BC7 y sin copia CPU legible

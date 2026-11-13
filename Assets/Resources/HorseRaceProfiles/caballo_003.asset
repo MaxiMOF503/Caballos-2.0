@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a72746d7ceb004faa6c27e79c4ac35, type: 3}
+  m_Name: caballo_003
+  m_EditorClassIdentifier: Assembly-CSharp::HorseVisualProfile
+  profileId: catalogo:caballo_003
+  catalogIdentityId: caballo_003
+  splashResource: Catalogos/Caballos/caballo_003
+  productionReady: 1
+  baseSprite: {fileID: 21300000, guid: bd1faebadb5a5c3499331a9cb1db394a, type: 3}
+  splash: {fileID: 21300000, guid: bd1faebadb5a5c3499331a9cb1db394a, type: 3}
+  presentationBounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  runFrames:
+  - {fileID: -205416456, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  - {fileID: 457704584, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  - {fileID: -646615512, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  - {fileID: 1279347946, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  - {fileID: -220889263, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  - {fileID: -517134538, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  - {fileID: -91040415, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  - {fileID: -1132749387, guid: 941bdea691f27ee45817fcc19c2423d0, type: 3}
+  framesPerSecond: 9
+  provisional: 0
+  source: Galope generado desde el splash propio; 8 fases, hoja 4x2. Ver Catalogos/Animaciones/Produccion.json.

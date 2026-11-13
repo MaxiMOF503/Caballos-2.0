@@ -1,0 +1,10 @@
+Validación de progreso semanal:
+SemanaProbe.Run: 78 comprobaciones aprobadas; cierres, reservas, saldo negativo,
+persistencia, ambos botones, Escape, espera de podio y carrera completa.
+AnimacionesCatalogoProbe.Run: 2604 comprobaciones aprobadas con 100 perfiles.
+Compilación de scripts Windows: 27 ensamblados; sin ejecutable.
+Logs en C:\Caballos\Validation\HubRefresh\Semana-*.log.
+Renders revisados en C:\Caballos\Validation\Semana.
+Guardados exclusivos de validación; no se usó el guardado personal.
+A se prueba por estado lógico; teclado físico, DPI y apoyo visual de las patas
+quedan pendientes de comprobación manual. No hubo commit ni push.

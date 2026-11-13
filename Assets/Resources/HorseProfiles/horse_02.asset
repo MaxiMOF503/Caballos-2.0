@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HorseVisualProfile
   profileId: horse_02
   baseSprite: {fileID: 21300000, guid: b7ef57e66fa93ea4ea569f652a611382, type: 3}
+  splash: {fileID: 0}
+  presentationBounds:
+    serializedVersion: 2
+    x: 24
+    y: 122
+    width: 463
+    height: 268
   runFrames:
   - {fileID: 21300000, guid: 8c468fe5164d3ae4f9541ae8c62afc1e, type: 3}
   - {fileID: 21300000, guid: 2025902f5ff286343a9ab5add9f34132, type: 3}

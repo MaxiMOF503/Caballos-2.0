@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -47,7 +47,7 @@ public sealed class MenuPausa : MonoBehaviour
 
     internal void ProcesarEscape()
     {
-        if (saliendo) return;
+        if (saliendo || GameManager.Instancia?.Derrotado == true) return;
         if (abierta)
         {
             if (destino != Destino.Ninguno) CancelarSalida();
@@ -94,6 +94,8 @@ public sealed class MenuPausa : MonoBehaviour
             EventSystem.current?.SetSelectedGameObject(focoAnterior);
         focoAnterior = null;
     }
+
+    internal void CerrarParaReinicio() => Cerrar(false);
 
     void Guardar()
     {

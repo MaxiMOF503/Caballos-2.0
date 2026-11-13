@@ -16,6 +16,29 @@ MonoBehaviour:
   minimoOfertas: 2
   maximoOfertas: 4
   carreraEspecialSemanal: copa-nocturna
+  tarifas:
+  - distanciaMetros: 1200
+    inicial: 200
+    desdeDia8: 400
+  - distanciaMetros: 1600
+    inicial: 300
+    desdeDia8: 600
+  - distanciaMetros: 2100
+    inicial: 400
+    desdeDia8: 800
+  - distanciaMetros: 2400
+    inicial: 500
+    desdeDia8: 1000
+  tarifaNuevaDistanciaInicial: 500
+  tarifaNuevaDistanciaDesdeDia8: 1000
+  ritmoRivalIniciacionMin: 0.82
+  ritmoRivalIniciacionMax: 0.94
+  bandasRivales:
+    dispersion: 1
+    ajusteInicial: -2
+    ajusteAvanzado: 1
+    diaEtapaAvanzada: 15
+    especialidadDistancia: 1
   carreras:
   - id: copa-pampeana
     nombre: Copa Pampeana
@@ -25,6 +48,8 @@ MonoBehaviour:
     dificultad: 1
     indiceBanner: 0
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: trofeo-alamedas
     nombre: Trofeo de las Alamedas
     tipo: 0
@@ -33,6 +58,8 @@ MonoBehaviour:
     dificultad: 1
     indiceBanner: 1
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: sprint-faro
     nombre: Sprint del Faro
     tipo: 0
@@ -41,6 +68,8 @@ MonoBehaviour:
     dificultad: 2
     indiceBanner: 2
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: velocidad-canon
     nombre: Velocidad del Cañón
     tipo: 0
@@ -49,6 +78,8 @@ MonoBehaviour:
     dificultad: 2
     indiceBanner: 3
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: premio-cerezos
     nombre: Premio de los Cerezos
     tipo: 1
@@ -57,6 +88,8 @@ MonoBehaviour:
     dificultad: 2
     indiceBanner: 4
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: milla-canterbury
     nombre: Milla de Canterbury
     tipo: 1
@@ -65,6 +98,8 @@ MonoBehaviour:
     dificultad: 2
     indiceBanner: 5
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: trofeo-toscano
     nombre: Trofeo Toscano
     tipo: 1
@@ -73,6 +108,8 @@ MonoBehaviour:
     dificultad: 3
     indiceBanner: 6
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: copa-rin
     nombre: Copa del Rin
     tipo: 1
@@ -81,6 +118,8 @@ MonoBehaviour:
     dificultad: 3
     indiceBanner: 7
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: gran-premio-chateau
     nombre: Gran Premio del Château
     tipo: 2
@@ -89,6 +128,8 @@ MonoBehaviour:
     dificultad: 3
     indiceBanner: 8
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: derbi-esmeralda
     nombre: Derbi Esmeralda
     tipo: 2
@@ -97,6 +138,8 @@ MonoBehaviour:
     dificultad: 3
     indiceBanner: 9
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: copa-alpina
     nombre: Copa Alpina
     tipo: 2
@@ -105,6 +148,8 @@ MonoBehaviour:
     dificultad: 4
     indiceBanner: 10
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: premio-andalucia
     nombre: Premio de Andalucía
     tipo: 2
@@ -113,6 +158,8 @@ MonoBehaviour:
     dificultad: 4
     indiceBanner: 11
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: gran-fondo-fuji
     nombre: Gran Fondo del Fuji
     tipo: 3
@@ -121,6 +168,8 @@ MonoBehaviour:
     dificultad: 4
     indiceBanner: 12
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: desafio-highlands
     nombre: Desafío de las Highlands
     tipo: 3
@@ -129,6 +178,8 @@ MonoBehaviour:
     dificultad: 4
     indiceBanner: 13
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: gran-premio-patagonia
     nombre: Gran Premio Patagonia
     tipo: 3
@@ -137,6 +188,8 @@ MonoBehaviour:
     dificultad: 5
     indiceBanner: 14
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: -1
+    inscripcionDesdeDia8: -1
   - id: copa-nocturna
     nombre: Copa Nocturna
     tipo: 3
@@ -145,3 +198,5 @@ MonoBehaviour:
     dificultad: 5
     indiceBanner: 15
     bannerAlternativo: {fileID: 0}
+    inscripcionInicial: 500
+    inscripcionDesdeDia8: 1000

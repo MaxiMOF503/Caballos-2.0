@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 
@@ -13,7 +13,7 @@ public enum GameState
 
 public partial class GameManager : MonoBehaviour
 {
-    private const int DineroInicial = 1000;
+    private const int DineroInicial = 2500;
     private const int DiaInicial = 1;
     private const int EdadMinima = 3;
     private const int EdadMaximaExclusiva = 8;
@@ -22,16 +22,6 @@ public partial class GameManager : MonoBehaviour
     private const int DiasPorSemana = 7;
     private const int TotalSemanasCampana = 6;
     private const int UltimoDiaCampana = DiasPorSemana * TotalSemanasCampana;
-
-    private static readonly int[] CuotasSemanales =
-    {
-        1500,
-        2000,
-        2750,
-        3500,
-        4500,
-        6000
-    };
 
     private enum ResultadoCierreDia
     {
@@ -110,6 +100,9 @@ public partial class GameManager : MonoBehaviour
 
     private void Start()
     {
+        nombres = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Select(CatalogoCaballos.Todos, c => c.nombre));
+        if (UIManager.instance != null && UIManager.instance.GetComponent<AvisosSubasta>() == null)
+            UIManager.instance.gameObject.AddComponent<AvisosSubasta>();
         ResetSprites();
 
         // Menu intent takes priority over the editor-only development reset.
@@ -155,9 +148,15 @@ public partial class GameManager : MonoBehaviour
 
     public void IniciarNuevaPartida()
     {
+        derrota = null; resultadosAntesDerrota = false; ultimoTotalConfirmado = 2500;
+        inicioCarreras = ProgresoInicioCarreras.Nuevo();
         carreraProgramada = null;
         semillaOfertaCarreras = Random.Range(1, int.MaxValue);
         UltimaApuesta = null;
+        UltimoResultadoCarrera = null;
+        ResultadoCarreraGuardado = true;
+        subastas = new EstadoSubastasData();
+        caballoActivoId = null;
         dinero = DineroInicial;
         dia = DiaInicial;
         campanaCompletada = false;
@@ -175,6 +174,7 @@ public partial class GameManager : MonoBehaviour
 
         ResetSprites();
         CrearCaballoInicial();
+        InicializarSubastas();
         ActualizarHUD();
         GuardarPartida();
         RefrescarTiendaAbierta();
@@ -187,8 +187,13 @@ public partial class GameManager : MonoBehaviour
     public bool GuardarPartida()
     {
         if (procesandoResultado) return true;
+        InicializarSubastas();
+        var derrotaAnterior = derrota;
+        if (!Derrotado && SaldoTotal < 0 && (ultimoTotalConfirmado >= 0 || SaldoTotal < ultimoTotalConfirmado))
+            derrota = new DerrotaCampana { motivo = "Saldo total negativo: " + Moneda.Texto(SaldoTotal) + "." };
         GameData datos = new GameData
         {
+            derrota = derrota,
             saveVersion = SaveSystem.SaveVersionActual,
             dinero = dinero,
             dia = dia,
@@ -196,7 +201,11 @@ public partial class GameManager : MonoBehaviour
             estadoTienda = estadoTienda,
             carreraProgramada = carreraProgramada,
             semillaOfertaCarreras = semillaOfertaCarreras,
-            ultimaApuesta = UltimaApuesta
+            ultimaApuesta = UltimaApuesta,
+            ultimoResultadoCarrera = UltimoResultadoCarrera,
+            inicioCarreras = inicioCarreras,
+            subastas = subastas,
+            caballoActivoId = CaballoActivo?.id
         };
 
         HashSet<string> idsCaballosJugador = new HashSet<string>();
@@ -258,7 +267,10 @@ public partial class GameManager : MonoBehaviour
             datos.rivalPersistente = CaballoData.DesdeCaballo(rivalPersistente, indiceSprite);
         }
 
-        return SaveSystem.Guardar(datos);
+        bool guardado = SaveSystem.Guardar(datos);
+        if (guardado) { ResultadoCarreraGuardado = true; ultimoTotalConfirmado = SaldoTotal; }
+        else derrota = derrotaAnterior;
+        return guardado;
     }
 
     bool CargarPartida()
@@ -352,14 +364,15 @@ public partial class GameManager : MonoBehaviour
                 }
 
                 ValidarAsignacionItem(item, idsCargados, slotsOcupados);
-                item.sprite = ObtenerSpriteItemGuardado(itemGuardado.spriteIndex);
+                item.sprite = SistemaTienda.Buscar(CatalogoTienda(), item.idDefinicion)?.sprite ??
+                    ObtenerSpriteItemGuardado(itemGuardado.spriteIndex);
                 itemsJugador.Add(item);
             }
         }
 
         rivalPersistente = null;
 
-        if (datos.rivalPersistente != null)
+        if (TieneDatosRival(datos.rivalPersistente))
         {
             Caballo rivalCargado = datos.rivalPersistente.CrearCaballo();
 
@@ -376,13 +389,37 @@ public partial class GameManager : MonoBehaviour
             }
         }
 
+        derrota = string.IsNullOrEmpty(datos.derrota?.motivo) ? null : datos.derrota;
+        resultadosAntesDerrota = false;
         CargarCarreraProgramada(datos);
+        bool migrarSubasta = string.IsNullOrEmpty(datos.subastas?.actual?.id);
+        subastas = datos.subastas;
+        caballoActivoId = datos.caballoActivoId;
+        InicializarSubastas();
+        ultimoTotalConfirmado = SaldoTotal;
+        migrarSubasta |= campanaCompletada && CancelarSubastaAlTerminarCampana();
+        if (migrarSubasta && !GuardarPartida())
+            Debug.LogWarning("No se pudo guardar la migración de subastas. Reintentá guardar antes de salir.");
+        ultimoTotalConfirmado = SaldoTotal;
         Debug.Log("Partida cargada: " + caballosJugador.Count + " caballo(s).");
         return true;
     }
 
+    // JsonUtility puede materializar una clase inline nula como un DTO vacío.
+    // Un GUID regenerado no demuestra que haya existido un rival real.
+    static bool TieneDatosRival(CaballoData datos) => datos != null &&
+        (!string.IsNullOrWhiteSpace(datos.nombre) || !string.IsNullOrEmpty(datos.catalogIdentityId) ||
+        (!string.IsNullOrEmpty(datos.visualProfileId) && datos.visualProfileId != "legacy:-1") ||
+        datos.spriteIndex >= 0);
+
     void AsignarVisualNuevo(Caballo caballo)
     {
+        var identidad = CatalogoCaballos.PorNombre(caballo.nombre);
+        if (identidad != null && string.IsNullOrEmpty(caballo.visualProfileId))
+        {
+            CatalogoCaballos.Asignar(caballo, identidad);
+            return;
+        }
         var catalog = HorseVisualCatalog.Default;
         if (catalog == null || !catalog.AssignNew(caballo))
         {
@@ -394,6 +431,7 @@ public partial class GameManager : MonoBehaviour
     void RestaurarVisual(Caballo caballo, int indice)
     {
         var catalog = HorseVisualCatalog.Default;
+        if (catalog != null && catalog.RestoreCatalogVisual(caballo)) return;
         var profile = catalog != null ? catalog.Resolve(caballo.visualProfileId) : null;
         if (profile != null) { caballo.sprite = profile.baseSprite; return; }
         var legacy = ObtenerSpriteGuardado(indice);
@@ -401,8 +439,17 @@ public partial class GameManager : MonoBehaviour
         else caballo.sprite = legacy;
     }
 
+    void MigrarIdentidadVisual(CaballoData datos)
+    {
+        if (datos == null) return;
+        var caballo = datos.CrearCaballo();
+        if (HorseVisualCatalog.Default?.RestoreCatalogVisual(caballo) == true)
+            datos.catalogIdentityId = caballo.catalogIdentityId;
+    }
+
     int ObtenerIndiceSprite(Sprite sprite)
     {
+        if (RecursosCatalogo.EsCaballo(sprite)) return -1;
         if (sprite == null || spritesCaballos == null)
             return -1;
 
@@ -454,6 +501,9 @@ public partial class GameManager : MonoBehaviour
             if (spritesItems[i] == sprite)
                 return i;
         }
+
+        foreach (var producto in CatalogoTienda())
+            if (producto.sprite == sprite) return -1;
 
         Debug.LogWarning("El sprite de un item no pertenece a spritesItems.");
         return -1;
@@ -677,8 +727,8 @@ public partial class GameManager : MonoBehaviour
     public bool IntentarComprarItem(string idDefinicion)
     {
         DefinicionProductoTienda producto = SistemaTienda.Buscar(CatalogoTienda(), idDefinicion);
-        if (producto == null || producto.tipoProducto != TipoProductoTienda.Equipable ||
-            !producto.tieneSlotEquipable || !System.Enum.IsDefined(typeof(TipoSlotItem), producto.slotPermitido) ||
+        if (producto == null ||
+            (producto.tieneSlotEquipable && !System.Enum.IsDefined(typeof(TipoSlotItem), producto.slotPermitido)) ||
             producto.precio < 0 || dinero < producto.precio || itemsJugador == null || producto.sprite == null ||
             estadoTienda == null || estadoTienda.idsProductosStock == null ||
             !estadoTienda.idsProductosStock.Contains(producto.idDefinicion))
@@ -738,6 +788,9 @@ public partial class GameManager : MonoBehaviour
 
     public bool EquiparItem(Caballo caballo, ItemCaballo item, TipoSlotItem ranura, bool permitirReemplazo)
     {
+        var definicion = SistemaTienda.Buscar(CatalogoTienda(), item?.idDefinicion);
+        if (definicion != null && (!definicion.tieneSlotEquipable || caballo == null || caballo.nivel < definicion.nivelMinimo))
+            return false;
         ItemCaballo propio = itemsJugador?.Find(i => ReferenceEquals(i, item) ||
             (i != null && !string.IsNullOrEmpty(item?.id) && i.id == item.id));
         string asignacionAnterior = propio?.caballoEquipadoId;
@@ -815,7 +868,7 @@ public partial class GameManager : MonoBehaviour
 
     public void AgregarDinero(int c)
     {
-        dinero += c;
+        dinero = (int)System.Math.Min(int.MaxValue - DineroReservado, (long)dinero + c);
         ActualizarHUD();
         GuardarPartida();
     }
@@ -829,38 +882,37 @@ public partial class GameManager : MonoBehaviour
 
     public void SiguienteDia()
     {
-        if (campanaCompletada)
+        if (campanaCompletada || Derrotado)
         {
             Debug.LogWarning("La campaña ya está completada. No se puede avanzar a un día 43.");
             return;
         }
 
-        TransicionCampana transicion = CalcularTransicionCampana(dia, dinero);
+        foreach (var caballo in caballosJugador)
+        {
+            caballo.preparacionVelocidad = 0;
+            caballo.preparacionStamina = 0;
+            caballo.preparacionSuerte = 0;
+            caballo.preparacionInteligencia = 0;
+        }
+
+        if (SubastaActual != null && dia >= SubastaActual.diaFin) CerrarSubasta();
+        TransicionCampana transicion = CalcularTransicionCampana(dia, (int)System.Math.Min(int.MaxValue, SaldoTotal));
         carreraProgramada = null;
         caballosDelDia.Clear();
 
-        if (transicion.resultado == ResultadoCierreDia.CampanaPerdida)
+        if (SaldoTotal < 0 || transicion.resultado == ResultadoCierreDia.CampanaPerdida)
         {
-            Debug.LogWarning(
-                "CAMPAÑA PERDIDA. Semana " + transicion.semanaFinalizada +
-                ": dinero $" + dinero + ", cuota $" + transicion.cuotaAplicada + ".");
-            IniciarNuevaPartida();
-            return;
-        }
-
-        dinero = transicion.dineroRestante;
-
-        if (transicion.cuotaAplicada > 0)
-        {
-            Debug.Log(
-                "Semana " + transicion.semanaFinalizada + " superada. Cuota pagada: $" +
-                transicion.cuotaAplicada + ". Dinero restante: $" + dinero + ".");
+            derrota = new DerrotaCampana { motivo = SaldoTotal < 0 ? "Saldo total negativo: " + Moneda.Texto(SaldoTotal) + "." :
+                "No alcanzaste el objetivo semanal. Saldo final: " + Moneda.Texto(SaldoTotal) + " de " + Moneda.Texto(transicion.cuotaAplicada) + "." };
+            ActualizarHUD(); GuardarPartida(); return;
         }
 
         if (transicion.resultado == ResultadoCierreDia.CampanaCompletada)
         {
             dia = UltimoDiaCampana;
             campanaCompletada = true;
+            CancelarSubastaAlTerminarCampana();
             Debug.Log("CAMPAÑA COMPLETADA");
             ActualizarHUD();
             GuardarPartida();
@@ -868,6 +920,7 @@ public partial class GameManager : MonoBehaviour
         }
 
         dia = transicion.diaSiguiente;
+        AvanzarSubasta(dia);
         bool tiendaRotada = SincronizarTienda();
         ActualizarHUD();
         GuardarPartida();
@@ -910,9 +963,7 @@ public partial class GameManager : MonoBehaviour
 
     public static int ObtenerCuotaSemana(int semana)
     {
-        return semana >= 1 && semana <= CuotasSemanales.Length
-            ? CuotasSemanales[semana - 1]
-            : 0;
+        return MetasSemanales.Actual.Meta(semana);
     }
 
     static TransicionCampana CalcularTransicionCampana(int diaActual, int dineroActual)
@@ -939,11 +990,11 @@ public partial class GameManager : MonoBehaviour
         if (dineroActual < transicion.cuotaAplicada)
         {
             transicion.resultado = ResultadoCierreDia.CampanaPerdida;
-            transicion.diaSiguiente = DiaInicial;
+            transicion.diaSiguiente = diaValido;
             return transicion;
         }
 
-        transicion.dineroRestante = dineroActual - transicion.cuotaAplicada;
+        transicion.dineroRestante = dineroActual;
 
         if (transicion.semanaFinalizada == TotalSemanasCampana)
         {
@@ -957,7 +1008,7 @@ public partial class GameManager : MonoBehaviour
     void ActualizarHUD()
     {
         if (textoDinero != null)
-            textoDinero.text = "$ " + dinero;
+            textoDinero.text = Moneda.Texto(dinero) + (DineroReservado > 0 ? " · Reserva " + Moneda.Texto(DineroReservado) : "");
 
         if (textoDia != null)
             textoDia.text = "Día " + dia;
@@ -969,6 +1020,7 @@ public partial class GameManager : MonoBehaviour
 
     public void SetState(Interactable.Tipo tipo)
     {
+        if (Derrotado) return;
         switch (tipo)
         {
             case Interactable.Tipo.TV:

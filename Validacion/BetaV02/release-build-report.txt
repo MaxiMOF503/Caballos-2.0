@@ -1,0 +1,16 @@
+Result: Succeeded
+Unity: 6000.3.13f1
+Product: Caballos 2.0
+Version: 0.2.0
+Target: StandaloneWindows64
+Options: None
+Development: False
+Debugging: False
+Resolution: 1920x1080 Windowed; resizable
+Bytes: 389046434
+Errors: 0
+Warnings: 2
+Scenes:
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/hub.unity
+Assets/Scenes/SampleScene.unity

@@ -1,0 +1,78 @@
+Nueva partida 2500 día1
+Moneda
+Carga aislada
+Umbral 7 -1
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 7 0
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 7 700
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 14 -1
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 14 0
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 14 700
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 21 -1
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 21 0
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Carga aislada
+Umbral 21 700
+Sin descuento
+Día correcto
+Carga aislada
+Carga conserva cierre
+Cero permitido
+Reserva no es pérdida
+Puja impagable rechazada
+Negativo total confirmado
+Carga aislada
+Derrota negativa persistente
+Sólo dos botones bloqueo
+Escape no elimina derrota
+Botón nueva partida
+Premio del día7 alimenta cierre
+Liquidación única
+Espera podio antes de Game Over
+Derrota semanal visible
+Carga aislada
+Migración sin derrota retroactiva
+Cinco participantes
+Sin puntos renderizados
+Una flecha propia
+A soltada
+A mantenida
+Carrera completa con escala nueva
+Botón menú principal carga menú sin reinicio

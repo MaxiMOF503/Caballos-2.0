@@ -8,6 +8,7 @@ public enum TipoProductoTienda
     Consumible
 }
 
+[Serializable]
 public sealed class DefinicionProductoTienda
 {
     public string idDefinicion;
@@ -20,6 +21,28 @@ public sealed class DefinicionProductoTienda
     public Sprite sprite;
     public TipoEstadisticaCaballo estadistica;
     public int bonificacion;
+    public TipoEstadisticaCaballo estadisticaSecundaria;
+    public int bonificacionSecundaria;
+    public int nivelMinimo = 1;
+    public int experiencia;
+    public int indiceLegacy = -1;
+    public string iconoRecurso;
+    public bool visualDefinitivo;
+
+    public int BonoPara(TipoEstadisticaCaballo tipo) =>
+        (estadistica == tipo ? bonificacion : 0) + (estadisticaSecundaria == tipo ? bonificacionSecundaria : 0);
+
+    public string EfectoVisible
+    {
+        get
+        {
+            var efectos = new List<string>();
+            if (bonificacion != 0) efectos.Add(bonificacion.ToString("+0;-0") + " " + estadistica);
+            if (bonificacionSecundaria != 0) efectos.Add(bonificacionSecundaria.ToString("+0;-0") + " " + estadisticaSecundaria);
+            if (experiencia > 0) efectos.Add("+" + experiencia + " XP");
+            return string.Join(" · ", efectos);
+        }
+    }
 
     public DefinicionProductoTienda(string id, string nombre, string descripcion,
         int precio, TipoProductoTienda tipo, bool tieneSlot, TipoSlotItem slot, Sprite sprite)
@@ -37,6 +60,9 @@ public sealed class DefinicionProductoTienda
 
 public static class SistemaTienda
 {
+    [Serializable]
+    sealed class Archivo { public DefinicionProductoTienda[] productos; }
+    static DefinicionProductoTienda[] definiciones;
     public const int OfertasIniciales = 3;
     public const int DiasPorRotacion = 4;
     public const int CostoRerollManual = 250;
@@ -44,21 +70,27 @@ public static class SistemaTienda
     // Índices de los seis sprites ya asignados a GameManager en la escena.
     public static List<DefinicionProductoTienda> CrearCatalogo(Sprite[] sprites)
     {
-        return new List<DefinicionProductoTienda>
+        if (definiciones == null)
         {
-            new DefinicionProductoTienda("herradura_plata", "Herradura de Plata", "+1 resistencia.", 200,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 0)) { estadistica = TipoEstadisticaCaballo.Stamina, bonificacion = 1 },
-            new DefinicionProductoTienda("manzana_dorada", "Manzana Dorada", "Aumenta considerablemente la energía.", 350,
-                TipoProductoTienda.Consumible, false, default, SpriteEn(sprites, 2)),
-            new DefinicionProductoTienda("herradura_oro", "Herradura de Oro", "+2 velocidad.", 500,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 1)) { estadistica = TipoEstadisticaCaballo.Velocidad, bonificacion = 2 },
-            new DefinicionProductoTienda("zapatillas", "Zapatillas", "+1 velocidad.", 150,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Patas, SpriteEn(sprites, 5)) { estadistica = TipoEstadisticaCaballo.Velocidad, bonificacion = 1 },
-            new DefinicionProductoTienda("sombrero_copa", "Sombrero de Copa", "+1 suerte.", 300,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Cabeza, SpriteEn(sprites, 3)) { estadistica = TipoEstadisticaCaballo.Suerte, bonificacion = 1 },
-            new DefinicionProductoTienda("sombrero_noble", "Sombrero Noble", "+2 suerte.", 450,
-                TipoProductoTienda.Equipable, true, TipoSlotItem.Cabeza, SpriteEn(sprites, 4)) { estadistica = TipoEstadisticaCaballo.Suerte, bonificacion = 2 }
-        };
+            var archivo = Resources.Load<TextAsset>("Catalogos/Items");
+            if (archivo == null) throw new InvalidOperationException("Falta Catalogos/Items.json.");
+            definiciones = JsonUtility.FromJson<Archivo>(archivo.text).productos;
+        }
+        var catalogo = new List<DefinicionProductoTienda>(definiciones.Length);
+        foreach (var datos in definiciones)
+        {
+            var icono = datos.indiceLegacy >= 0 ? SpriteEn(sprites, datos.indiceLegacy) :
+                RecursosCatalogo.Cargar(datos.iconoRecurso) ?? RecursosCatalogo.Cargar("Catalogos/IconoPendiente");
+            catalogo.Add(new DefinicionProductoTienda(datos.idDefinicion, datos.nombre, datos.descripcion,
+                datos.precio, datos.tipoProducto, datos.tieneSlotEquipable, datos.slotPermitido, icono)
+            {
+                estadistica = datos.estadistica, bonificacion = datos.bonificacion,
+                estadisticaSecundaria = datos.estadisticaSecundaria, bonificacionSecundaria = datos.bonificacionSecundaria,
+                nivelMinimo = datos.nivelMinimo, experiencia = datos.experiencia,
+                indiceLegacy = datos.indiceLegacy, iconoRecurso = datos.iconoRecurso, visualDefinitivo = datos.visualDefinitivo
+            });
+        }
+        return catalogo;
     }
 
     private static Sprite SpriteEn(Sprite[] sprites, int indice)

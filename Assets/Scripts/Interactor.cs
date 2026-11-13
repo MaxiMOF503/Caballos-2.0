@@ -12,18 +12,18 @@ public class Interactor : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
-
-                if (interactable != null)
-                {
-                    interactable.Interact();
-                }
-            }
+            Interactable interactable = BuscarInteractuable(Input.mousePosition);
+            if (interactable != null) interactable.Interact();
         }
+    }
+
+    // La flecha y el clic consultan el mismo collider, con las mismas reglas.
+    internal Interactable BuscarInteractuable(Vector2 posicion)
+    {
+        if (cam == null) return null;
+        Ray ray = cam.ScreenPointToRay(posicion);
+        return Physics.Raycast(ray, out RaycastHit hit)
+            ? hit.collider.GetComponent<Interactable>()
+            : null;
     }
 }

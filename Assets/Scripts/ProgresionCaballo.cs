@@ -17,7 +17,7 @@ public static class ProgresionCaballo
         return 100 + ((nivelValido - 1) * 50);
     }
 
-    public static int AgregarExperiencia(Caballo caballo, int cantidad)
+    public static int AgregarExperiencia(Caballo caballo, int cantidad, bool guardar = true)
     {
         if (caballo == null)
         {
@@ -53,7 +53,7 @@ public static class ProgresionCaballo
                       " nivel(es) y alcanzó el nivel " + caballo.nivel + ".");
         }
 
-        if (GameManager.Instancia != null)
+        if (guardar && GameManager.Instancia != null)
             GameManager.Instancia.GuardarPartida();
 
         return nivelesSubidos;

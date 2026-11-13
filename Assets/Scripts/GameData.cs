@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -299,6 +299,7 @@ public static class SistemaEquipamiento
 [Serializable]
 public class GameData
 {
+    public DerrotaCampana derrota;
     public int saveVersion = 1;
     public int dinero;
     public int dia;
@@ -310,6 +311,10 @@ public class GameData
     public CarreraProgramada carreraProgramada;
     public int semillaOfertaCarreras;
     public ApuestaCarrera ultimaApuesta;
+    public ResultadoCarrera ultimoResultadoCarrera;
+    public ProgresoInicioCarreras inicioCarreras;
+    public EstadoSubastasData subastas;
+    public string caballoActivoId;
 }
 
 [Serializable]
@@ -370,7 +375,11 @@ public class CaballoData
 {
     public string id;
     public string visualProfileId;
+    public string catalogIdentityId;
+    public int preparacionVelocidad, preparacionStamina, preparacionSuerte, preparacionInteligencia;
+    public int ultimoDiaConsumible;
     public string nombre;
+    public string raza;
     public int edad;
     public int nivel;
     public int experiencia;
@@ -391,7 +400,14 @@ public class CaballoData
         {
             id = caballo.id,
             visualProfileId = caballo.visualProfileId,
+            catalogIdentityId = caballo.catalogIdentityId,
+            preparacionVelocidad = caballo.preparacionVelocidad,
+            preparacionStamina = caballo.preparacionStamina,
+            preparacionSuerte = caballo.preparacionSuerte,
+            preparacionInteligencia = caballo.preparacionInteligencia,
+            ultimoDiaConsumible = caballo.ultimoDiaConsumible,
             nombre = caballo.nombre,
+            raza = caballo.raza,
             edad = caballo.edad,
             nivel = caballo.nivel,
             experiencia = caballo.experiencia,
@@ -414,7 +430,14 @@ public class CaballoData
         {
             id = id,
             visualProfileId = visualProfileId,
+            catalogIdentityId = catalogIdentityId,
+            preparacionVelocidad = preparacionVelocidad,
+            preparacionStamina = preparacionStamina,
+            preparacionSuerte = preparacionSuerte,
+            preparacionInteligencia = preparacionInteligencia,
+            ultimoDiaConsumible = ultimoDiaConsumible,
             nombre = nombre,
+            raza = raza,
             edad = edad,
             nivel = nivel,
             experiencia = experiencia,

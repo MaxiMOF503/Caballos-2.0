@@ -1,0 +1,28 @@
+{
+  "motorSimulacionConservado": true,
+  "camaraHubConservada": true,
+  "escenaHubConservada": true,
+  "scriptsProtegidosConservados": [
+    "CameraController.cs",
+    "HorseVisualAnimator.cs",
+    "ProgresionCaballo.cs",
+    "EstabloView.cs",
+    "MenuPausa.cs",
+    "CursorCaballos.cs"
+  ],
+  "perfilesConservados": 100,
+  "framesConservados": 800,
+  "spritesSplashConservados": 100,
+  "codigoCoincideConCopiaValidada": true,
+  "metasNuevosUnicos": 2,
+  "zipAnteriorConservado": true,
+  "shaScripts": {
+    "ClasificacionCarrera.cs": "66c469fe59f2d81833c496a5ccd2936896aebf5e86d67e6f35f03e43d2c2898f",
+    "ResultadosCarreraView.cs": "c1e11f31e41ace71337bab50cfb6c58c2a52348b7f80db864ec5f7023f82a578",
+    "CarreraUI.cs": "3819d831e495d83775aae23679303eabcbd0e954abd0b96acc8f58efa21afe74",
+    "CarreraProgramada.cs": "207034d88bdb38766631bfca79c0c56e909b21299d98c12802daf14952cb0208",
+    "GameManager.Carrera.cs": "b6fc7d6ba21399fa85669c15b79381ea9146500e187b895eced2d30e5e3b2d0b",
+    "GameManager.cs": "2b4b31c8751fc79db7e1b92236e287199cce35a052d8a3ab4080dbbe10202c4d",
+    "GameData.cs": "c8aff596f640767ee60cb132c970df9a4a695d8879de9a6e87985ce8656caf48"
+  }
+}

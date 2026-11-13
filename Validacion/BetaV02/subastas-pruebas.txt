@@ -1,0 +1,163 @@
+Oferta disponible desde día 1
+Nombre y raza definidos
+Día 1 oculta todas las características
+Los 12 perfiles conservan sus ocho frames
+Perfil visual válido e identidad consistente
+Botón Subasta habilitado y conectado
+Nombre y raza visibles en UI
+UI muestra el sprite correspondiente al caballo
+UI no filtra valores ocultos
+Selección separada del hover en Tienda
+Selección separada del hover en Subasta
+Selección separada del hover en Volver
+Selección separada del hover en Menos
+Selección separada del hover en Mas
+Selección separada del hover en Pujar
+Selección separada del hover en Seguir
+Selección separada del hover en Pedigri
+Hover entra únicamente por evento del puntero
+Salir del botón restaura color normal
+Pedigrí informa ausencia de genealogía
+Escape cierra pedigrí antes de pausar
+Textos completos dia1 (1920, 1080)
+Textos completos dia1 (1600, 900)
+Textos completos dia1 (1366, 768)
+Textos completos dia1 (1280, 720)
+Cambiar de sección conserva oferta 0
+Cambiar de sección conserva oferta 1
+Cambiar de sección conserva oferta 2
+Rechaza pujas inferiores y sin saldo
+Puja reserva una sola vez el importe
+Repetir el mismo importe no duplica cargos
+Reserva bloquea compra y reroll con saldo insuficiente
+Equipo tampoco consume dinero reservado
+Parrilla real preparada
+Apuestas no consumen dinero reservado
+Aumentar la oferta reserva únicamente la diferencia
+Seguir persiste la selección
+Guardado completo
+Carga completa
+Guardar y cargar conserva caballo, pujas, reservas, presupuestos y revelaciones
+Día 2 revela una característica
+Día 3 mantiene una sola revelación
+Día 4 muestra dos datos distintos
+Seguimiento avisa el último día
+Notificación del último día visible
+Textos completos dia4 (1920, 1080)
+Textos completos dia4 (1600, 900)
+Textos completos dia4 (1366, 768)
+Textos completos dia4 (1280, 720)
+Cierre de victoria convierte reserva sin volver a cobrar
+Entrega un caballo sin sustituir al activo
+Caballo entregado conserva todos los datos originales
+Día 5 renueva caballo, oferta y perfil
+Repetir cierre conserva entrega y pago únicos
+Activa seguimiento de la segunda oferta
+IA supera al jugador y libera exactamente su reserva
+Seguimiento registra el aviso de oferta superada
+Derrota no entrega caballo
+Seguimiento conserva resultado final
+Hub muestra un aviso vigente y omite los últimos días vencidos
+Lectura del aviso se guarda
+Carga completa
+Recargar conserva los avisos ya leídos
+Sin ofertas no hay caballo gratuito
+El establo establece y guarda el caballo seleccionado como activo
+Retrato del establo usa la identidad seleccionada
+Textos completos establo-activo (1920, 1080)
+Textos completos establo-activo (1600, 900)
+Textos completos establo-activo (1366, 768)
+Textos completos establo-activo (1280, 720)
+Equipo permanece asociado al caballo original
+El caballo nuevo no hereda equipo
+Guardado completo
+Carga completa
+Carga conserva activo y equipamiento individual
+Prepara carrera con el nuevo activo
+Carreras usan el ID y perfil del caballo activo
+Parrilla preparada bloquea cambios sin alterar participantes
+Apuesta activa mantiene bloqueado el cambio de caballo
+Carrera en ejecución bloquea cambio de caballo
+Carrera real dispone de sprite y ocho frames correspondientes
+Resultado conserva selección y permite próximos cambios
+Lee guardado temporal para migración
+Fixture antiguo carece realmente de campos nuevos
+Carga completa
+Partida anterior conserva todos los caballos y objetos
+Compatibilidad conserva sprite legacy y selecciona primer caballo
+Carga completa
+Migración se guarda una vez y recarga la misma oferta
+Fixture con campo nuevo nulo
+Carga completa
+Carga completa
+Objeto vacío de Unity también migra y persiste una sola vez
+Migración produce oferta con fechas válidas
+Fallo de guardado revierte oferta, IA, reserva y saldo
+Semilla de campaña y ciclo reproduce exactamente la oferta y sus IDs
+Generación equilibrada muestra 0
+Generación equilibrada muestra 1
+Generación equilibrada muestra 2
+Generación equilibrada muestra 3
+Generación equilibrada muestra 4
+Generación equilibrada muestra 5
+Generación equilibrada muestra 6
+Generación equilibrada muestra 7
+Generación equilibrada muestra 8
+Generación equilibrada muestra 9
+Generación equilibrada muestra 10
+Generación equilibrada muestra 11
+Generación equilibrada muestra 12
+Generación equilibrada muestra 13
+Generación equilibrada muestra 14
+Generación equilibrada muestra 15
+Generación equilibrada muestra 16
+Generación equilibrada muestra 17
+Generación equilibrada muestra 18
+Generación equilibrada muestra 19
+Generación equilibrada muestra 20
+Generación equilibrada muestra 21
+Generación equilibrada muestra 22
+Generación equilibrada muestra 23
+Generación equilibrada muestra 24
+Generación equilibrada muestra 25
+Generación equilibrada muestra 26
+Generación equilibrada muestra 27
+Generación equilibrada muestra 28
+Generación equilibrada muestra 29
+Generación equilibrada muestra 30
+Generación equilibrada muestra 31
+Generación equilibrada muestra 32
+Generación equilibrada muestra 33
+Generación equilibrada muestra 34
+Generación equilibrada muestra 35
+Generación equilibrada muestra 36
+Generación equilibrada muestra 37
+Generación equilibrada muestra 38
+Generación equilibrada muestra 39
+Generación equilibrada muestra 40
+Generación equilibrada muestra 41
+Generación equilibrada muestra 42
+Generación equilibrada muestra 43
+Generación equilibrada muestra 44
+Generación equilibrada muestra 45
+Generación equilibrada muestra 46
+Generación equilibrada muestra 47
+Generación equilibrada muestra 48
+Generación equilibrada muestra 49
+Revelaciones varían entre subastas
+IA puede pujar por día y retirarse al superar su presupuesto
+Control + cambia el importe dinámico
+Control − vuelve a la mínima
+Botón Pujar ejecuta la oferta real
+Botón Seguir cambia el seguimiento real
+Textos completos final (1920, 1080)
+Textos completos final (1600, 900)
+Textos completos final (1366, 768)
+Textos completos final (1280, 720)
+Tienda de productos sigue accesible
+Compra anterior sigue funcionando
+Volver regresa al Hub
+Reserva durante último día de campaña
+Final de campaña cancela la oferta incompleta y libera reserva sin entregar caballo
+Carga completa
+Recargar el final de campaña no duplica la devolución

@@ -1,0 +1,27 @@
+Puja real aceptada
+Pago reservado una vez
+Cierre repetido no duplica pago ni caballo
+Resultado ganado guardado
+Resuelto fuera del Hub queda pendiente
+Carga pendiente aislada
+Pendiente sobrevive carga fuera del Hub
+Diseño y mensaje dinámico conservados
+Consumo persistido al mostrar, antes del cierre
+Visible antes de cinco segundos con timeScale cero
+Se oculta a los cinco segundos reales sin avanzar de día
+Salir y volver no repite aviso consumido
+Carga después de mostrar
+Carga conserva caballo y pago único sin repetir cartel
+Ocultar no borra resultado de subasta
+Avanzar día no reactiva el aviso
+Otro aviso queda pendiente durante el primero
+Segundo aviso recibe cinco segundos propios
+Temporizador anterior no oculta al nuevo
+Segundo aviso expira en su propio límite
+Abrir y cerrar menú antes de vencer no repite aviso
+Fallo de escritura conserva aviso pendiente sin mostrar
+Escritura recuperada permite mostrar una vez
+Carga durante aviso activo
+Carga durante temporizador activo no repite cartel
+Avisos y guardado no cambian economía ni entrega
+Nueva partida no hereda panel activo
